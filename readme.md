@@ -67,8 +67,18 @@ docker-compose --version
 - Client processing employee data records
 
 9. Troubleshooting common errors:
+- If you encounter an aiohttp build error during installation:
+  ```
+  error C2039: 'ob_digit': is not a member of '_longobject'
+  ```
+  - This is a compatibility issue with aiohttp and Python 3.12+
+  - Solutions:
+    - Use Python 3.8 or 3.9 instead of newer versions
+    - Use the exact aiohttp version in requirements.txt: `aiohttp==3.7.4.post0`
+    - For Docker, the client Dockerfile has been updated to use Python 3.8
+
 - If you encounter a 405 Method Not Allowed error:
-  - The API endpoint in client/employee_client.py has been corrected from `/api/employees/` to `/api/employees` (without trailing slash)
+  - The API endpoint in client/employee_client.py has been corrected from `/api/employees` to `/api/employees/` (with trailing slash)
   - Verify that all HTTP methods match between client and server (POST, GET, etc.)
   - Check server logs for more details on the rejected request
 
@@ -214,8 +224,13 @@ deactivate
 cd ../client
 python -m venv env
 source env/bin/activate  # On Windows: env\Scripts\activate
-pip install -r requirements.txt
-pip install aiohttp==3.8.6  # Install aiohttp explicitly
+pip install -r requirements.txt  # Note: This now includes aiohttp 3.7.4.post0
+
+# If you encounter aiohttp build issues, make sure you're using Python 3.8 or 3.9
+# For Python 3.10+ you may need to explicitly install a compatible version:
+# pip install aiohttp==3.7.4.post0
+
+# Verify that required packages for specific modes are installed
 pip install aiokafka==0.8.1  # Required for Kafka mode
 pip install websockets==11.0.3  # Required for WebSocket mode
 deactivate

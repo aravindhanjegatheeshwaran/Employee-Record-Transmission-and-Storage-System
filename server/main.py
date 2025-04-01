@@ -38,7 +38,7 @@ async def start_kafka_consumer():
         return
 
     try:
-        bootstrap_servers = os.getenv("KAFKA_BOOTSTRAP_SERVERS", "localhost:9092")
+        bootstrap_servers = os.getenv("KAFKA_BOOTSTRAP_SERVERS", "kafka:9092")
         topic = os.getenv("KAFKA_TOPIC", "employee-records")
 
         consumer = aiokafka.AIOKafkaConsumer(

@@ -4532,3 +4532,147 @@ employee_id
 2025-04-01 18:59:15,417 - main - INFO - Received WebSocket message from admin_2475570901264: employee_id=80
 2025-04-01 18:59:15,848 - main - INFO - WebSocket client disconnected: admin_2475570901264
 2025-04-01 19:07:42,086 - main - INFO - Starting server...
+2025-04-01 19:10:03,961 - main - INFO - Shutting down, closing connections...
+2025-04-01 19:10:03,962 - core.database - INFO - Database connections closed
+2025-04-01 19:10:03,963 - main - INFO - Database connections closed
+2025-04-01 19:10:47,716 - main - INFO - Starting server...
+2025-04-01 19:13:20,767 - core.decorators - INFO - FUNC 20250401191320763977: login_for_access_token called
+2025-04-01 19:13:21,173 - core.decorators - INFO - login_for_access_token took 0.4053s
+2025-04-01 19:13:21,173 - core.decorators - INFO - DONE 20250401191320763977: completed in 0.4053s
+2025-04-01 19:13:23,267 - main - INFO - WebSocket connection accepted
+2025-04-01 19:13:23,270 - main - INFO - WebSocket authenticated as admin
+2025-04-01 19:13:23,270 - main - INFO - WebSocket client connected: admin_2559531416704
+2025-04-01 19:13:23,327 - main - INFO - Received WebSocket message from admin_2559531416704: employee_id=1
+2025-04-01 19:13:23,687 - main - INFO - Received WebSocket message from admin_2559531416704: employee_id=2
+2025-04-01 19:13:24,011 - main - INFO - Received WebSocket message from admin_2559531416704: employee_id=3
+2025-04-01 19:13:24,356 - main - INFO - Received WebSocket message from admin_2559531416704: employee_id=4
+2025-04-01 19:13:24,671 - main - INFO - Received WebSocket message from admin_2559531416704: employee_id=5
+2025-04-01 19:13:24,998 - main - INFO - Received WebSocket message from admin_2559531416704: employee_id=6
+2025-04-01 19:13:25,392 - main - INFO - Received WebSocket message from admin_2559531416704: employee_id=7
+2025-04-01 19:13:25,714 - main - INFO - Received WebSocket message from admin_2559531416704: employee_id=8
+2025-04-01 19:13:26,037 - main - INFO - Received WebSocket message from admin_2559531416704: employee_id=9
+2025-04-01 19:13:26,352 - main - INFO - Received WebSocket message from admin_2559531416704: employee_id=10
+2025-04-01 19:13:26,710 - main - INFO - Received WebSocket message from admin_2559531416704: employee_id=11
+2025-04-01 19:13:27,038 - main - INFO - Received WebSocket message from admin_2559531416704: employee_id=12
+2025-04-01 19:13:27,362 - main - INFO - Received WebSocket message from admin_2559531416704: employee_id=13
+2025-04-01 19:13:27,675 - main - INFO - Received WebSocket message from admin_2559531416704: employee_id=14
+2025-04-01 19:13:27,990 - main - INFO - Received WebSocket message from admin_2559531416704: employee_id=15
+2025-04-01 19:13:28,317 - main - INFO - Received WebSocket message from admin_2559531416704: employee_id=16
+2025-04-01 19:13:28,650 - main - INFO - Received WebSocket message from admin_2559531416704: employee_id=17
+2025-04-01 19:13:28,968 - main - INFO - Received WebSocket message from admin_2559531416704: employee_id=18
+2025-04-01 19:13:29,306 - main - INFO - Received WebSocket message from admin_2559531416704: employee_id=19
+2025-04-01 19:13:29,660 - main - INFO - Received WebSocket message from admin_2559531416704: employee_id=20
+2025-04-01 19:13:30,487 - main - INFO - Received WebSocket message from admin_2559531416704: employee_id=21
+2025-04-01 19:13:30,815 - main - INFO - Received WebSocket message from admin_2559531416704: employee_id=22
+2025-04-01 19:13:31,139 - main - INFO - Received WebSocket message from admin_2559531416704: employee_id=23
+2025-04-01 19:13:31,455 - main - INFO - Received WebSocket message from admin_2559531416704: employee_id=24
+2025-04-01 19:13:31,772 - main - INFO - Received WebSocket message from admin_2559531416704: employee_id=25
+2025-04-01 19:13:32,136 - main - INFO - Received WebSocket message from admin_2559531416704: employee_id=26
+2025-04-01 19:13:32,459 - main - INFO - Received WebSocket message from admin_2559531416704: employee_id=27
+2025-04-01 19:13:32,793 - main - INFO - Received WebSocket message from admin_2559531416704: employee_id=28
+2025-04-01 19:13:33,112 - main - INFO - Received WebSocket message from admin_2559531416704: employee_id=29
+2025-04-01 19:13:33,443 - main - INFO - Received WebSocket message from admin_2559531416704: employee_id=30
+2025-04-01 19:13:33,767 - main - INFO - Received WebSocket message from admin_2559531416704: employee_id=31
+2025-04-01 19:13:34,084 - main - INFO - Received WebSocket message from admin_2559531416704: employee_id=32
+2025-04-01 19:13:34,414 - main - INFO - Received WebSocket message from admin_2559531416704: employee_id=33
+2025-04-01 19:13:34,742 - main - INFO - Received WebSocket message from admin_2559531416704: employee_id=34
+2025-04-01 19:13:35,076 - main - INFO - Received WebSocket message from admin_2559531416704: employee_id=35
+2025-04-01 19:13:35,425 - main - INFO - Received WebSocket message from admin_2559531416704: employee_id=36
+2025-04-01 19:13:35,763 - main - INFO - Received WebSocket message from admin_2559531416704: employee_id=37
+2025-04-01 19:13:36,089 - main - INFO - Received WebSocket message from admin_2559531416704: employee_id=38
+2025-04-01 19:13:36,402 - main - INFO - Received WebSocket message from admin_2559531416704: employee_id=39
+2025-04-01 19:13:36,747 - main - INFO - Received WebSocket message from admin_2559531416704: employee_id=40
+2025-04-01 19:13:37,583 - main - INFO - Received WebSocket message from admin_2559531416704: employee_id=41
+2025-04-01 19:13:37,909 - main - INFO - Received WebSocket message from admin_2559531416704: employee_id=42
+2025-04-01 19:13:38,235 - main - INFO - Received WebSocket message from admin_2559531416704: employee_id=43
+2025-04-01 19:13:38,551 - main - INFO - Received WebSocket message from admin_2559531416704: employee_id=44
+2025-04-01 19:13:38,875 - main - INFO - Received WebSocket message from admin_2559531416704: employee_id=45
+2025-04-01 19:13:39,198 - main - INFO - Received WebSocket message from admin_2559531416704: employee_id=46
+2025-04-01 19:13:39,525 - main - INFO - Received WebSocket message from admin_2559531416704: employee_id=47
+2025-04-01 19:13:39,854 - main - INFO - Received WebSocket message from admin_2559531416704: employee_id=48
+2025-04-01 19:13:40,235 - main - INFO - Received WebSocket message from admin_2559531416704: employee_id=49
+2025-04-01 19:13:40,563 - main - INFO - Received WebSocket message from admin_2559531416704: employee_id=50
+2025-04-01 19:13:40,869 - main - INFO - Received WebSocket message from admin_2559531416704: employee_id=51
+2025-04-01 19:13:41,197 - main - INFO - Received WebSocket message from admin_2559531416704: employee_id=52
+2025-04-01 19:13:41,542 - main - INFO - WebSocket client disconnected: admin_2559531416704
+2025-04-01 19:14:59,309 - core.decorators - INFO - FUNC 20250401191459309397: login_for_access_token called
+2025-04-01 19:14:59,735 - core.decorators - INFO - login_for_access_token took 0.4253s
+2025-04-01 19:14:59,735 - core.decorators - INFO - DONE 20250401191459309397: completed in 0.4253s
+2025-04-01 19:15:01,845 - main - INFO - WebSocket connection accepted
+2025-04-01 19:15:01,846 - main - INFO - WebSocket authenticated as admin
+2025-04-01 19:15:01,846 - main - INFO - WebSocket client connected: admin_2559532649312
+2025-04-01 19:15:01,917 - main - INFO - Received WebSocket message from admin_2559532649312: employee_id=1
+2025-04-01 19:15:03,179 - main - INFO - Successfully created employee 1 via WebSocket
+2025-04-01 19:15:03,497 - main - INFO - Received WebSocket message from admin_2559532649312: employee_id=2
+2025-04-01 19:15:05,316 - main - INFO - Successfully created employee 2 via WebSocket
+2025-04-01 19:15:05,637 - main - INFO - Received WebSocket message from admin_2559532649312: employee_id=3
+2025-04-01 19:15:06,656 - main - INFO - Successfully created employee 3 via WebSocket
+2025-04-01 19:15:06,982 - main - INFO - Received WebSocket message from admin_2559532649312: employee_id=4
+2025-04-01 19:15:07,854 - main - INFO - Successfully created employee 4 via WebSocket
+2025-04-01 19:15:08,157 - main - INFO - Received WebSocket message from admin_2559532649312: employee_id=5
+2025-04-01 19:15:10,032 - main - INFO - Successfully created employee 5 via WebSocket
+2025-04-01 19:15:10,346 - main - INFO - Received WebSocket message from admin_2559532649312: employee_id=6
+2025-04-01 19:15:11,122 - main - INFO - Successfully created employee 6 via WebSocket
+2025-04-01 19:15:11,433 - main - INFO - Received WebSocket message from admin_2559532649312: employee_id=7
+2025-04-01 19:15:12,050 - main - INFO - Successfully created employee 7 via WebSocket
+2025-04-01 19:15:12,370 - main - INFO - Received WebSocket message from admin_2559532649312: employee_id=8
+2025-04-01 19:15:12,808 - main - INFO - Successfully created employee 8 via WebSocket
+2025-04-01 19:15:13,146 - main - INFO - Received WebSocket message from admin_2559532649312: employee_id=9
+2025-04-01 19:15:13,752 - main - INFO - Successfully created employee 9 via WebSocket
+2025-04-01 19:15:14,070 - main - INFO - Received WebSocket message from admin_2559532649312: employee_id=10
+2025-04-01 19:15:14,604 - main - INFO - Successfully created employee 10 via WebSocket
+2025-04-01 19:15:14,917 - main - INFO - Received WebSocket message from admin_2559532649312: employee_id=11
+2025-04-01 19:15:15,181 - main - INFO - Successfully created employee 11 via WebSocket
+2025-04-01 19:15:15,500 - main - INFO - Received WebSocket message from admin_2559532649312: employee_id=12
+2025-04-01 19:15:15,724 - main - INFO - Successfully created employee 12 via WebSocket
+2025-04-01 19:15:16,038 - main - INFO - Received WebSocket message from admin_2559532649312: employee_id=13
+2025-04-01 19:15:16,327 - main - INFO - Successfully created employee 13 via WebSocket
+2025-04-01 19:15:16,648 - main - INFO - Received WebSocket message from admin_2559532649312: employee_id=14
+2025-04-01 19:15:16,911 - main - INFO - Successfully created employee 14 via WebSocket
+2025-04-01 19:15:17,235 - main - INFO - Received WebSocket message from admin_2559532649312: employee_id=15
+2025-04-01 19:15:17,477 - main - INFO - Successfully created employee 15 via WebSocket
+2025-04-01 19:15:17,794 - main - INFO - Received WebSocket message from admin_2559532649312: employee_id=16
+2025-04-01 19:15:17,996 - main - INFO - Successfully created employee 16 via WebSocket
+2025-04-01 19:15:18,319 - main - INFO - Received WebSocket message from admin_2559532649312: employee_id=17
+2025-04-01 19:15:18,549 - main - INFO - Successfully created employee 17 via WebSocket
+2025-04-01 19:15:18,859 - main - INFO - Received WebSocket message from admin_2559532649312: employee_id=18
+2025-04-01 19:15:19,139 - main - INFO - Successfully created employee 18 via WebSocket
+2025-04-01 19:15:19,448 - main - INFO - Received WebSocket message from admin_2559532649312: employee_id=19
+2025-04-01 19:15:19,741 - main - INFO - Successfully created employee 19 via WebSocket
+2025-04-01 19:15:20,066 - main - INFO - Received WebSocket message from admin_2559532649312: employee_id=20
+2025-04-01 19:15:20,259 - main - INFO - Successfully created employee 20 via WebSocket
+2025-04-01 19:15:21,097 - main - INFO - Received WebSocket message from admin_2559532649312: employee_id=21
+2025-04-01 19:15:21,416 - main - INFO - Successfully created employee 21 via WebSocket
+2025-04-01 19:15:21,743 - main - INFO - Received WebSocket message from admin_2559532649312: employee_id=22
+2025-04-01 19:15:22,069 - main - INFO - Successfully created employee 22 via WebSocket
+2025-04-01 19:15:22,406 - main - INFO - Received WebSocket message from admin_2559532649312: employee_id=23
+2025-04-01 19:15:22,635 - main - INFO - Successfully created employee 23 via WebSocket
+2025-04-01 19:15:22,960 - main - INFO - Received WebSocket message from admin_2559532649312: employee_id=24
+2025-04-01 19:15:23,179 - main - INFO - Successfully created employee 24 via WebSocket
+2025-04-01 19:15:23,501 - main - INFO - Received WebSocket message from admin_2559532649312: employee_id=25
+2025-04-01 19:15:23,929 - main - INFO - Successfully created employee 25 via WebSocket
+2025-04-01 19:15:24,248 - main - INFO - Received WebSocket message from admin_2559532649312: employee_id=26
+2025-04-01 19:15:24,480 - main - INFO - Successfully created employee 26 via WebSocket
+2025-04-01 19:15:24,805 - main - INFO - Received WebSocket message from admin_2559532649312: employee_id=27
+2025-04-01 19:15:25,267 - main - INFO - Successfully created employee 27 via WebSocket
+2025-04-01 19:15:25,582 - main - INFO - Received WebSocket message from admin_2559532649312: employee_id=28
+2025-04-01 19:15:25,910 - main - INFO - Successfully created employee 28 via WebSocket
+2025-04-01 19:15:26,226 - main - INFO - Received WebSocket message from admin_2559532649312: employee_id=29
+2025-04-01 19:15:26,657 - main - INFO - Successfully created employee 29 via WebSocket
+2025-04-01 19:15:26,992 - main - INFO - Received WebSocket message from admin_2559532649312: employee_id=30
+2025-04-01 19:15:27,728 - main - INFO - Successfully created employee 30 via WebSocket
+2025-04-01 19:15:28,032 - main - INFO - Received WebSocket message from admin_2559532649312: employee_id=31
+2025-04-01 19:15:28,982 - main - ERROR - Database error processing WebSocket message: received 1000 (OK); then sent 1000 (OK)
+2025-04-01 19:15:28,983 - main - ERROR - Error processing WebSocket message: received 1000 (OK); then sent 1000 (OK)
+2025-04-01 19:15:28,984 - main - ERROR - WebSocket error: received 1000 (OK); then sent 1000 (OK)
+2025-04-01 19:36:22,498 - main - INFO - Shutting down, closing connections...
+2025-04-01 19:36:22,499 - core.database - INFO - Database connections closed
+2025-04-01 19:36:22,499 - main - INFO - Database connections closed
+2025-04-01 19:36:31,057 - main - INFO - Starting server...
+2025-04-01 19:39:11,161 - main - INFO - Shutting down, closing connections...
+2025-04-01 19:39:11,163 - core.database - INFO - Database connections closed
+2025-04-01 19:39:11,163 - main - INFO - Database connections closed
+2025-04-01 19:39:20,167 - main - INFO - Starting server...
+2025-04-01 19:39:52,470 - main - INFO - Shutting down, closing connections...
+2025-04-01 19:39:52,472 - core.database - INFO - Database connections closed
+2025-04-01 19:39:52,472 - main - INFO - Database connections closed

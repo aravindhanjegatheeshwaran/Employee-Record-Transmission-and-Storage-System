@@ -3309,3 +3309,350 @@ pip install aiokafka==0.8.1
 Or use HTTP mode with: --mode http
 2025-04-01 19:06:07,255 - __main__ - ERROR - Please install the required packages in requirements.txt
 2025-04-01 19:06:07,256 - __main__ - ERROR - You can use HTTP mode as a fallback: --mode http
+2025-04-01 19:13:17,817 - config - INFO - Configuration loaded: {
+  "SERVER_URL": "http://localhost:8000",
+  "COMM_MODE": "http",
+  "CSV_FILE_PATH": "./employee_data.csv",
+  "CSV_DELIMITER": ",",
+  "CSV_ENCODING": "utf-8",
+  "BATCH_SIZE": 50,
+  "MAX_RETRIES": 3,
+  "RETRY_DELAY": 1.0,
+  "TIMEOUT": 10.0,
+  "MAX_WORKERS": 10,
+  "KAFKA_BOOTSTRAP_SERVERS": "localhost:9092",
+  "KAFKA_TOPIC": "employee-records",
+  "WS_URL": "ws://localhost:8000/ws",
+  "AUTH_USERNAME": "admin"
+}
+2025-04-01 19:13:18,688 - __main__ - INFO - Starting transmission using websocket mode
+2025-04-01 19:13:18,689 - employee_client - INFO - Setting up CommunicationMode.WEBSOCKET client
+2025-04-01 19:13:18,690 - employee_client - INFO - Getting authentication token
+2025-04-01 19:13:21,173 - employee_client - INFO - Authentication successful
+2025-04-01 19:13:21,173 - employee_client - INFO - Opening WebSocket connection
+2025-04-01 19:13:23,273 - employee_client - INFO - WebSocket connected
+2025-04-01 19:13:23,274 - employee_client - INFO - Client ready
+2025-04-01 19:13:23,274 - employee_client - INFO - Reading CSV file: ./employee_data.csv
+2025-04-01 19:13:23,323 - employee_client - INFO - Found 1000 employee records
+2025-04-01 19:13:23,324 - employee_client - INFO - Processing batch 1/50 (20 records)
+2025-04-01 19:13:23,324 - employee_client - INFO - Using sequential processing for WebSocket mode
+2025-04-01 19:13:23,325 - employee_client - INFO - Sending employee 1 via WebSocket
+2025-04-01 19:13:23,480 - utils - INFO - send_employee_websocket completed in 0.1545s
+2025-04-01 19:13:23,686 - employee_client - INFO - Sending employee 2 via WebSocket
+2025-04-01 19:13:23,802 - utils - INFO - send_employee_websocket completed in 0.1166s
+2025-04-01 19:13:24,010 - employee_client - INFO - Sending employee 3 via WebSocket
+2025-04-01 19:13:24,140 - utils - INFO - send_employee_websocket completed in 0.1296s
+2025-04-01 19:13:24,356 - employee_client - INFO - Sending employee 4 via WebSocket
+2025-04-01 19:13:24,464 - utils - INFO - send_employee_websocket completed in 0.1086s
+2025-04-01 19:13:24,671 - employee_client - INFO - Sending employee 5 via WebSocket
+2025-04-01 19:13:24,785 - utils - INFO - send_employee_websocket completed in 0.1141s
+2025-04-01 19:13:24,996 - employee_client - INFO - Sending employee 6 via WebSocket
+2025-04-01 19:13:25,106 - utils - INFO - send_employee_websocket completed in 0.1101s
+2025-04-01 19:13:25,391 - employee_client - INFO - Sending employee 7 via WebSocket
+2025-04-01 19:13:25,498 - utils - INFO - send_employee_websocket completed in 0.1069s
+2025-04-01 19:13:25,712 - employee_client - INFO - Sending employee 8 via WebSocket
+2025-04-01 19:13:25,833 - utils - INFO - send_employee_websocket completed in 0.1207s
+2025-04-01 19:13:26,036 - employee_client - INFO - Sending employee 9 via WebSocket
+2025-04-01 19:13:26,143 - utils - INFO - send_employee_websocket completed in 0.1077s
+2025-04-01 19:13:26,351 - employee_client - INFO - Sending employee 10 via WebSocket
+2025-04-01 19:13:26,460 - utils - INFO - send_employee_websocket completed in 0.1094s
+2025-04-01 19:13:26,709 - employee_client - INFO - Sending employee 11 via WebSocket
+2025-04-01 19:13:26,830 - utils - INFO - send_employee_websocket completed in 0.1208s
+2025-04-01 19:13:27,035 - employee_client - INFO - Sending employee 12 via WebSocket
+2025-04-01 19:13:27,158 - utils - INFO - send_employee_websocket completed in 0.1230s
+2025-04-01 19:13:27,360 - employee_client - INFO - Sending employee 13 via WebSocket
+2025-04-01 19:13:27,469 - utils - INFO - send_employee_websocket completed in 0.1088s
+2025-04-01 19:13:27,674 - employee_client - INFO - Sending employee 14 via WebSocket
+2025-04-01 19:13:27,785 - utils - INFO - send_employee_websocket completed in 0.1107s
+2025-04-01 19:13:27,990 - employee_client - INFO - Sending employee 15 via WebSocket
+2025-04-01 19:13:28,100 - utils - INFO - send_employee_websocket completed in 0.1107s
+2025-04-01 19:13:28,316 - employee_client - INFO - Sending employee 16 via WebSocket
+2025-04-01 19:13:28,440 - utils - INFO - send_employee_websocket completed in 0.1245s
+2025-04-01 19:13:28,649 - employee_client - INFO - Sending employee 17 via WebSocket
+2025-04-01 19:13:28,759 - utils - INFO - send_employee_websocket completed in 0.1096s
+2025-04-01 19:13:28,966 - employee_client - INFO - Sending employee 18 via WebSocket
+2025-04-01 19:13:29,090 - utils - INFO - send_employee_websocket completed in 0.1239s
+2025-04-01 19:13:29,305 - employee_client - INFO - Sending employee 19 via WebSocket
+2025-04-01 19:13:29,416 - utils - INFO - send_employee_websocket completed in 0.1119s
+2025-04-01 19:13:29,656 - employee_client - INFO - Sending employee 20 via WebSocket
+2025-04-01 19:13:29,764 - utils - INFO - send_employee_websocket completed in 0.1082s
+2025-04-01 19:13:29,977 - employee_client - INFO - Batch 1 result: 20 ok, 0 failed
+2025-04-01 19:13:29,977 - employee_client - INFO - Waiting 0.5s before next batch...
+2025-04-01 19:13:30,484 - employee_client - INFO - Processing batch 2/50 (20 records)
+2025-04-01 19:13:30,485 - employee_client - INFO - Using sequential processing for WebSocket mode
+2025-04-01 19:13:30,485 - employee_client - INFO - Sending employee 21 via WebSocket
+2025-04-01 19:13:30,608 - utils - INFO - send_employee_websocket completed in 0.1226s
+2025-04-01 19:13:30,814 - employee_client - INFO - Sending employee 22 via WebSocket
+2025-04-01 19:13:30,926 - utils - INFO - send_employee_websocket completed in 0.1124s
+2025-04-01 19:13:31,138 - employee_client - INFO - Sending employee 23 via WebSocket
+2025-04-01 19:13:31,247 - utils - INFO - send_employee_websocket completed in 0.1093s
+2025-04-01 19:13:31,454 - employee_client - INFO - Sending employee 24 via WebSocket
+2025-04-01 19:13:31,563 - utils - INFO - send_employee_websocket completed in 0.1087s
+2025-04-01 19:13:31,771 - employee_client - INFO - Sending employee 25 via WebSocket
+2025-04-01 19:13:31,891 - utils - INFO - send_employee_websocket completed in 0.1204s
+2025-04-01 19:13:32,135 - employee_client - INFO - Sending employee 26 via WebSocket
+2025-04-01 19:13:32,254 - utils - INFO - send_employee_websocket completed in 0.1193s
+2025-04-01 19:13:32,458 - employee_client - INFO - Sending employee 27 via WebSocket
+2025-04-01 19:13:32,580 - utils - INFO - send_employee_websocket completed in 0.1223s
+2025-04-01 19:13:32,792 - employee_client - INFO - Sending employee 28 via WebSocket
+2025-04-01 19:13:32,902 - utils - INFO - send_employee_websocket completed in 0.1097s
+2025-04-01 19:13:33,112 - employee_client - INFO - Sending employee 29 via WebSocket
+2025-04-01 19:13:33,227 - utils - INFO - send_employee_websocket completed in 0.1148s
+2025-04-01 19:13:33,442 - employee_client - INFO - Sending employee 30 via WebSocket
+2025-04-01 19:13:33,562 - utils - INFO - send_employee_websocket completed in 0.1200s
+2025-04-01 19:13:33,766 - employee_client - INFO - Sending employee 31 via WebSocket
+2025-04-01 19:13:33,878 - utils - INFO - send_employee_websocket completed in 0.1116s
+2025-04-01 19:13:34,083 - employee_client - INFO - Sending employee 32 via WebSocket
+2025-04-01 19:13:34,201 - utils - INFO - send_employee_websocket completed in 0.1181s
+2025-04-01 19:13:34,413 - employee_client - INFO - Sending employee 33 via WebSocket
+2025-04-01 19:13:34,537 - utils - INFO - send_employee_websocket completed in 0.1240s
+2025-04-01 19:13:34,740 - employee_client - INFO - Sending employee 34 via WebSocket
+2025-04-01 19:13:34,867 - utils - INFO - send_employee_websocket completed in 0.1276s
+2025-04-01 19:13:35,075 - employee_client - INFO - Sending employee 35 via WebSocket
+2025-04-01 19:13:35,187 - utils - INFO - send_employee_websocket completed in 0.1118s
+2025-04-01 19:13:35,413 - employee_client - INFO - Sending employee 36 via WebSocket
+2025-04-01 19:13:35,545 - utils - INFO - send_employee_websocket completed in 0.1317s
+2025-04-01 19:13:35,762 - employee_client - INFO - Sending employee 37 via WebSocket
+2025-04-01 19:13:35,876 - utils - INFO - send_employee_websocket completed in 0.1141s
+2025-04-01 19:13:36,088 - employee_client - INFO - Sending employee 38 via WebSocket
+2025-04-01 19:13:36,197 - utils - INFO - send_employee_websocket completed in 0.1086s
+2025-04-01 19:13:36,401 - employee_client - INFO - Sending employee 39 via WebSocket
+2025-04-01 19:13:36,531 - utils - INFO - send_employee_websocket completed in 0.1302s
+2025-04-01 19:13:36,746 - employee_client - INFO - Sending employee 40 via WebSocket
+2025-04-01 19:13:36,854 - utils - INFO - send_employee_websocket completed in 0.1074s
+2025-04-01 19:13:37,070 - employee_client - INFO - Batch 2 result: 20 ok, 0 failed
+2025-04-01 19:13:37,070 - employee_client - INFO - Waiting 0.5s before next batch...
+2025-04-01 19:13:37,580 - employee_client - INFO - Processing batch 3/50 (20 records)
+2025-04-01 19:13:37,580 - employee_client - INFO - Using sequential processing for WebSocket mode
+2025-04-01 19:13:37,581 - employee_client - INFO - Sending employee 41 via WebSocket
+2025-04-01 19:13:37,695 - utils - INFO - send_employee_websocket completed in 0.1141s
+2025-04-01 19:13:37,908 - employee_client - INFO - Sending employee 42 via WebSocket
+2025-04-01 19:13:38,029 - utils - INFO - send_employee_websocket completed in 0.1209s
+2025-04-01 19:13:38,234 - employee_client - INFO - Sending employee 43 via WebSocket
+2025-04-01 19:13:38,345 - utils - INFO - send_employee_websocket completed in 0.1112s
+2025-04-01 19:13:38,550 - employee_client - INFO - Sending employee 44 via WebSocket
+2025-04-01 19:13:38,662 - utils - INFO - send_employee_websocket completed in 0.1120s
+2025-04-01 19:13:38,873 - employee_client - INFO - Sending employee 45 via WebSocket
+2025-04-01 19:13:38,983 - utils - INFO - send_employee_websocket completed in 0.1099s
+2025-04-01 19:13:39,197 - employee_client - INFO - Sending employee 46 via WebSocket
+2025-04-01 19:13:39,316 - utils - INFO - send_employee_websocket completed in 0.1194s
+2025-04-01 19:13:39,525 - employee_client - INFO - Sending employee 47 via WebSocket
+2025-04-01 19:13:39,643 - utils - INFO - send_employee_websocket completed in 0.1175s
+2025-04-01 19:13:39,853 - employee_client - INFO - Sending employee 48 via WebSocket
+2025-04-01 19:13:39,964 - utils - INFO - send_employee_websocket completed in 0.1114s
+2025-04-01 19:13:40,174 - employee_client - INFO - Sending employee 49 via WebSocket
+2025-04-01 19:13:40,358 - utils - INFO - send_employee_websocket completed in 0.1838s
+2025-04-01 19:13:40,563 - employee_client - INFO - Sending employee 50 via WebSocket
+2025-04-01 19:13:40,665 - utils - INFO - send_employee_websocket completed in 0.1022s
+2025-04-01 19:13:40,869 - employee_client - INFO - Sending employee 51 via WebSocket
+2025-04-01 19:13:40,983 - utils - INFO - send_employee_websocket completed in 0.1143s
+2025-04-01 19:13:41,197 - employee_client - INFO - Sending employee 52 via WebSocket
+2025-04-01 19:13:41,307 - utils - INFO - send_employee_websocket completed in 0.1106s
+2025-04-01 19:13:41,513 - employee_client - INFO - Cleaning up resources
+2025-04-01 19:13:41,542 - employee_client - INFO - Resources released
+2025-04-01 19:13:41,544 - __main__ - INFO - Process interrupted by user
+2025-04-01 19:14:56,612 - config - INFO - Configuration loaded: {
+  "SERVER_URL": "http://localhost:8000",
+  "COMM_MODE": "http",
+  "CSV_FILE_PATH": "./employee_data.csv",
+  "CSV_DELIMITER": ",",
+  "CSV_ENCODING": "utf-8",
+  "BATCH_SIZE": 50,
+  "MAX_RETRIES": 3,
+  "RETRY_DELAY": 1.0,
+  "TIMEOUT": 10.0,
+  "MAX_WORKERS": 10,
+  "KAFKA_BOOTSTRAP_SERVERS": "localhost:9092",
+  "KAFKA_TOPIC": "employee-records",
+  "WS_URL": "ws://localhost:8000/ws",
+  "AUTH_USERNAME": "admin"
+}
+2025-04-01 19:14:57,266 - __main__ - INFO - Starting transmission using websocket mode
+2025-04-01 19:14:57,267 - employee_client - INFO - Setting up CommunicationMode.WEBSOCKET client
+2025-04-01 19:14:57,268 - employee_client - INFO - Getting authentication token
+2025-04-01 19:14:59,735 - employee_client - INFO - Authentication successful
+2025-04-01 19:14:59,735 - employee_client - INFO - Opening WebSocket connection
+2025-04-01 19:15:01,848 - employee_client - INFO - WebSocket connected
+2025-04-01 19:15:01,848 - employee_client - INFO - Client ready
+2025-04-01 19:15:01,849 - employee_client - INFO - Reading CSV file: ./employee_data.csv
+2025-04-01 19:15:01,914 - employee_client - INFO - Found 1000 employee records
+2025-04-01 19:15:01,914 - employee_client - INFO - Processing batch 1/50 (20 records)
+2025-04-01 19:15:01,915 - employee_client - INFO - Using sequential processing for WebSocket mode
+2025-04-01 19:15:01,916 - employee_client - INFO - Sending employee 1 via WebSocket
+2025-04-01 19:15:03,291 - utils - INFO - send_employee_websocket completed in 1.3753s
+2025-04-01 19:15:03,496 - employee_client - INFO - Sending employee 2 via WebSocket
+2025-04-01 19:15:05,421 - utils - INFO - send_employee_websocket completed in 1.9248s
+2025-04-01 19:15:05,635 - employee_client - INFO - Sending employee 3 via WebSocket
+2025-04-01 19:15:06,767 - utils - INFO - send_employee_websocket completed in 1.1311s
+2025-04-01 19:15:06,979 - employee_client - INFO - Sending employee 4 via WebSocket
+2025-04-01 19:15:07,955 - utils - INFO - send_employee_websocket completed in 0.9757s
+2025-04-01 19:15:08,156 - employee_client - INFO - Sending employee 5 via WebSocket
+2025-04-01 19:15:10,139 - utils - INFO - send_employee_websocket completed in 1.9831s
+2025-04-01 19:15:10,344 - employee_client - INFO - Sending employee 6 via WebSocket
+2025-04-01 19:15:11,226 - utils - INFO - send_employee_websocket completed in 0.8816s
+2025-04-01 19:15:11,431 - employee_client - INFO - Sending employee 7 via WebSocket
+2025-04-01 19:15:12,164 - utils - INFO - send_employee_websocket completed in 0.7330s
+2025-04-01 19:15:12,369 - employee_client - INFO - Sending employee 8 via WebSocket
+2025-04-01 19:15:12,937 - utils - INFO - send_employee_websocket completed in 0.5672s
+2025-04-01 19:15:13,145 - employee_client - INFO - Sending employee 9 via WebSocket
+2025-04-01 19:15:13,863 - utils - INFO - send_employee_websocket completed in 0.7185s
+2025-04-01 19:15:14,070 - employee_client - INFO - Sending employee 10 via WebSocket
+2025-04-01 19:15:14,709 - utils - INFO - send_employee_websocket completed in 0.6399s
+2025-04-01 19:15:14,915 - employee_client - INFO - Sending employee 11 via WebSocket
+2025-04-01 19:15:15,297 - utils - INFO - send_employee_websocket completed in 0.3824s
+2025-04-01 19:15:15,499 - employee_client - INFO - Sending employee 12 via WebSocket
+2025-04-01 19:15:15,833 - utils - INFO - send_employee_websocket completed in 0.3335s
+2025-04-01 19:15:16,036 - employee_client - INFO - Sending employee 13 via WebSocket
+2025-04-01 19:15:16,439 - utils - INFO - send_employee_websocket completed in 0.4027s
+2025-04-01 19:15:16,647 - employee_client - INFO - Sending employee 14 via WebSocket
+2025-04-01 19:15:17,021 - utils - INFO - send_employee_websocket completed in 0.3739s
+2025-04-01 19:15:17,235 - employee_client - INFO - Sending employee 15 via WebSocket
+2025-04-01 19:15:17,584 - utils - INFO - send_employee_websocket completed in 0.3491s
+2025-04-01 19:15:17,794 - employee_client - INFO - Sending employee 16 via WebSocket
+2025-04-01 19:15:18,113 - utils - INFO - send_employee_websocket completed in 0.3193s
+2025-04-01 19:15:18,318 - employee_client - INFO - Sending employee 17 via WebSocket
+2025-04-01 19:15:18,653 - utils - INFO - send_employee_websocket completed in 0.3358s
+2025-04-01 19:15:18,858 - employee_client - INFO - Sending employee 18 via WebSocket
+2025-04-01 19:15:19,242 - utils - INFO - send_employee_websocket completed in 0.3836s
+2025-04-01 19:15:19,446 - employee_client - INFO - Sending employee 19 via WebSocket
+2025-04-01 19:15:19,851 - utils - INFO - send_employee_websocket completed in 0.4048s
+2025-04-01 19:15:20,065 - employee_client - INFO - Sending employee 20 via WebSocket
+2025-04-01 19:15:20,375 - utils - INFO - send_employee_websocket completed in 0.3107s
+2025-04-01 19:15:20,589 - employee_client - INFO - Batch 1 result: 20 ok, 0 failed
+2025-04-01 19:15:20,590 - employee_client - INFO - Waiting 0.5s before next batch...
+2025-04-01 19:15:21,093 - employee_client - INFO - Processing batch 2/50 (20 records)
+2025-04-01 19:15:21,094 - employee_client - INFO - Using sequential processing for WebSocket mode
+2025-04-01 19:15:21,096 - employee_client - INFO - Sending employee 21 via WebSocket
+2025-04-01 19:15:21,523 - utils - INFO - send_employee_websocket completed in 0.4286s
+2025-04-01 19:15:21,742 - employee_client - INFO - Sending employee 22 via WebSocket
+2025-04-01 19:15:22,191 - utils - INFO - send_employee_websocket completed in 0.4491s
+2025-04-01 19:15:22,405 - employee_client - INFO - Sending employee 23 via WebSocket
+2025-04-01 19:15:22,743 - utils - INFO - send_employee_websocket completed in 0.3377s
+2025-04-01 19:15:22,959 - employee_client - INFO - Sending employee 24 via WebSocket
+2025-04-01 19:15:23,294 - utils - INFO - send_employee_websocket completed in 0.3351s
+2025-04-01 19:15:23,500 - employee_client - INFO - Sending employee 25 via WebSocket
+2025-04-01 19:15:24,031 - utils - INFO - send_employee_websocket completed in 0.5307s
+2025-04-01 19:15:24,247 - employee_client - INFO - Sending employee 26 via WebSocket
+2025-04-01 19:15:24,594 - utils - INFO - send_employee_websocket completed in 0.3472s
+2025-04-01 19:15:24,804 - employee_client - INFO - Sending employee 27 via WebSocket
+2025-04-01 19:15:25,375 - utils - INFO - send_employee_websocket completed in 0.5708s
+2025-04-01 19:15:25,581 - employee_client - INFO - Sending employee 28 via WebSocket
+2025-04-01 19:15:26,018 - utils - INFO - send_employee_websocket completed in 0.4371s
+2025-04-01 19:15:26,224 - employee_client - INFO - Sending employee 29 via WebSocket
+2025-04-01 19:15:26,773 - utils - INFO - send_employee_websocket completed in 0.5489s
+2025-04-01 19:15:26,990 - employee_client - INFO - Sending employee 30 via WebSocket
+2025-04-01 19:15:27,830 - utils - INFO - send_employee_websocket completed in 0.8396s
+2025-04-01 19:15:28,031 - employee_client - INFO - Sending employee 31 via WebSocket
+2025-04-01 19:15:28,072 - employee_client - INFO - Cleaning up resources
+2025-04-01 19:15:28,074 - employee_client - INFO - Resources released
+2025-04-01 19:15:28,077 - __main__ - INFO - Process interrupted by user
+2025-04-01 19:15:35,760 - config - INFO - Configuration loaded: {
+  "SERVER_URL": "http://localhost:8000",
+  "COMM_MODE": "http",
+  "CSV_FILE_PATH": "./employee_data.csv",
+  "CSV_DELIMITER": ",",
+  "CSV_ENCODING": "utf-8",
+  "BATCH_SIZE": 50,
+  "MAX_RETRIES": 3,
+  "RETRY_DELAY": 1.0,
+  "TIMEOUT": 10.0,
+  "MAX_WORKERS": 10,
+  "KAFKA_BOOTSTRAP_SERVERS": "localhost:9092",
+  "KAFKA_TOPIC": "employee-records",
+  "WS_URL": "ws://localhost:8000/ws",
+  "AUTH_USERNAME": "admin"
+}
+2025-04-01 19:15:36,293 - __main__ - INFO - Starting transmission using kafka mode
+2025-04-01 19:15:36,294 - __main__ - ERROR - Dependency error: Kafka support requires aiokafka package. Please install it with:
+pip install aiokafka==0.8.1
+Or use HTTP mode with: --mode http
+2025-04-01 19:15:36,294 - __main__ - ERROR - Please install the required packages in requirements.txt
+2025-04-01 19:15:36,295 - __main__ - ERROR - You can use HTTP mode as a fallback: --mode http
+2025-04-01 19:23:24,027 - config - INFO - Configuration loaded: {
+  "SERVER_URL": "http://localhost:8000",
+  "COMM_MODE": "http",
+  "CSV_FILE_PATH": "./employee_data.csv",
+  "CSV_DELIMITER": ",",
+  "CSV_ENCODING": "utf-8",
+  "BATCH_SIZE": 50,
+  "MAX_RETRIES": 3,
+  "RETRY_DELAY": 1.0,
+  "TIMEOUT": 10.0,
+  "MAX_WORKERS": 10,
+  "KAFKA_BOOTSTRAP_SERVERS": "localhost:9092",
+  "KAFKA_TOPIC": "employee-records",
+  "WS_URL": "ws://localhost:8000/ws",
+  "AUTH_USERNAME": "admin"
+}
+2025-04-01 19:23:24,852 - __main__ - INFO - Starting transmission using kafka mode
+2025-04-01 19:23:24,852 - __main__ - ERROR - Dependency error: Kafka support requires aiokafka package. Please install it with:
+pip install aiokafka==0.8.1
+Or use HTTP mode with: --mode http
+2025-04-01 19:23:24,852 - __main__ - ERROR - Please install the required packages in requirements.txt
+2025-04-01 19:23:24,852 - __main__ - ERROR - You can use HTTP mode as a fallback: --mode http
+2025-04-01 19:36:31,953 - config - INFO - Configuration loaded: {
+  "SERVER_URL": "http://localhost:8000",
+  "COMM_MODE": "http",
+  "CSV_FILE_PATH": "./employee_data.csv",
+  "CSV_DELIMITER": ",",
+  "CSV_ENCODING": "utf-8",
+  "BATCH_SIZE": 50,
+  "MAX_RETRIES": 3,
+  "RETRY_DELAY": 1.0,
+  "TIMEOUT": 10.0,
+  "MAX_WORKERS": 10,
+  "KAFKA_BOOTSTRAP_SERVERS": "localhost:9092",
+  "KAFKA_TOPIC": "employee-records",
+  "WS_URL": "ws://localhost:8000/ws",
+  "AUTH_USERNAME": "admin"
+}
+2025-04-01 19:36:32,544 - __main__ - INFO - Starting transmission using kafka mode
+2025-04-01 19:36:32,545 - __main__ - ERROR - Dependency error: Kafka support requires aiokafka package. Please install it with:
+pip install aiokafka==0.8.1
+Or use HTTP mode with: --mode http
+2025-04-01 19:36:32,546 - __main__ - ERROR - Please install the required packages in requirements.txt
+2025-04-01 19:36:32,547 - __main__ - ERROR - You can use HTTP mode as a fallback: --mode http
+2025-04-01 19:39:05,960 - config - INFO - Configuration loaded: {
+  "SERVER_URL": "http://localhost:8000",
+  "COMM_MODE": "http",
+  "CSV_FILE_PATH": "./employee_data.csv",
+  "CSV_DELIMITER": ",",
+  "CSV_ENCODING": "utf-8",
+  "BATCH_SIZE": 50,
+  "MAX_RETRIES": 3,
+  "RETRY_DELAY": 1.0,
+  "TIMEOUT": 10.0,
+  "MAX_WORKERS": 10,
+  "KAFKA_BOOTSTRAP_SERVERS": "kafka:9092",
+  "KAFKA_TOPIC": "employee-records",
+  "WS_URL": "ws://localhost:8000/ws",
+  "AUTH_USERNAME": "admin"
+}
+2025-04-01 19:39:06,724 - __main__ - INFO - Starting transmission using kafka mode
+2025-04-01 19:39:06,725 - __main__ - ERROR - Dependency error: Kafka support requires aiokafka package. Please install it with:
+pip install aiokafka==0.8.1
+Or use HTTP mode with: --mode http
+2025-04-01 19:39:06,726 - __main__ - ERROR - Please install the required packages in requirements.txt
+2025-04-01 19:39:06,726 - __main__ - ERROR - You can use HTTP mode as a fallback: --mode http
+2025-04-01 19:40:06,444 - config - INFO - Configuration loaded: {
+  "SERVER_URL": "http://localhost:8000",
+  "COMM_MODE": "http",
+  "CSV_FILE_PATH": "./employee_data.csv",
+  "CSV_DELIMITER": ",",
+  "CSV_ENCODING": "utf-8",
+  "BATCH_SIZE": 50,
+  "MAX_RETRIES": 3,
+  "RETRY_DELAY": 1.0,
+  "TIMEOUT": 10.0,
+  "MAX_WORKERS": 10,
+  "KAFKA_BOOTSTRAP_SERVERS": "kafka:9092",
+  "KAFKA_TOPIC": "employee-records",
+  "WS_URL": "ws://localhost:8000/ws",
+  "AUTH_USERNAME": "admin"
+}
+2025-04-01 19:40:06,907 - __main__ - INFO - Starting transmission using kafka mode
+2025-04-01 19:40:06,907 - __main__ - ERROR - Dependency error: Kafka support requires aiokafka package. Please install it with:
+pip install aiokafka==0.8.1
+Or use HTTP mode with: --mode http
+2025-04-01 19:40:06,908 - __main__ - ERROR - Please install the required packages in requirements.txt
+2025-04-01 19:40:06,909 - __main__ - ERROR - You can use HTTP mode as a fallback: --mode http

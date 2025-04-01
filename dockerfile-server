@@ -21,7 +21,6 @@ RUN apt-get update \
 # Install Python dependencies
 COPY server/requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
-RUN pip install aiokafka==0.8.1
 
 # Copy project files
 COPY server/ .
