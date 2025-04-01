@@ -86,18 +86,41 @@ docker-compose --version
   - Check the server logs to ensure the WebSocket endpoint is properly registered
 
 - If you encounter a "Kafka support requires aiokafka package" error:
-  - Install the required package:
+  - Install the required package with PIP:
     ```bash
+    # Make sure you're in the client's virtual environment
+    cd client
+    # Windows:
+    .\env\Scripts\activate
+    # Linux/Mac:
+    source env/bin/activate
+    
+    # Install the package
     pip install aiokafka==0.8.1
     ```
-  - Or, when using Docker, make sure the packages are properly installed in the image
+  - Or use HTTP mode instead:
+    ```bash
+    python main.py --mode http
+    ```
+  - NOTE: All required packages are already listed in requirements.txt - they may need to be installed separately
 
 - If you encounter a "WebSocket support requires websockets package" error:
-  - Install the required package:
+  - Install the required package with PIP:
     ```bash
+    # Make sure you're in the client's virtual environment
+    cd client
+    # Windows:
+    .\env\Scripts\activate
+    # Linux/Mac:
+    source env/bin/activate
+    
+    # Install the package
     pip install websockets==11.0.3
     ```
-  - Or, when using Docker, make sure the packages are properly installed in the image
+  - Or use HTTP mode instead:
+    ```bash
+    python main.py --mode http
+    ```
 
 10. To stop all services:
     docker-compose down

@@ -2650,3 +2650,662 @@ RuntimeError: Session is closed
 2025-04-01 18:47:45,258 - employee_client - INFO - Cleaning up resources
 2025-04-01 18:47:45,261 - employee_client - INFO - Resources released
 2025-04-01 18:47:45,270 - __main__ - INFO - Process interrupted by user
+2025-04-01 18:52:31,038 - config - INFO - Configuration loaded: {
+  "SERVER_URL": "http://localhost:8000",
+  "COMM_MODE": "http",
+  "CSV_FILE_PATH": "./employee_data.csv",
+  "CSV_DELIMITER": ",",
+  "CSV_ENCODING": "utf-8",
+  "BATCH_SIZE": 50,
+  "MAX_RETRIES": 3,
+  "RETRY_DELAY": 1.0,
+  "TIMEOUT": 10.0,
+  "MAX_WORKERS": 10,
+  "KAFKA_BOOTSTRAP_SERVERS": "localhost:9092",
+  "KAFKA_TOPIC": "employee-records",
+  "WS_URL": "ws://localhost:8000/ws",
+  "AUTH_USERNAME": "admin"
+}
+2025-04-01 18:52:31,529 - __main__ - INFO - Starting transmission using websocket mode
+2025-04-01 18:52:31,530 - employee_client - INFO - Setting up CommunicationMode.WEBSOCKET client
+2025-04-01 18:52:31,531 - employee_client - INFO - Getting authentication token
+2025-04-01 18:52:32,306 - employee_client - INFO - Authentication successful
+2025-04-01 18:52:32,306 - employee_client - INFO - Opening WebSocket connection
+2025-04-01 18:52:34,428 - employee_client - INFO - WebSocket connected
+2025-04-01 18:52:34,428 - employee_client - INFO - Client ready
+2025-04-01 18:52:34,428 - employee_client - INFO - Reading CSV file: ./employee_data.csv
+2025-04-01 18:52:34,499 - employee_client - INFO - Found 1000 employee records
+2025-04-01 18:52:34,502 - employee_client - INFO - Processing batch 1/20 (50 records)
+2025-04-01 18:52:34,504 - employee_client - ERROR - WebSocket transmission error: cannot call recv while another coroutine is already waiting for the next message
+2025-04-01 18:52:34,505 - utils - WARNING - Retry 1/3 after error: cannot call recv while another coroutine is already waiting for the next message
+2025-04-01 18:52:34,506 - employee_client - ERROR - WebSocket transmission error: cannot call recv while another coroutine is already waiting for the next message
+2025-04-01 18:52:34,508 - utils - WARNING - Retry 1/3 after error: cannot call recv while another coroutine is already waiting for the next message
+2025-04-01 18:52:34,509 - employee_client - ERROR - WebSocket transmission error: cannot call recv while another coroutine is already waiting for the next message
+2025-04-01 18:52:34,509 - utils - WARNING - Retry 1/3 after error: cannot call recv while another coroutine is already waiting for the next message
+2025-04-01 18:52:34,511 - employee_client - ERROR - WebSocket transmission error: cannot call recv while another coroutine is already waiting for the next message
+2025-04-01 18:52:34,512 - utils - WARNING - Retry 1/3 after error: cannot call recv while another coroutine is already waiting for the next message
+2025-04-01 18:52:34,513 - employee_client - ERROR - WebSocket transmission error: cannot call recv while another coroutine is already waiting for the next message
+2025-04-01 18:52:34,514 - utils - WARNING - Retry 1/3 after error: cannot call recv while another coroutine is already waiting for the next message
+2025-04-01 18:52:34,516 - employee_client - ERROR - WebSocket transmission error: cannot call recv while another coroutine is already waiting for the next message
+2025-04-01 18:52:34,517 - utils - WARNING - Retry 1/3 after error: cannot call recv while another coroutine is already waiting for the next message
+2025-04-01 18:52:34,518 - employee_client - ERROR - WebSocket transmission error: cannot call recv while another coroutine is already waiting for the next message
+2025-04-01 18:52:34,518 - utils - WARNING - Retry 1/3 after error: cannot call recv while another coroutine is already waiting for the next message
+2025-04-01 18:52:34,520 - employee_client - ERROR - WebSocket transmission error: cannot call recv while another coroutine is already waiting for the next message
+2025-04-01 18:52:34,521 - utils - WARNING - Retry 1/3 after error: cannot call recv while another coroutine is already waiting for the next message
+2025-04-01 18:52:34,521 - employee_client - ERROR - WebSocket transmission error: cannot call recv while another coroutine is already waiting for the next message
+2025-04-01 18:52:34,523 - utils - WARNING - Retry 1/3 after error: cannot call recv while another coroutine is already waiting for the next message
+2025-04-01 18:52:34,526 - employee_client - ERROR - WebSocket transmission error: received 1000 (OK); then sent 1000 (OK)
+2025-04-01 18:52:34,528 - employee_client - INFO - Reconnecting WebSocket...
+2025-04-01 18:52:34,528 - employee_client - INFO - Opening WebSocket connection
+2025-04-01 18:52:35,513 - employee_client - ERROR - WebSocket transmission error: received 1000 (OK); then sent 1000 (OK)
+2025-04-01 18:52:35,513 - employee_client - INFO - Reconnecting WebSocket...
+2025-04-01 18:52:35,513 - employee_client - INFO - Opening WebSocket connection
+2025-04-01 18:52:35,513 - employee_client - ERROR - WebSocket transmission error: received 1000 (OK); then sent 1000 (OK)
+2025-04-01 18:52:35,513 - employee_client - INFO - Reconnecting WebSocket...
+2025-04-01 18:52:35,513 - employee_client - INFO - Opening WebSocket connection
+2025-04-01 18:52:35,513 - employee_client - ERROR - WebSocket transmission error: received 1000 (OK); then sent 1000 (OK)
+2025-04-01 18:52:35,513 - employee_client - INFO - Reconnecting WebSocket...
+2025-04-01 18:52:35,513 - employee_client - INFO - Opening WebSocket connection
+2025-04-01 18:52:35,519 - employee_client - ERROR - WebSocket transmission error: received 1000 (OK); then sent 1000 (OK)
+2025-04-01 18:52:35,519 - employee_client - INFO - Reconnecting WebSocket...
+2025-04-01 18:52:35,519 - employee_client - INFO - Opening WebSocket connection
+2025-04-01 18:52:35,521 - employee_client - ERROR - WebSocket transmission error: received 1000 (OK); then sent 1000 (OK)
+2025-04-01 18:52:35,522 - employee_client - INFO - Reconnecting WebSocket...
+2025-04-01 18:52:35,523 - employee_client - INFO - Opening WebSocket connection
+2025-04-01 18:52:35,528 - employee_client - ERROR - WebSocket transmission error: received 1000 (OK); then sent 1000 (OK)
+2025-04-01 18:52:35,528 - employee_client - INFO - Reconnecting WebSocket...
+2025-04-01 18:52:35,532 - employee_client - INFO - Opening WebSocket connection
+2025-04-01 18:52:35,534 - employee_client - ERROR - WebSocket transmission error: received 1000 (OK); then sent 1000 (OK)
+2025-04-01 18:52:35,534 - employee_client - INFO - Reconnecting WebSocket...
+2025-04-01 18:52:35,535 - employee_client - INFO - Opening WebSocket connection
+2025-04-01 18:52:35,536 - employee_client - ERROR - WebSocket transmission error: received 1000 (OK); then sent 1000 (OK)
+2025-04-01 18:52:35,536 - employee_client - INFO - Reconnecting WebSocket...
+2025-04-01 18:52:35,537 - employee_client - INFO - Opening WebSocket connection
+2025-04-01 18:52:35,539 - employee_client - ERROR - WebSocket transmission error: received 1000 (OK); then sent 1000 (OK)
+2025-04-01 18:52:35,539 - employee_client - INFO - Reconnecting WebSocket...
+2025-04-01 18:52:35,539 - employee_client - INFO - Opening WebSocket connection
+2025-04-01 18:52:36,570 - employee_client - INFO - WebSocket connected
+2025-04-01 18:52:36,570 - utils - WARNING - Retry 1/3 after error: received 1000 (OK); then sent 1000 (OK)
+2025-04-01 18:52:37,572 - employee_client - ERROR - WebSocket transmission error: received 1000 (OK); then sent 1000 (OK)
+2025-04-01 18:52:37,572 - employee_client - INFO - Reconnecting WebSocket...
+2025-04-01 18:52:37,573 - employee_client - INFO - Opening WebSocket connection
+2025-04-01 18:52:37,600 - employee_client - INFO - WebSocket connected
+2025-04-01 18:52:37,600 - utils - WARNING - Retry 2/3 after error: received 1000 (OK); then sent 1000 (OK)
+2025-04-01 18:52:37,615 - employee_client - INFO - WebSocket connected
+2025-04-01 18:52:37,615 - utils - WARNING - Retry 2/3 after error: received 1000 (OK); then sent 1000 (OK)
+2025-04-01 18:52:37,615 - employee_client - INFO - WebSocket connected
+2025-04-01 18:52:37,615 - utils - WARNING - Retry 2/3 after error: received 1000 (OK); then sent 1000 (OK)
+2025-04-01 18:52:37,615 - employee_client - INFO - WebSocket connected
+2025-04-01 18:52:37,615 - utils - WARNING - Retry 2/3 after error: received 1000 (OK); then sent 1000 (OK)
+2025-04-01 18:52:37,622 - employee_client - INFO - WebSocket connected
+2025-04-01 18:52:37,622 - utils - WARNING - Retry 2/3 after error: received 1000 (OK); then sent 1000 (OK)
+2025-04-01 18:52:37,629 - employee_client - INFO - WebSocket connected
+2025-04-01 18:52:37,632 - utils - WARNING - Retry 2/3 after error: received 1000 (OK); then sent 1000 (OK)
+2025-04-01 18:52:37,632 - employee_client - INFO - WebSocket connected
+2025-04-01 18:52:37,632 - utils - WARNING - Retry 2/3 after error: received 1000 (OK); then sent 1000 (OK)
+2025-04-01 18:52:37,632 - employee_client - INFO - WebSocket connected
+2025-04-01 18:52:37,632 - utils - WARNING - Retry 2/3 after error: received 1000 (OK); then sent 1000 (OK)
+2025-04-01 18:52:37,632 - employee_client - INFO - WebSocket connected
+2025-04-01 18:52:37,632 - utils - WARNING - Retry 2/3 after error: received 1000 (OK); then sent 1000 (OK)
+2025-04-01 18:52:39,607 - employee_client - ERROR - WebSocket transmission error: received 1000 (OK); then sent 1000 (OK)
+2025-04-01 18:52:39,608 - employee_client - INFO - Reconnecting WebSocket...
+2025-04-01 18:52:39,610 - employee_client - INFO - Opening WebSocket connection
+2025-04-01 18:52:39,611 - employee_client - ERROR - WebSocket transmission error: received 1000 (OK); then sent 1000 (OK)
+2025-04-01 18:52:39,612 - employee_client - INFO - Reconnecting WebSocket...
+2025-04-01 18:52:39,612 - employee_client - INFO - Opening WebSocket connection
+2025-04-01 18:52:39,613 - employee_client - ERROR - WebSocket transmission error: received 1000 (OK); then sent 1000 (OK)
+2025-04-01 18:52:39,615 - employee_client - INFO - Reconnecting WebSocket...
+2025-04-01 18:52:39,615 - employee_client - INFO - Opening WebSocket connection
+2025-04-01 18:52:39,618 - employee_client - ERROR - WebSocket transmission error: received 1000 (OK); then sent 1000 (OK)
+2025-04-01 18:52:39,619 - employee_client - INFO - Reconnecting WebSocket...
+2025-04-01 18:52:39,619 - employee_client - INFO - Opening WebSocket connection
+2025-04-01 18:52:39,622 - employee_client - ERROR - WebSocket transmission error: received 1000 (OK); then sent 1000 (OK)
+2025-04-01 18:52:39,630 - employee_client - INFO - Reconnecting WebSocket...
+2025-04-01 18:52:39,633 - employee_client - INFO - Opening WebSocket connection
+2025-04-01 18:52:39,634 - employee_client - ERROR - WebSocket transmission error: received 1000 (OK); then sent 1000 (OK)
+2025-04-01 18:52:39,635 - employee_client - INFO - Reconnecting WebSocket...
+2025-04-01 18:52:39,635 - employee_client - INFO - Opening WebSocket connection
+2025-04-01 18:52:39,636 - employee_client - ERROR - WebSocket transmission error: received 1000 (OK); then sent 1000 (OK)
+2025-04-01 18:52:39,637 - employee_client - INFO - Reconnecting WebSocket...
+2025-04-01 18:52:39,638 - employee_client - INFO - Opening WebSocket connection
+2025-04-01 18:52:39,638 - employee_client - ERROR - WebSocket transmission error: received 1000 (OK); then sent 1000 (OK)
+2025-04-01 18:52:39,647 - employee_client - INFO - Reconnecting WebSocket...
+2025-04-01 18:52:39,648 - employee_client - INFO - Opening WebSocket connection
+2025-04-01 18:52:39,653 - employee_client - ERROR - WebSocket transmission error: received 1000 (OK); then sent 1000 (OK)
+2025-04-01 18:52:39,654 - employee_client - INFO - Reconnecting WebSocket...
+2025-04-01 18:52:39,654 - employee_client - INFO - Opening WebSocket connection
+2025-04-01 18:52:39,663 - employee_client - INFO - WebSocket connected
+2025-04-01 18:52:39,664 - utils - WARNING - Retry 2/3 after error: received 1000 (OK); then sent 1000 (OK)
+2025-04-01 18:52:41,679 - employee_client - ERROR - WebSocket transmission error: received 1000 (OK); then sent 1000 (OK)
+2025-04-01 18:52:41,679 - employee_client - INFO - Reconnecting WebSocket...
+2025-04-01 18:52:41,679 - employee_client - INFO - Opening WebSocket connection
+2025-04-01 18:52:41,695 - employee_client - INFO - WebSocket connected
+2025-04-01 18:52:41,695 - utils - WARNING - Retry 3/3 after error: received 1000 (OK); then sent 1000 (OK)
+2025-04-01 18:52:41,695 - employee_client - INFO - WebSocket connected
+2025-04-01 18:52:41,695 - utils - WARNING - Retry 3/3 after error: received 1000 (OK); then sent 1000 (OK)
+2025-04-01 18:52:41,703 - employee_client - INFO - WebSocket connected
+2025-04-01 18:52:41,703 - utils - WARNING - Retry 3/3 after error: received 1000 (OK); then sent 1000 (OK)
+2025-04-01 18:52:41,703 - employee_client - INFO - WebSocket connected
+2025-04-01 18:52:41,707 - utils - WARNING - Retry 3/3 after error: received 1000 (OK); then sent 1000 (OK)
+2025-04-01 18:52:41,725 - employee_client - INFO - WebSocket connected
+2025-04-01 18:52:41,727 - utils - WARNING - Retry 3/3 after error: received 1000 (OK); then sent 1000 (OK)
+2025-04-01 18:52:41,728 - employee_client - INFO - WebSocket connected
+2025-04-01 18:52:41,728 - utils - WARNING - Retry 3/3 after error: received 1000 (OK); then sent 1000 (OK)
+2025-04-01 18:52:41,731 - employee_client - INFO - WebSocket connected
+2025-04-01 18:52:41,732 - utils - WARNING - Retry 3/3 after error: received 1000 (OK); then sent 1000 (OK)
+2025-04-01 18:52:41,733 - employee_client - INFO - WebSocket connected
+2025-04-01 18:52:41,733 - utils - WARNING - Retry 3/3 after error: received 1000 (OK); then sent 1000 (OK)
+2025-04-01 18:52:41,740 - employee_client - INFO - WebSocket connected
+2025-04-01 18:52:41,741 - utils - WARNING - Retry 3/3 after error: received 1000 (OK); then sent 1000 (OK)
+2025-04-01 18:52:43,714 - employee_client - INFO - WebSocket connected
+2025-04-01 18:52:43,716 - utils - WARNING - Retry 3/3 after error: received 1000 (OK); then sent 1000 (OK)
+2025-04-01 18:52:45,693 - employee_client - ERROR - WebSocket transmission error: received 1000 (OK); then sent 1000 (OK)
+2025-04-01 18:52:45,696 - employee_client - INFO - Reconnecting WebSocket...
+2025-04-01 18:52:45,696 - employee_client - INFO - Opening WebSocket connection
+2025-04-01 18:52:45,697 - employee_client - ERROR - WebSocket transmission error: received 1000 (OK); then sent 1000 (OK)
+2025-04-01 18:52:45,699 - employee_client - INFO - Reconnecting WebSocket...
+2025-04-01 18:52:45,702 - employee_client - INFO - Opening WebSocket connection
+2025-04-01 18:52:45,706 - employee_client - ERROR - WebSocket transmission error: received 1000 (OK); then sent 1000 (OK)
+2025-04-01 18:52:45,709 - employee_client - INFO - Reconnecting WebSocket...
+2025-04-01 18:52:45,711 - employee_client - INFO - Opening WebSocket connection
+2025-04-01 18:52:45,713 - employee_client - ERROR - WebSocket transmission error: received 1000 (OK); then sent 1000 (OK)
+2025-04-01 18:52:45,718 - employee_client - INFO - Reconnecting WebSocket...
+2025-04-01 18:52:45,726 - employee_client - INFO - Opening WebSocket connection
+2025-04-01 18:52:45,741 - employee_client - ERROR - WebSocket transmission error: received 1000 (OK); then sent 1000 (OK)
+2025-04-01 18:52:45,746 - employee_client - INFO - Reconnecting WebSocket...
+2025-04-01 18:52:45,752 - employee_client - INFO - Opening WebSocket connection
+2025-04-01 18:52:45,753 - employee_client - ERROR - WebSocket transmission error: received 1000 (OK); then sent 1000 (OK)
+2025-04-01 18:52:45,756 - employee_client - INFO - Reconnecting WebSocket...
+2025-04-01 18:52:45,756 - employee_client - INFO - Opening WebSocket connection
+2025-04-01 18:52:45,758 - employee_client - ERROR - WebSocket transmission error: received 1000 (OK); then sent 1000 (OK)
+2025-04-01 18:52:45,759 - employee_client - INFO - Reconnecting WebSocket...
+2025-04-01 18:52:45,761 - employee_client - INFO - Opening WebSocket connection
+2025-04-01 18:52:45,762 - employee_client - ERROR - WebSocket transmission error: received 1000 (OK); then sent 1000 (OK)
+2025-04-01 18:52:45,764 - employee_client - INFO - Reconnecting WebSocket...
+2025-04-01 18:52:45,766 - employee_client - INFO - Opening WebSocket connection
+2025-04-01 18:52:45,767 - employee_client - ERROR - WebSocket transmission error: received 1000 (OK); then sent 1000 (OK)
+2025-04-01 18:52:45,768 - employee_client - INFO - Reconnecting WebSocket...
+2025-04-01 18:52:45,769 - employee_client - INFO - Opening WebSocket connection
+2025-04-01 18:52:47,726 - employee_client - ERROR - WebSocket transmission error: received 1000 (OK); then sent 1000 (OK)
+2025-04-01 18:52:47,727 - employee_client - INFO - Reconnecting WebSocket...
+2025-04-01 18:52:47,727 - employee_client - INFO - Opening WebSocket connection
+2025-04-01 18:52:47,771 - employee_client - INFO - WebSocket connected
+2025-04-01 18:52:47,771 - utils - ERROR - Max retries reached for send_employee_websocket
+2025-04-01 18:52:47,772 - utils - ERROR - send_employee_websocket failed after 13.2586s: received 1000 (OK); then sent 1000 (OK)
+2025-04-01 18:52:47,773 - employee_client - ERROR - CSV processing error: received 1000 (OK); then sent 1000 (OK)
+2025-04-01 18:52:47,773 - utils - ERROR - process_csv_file failed after 13.3446s: received 1000 (OK); then sent 1000 (OK)
+2025-04-01 18:52:47,774 - __main__ - ERROR - Error: received 1000 (OK); then sent 1000 (OK)
+2025-04-01 18:52:47,774 - employee_client - INFO - Cleaning up resources
+2025-04-01 18:52:47,775 - employee_client - INFO - WebSocket connected
+2025-04-01 18:52:47,775 - utils - ERROR - Max retries reached for send_employee_websocket
+2025-04-01 18:52:47,778 - utils - ERROR - send_employee_websocket failed after 13.2722s: received 1000 (OK); then sent 1000 (OK)
+2025-04-01 18:52:47,780 - employee_client - INFO - WebSocket connected
+2025-04-01 18:52:47,780 - utils - ERROR - Max retries reached for send_employee_websocket
+2025-04-01 18:52:47,781 - utils - ERROR - send_employee_websocket failed after 13.2651s: received 1000 (OK); then sent 1000 (OK)
+2025-04-01 18:52:47,783 - employee_client - ERROR - WebSocket transmission error: sent 1000 (OK); then received 1000 (OK)
+2025-04-01 18:52:47,783 - employee_client - INFO - Reconnecting WebSocket...
+2025-04-01 18:52:47,784 - employee_client - INFO - Opening WebSocket connection
+2025-04-01 18:52:47,785 - employee_client - INFO - Resources released
+2025-04-01 18:55:01,716 - config - INFO - Configuration loaded: {
+  "SERVER_URL": "http://localhost:8000",
+  "COMM_MODE": "http",
+  "CSV_FILE_PATH": "./employee_data.csv",
+  "CSV_DELIMITER": ",",
+  "CSV_ENCODING": "utf-8",
+  "BATCH_SIZE": 50,
+  "MAX_RETRIES": 3,
+  "RETRY_DELAY": 1.0,
+  "TIMEOUT": 10.0,
+  "MAX_WORKERS": 10,
+  "KAFKA_BOOTSTRAP_SERVERS": "localhost:9092",
+  "KAFKA_TOPIC": "employee-records",
+  "WS_URL": "ws://localhost:8000/ws",
+  "AUTH_USERNAME": "admin"
+}
+2025-04-01 18:55:02,547 - __main__ - INFO - Starting transmission using http mode
+2025-04-01 18:55:02,547 - employee_client - INFO - Setting up CommunicationMode.HTTP client
+2025-04-01 18:55:02,549 - employee_client - INFO - Getting authentication token
+2025-04-01 18:55:03,232 - employee_client - INFO - Authentication successful
+2025-04-01 18:55:03,232 - employee_client - INFO - Client ready
+2025-04-01 18:55:03,232 - employee_client - INFO - Reading CSV file: ./employee_data.csv
+2025-04-01 18:55:03,316 - employee_client - INFO - Found 1000 employee records
+2025-04-01 18:55:03,316 - employee_client - INFO - Processing batch 1/50 (20 records)
+2025-04-01 18:55:03,317 - employee_client - INFO - Sending employee data: {'employee_id': 1, 'name': 'Jivin Sanghvi', 'email': 'jayeshsachdeva@rau-shetty.com', 'department': 'Admin', 'designation': 'HR Executive', 'salary': 1494496, 'date_of_joining': '2023-03-24'}
+2025-04-01 18:55:03,374 - employee_client - INFO - Sending employee data: {'employee_id': 2, 'name': 'Ryan Bala', 'email': 'dhanush10@hotmail.com', 'department': 'Admin', 'designation': 'Senior Software Engineer', 'salary': 981164, 'date_of_joining': '2017-01-31'}
+2025-04-01 18:55:03,376 - employee_client - INFO - Sending employee data: {'employee_id': 5, 'name': 'Siya Kale', 'email': 'hariaarush@hotmail.com', 'department': 'HR', 'designation': 'Sales Executive', 'salary': 1223716, 'date_of_joining': '2017-09-03'}
+2025-04-01 18:55:03,377 - employee_client - INFO - Sending employee data: {'employee_id': 6, 'name': 'Charvi Kaur', 'email': 'shalvchandran@yahoo.com', 'department': 'Sales', 'designation': 'Finance Analyst', 'salary': 1612976, 'date_of_joining': '2018-04-16'}
+2025-04-01 18:55:03,379 - employee_client - INFO - Sending employee data: {'employee_id': 10, 'name': 'Ranbir Ravi', 'email': 'hazel37@dalia.info', 'department': 'Engineering', 'designation': 'HR Executive', 'salary': 1403010, 'date_of_joining': '2018-01-01'}
+2025-04-01 18:55:03,380 - employee_client - INFO - Sending employee data: {'employee_id': 9, 'name': 'Lavanya Kalla', 'email': 'iloyal@yahoo.com', 'department': 'IT', 'designation': 'Marketing Specialist', 'salary': 1270886, 'date_of_joining': '2019-03-31'}
+2025-04-01 18:55:03,404 - employee_client - INFO - Sending employee data: {'employee_id': 8, 'name': 'Adah Borde', 'email': 'wagarwal@ranganathan.info', 'department': 'HR', 'designation': 'Finance Analyst', 'salary': 1537758, 'date_of_joining': '2015-11-16'}
+2025-04-01 18:55:03,408 - employee_client - INFO - Sending employee data: {'employee_id': 3, 'name': 'Miraan Chacko', 'email': 'ddave@gmail.com', 'department': 'R&D', 'designation': 'HR Executive', 'salary': 1289428, 'date_of_joining': '2020-10-26'}
+2025-04-01 18:55:03,410 - employee_client - INFO - Sending employee data: {'employee_id': 4, 'name': 'Zain Handa', 'email': 'gopalaaina@lall.com', 'department': 'Sales', 'designation': 'Marketing Specialist', 'salary': 1927130, 'date_of_joining': '2017-09-15'}
+2025-04-01 18:55:03,413 - employee_client - INFO - Sending employee data: {'employee_id': 7, 'name': 'Aradhya Luthra', 'email': 'vasadivyansh@hotmail.com', 'department': 'IT', 'designation': 'Finance Analyst', 'salary': 1524128, 'date_of_joining': '2018-09-11'}
+2025-04-01 18:55:03,417 - employee_client - ERROR - HTTP transmission error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:03,421 - utils - WARNING - Retry 1/3 after error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:03,484 - employee_client - ERROR - HTTP transmission error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:03,484 - utils - WARNING - Retry 1/3 after error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:03,527 - employee_client - ERROR - HTTP transmission error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:03,528 - utils - WARNING - Retry 1/3 after error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:03,530 - employee_client - ERROR - HTTP transmission error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:03,532 - utils - WARNING - Retry 1/3 after error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:03,535 - employee_client - ERROR - HTTP transmission error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:03,535 - utils - WARNING - Retry 1/3 after error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:03,537 - employee_client - ERROR - HTTP transmission error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:03,537 - utils - WARNING - Retry 1/3 after error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:03,690 - employee_client - ERROR - HTTP transmission error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:03,691 - utils - WARNING - Retry 1/3 after error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:03,695 - employee_client - ERROR - HTTP transmission error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:03,696 - utils - WARNING - Retry 1/3 after error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:03,696 - employee_client - ERROR - HTTP transmission error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:03,698 - utils - WARNING - Retry 1/3 after error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:03,698 - employee_client - ERROR - HTTP transmission error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:03,700 - utils - WARNING - Retry 1/3 after error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:04,428 - employee_client - INFO - Sending employee data: {'employee_id': 1, 'name': 'Jivin Sanghvi', 'email': 'jayeshsachdeva@rau-shetty.com', 'department': 'Admin', 'designation': 'HR Executive', 'salary': 1494496, 'date_of_joining': '2023-03-24'}
+2025-04-01 18:55:04,445 - employee_client - ERROR - HTTP transmission error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:04,445 - utils - WARNING - Retry 2/3 after error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:04,493 - employee_client - INFO - Sending employee data: {'employee_id': 2, 'name': 'Ryan Bala', 'email': 'dhanush10@hotmail.com', 'department': 'Admin', 'designation': 'Senior Software Engineer', 'salary': 981164, 'date_of_joining': '2017-01-31'}
+2025-04-01 18:55:04,510 - employee_client - ERROR - HTTP transmission error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:04,511 - utils - WARNING - Retry 2/3 after error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:04,549 - employee_client - INFO - Sending employee data: {'employee_id': 3, 'name': 'Miraan Chacko', 'email': 'ddave@gmail.com', 'department': 'R&D', 'designation': 'HR Executive', 'salary': 1289428, 'date_of_joining': '2020-10-26'}
+2025-04-01 18:55:04,551 - employee_client - INFO - Sending employee data: {'employee_id': 7, 'name': 'Aradhya Luthra', 'email': 'vasadivyansh@hotmail.com', 'department': 'IT', 'designation': 'Finance Analyst', 'salary': 1524128, 'date_of_joining': '2018-09-11'}
+2025-04-01 18:55:04,552 - employee_client - INFO - Sending employee data: {'employee_id': 6, 'name': 'Charvi Kaur', 'email': 'shalvchandran@yahoo.com', 'department': 'Sales', 'designation': 'Finance Analyst', 'salary': 1612976, 'date_of_joining': '2018-04-16'}
+2025-04-01 18:55:04,554 - employee_client - INFO - Sending employee data: {'employee_id': 9, 'name': 'Lavanya Kalla', 'email': 'iloyal@yahoo.com', 'department': 'IT', 'designation': 'Marketing Specialist', 'salary': 1270886, 'date_of_joining': '2019-03-31'}
+2025-04-01 18:55:04,597 - employee_client - ERROR - HTTP transmission error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:04,598 - utils - WARNING - Retry 2/3 after error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:04,606 - employee_client - ERROR - HTTP transmission error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:04,607 - utils - WARNING - Retry 2/3 after error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:04,607 - employee_client - ERROR - HTTP transmission error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:04,609 - utils - WARNING - Retry 2/3 after error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:04,611 - employee_client - ERROR - HTTP transmission error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:04,612 - utils - WARNING - Retry 2/3 after error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:04,695 - employee_client - INFO - Sending employee data: {'employee_id': 8, 'name': 'Adah Borde', 'email': 'wagarwal@ranganathan.info', 'department': 'HR', 'designation': 'Finance Analyst', 'salary': 1537758, 'date_of_joining': '2015-11-16'}
+2025-04-01 18:55:04,697 - employee_client - INFO - Sending employee data: {'employee_id': 5, 'name': 'Siya Kale', 'email': 'hariaarush@hotmail.com', 'department': 'HR', 'designation': 'Sales Executive', 'salary': 1223716, 'date_of_joining': '2017-09-03'}
+2025-04-01 18:55:04,720 - employee_client - INFO - Sending employee data: {'employee_id': 10, 'name': 'Ranbir Ravi', 'email': 'hazel37@dalia.info', 'department': 'Engineering', 'designation': 'HR Executive', 'salary': 1403010, 'date_of_joining': '2018-01-01'}
+2025-04-01 18:55:04,748 - employee_client - INFO - Sending employee data: {'employee_id': 4, 'name': 'Zain Handa', 'email': 'gopalaaina@lall.com', 'department': 'Sales', 'designation': 'Marketing Specialist', 'salary': 1927130, 'date_of_joining': '2017-09-15'}
+2025-04-01 18:55:04,812 - employee_client - ERROR - HTTP transmission error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:04,822 - utils - WARNING - Retry 2/3 after error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:04,852 - employee_client - ERROR - HTTP transmission error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:04,862 - utils - WARNING - Retry 2/3 after error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:04,862 - employee_client - ERROR - HTTP transmission error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:04,868 - utils - WARNING - Retry 2/3 after error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:04,870 - employee_client - ERROR - HTTP transmission error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:04,871 - utils - WARNING - Retry 2/3 after error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:06,490 - employee_client - INFO - Sending employee data: {'employee_id': 1, 'name': 'Jivin Sanghvi', 'email': 'jayeshsachdeva@rau-shetty.com', 'department': 'Admin', 'designation': 'HR Executive', 'salary': 1494496, 'date_of_joining': '2023-03-24'}
+2025-04-01 18:55:06,497 - employee_client - INFO - Sending employee data: {'employee_id': 2, 'name': 'Ryan Bala', 'email': 'dhanush10@hotmail.com', 'department': 'Admin', 'designation': 'Senior Software Engineer', 'salary': 981164, 'date_of_joining': '2017-01-31'}
+2025-04-01 18:55:06,531 - employee_client - ERROR - HTTP transmission error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:06,533 - utils - WARNING - Retry 3/3 after error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:06,533 - employee_client - ERROR - HTTP transmission error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:06,533 - utils - WARNING - Retry 3/3 after error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:06,609 - employee_client - INFO - Sending employee data: {'employee_id': 3, 'name': 'Miraan Chacko', 'email': 'ddave@gmail.com', 'department': 'R&D', 'designation': 'HR Executive', 'salary': 1289428, 'date_of_joining': '2020-10-26'}
+2025-04-01 18:55:06,612 - employee_client - INFO - Sending employee data: {'employee_id': 7, 'name': 'Aradhya Luthra', 'email': 'vasadivyansh@hotmail.com', 'department': 'IT', 'designation': 'Finance Analyst', 'salary': 1524128, 'date_of_joining': '2018-09-11'}
+2025-04-01 18:55:06,614 - employee_client - INFO - Sending employee data: {'employee_id': 6, 'name': 'Charvi Kaur', 'email': 'shalvchandran@yahoo.com', 'department': 'Sales', 'designation': 'Finance Analyst', 'salary': 1612976, 'date_of_joining': '2018-04-16'}
+2025-04-01 18:55:06,614 - employee_client - INFO - Sending employee data: {'employee_id': 9, 'name': 'Lavanya Kalla', 'email': 'iloyal@yahoo.com', 'department': 'IT', 'designation': 'Marketing Specialist', 'salary': 1270886, 'date_of_joining': '2019-03-31'}
+2025-04-01 18:55:06,683 - employee_client - ERROR - HTTP transmission error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:06,685 - utils - WARNING - Retry 3/3 after error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:06,685 - employee_client - ERROR - HTTP transmission error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:06,685 - utils - WARNING - Retry 3/3 after error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:06,697 - employee_client - ERROR - HTTP transmission error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:06,697 - utils - WARNING - Retry 3/3 after error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:06,697 - employee_client - ERROR - HTTP transmission error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:06,703 - utils - WARNING - Retry 3/3 after error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:06,846 - employee_client - INFO - Sending employee data: {'employee_id': 5, 'name': 'Siya Kale', 'email': 'hariaarush@hotmail.com', 'department': 'HR', 'designation': 'Sales Executive', 'salary': 1223716, 'date_of_joining': '2017-09-03'}
+2025-04-01 18:55:06,876 - employee_client - INFO - Sending employee data: {'employee_id': 10, 'name': 'Ranbir Ravi', 'email': 'hazel37@dalia.info', 'department': 'Engineering', 'designation': 'HR Executive', 'salary': 1403010, 'date_of_joining': '2018-01-01'}
+2025-04-01 18:55:06,879 - employee_client - INFO - Sending employee data: {'employee_id': 8, 'name': 'Adah Borde', 'email': 'wagarwal@ranganathan.info', 'department': 'HR', 'designation': 'Finance Analyst', 'salary': 1537758, 'date_of_joining': '2015-11-16'}
+2025-04-01 18:55:06,882 - employee_client - INFO - Sending employee data: {'employee_id': 4, 'name': 'Zain Handa', 'email': 'gopalaaina@lall.com', 'department': 'Sales', 'designation': 'Marketing Specialist', 'salary': 1927130, 'date_of_joining': '2017-09-15'}
+2025-04-01 18:55:06,897 - employee_client - ERROR - HTTP transmission error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:06,897 - utils - WARNING - Retry 3/3 after error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:06,932 - employee_client - ERROR - HTTP transmission error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:06,932 - utils - WARNING - Retry 3/3 after error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:06,932 - employee_client - ERROR - HTTP transmission error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:06,934 - utils - WARNING - Retry 3/3 after error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:06,938 - employee_client - ERROR - HTTP transmission error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:06,939 - utils - WARNING - Retry 3/3 after error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:10,548 - employee_client - INFO - Sending employee data: {'employee_id': 2, 'name': 'Ryan Bala', 'email': 'dhanush10@hotmail.com', 'department': 'Admin', 'designation': 'Senior Software Engineer', 'salary': 981164, 'date_of_joining': '2017-01-31'}
+2025-04-01 18:55:10,549 - employee_client - INFO - Sending employee data: {'employee_id': 1, 'name': 'Jivin Sanghvi', 'email': 'jayeshsachdeva@rau-shetty.com', 'department': 'Admin', 'designation': 'HR Executive', 'salary': 1494496, 'date_of_joining': '2023-03-24'}
+2025-04-01 18:55:10,576 - employee_client - ERROR - HTTP transmission error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:10,576 - utils - ERROR - Max retries reached for send_employee_http
+2025-04-01 18:55:10,577 - utils - ERROR - send_employee_http failed after 7.2029s: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:10,578 - utils - ERROR - Task 1 failed: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:10,584 - employee_client - ERROR - HTTP transmission error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:10,585 - utils - ERROR - Max retries reached for send_employee_http
+2025-04-01 18:55:10,585 - utils - ERROR - send_employee_http failed after 7.2680s: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:10,586 - utils - ERROR - Task 0 failed: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:10,645 - employee_client - INFO - Sending employee data: {'employee_id': 11, 'name': 'Umang Mani', 'email': 'pdara@gmail.com', 'department': 'Operations', 'designation': 'Software Engineer', 'salary': 1746054, 'date_of_joining': '2019-07-27'}
+2025-04-01 18:55:10,652 - employee_client - INFO - Sending employee data: {'employee_id': 12, 'name': 'Renee Kannan', 'email': 'kalemannat@sagar.com', 'department': 'HR', 'designation': 'Senior Software Engineer', 'salary': 323342, 'date_of_joining': '2024-01-11'}
+2025-04-01 18:55:10,709 - employee_client - INFO - Sending employee data: {'employee_id': 9, 'name': 'Lavanya Kalla', 'email': 'iloyal@yahoo.com', 'department': 'IT', 'designation': 'Marketing Specialist', 'salary': 1270886, 'date_of_joining': '2019-03-31'}
+2025-04-01 18:55:10,713 - employee_client - INFO - Sending employee data: {'employee_id': 7, 'name': 'Aradhya Luthra', 'email': 'vasadivyansh@hotmail.com', 'department': 'IT', 'designation': 'Finance Analyst', 'salary': 1524128, 'date_of_joining': '2018-09-11'}
+2025-04-01 18:55:10,717 - employee_client - INFO - Sending employee data: {'employee_id': 6, 'name': 'Charvi Kaur', 'email': 'shalvchandran@yahoo.com', 'department': 'Sales', 'designation': 'Finance Analyst', 'salary': 1612976, 'date_of_joining': '2018-04-16'}
+2025-04-01 18:55:10,722 - employee_client - INFO - Sending employee data: {'employee_id': 3, 'name': 'Miraan Chacko', 'email': 'ddave@gmail.com', 'department': 'R&D', 'designation': 'HR Executive', 'salary': 1289428, 'date_of_joining': '2020-10-26'}
+2025-04-01 18:55:10,725 - employee_client - ERROR - HTTP transmission error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:10,735 - utils - WARNING - Retry 1/3 after error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:10,749 - employee_client - ERROR - HTTP transmission error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:10,758 - utils - WARNING - Retry 1/3 after error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:10,771 - employee_client - ERROR - HTTP transmission error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:10,773 - utils - ERROR - Max retries reached for send_employee_http
+2025-04-01 18:55:10,773 - utils - ERROR - send_employee_http failed after 7.3596s: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:10,774 - utils - ERROR - Task 6 failed: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:10,774 - employee_client - ERROR - HTTP transmission error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:10,774 - utils - ERROR - Max retries reached for send_employee_http
+2025-04-01 18:55:10,774 - utils - ERROR - send_employee_http failed after 7.3662s: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:10,777 - utils - ERROR - Task 2 failed: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:10,781 - employee_client - ERROR - HTTP transmission error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:10,782 - utils - ERROR - Max retries reached for send_employee_http
+2025-04-01 18:55:10,783 - utils - ERROR - send_employee_http failed after 7.4025s: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:10,784 - utils - ERROR - Task 8 failed: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:10,784 - employee_client - ERROR - HTTP transmission error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:10,785 - utils - ERROR - Max retries reached for send_employee_http
+2025-04-01 18:55:10,786 - utils - ERROR - send_employee_http failed after 7.4092s: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:10,786 - utils - ERROR - Task 5 failed: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:10,824 - employee_client - INFO - Sending employee data: {'employee_id': 13, 'name': 'Nitara Borde', 'email': 'priyanshsinha@yahoo.com', 'department': 'Operations', 'designation': 'Senior Software Engineer', 'salary': 661509, 'date_of_joining': '2022-03-12'}
+2025-04-01 18:55:10,826 - employee_client - INFO - Sending employee data: {'employee_id': 14, 'name': 'Jayant Bir', 'email': 'neysaghosh@arya.com', 'department': 'IT', 'designation': 'Senior Software Engineer', 'salary': 1629811, 'date_of_joining': '2020-08-28'}
+2025-04-01 18:55:10,828 - employee_client - INFO - Sending employee data: {'employee_id': 15, 'name': 'Taran Sarna', 'email': 'fbhandari@wagle.com', 'department': 'HR', 'designation': 'Manager', 'salary': 1522595, 'date_of_joining': '2019-06-05'}
+2025-04-01 18:55:10,834 - employee_client - INFO - Sending employee data: {'employee_id': 16, 'name': 'Zara Varma', 'email': 'gatik74@sachar.com', 'department': 'R&D', 'designation': 'Manager', 'salary': 1156750, 'date_of_joining': '2025-01-29'}
+2025-04-01 18:55:10,858 - employee_client - ERROR - HTTP transmission error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:10,859 - utils - WARNING - Retry 1/3 after error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:10,859 - employee_client - ERROR - HTTP transmission error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:10,860 - utils - WARNING - Retry 1/3 after error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:10,878 - employee_client - ERROR - HTTP transmission error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:10,878 - utils - WARNING - Retry 1/3 after error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:10,878 - employee_client - ERROR - HTTP transmission error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:10,878 - utils - WARNING - Retry 1/3 after error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:10,904 - employee_client - INFO - Sending employee data: {'employee_id': 5, 'name': 'Siya Kale', 'email': 'hariaarush@hotmail.com', 'department': 'HR', 'designation': 'Sales Executive', 'salary': 1223716, 'date_of_joining': '2017-09-03'}
+2025-04-01 18:55:10,935 - employee_client - INFO - Sending employee data: {'employee_id': 4, 'name': 'Zain Handa', 'email': 'gopalaaina@lall.com', 'department': 'Sales', 'designation': 'Marketing Specialist', 'salary': 1927130, 'date_of_joining': '2017-09-15'}
+2025-04-01 18:55:10,938 - employee_client - ERROR - HTTP transmission error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:10,939 - utils - ERROR - Max retries reached for send_employee_http
+2025-04-01 18:55:10,940 - utils - ERROR - send_employee_http failed after 7.5644s: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:10,941 - utils - ERROR - Task 4 failed: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:10,941 - employee_client - INFO - Sending employee data: {'employee_id': 10, 'name': 'Ranbir Ravi', 'email': 'hazel37@dalia.info', 'department': 'Engineering', 'designation': 'HR Executive', 'salary': 1403010, 'date_of_joining': '2018-01-01'}
+2025-04-01 18:55:10,942 - employee_client - INFO - Sending employee data: {'employee_id': 8, 'name': 'Adah Borde', 'email': 'wagarwal@ranganathan.info', 'department': 'HR', 'designation': 'Finance Analyst', 'salary': 1537758, 'date_of_joining': '2015-11-16'}
+2025-04-01 18:55:10,971 - employee_client - ERROR - HTTP transmission error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:10,971 - utils - ERROR - Max retries reached for send_employee_http
+2025-04-01 18:55:10,972 - utils - ERROR - send_employee_http failed after 7.5620s: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:10,972 - utils - ERROR - Task 3 failed: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:10,991 - employee_client - INFO - Sending employee data: {'employee_id': 17, 'name': 'Zara Sankaran', 'email': 'yramachandran@sur.biz', 'department': 'Engineering', 'designation': 'Admin Assistant', 'salary': 1244948, 'date_of_joining': '2018-10-26'}
+2025-04-01 18:55:10,993 - employee_client - ERROR - HTTP transmission error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:10,994 - utils - ERROR - Max retries reached for send_employee_http
+2025-04-01 18:55:10,995 - utils - ERROR - send_employee_http failed after 7.6164s: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:10,995 - utils - ERROR - Task 9 failed: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:11,017 - employee_client - INFO - Sending employee data: {'employee_id': 18, 'name': 'Jayan Ganesh', 'email': 'veerdugal@dugar.com', 'department': 'R&D', 'designation': 'Software Engineer', 'salary': 737680, 'date_of_joining': '2023-07-18'}
+2025-04-01 18:55:11,017 - employee_client - ERROR - HTTP transmission error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:11,017 - utils - ERROR - Max retries reached for send_employee_http
+2025-04-01 18:55:11,017 - utils - ERROR - send_employee_http failed after 7.6126s: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:11,017 - utils - ERROR - Task 7 failed: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:11,037 - employee_client - INFO - Sending employee data: {'employee_id': 19, 'name': 'Kiaan Chaudhary', 'email': 'yasminraja@yahoo.com', 'department': 'Admin', 'designation': 'Admin Assistant', 'salary': 323512, 'date_of_joining': '2022-04-14'}
+2025-04-01 18:55:11,056 - employee_client - ERROR - HTTP transmission error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:11,057 - utils - WARNING - Retry 1/3 after error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:11,081 - employee_client - INFO - Sending employee data: {'employee_id': 20, 'name': 'Zeeshan Bera', 'email': 'adira60@kamdar.net', 'department': 'Engineering', 'designation': 'Senior Software Engineer', 'salary': 332423, 'date_of_joining': '2016-03-13'}
+2025-04-01 18:55:11,083 - employee_client - ERROR - HTTP transmission error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:11,083 - utils - WARNING - Retry 1/3 after error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:11,133 - employee_client - ERROR - HTTP transmission error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:11,134 - utils - WARNING - Retry 1/3 after error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:11,144 - employee_client - ERROR - HTTP transmission error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:11,144 - utils - WARNING - Retry 1/3 after error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:11,768 - employee_client - INFO - Sending employee data: {'employee_id': 11, 'name': 'Umang Mani', 'email': 'pdara@gmail.com', 'department': 'Operations', 'designation': 'Software Engineer', 'salary': 1746054, 'date_of_joining': '2019-07-27'}
+2025-04-01 18:55:11,769 - employee_client - INFO - Sending employee data: {'employee_id': 12, 'name': 'Renee Kannan', 'email': 'kalemannat@sagar.com', 'department': 'HR', 'designation': 'Senior Software Engineer', 'salary': 323342, 'date_of_joining': '2024-01-11'}
+2025-04-01 18:55:11,792 - employee_client - ERROR - HTTP transmission error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:11,793 - utils - WARNING - Retry 2/3 after error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:11,793 - employee_client - ERROR - HTTP transmission error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:11,795 - utils - WARNING - Retry 2/3 after error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:11,861 - employee_client - INFO - Sending employee data: {'employee_id': 13, 'name': 'Nitara Borde', 'email': 'priyanshsinha@yahoo.com', 'department': 'Operations', 'designation': 'Senior Software Engineer', 'salary': 661509, 'date_of_joining': '2022-03-12'}
+2025-04-01 18:55:11,863 - employee_client - INFO - Sending employee data: {'employee_id': 14, 'name': 'Jayant Bir', 'email': 'neysaghosh@arya.com', 'department': 'IT', 'designation': 'Senior Software Engineer', 'salary': 1629811, 'date_of_joining': '2020-08-28'}
+2025-04-01 18:55:11,865 - employee_client - INFO - Sending employee data: {'employee_id': 15, 'name': 'Taran Sarna', 'email': 'fbhandari@wagle.com', 'department': 'HR', 'designation': 'Manager', 'salary': 1522595, 'date_of_joining': '2019-06-05'}
+2025-04-01 18:55:11,866 - employee_client - INFO - Sending employee data: {'employee_id': 16, 'name': 'Zara Varma', 'email': 'gatik74@sachar.com', 'department': 'R&D', 'designation': 'Manager', 'salary': 1156750, 'date_of_joining': '2025-01-29'}
+2025-04-01 18:55:11,911 - employee_client - ERROR - HTTP transmission error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:11,911 - utils - WARNING - Retry 2/3 after error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:11,916 - employee_client - ERROR - HTTP transmission error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:11,916 - utils - WARNING - Retry 2/3 after error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:11,916 - employee_client - ERROR - HTTP transmission error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:11,917 - utils - WARNING - Retry 2/3 after error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:11,917 - employee_client - ERROR - HTTP transmission error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:11,921 - utils - WARNING - Retry 2/3 after error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:12,048 - employee_client - INFO - Sending employee data: {'employee_id': 17, 'name': 'Zara Sankaran', 'email': 'yramachandran@sur.biz', 'department': 'Engineering', 'designation': 'Admin Assistant', 'salary': 1244948, 'date_of_joining': '2018-10-26'}
+2025-04-01 18:55:12,064 - employee_client - INFO - Sending employee data: {'employee_id': 18, 'name': 'Jayan Ganesh', 'email': 'veerdugal@dugar.com', 'department': 'R&D', 'designation': 'Software Engineer', 'salary': 737680, 'date_of_joining': '2023-07-18'}
+2025-04-01 18:55:12,067 - employee_client - ERROR - HTTP transmission error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:12,068 - utils - WARNING - Retry 2/3 after error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:12,083 - employee_client - ERROR - HTTP transmission error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:12,084 - utils - WARNING - Retry 2/3 after error: API error 500: {"detail":"Error creating employee: "}
+2025-04-01 18:55:12,128 - employee_client - INFO - Cleaning up resources
+2025-04-01 18:55:12,128 - employee_client - INFO - Resources released
+2025-04-01 18:55:12,140 - __main__ - INFO - Process interrupted by user
+2025-04-01 18:58:44,883 - config - INFO - Configuration loaded: {
+  "SERVER_URL": "http://localhost:8000",
+  "COMM_MODE": "http",
+  "CSV_FILE_PATH": "./employee_data.csv",
+  "CSV_DELIMITER": ",",
+  "CSV_ENCODING": "utf-8",
+  "BATCH_SIZE": 50,
+  "MAX_RETRIES": 3,
+  "RETRY_DELAY": 1.0,
+  "TIMEOUT": 10.0,
+  "MAX_WORKERS": 10,
+  "KAFKA_BOOTSTRAP_SERVERS": "localhost:9092",
+  "KAFKA_TOPIC": "employee-records",
+  "WS_URL": "ws://localhost:8000/ws",
+  "AUTH_USERNAME": "admin"
+}
+2025-04-01 18:58:45,507 - __main__ - INFO - Starting transmission using websocket mode
+2025-04-01 18:58:45,508 - employee_client - INFO - Setting up CommunicationMode.WEBSOCKET client
+2025-04-01 18:58:45,508 - employee_client - INFO - Getting authentication token
+2025-04-01 18:58:46,209 - employee_client - INFO - Authentication successful
+2025-04-01 18:58:46,209 - employee_client - INFO - Opening WebSocket connection
+2025-04-01 18:58:48,300 - employee_client - INFO - WebSocket connected
+2025-04-01 18:58:48,300 - employee_client - INFO - Client ready
+2025-04-01 18:58:48,300 - employee_client - INFO - Reading CSV file: ./employee_data.csv
+2025-04-01 18:58:48,353 - employee_client - INFO - Found 1000 employee records
+2025-04-01 18:58:48,354 - employee_client - INFO - Processing batch 1/50 (20 records)
+2025-04-01 18:58:48,355 - employee_client - INFO - Using sequential processing for WebSocket mode
+2025-04-01 18:58:48,356 - employee_client - INFO - Sending employee 1 via WebSocket
+2025-04-01 18:58:48,498 - utils - INFO - send_employee_websocket completed in 0.1427s
+2025-04-01 18:58:48,709 - employee_client - INFO - Sending employee 2 via WebSocket
+2025-04-01 18:58:48,819 - utils - INFO - send_employee_websocket completed in 0.1099s
+2025-04-01 18:58:49,025 - employee_client - INFO - Sending employee 3 via WebSocket
+2025-04-01 18:58:49,137 - utils - INFO - send_employee_websocket completed in 0.1121s
+2025-04-01 18:58:49,342 - employee_client - INFO - Sending employee 4 via WebSocket
+2025-04-01 18:58:49,452 - utils - INFO - send_employee_websocket completed in 0.1098s
+2025-04-01 18:58:49,666 - employee_client - INFO - Sending employee 5 via WebSocket
+2025-04-01 18:58:49,790 - utils - INFO - send_employee_websocket completed in 0.1236s
+2025-04-01 18:58:50,003 - employee_client - INFO - Sending employee 6 via WebSocket
+2025-04-01 18:58:50,113 - utils - INFO - send_employee_websocket completed in 0.1098s
+2025-04-01 18:58:50,318 - employee_client - INFO - Sending employee 7 via WebSocket
+2025-04-01 18:58:50,445 - utils - INFO - send_employee_websocket completed in 0.1267s
+2025-04-01 18:58:50,654 - employee_client - INFO - Sending employee 8 via WebSocket
+2025-04-01 18:58:50,764 - utils - INFO - send_employee_websocket completed in 0.1098s
+2025-04-01 18:58:50,976 - employee_client - INFO - Sending employee 9 via WebSocket
+2025-04-01 18:58:51,089 - utils - INFO - send_employee_websocket completed in 0.1125s
+2025-04-01 18:58:51,293 - employee_client - INFO - Sending employee 10 via WebSocket
+2025-04-01 18:58:51,404 - utils - INFO - send_employee_websocket completed in 0.1104s
+2025-04-01 18:58:51,619 - employee_client - INFO - Sending employee 11 via WebSocket
+2025-04-01 18:58:51,727 - utils - INFO - send_employee_websocket completed in 0.1073s
+2025-04-01 18:58:51,932 - employee_client - INFO - Sending employee 12 via WebSocket
+2025-04-01 18:58:52,042 - utils - INFO - send_employee_websocket completed in 0.1100s
+2025-04-01 18:58:52,262 - employee_client - INFO - Sending employee 13 via WebSocket
+2025-04-01 18:58:52,384 - utils - INFO - send_employee_websocket completed in 0.1216s
+2025-04-01 18:58:52,592 - employee_client - INFO - Sending employee 14 via WebSocket
+2025-04-01 18:58:52,703 - utils - INFO - send_employee_websocket completed in 0.1112s
+2025-04-01 18:58:52,918 - employee_client - INFO - Sending employee 15 via WebSocket
+2025-04-01 18:58:53,027 - utils - INFO - send_employee_websocket completed in 0.1085s
+2025-04-01 18:58:53,234 - employee_client - INFO - Sending employee 16 via WebSocket
+2025-04-01 18:58:53,345 - utils - INFO - send_employee_websocket completed in 0.1107s
+2025-04-01 18:58:53,551 - employee_client - INFO - Sending employee 17 via WebSocket
+2025-04-01 18:58:53,658 - utils - INFO - send_employee_websocket completed in 0.1069s
+2025-04-01 18:58:53,860 - employee_client - INFO - Sending employee 18 via WebSocket
+2025-04-01 18:58:53,982 - utils - INFO - send_employee_websocket completed in 0.1224s
+2025-04-01 18:58:54,192 - employee_client - INFO - Sending employee 19 via WebSocket
+2025-04-01 18:58:54,315 - utils - INFO - send_employee_websocket completed in 0.1231s
+2025-04-01 18:58:54,531 - employee_client - INFO - Sending employee 20 via WebSocket
+2025-04-01 18:58:54,639 - utils - INFO - send_employee_websocket completed in 0.1083s
+2025-04-01 18:58:54,859 - employee_client - INFO - Batch 1 result: 20 ok, 0 failed
+2025-04-01 18:58:54,862 - employee_client - INFO - Waiting 0.5s before next batch...
+2025-04-01 18:58:55,377 - employee_client - INFO - Processing batch 2/50 (20 records)
+2025-04-01 18:58:55,378 - employee_client - INFO - Using sequential processing for WebSocket mode
+2025-04-01 18:58:55,379 - employee_client - INFO - Sending employee 21 via WebSocket
+2025-04-01 18:58:55,501 - utils - INFO - send_employee_websocket completed in 0.1219s
+2025-04-01 18:58:55,717 - employee_client - INFO - Sending employee 22 via WebSocket
+2025-04-01 18:58:55,827 - utils - INFO - send_employee_websocket completed in 0.1096s
+2025-04-01 18:58:56,033 - employee_client - INFO - Sending employee 23 via WebSocket
+2025-04-01 18:58:56,148 - utils - INFO - send_employee_websocket completed in 0.1149s
+2025-04-01 18:58:56,371 - employee_client - INFO - Sending employee 24 via WebSocket
+2025-04-01 18:58:56,493 - utils - INFO - send_employee_websocket completed in 0.1211s
+2025-04-01 18:58:56,700 - employee_client - INFO - Sending employee 25 via WebSocket
+2025-04-01 18:58:56,825 - utils - INFO - send_employee_websocket completed in 0.1248s
+2025-04-01 18:58:57,041 - employee_client - INFO - Sending employee 26 via WebSocket
+2025-04-01 18:58:57,157 - utils - INFO - send_employee_websocket completed in 0.1154s
+2025-04-01 18:58:57,370 - employee_client - INFO - Sending employee 27 via WebSocket
+2025-04-01 18:58:57,495 - utils - INFO - send_employee_websocket completed in 0.1256s
+2025-04-01 18:58:57,703 - employee_client - INFO - Sending employee 28 via WebSocket
+2025-04-01 18:58:57,818 - utils - INFO - send_employee_websocket completed in 0.1157s
+2025-04-01 18:58:58,063 - employee_client - INFO - Sending employee 29 via WebSocket
+2025-04-01 18:58:58,184 - utils - INFO - send_employee_websocket completed in 0.1213s
+2025-04-01 18:58:58,403 - employee_client - INFO - Sending employee 30 via WebSocket
+2025-04-01 18:58:58,523 - utils - INFO - send_employee_websocket completed in 0.1196s
+2025-04-01 18:58:58,737 - employee_client - INFO - Sending employee 31 via WebSocket
+2025-04-01 18:58:58,861 - utils - INFO - send_employee_websocket completed in 0.1240s
+2025-04-01 18:58:59,066 - employee_client - INFO - Sending employee 32 via WebSocket
+2025-04-01 18:58:59,178 - utils - INFO - send_employee_websocket completed in 0.1115s
+2025-04-01 18:58:59,382 - employee_client - INFO - Sending employee 33 via WebSocket
+2025-04-01 18:58:59,498 - utils - INFO - send_employee_websocket completed in 0.1155s
+2025-04-01 18:58:59,709 - employee_client - INFO - Sending employee 34 via WebSocket
+2025-04-01 18:58:59,819 - utils - INFO - send_employee_websocket completed in 0.1101s
+2025-04-01 18:59:00,027 - employee_client - INFO - Sending employee 35 via WebSocket
+2025-04-01 18:59:00,141 - utils - INFO - send_employee_websocket completed in 0.1140s
+2025-04-01 18:59:00,356 - employee_client - INFO - Sending employee 36 via WebSocket
+2025-04-01 18:59:00,467 - utils - INFO - send_employee_websocket completed in 0.1112s
+2025-04-01 18:59:00,671 - employee_client - INFO - Sending employee 37 via WebSocket
+2025-04-01 18:59:00,781 - utils - INFO - send_employee_websocket completed in 0.1106s
+2025-04-01 18:59:00,986 - employee_client - INFO - Sending employee 38 via WebSocket
+2025-04-01 18:59:01,098 - utils - INFO - send_employee_websocket completed in 0.1133s
+2025-04-01 18:59:01,298 - employee_client - INFO - Sending employee 39 via WebSocket
+2025-04-01 18:59:01,410 - utils - INFO - send_employee_websocket completed in 0.1120s
+2025-04-01 18:59:01,616 - employee_client - INFO - Sending employee 40 via WebSocket
+2025-04-01 18:59:01,724 - utils - INFO - send_employee_websocket completed in 0.1082s
+2025-04-01 18:59:01,930 - employee_client - INFO - Batch 2 result: 20 ok, 0 failed
+2025-04-01 18:59:01,931 - employee_client - INFO - Waiting 0.5s before next batch...
+2025-04-01 18:59:02,440 - employee_client - INFO - Processing batch 3/50 (20 records)
+2025-04-01 18:59:02,441 - employee_client - INFO - Using sequential processing for WebSocket mode
+2025-04-01 18:59:02,441 - employee_client - INFO - Sending employee 41 via WebSocket
+2025-04-01 18:59:02,556 - utils - INFO - send_employee_websocket completed in 0.1148s
+2025-04-01 18:59:02,761 - employee_client - INFO - Sending employee 42 via WebSocket
+2025-04-01 18:59:02,868 - utils - INFO - send_employee_websocket completed in 0.1077s
+2025-04-01 18:59:03,086 - employee_client - INFO - Sending employee 43 via WebSocket
+2025-04-01 18:59:03,191 - utils - INFO - send_employee_websocket completed in 0.1046s
+2025-04-01 18:59:03,395 - employee_client - INFO - Sending employee 44 via WebSocket
+2025-04-01 18:59:03,505 - utils - INFO - send_employee_websocket completed in 0.1104s
+2025-04-01 18:59:03,720 - employee_client - INFO - Sending employee 45 via WebSocket
+2025-04-01 18:59:03,823 - utils - INFO - send_employee_websocket completed in 0.1028s
+2025-04-01 18:59:04,034 - employee_client - INFO - Sending employee 46 via WebSocket
+2025-04-01 18:59:04,145 - utils - INFO - send_employee_websocket completed in 0.1108s
+2025-04-01 18:59:04,348 - employee_client - INFO - Sending employee 47 via WebSocket
+2025-04-01 18:59:04,460 - utils - INFO - send_employee_websocket completed in 0.1121s
+2025-04-01 18:59:04,664 - employee_client - INFO - Sending employee 48 via WebSocket
+2025-04-01 18:59:04,776 - utils - INFO - send_employee_websocket completed in 0.1112s
+2025-04-01 18:59:04,986 - employee_client - INFO - Sending employee 49 via WebSocket
+2025-04-01 18:59:05,105 - utils - INFO - send_employee_websocket completed in 0.1185s
+2025-04-01 18:59:05,323 - employee_client - INFO - Sending employee 50 via WebSocket
+2025-04-01 18:59:05,438 - utils - INFO - send_employee_websocket completed in 0.1148s
+2025-04-01 18:59:05,641 - employee_client - INFO - Sending employee 51 via WebSocket
+2025-04-01 18:59:05,753 - utils - INFO - send_employee_websocket completed in 0.1114s
+2025-04-01 18:59:05,958 - employee_client - INFO - Sending employee 52 via WebSocket
+2025-04-01 18:59:06,081 - utils - INFO - send_employee_websocket completed in 0.1225s
+2025-04-01 18:59:06,296 - employee_client - INFO - Sending employee 53 via WebSocket
+2025-04-01 18:59:06,422 - utils - INFO - send_employee_websocket completed in 0.1260s
+2025-04-01 18:59:06,626 - employee_client - INFO - Sending employee 54 via WebSocket
+2025-04-01 18:59:06,737 - utils - INFO - send_employee_websocket completed in 0.1106s
+2025-04-01 18:59:06,941 - employee_client - INFO - Sending employee 55 via WebSocket
+2025-04-01 18:59:07,050 - utils - INFO - send_employee_websocket completed in 0.1083s
+2025-04-01 18:59:07,252 - employee_client - INFO - Sending employee 56 via WebSocket
+2025-04-01 18:59:07,361 - utils - INFO - send_employee_websocket completed in 0.1092s
+2025-04-01 18:59:07,564 - employee_client - INFO - Sending employee 57 via WebSocket
+2025-04-01 18:59:07,674 - utils - INFO - send_employee_websocket completed in 0.1096s
+2025-04-01 18:59:07,876 - employee_client - INFO - Sending employee 58 via WebSocket
+2025-04-01 18:59:07,988 - utils - INFO - send_employee_websocket completed in 0.1116s
+2025-04-01 18:59:08,196 - employee_client - INFO - Sending employee 59 via WebSocket
+2025-04-01 18:59:08,304 - utils - INFO - send_employee_websocket completed in 0.1078s
+2025-04-01 18:59:08,506 - employee_client - INFO - Sending employee 60 via WebSocket
+2025-04-01 18:59:08,614 - utils - INFO - send_employee_websocket completed in 0.1080s
+2025-04-01 18:59:08,818 - employee_client - INFO - Batch 3 result: 20 ok, 0 failed
+2025-04-01 18:59:08,818 - employee_client - INFO - Waiting 0.5s before next batch...
+2025-04-01 18:59:09,328 - employee_client - INFO - Processing batch 4/50 (20 records)
+2025-04-01 18:59:09,329 - employee_client - INFO - Using sequential processing for WebSocket mode
+2025-04-01 18:59:09,330 - employee_client - INFO - Sending employee 61 via WebSocket
+2025-04-01 18:59:09,436 - utils - INFO - send_employee_websocket completed in 0.1070s
+2025-04-01 18:59:09,642 - employee_client - INFO - Sending employee 62 via WebSocket
+2025-04-01 18:59:09,757 - utils - INFO - send_employee_websocket completed in 0.1147s
+2025-04-01 18:59:09,964 - employee_client - INFO - Sending employee 63 via WebSocket
+2025-04-01 18:59:10,071 - utils - INFO - send_employee_websocket completed in 0.1065s
+2025-04-01 18:59:10,274 - employee_client - INFO - Sending employee 64 via WebSocket
+2025-04-01 18:59:10,388 - utils - INFO - send_employee_websocket completed in 0.1148s
+2025-04-01 18:59:10,595 - employee_client - INFO - Sending employee 65 via WebSocket
+2025-04-01 18:59:10,704 - utils - INFO - send_employee_websocket completed in 0.1091s
+2025-04-01 18:59:10,909 - employee_client - INFO - Sending employee 66 via WebSocket
+2025-04-01 18:59:11,025 - utils - INFO - send_employee_websocket completed in 0.1152s
+2025-04-01 18:59:11,228 - employee_client - INFO - Sending employee 67 via WebSocket
+2025-04-01 18:59:11,337 - utils - INFO - send_employee_websocket completed in 0.1087s
+2025-04-01 18:59:11,541 - employee_client - INFO - Sending employee 68 via WebSocket
+2025-04-01 18:59:11,656 - utils - INFO - send_employee_websocket completed in 0.1145s
+2025-04-01 18:59:11,868 - employee_client - INFO - Sending employee 69 via WebSocket
+2025-04-01 18:59:11,979 - utils - INFO - send_employee_websocket completed in 0.1110s
+2025-04-01 18:59:12,184 - employee_client - INFO - Sending employee 70 via WebSocket
+2025-04-01 18:59:12,305 - utils - INFO - send_employee_websocket completed in 0.1215s
+2025-04-01 18:59:12,508 - employee_client - INFO - Sending employee 71 via WebSocket
+2025-04-01 18:59:12,622 - utils - INFO - send_employee_websocket completed in 0.1135s
+2025-04-01 18:59:12,823 - employee_client - INFO - Sending employee 72 via WebSocket
+2025-04-01 18:59:12,931 - utils - INFO - send_employee_websocket completed in 0.1082s
+2025-04-01 18:59:13,142 - employee_client - INFO - Sending employee 73 via WebSocket
+2025-04-01 18:59:13,252 - utils - INFO - send_employee_websocket completed in 0.1095s
+2025-04-01 18:59:13,459 - employee_client - INFO - Sending employee 74 via WebSocket
+2025-04-01 18:59:13,567 - utils - INFO - send_employee_websocket completed in 0.1094s
+2025-04-01 18:59:13,775 - employee_client - INFO - Sending employee 75 via WebSocket
+2025-04-01 18:59:13,897 - utils - INFO - send_employee_websocket completed in 0.1220s
+2025-04-01 18:59:14,104 - employee_client - INFO - Sending employee 76 via WebSocket
+2025-04-01 18:59:14,224 - utils - INFO - send_employee_websocket completed in 0.1204s
+2025-04-01 18:59:14,428 - employee_client - INFO - Sending employee 77 via WebSocket
+2025-04-01 18:59:14,542 - utils - INFO - send_employee_websocket completed in 0.1140s
+2025-04-01 18:59:14,748 - employee_client - INFO - Sending employee 78 via WebSocket
+2025-04-01 18:59:14,858 - utils - INFO - send_employee_websocket completed in 0.1096s
+2025-04-01 18:59:15,074 - employee_client - INFO - Sending employee 79 via WebSocket
+2025-04-01 18:59:15,200 - utils - INFO - send_employee_websocket completed in 0.1252s
+2025-04-01 18:59:15,416 - employee_client - INFO - Sending employee 80 via WebSocket
+2025-04-01 18:59:15,536 - utils - INFO - send_employee_websocket completed in 0.1201s
+2025-04-01 18:59:15,747 - employee_client - INFO - Batch 4 result: 20 ok, 0 failed
+2025-04-01 18:59:15,748 - employee_client - INFO - Waiting 0.5s before next batch...
+2025-04-01 18:59:15,846 - employee_client - INFO - Cleaning up resources
+2025-04-01 18:59:15,848 - employee_client - INFO - Resources released
+2025-04-01 18:59:15,850 - __main__ - INFO - Process interrupted by user
+2025-04-01 19:03:15,355 - config - INFO - Configuration loaded: {
+  "SERVER_URL": "http://localhost:8000",
+  "COMM_MODE": "http",
+  "CSV_FILE_PATH": "./employee_data.csv",
+  "CSV_DELIMITER": ",",
+  "CSV_ENCODING": "utf-8",
+  "BATCH_SIZE": 50,
+  "MAX_RETRIES": 3,
+  "RETRY_DELAY": 1.0,
+  "TIMEOUT": 10.0,
+  "MAX_WORKERS": 10,
+  "KAFKA_BOOTSTRAP_SERVERS": "localhost:9092",
+  "KAFKA_TOPIC": "employee-records",
+  "WS_URL": "ws://localhost:8000/ws",
+  "AUTH_USERNAME": "admin"
+}
+2025-04-01 19:06:06,467 - config - INFO - Configuration loaded: {
+  "SERVER_URL": "http://localhost:8000",
+  "COMM_MODE": "http",
+  "CSV_FILE_PATH": "./employee_data.csv",
+  "CSV_DELIMITER": ",",
+  "CSV_ENCODING": "utf-8",
+  "BATCH_SIZE": 50,
+  "MAX_RETRIES": 3,
+  "RETRY_DELAY": 1.0,
+  "TIMEOUT": 10.0,
+  "MAX_WORKERS": 10,
+  "KAFKA_BOOTSTRAP_SERVERS": "localhost:9092",
+  "KAFKA_TOPIC": "employee-records",
+  "WS_URL": "ws://localhost:8000/ws",
+  "AUTH_USERNAME": "admin"
+}
+2025-04-01 19:06:07,251 - __main__ - INFO - Starting transmission using kafka mode
+2025-04-01 19:06:07,254 - __main__ - ERROR - Dependency error: Kafka support requires aiokafka package. Please install it with:
+pip install aiokafka==0.8.1
+Or use HTTP mode with: --mode http
+2025-04-01 19:06:07,255 - __main__ - ERROR - Please install the required packages in requirements.txt
+2025-04-01 19:06:07,256 - __main__ - ERROR - You can use HTTP mode as a fallback: --mode http

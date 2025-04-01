@@ -1,5 +1,5 @@
 # client/requirements.txt
-aiohttp==3.8.6
+aiohttp==3.7.4.post0
 python-dotenv==1.0.0
 websockets==11.0.3
 aiokafka==0.8.1

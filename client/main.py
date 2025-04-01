@@ -30,7 +30,7 @@ async def main():
     
     parser.add_argument('--mode', '-m', type=str, choices=['http', 'kafka', 'websocket'],
                         default=settings.COMM_MODE.value,
-                        help='Communication mode')
+                        help='Communication mode - note: kafka and websocket require additional packages')
     
     parser.add_argument('--batch-size', '-b', type=int, default=settings.BATCH_SIZE,
                         help='Records per batch')
@@ -57,15 +57,25 @@ async def main():
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
         args.output = f"failed_records_{timestamp}.csv"
     
-    client = EmployeeClient(
-        server_url=args.server,
-        comm_mode=CommunicationMode(args.mode),
-        batch_size=args.batch_size,
-        max_workers=args.workers
-    )
-    
+    # Create the client with the chosen communication mode
     try:
         logger.info(f"Starting transmission using {args.mode} mode")
+        client = EmployeeClient(
+            server_url=args.server,
+            comm_mode=CommunicationMode(args.mode),
+            batch_size=args.batch_size,
+            max_workers=args.workers
+        )
+    except ImportError as e:
+        # Handle missing dependency errors specifically
+        logger.error(f"Dependency error: {str(e)}")
+        logger.error(f"Please install the required packages in requirements.txt")
+        logger.error(f"You can use HTTP mode as a fallback: --mode http")
+        return 1
+    
+    try:
+        
+        # Initialize the client and process the file
         await client.initialize()
         
         start_time = time.time()
@@ -88,7 +98,8 @@ async def main():
         logger.error(f"Error: {str(e)}")
         return 1
     finally:
-        await client.close()
+        if 'client' in locals() and client:
+            await client.close()
 
 
 if __name__ == "__main__":

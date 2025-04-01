@@ -190,11 +190,19 @@ def format_employee_record(record):
     return formatted
 
 
-async def gather_with_concurrency(n, *tasks):
+async def gather_with_concurrency(n, *tasks, delay=0.05):
     semaphore = asyncio.Semaphore(n)
+    results = []
     
-    async def limited_task(task):
+    async def limited_task(i, task):
         async with semaphore:
-            return await task
+            # Add a small delay between tasks to avoid rate limiting
+            if i > 0:
+                await asyncio.sleep(delay)
+            try:
+                return await task
+            except Exception as e:
+                logger.error(f"Task {i} failed: {str(e)}")
+                return e
     
-    return await asyncio.gather(*(limited_task(task) for task in tasks))
+    return await asyncio.gather(*(limited_task(i, task) for i, task in enumerate(tasks)))

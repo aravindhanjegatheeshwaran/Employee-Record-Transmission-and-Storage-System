@@ -126,35 +126,58 @@ def validate_input(validator_class):
 
 def rate_limit(calls=60, period=60):
     cache = {}
+    global_cache = []
     
     def decorator(func):
         @functools.wraps(func)
         async def async_wrapper(*args, **kwargs):
             request = None
             for arg in args:
-                if hasattr(arg, "client") and hasattr(arg.client, "host"):
+                if isinstance(arg, Request):
                     request = arg
                     break
             
-            client_ip = "unknown"
-            if request and hasattr(request, "client"):
-                client_ip = request.client.host
+            if not request:
+                for value in kwargs.values():
+                    if isinstance(value, Request):
+                        request = value
+                        break
             
             current_time = time.time()
             
-            if client_ip not in cache:
-                cache[client_ip] = []
+            # Keep only timestamps within the rate limit period
+            nonlocal global_cache
+            global_cache = [ts for ts in global_cache if current_time - ts < period]
             
-            cache[client_ip] = [ts for ts in cache[client_ip] if current_time - ts < period]
-            
-            if len(cache[client_ip]) >= calls:
-                logger.warning(f"Rate limit exceeded: {client_ip}")
-                raise HTTPException(
-                    status_code=status.HTTP_429_TOO_MANY_REQUESTS,
-                    detail=f"Too many requests. Try again in {period} seconds."
-                )
-            
-            cache[client_ip].append(current_time)
+            # Individual IP-based rate limiting
+            if request and hasattr(request, "client") and hasattr(request.client, "host"):
+                client_ip = request.client.host
+                
+                if client_ip not in cache:
+                    cache[client_ip] = []
+                
+                cache[client_ip] = [ts for ts in cache[client_ip] if current_time - ts < period]
+                
+                if len(cache[client_ip]) >= calls:
+                    logger.warning(f"Client rate limit exceeded: {client_ip} ({len(cache[client_ip])} requests in {period}s)")
+                    raise HTTPException(
+                        status_code=status.HTTP_429_TOO_MANY_REQUESTS,
+                        detail=f"Too many requests. Try again in {period} seconds."
+                    )
+                
+                cache[client_ip].append(current_time)
+            else:
+                # For cases where client IP can't be determined, use a global limit with higher threshold
+                global_limit = calls * 10
+                
+                if len(global_cache) >= global_limit:
+                    logger.warning(f"Global rate limit exceeded: {len(global_cache)} requests in {period}s")
+                    raise HTTPException(
+                        status_code=status.HTTP_429_TOO_MANY_REQUESTS,
+                        detail=f"Server busy. Try again in {period} seconds."
+                    )
+                
+                global_cache.append(current_time)
             
             return await func(*args, **kwargs)
         

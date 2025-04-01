@@ -4099,3 +4099,436 @@ employee_id
 2025-04-01 18:51:20,309 - core.database - INFO - Database connections closed
 2025-04-01 18:51:20,310 - main - INFO - Database connections closed
 2025-04-01 18:51:24,571 - main - INFO - Starting server...
+2025-04-01 18:51:52,980 - main - INFO - Shutting down, closing connections...
+2025-04-01 18:51:52,982 - core.database - INFO - Database connections closed
+2025-04-01 18:51:52,983 - main - INFO - Database connections closed
+2025-04-01 18:51:59,245 - main - INFO - Starting server...
+2025-04-01 18:52:13,629 - main - INFO - Shutting down, closing connections...
+2025-04-01 18:52:13,629 - core.database - INFO - Database connections closed
+2025-04-01 18:52:13,629 - main - INFO - Database connections closed
+2025-04-01 18:52:18,153 - main - INFO - Starting server...
+2025-04-01 18:52:31,846 - core.decorators - INFO - FUNC 20250401185231845390: login_for_access_token called
+2025-04-01 18:52:32,299 - core.decorators - INFO - login_for_access_token took 0.4471s
+2025-04-01 18:52:32,302 - core.decorators - INFO - DONE 20250401185231845390: completed in 0.4504s
+2025-04-01 18:52:34,426 - main - ERROR - WebSocket error: Expected ASGI message "websocket.send" or "websocket.close", but got 'websocket.accept'
+2025-04-01 18:52:36,570 - main - ERROR - WebSocket error: Expected ASGI message "websocket.send" or "websocket.close", but got 'websocket.accept'
+2025-04-01 18:52:37,599 - main - ERROR - WebSocket error: Expected ASGI message "websocket.send" or "websocket.close", but got 'websocket.accept'
+2025-04-01 18:52:37,600 - main - ERROR - WebSocket error: Expected ASGI message "websocket.send" or "websocket.close", but got 'websocket.accept'
+2025-04-01 18:52:37,606 - main - ERROR - WebSocket error: Expected ASGI message "websocket.send" or "websocket.close", but got 'websocket.accept'
+2025-04-01 18:52:37,608 - main - ERROR - WebSocket error: Expected ASGI message "websocket.send" or "websocket.close", but got 'websocket.accept'
+2025-04-01 18:52:37,610 - main - ERROR - WebSocket error: Expected ASGI message "websocket.send" or "websocket.close", but got 'websocket.accept'
+2025-04-01 18:52:37,615 - main - ERROR - WebSocket error: Expected ASGI message "websocket.send" or "websocket.close", but got 'websocket.accept'
+2025-04-01 18:52:37,624 - main - ERROR - WebSocket error: Expected ASGI message "websocket.send" or "websocket.close", but got 'websocket.accept'
+2025-04-01 18:52:37,627 - main - ERROR - WebSocket error: Expected ASGI message "websocket.send" or "websocket.close", but got 'websocket.accept'
+2025-04-01 18:52:37,629 - main - ERROR - WebSocket error: Expected ASGI message "websocket.send" or "websocket.close", but got 'websocket.accept'
+2025-04-01 18:52:39,658 - main - ERROR - WebSocket error: Expected ASGI message "websocket.send" or "websocket.close", but got 'websocket.accept'
+2025-04-01 18:52:41,689 - main - ERROR - WebSocket error: Expected ASGI message "websocket.send" or "websocket.close", but got 'websocket.accept'
+2025-04-01 18:52:41,694 - main - ERROR - WebSocket error: Expected ASGI message "websocket.send" or "websocket.close", but got 'websocket.accept'
+2025-04-01 18:52:41,695 - main - ERROR - WebSocket error: Expected ASGI message "websocket.send" or "websocket.close", but got 'websocket.accept'
+2025-04-01 18:52:41,695 - main - ERROR - WebSocket error: Expected ASGI message "websocket.send" or "websocket.close", but got 'websocket.accept'
+2025-04-01 18:52:41,713 - main - ERROR - WebSocket error: Expected ASGI message "websocket.send" or "websocket.close", but got 'websocket.accept'
+2025-04-01 18:52:41,715 - main - ERROR - WebSocket error: Expected ASGI message "websocket.send" or "websocket.close", but got 'websocket.accept'
+2025-04-01 18:52:41,718 - main - ERROR - WebSocket error: Expected ASGI message "websocket.send" or "websocket.close", but got 'websocket.accept'
+2025-04-01 18:52:41,718 - main - ERROR - WebSocket error: Expected ASGI message "websocket.send" or "websocket.close", but got 'websocket.accept'
+2025-04-01 18:52:41,737 - main - ERROR - WebSocket error: Expected ASGI message "websocket.send" or "websocket.close", but got 'websocket.accept'
+2025-04-01 18:52:43,710 - main - ERROR - WebSocket error: Expected ASGI message "websocket.send" or "websocket.close", but got 'websocket.accept'
+2025-04-01 18:52:47,769 - main - ERROR - WebSocket error: Expected ASGI message "websocket.send" or "websocket.close", but got 'websocket.accept'
+2025-04-01 18:52:47,772 - main - ERROR - WebSocket error: Expected ASGI message "websocket.send" or "websocket.close", but got 'websocket.accept'
+2025-04-01 18:52:47,774 - main - ERROR - WebSocket error: Expected ASGI message "websocket.send" or "websocket.close", but got 'websocket.accept'
+2025-04-01 18:52:52,895 - main - INFO - Shutting down, closing connections...
+2025-04-01 18:52:52,895 - core.database - INFO - Database connections closed
+2025-04-01 18:52:52,895 - main - INFO - Database connections closed
+2025-04-01 18:52:57,884 - main - INFO - Starting server...
+2025-04-01 18:53:28,474 - main - INFO - Shutting down, closing connections...
+2025-04-01 18:53:28,476 - core.database - INFO - Database connections closed
+2025-04-01 18:53:28,476 - main - INFO - Database connections closed
+2025-04-01 18:53:35,198 - main - INFO - Starting server...
+2025-04-01 18:55:02,839 - core.decorators - INFO - FUNC 20250401185502839700: login_for_access_token called
+2025-04-01 18:55:03,227 - core.decorators - INFO - login_for_access_token took 0.3860s
+2025-04-01 18:55:03,227 - core.decorators - INFO - DONE 20250401185502839700: completed in 0.3865s
+2025-04-01 18:55:03,328 - core.decorators - INFO - FUNC 20250401185503328513: create_employee called
+2025-04-01 18:55:03,397 - api.api - ERROR - Error in create_employee: 
+2025-04-01 18:55:03,399 - core.decorators - ERROR - FAIL 20250401185503328513: error after 0.0712s - 
+2025-04-01 18:55:03,400 - core.decorators - ERROR - create_employee failed after 0.0722s: 
+2025-04-01 18:55:03,404 - core.database - ERROR - DB session error: 
+2025-04-01 18:55:03,433 - core.decorators - INFO - FUNC 20250401185503433080: create_employee called
+2025-04-01 18:55:03,437 - core.decorators - INFO - FUNC 20250401185503437136: create_employee called
+2025-04-01 18:55:03,439 - core.decorators - INFO - FUNC 20250401185503439669: create_employee called
+2025-04-01 18:55:03,444 - core.decorators - INFO - FUNC 20250401185503444179: create_employee called
+2025-04-01 18:55:03,447 - core.decorators - INFO - FUNC 20250401185503447024: create_employee called
+2025-04-01 18:55:03,450 - api.api - ERROR - Error in create_employee: 
+2025-04-01 18:55:03,457 - core.decorators - ERROR - FAIL 20250401185503433080: error after 0.0219s - 
+2025-04-01 18:55:03,463 - core.decorators - ERROR - create_employee failed after 0.0308s: 
+2025-04-01 18:55:03,479 - core.database - ERROR - DB session error: 
+2025-04-01 18:55:03,495 - api.api - ERROR - Error in create_employee: 
+2025-04-01 18:55:03,496 - core.decorators - ERROR - FAIL 20250401185503437136: error after 0.0570s - 
+2025-04-01 18:55:03,496 - core.decorators - ERROR - create_employee failed after 0.0597s: 
+2025-04-01 18:55:03,502 - api.api - ERROR - Error in create_employee: 
+2025-04-01 18:55:03,503 - core.decorators - ERROR - FAIL 20250401185503444179: error after 0.0586s - 
+2025-04-01 18:55:03,503 - core.decorators - ERROR - create_employee failed after 0.0595s: 
+2025-04-01 18:55:03,506 - api.api - ERROR - Error in create_employee: 
+2025-04-01 18:55:03,507 - core.decorators - ERROR - FAIL 20250401185503439669: error after 0.0676s - 
+2025-04-01 18:55:03,508 - core.decorators - ERROR - create_employee failed after 0.0686s: 
+2025-04-01 18:55:03,517 - core.database - ERROR - DB session error: 
+2025-04-01 18:55:03,520 - api.api - ERROR - Error in create_employee: 
+2025-04-01 18:55:03,521 - core.decorators - ERROR - FAIL 20250401185503447024: error after 0.0747s - 
+2025-04-01 18:55:03,521 - core.decorators - ERROR - create_employee failed after 0.0747s: 
+2025-04-01 18:55:03,522 - core.database - ERROR - DB session error: 
+2025-04-01 18:55:03,528 - core.database - ERROR - DB session error: 
+2025-04-01 18:55:03,530 - core.database - ERROR - DB session error: 
+2025-04-01 18:55:03,651 - core.decorators - INFO - FUNC 20250401185503651756: create_employee called
+2025-04-01 18:55:03,655 - core.decorators - INFO - FUNC 20250401185503655738: create_employee called
+2025-04-01 18:55:03,658 - core.decorators - INFO - FUNC 20250401185503658575: create_employee called
+2025-04-01 18:55:03,659 - core.decorators - INFO - FUNC 20250401185503659983: create_employee called
+2025-04-01 18:55:03,667 - api.api - ERROR - Error in create_employee: 
+2025-04-01 18:55:03,669 - core.decorators - ERROR - FAIL 20250401185503651756: error after 0.0155s - 
+2025-04-01 18:55:03,669 - core.decorators - ERROR - create_employee failed after 0.0175s: 
+2025-04-01 18:55:03,671 - api.api - ERROR - Error in create_employee: 
+2025-04-01 18:55:03,671 - core.decorators - ERROR - FAIL 20250401185503655738: error after 0.0150s - 
+2025-04-01 18:55:03,671 - core.decorators - ERROR - create_employee failed after 0.0161s: 
+2025-04-01 18:55:03,674 - api.api - ERROR - Error in create_employee: 
+2025-04-01 18:55:03,674 - core.decorators - ERROR - FAIL 20250401185503658575: error after 0.0155s - 
+2025-04-01 18:55:03,674 - core.decorators - ERROR - create_employee failed after 0.0159s: 
+2025-04-01 18:55:03,677 - api.api - ERROR - Error in create_employee: 
+2025-04-01 18:55:03,679 - core.decorators - ERROR - FAIL 20250401185503659983: error after 0.0172s - 
+2025-04-01 18:55:03,679 - core.decorators - ERROR - create_employee failed after 0.0197s: 
+2025-04-01 18:55:03,681 - core.database - ERROR - DB session error: 
+2025-04-01 18:55:03,681 - core.database - ERROR - DB session error: 
+2025-04-01 18:55:03,688 - core.database - ERROR - DB session error: 
+2025-04-01 18:55:03,690 - core.database - ERROR - DB session error: 
+2025-04-01 18:55:04,429 - core.decorators - INFO - FUNC 20250401185504429922: create_employee called
+2025-04-01 18:55:04,437 - api.api - ERROR - Error in create_employee: 
+2025-04-01 18:55:04,438 - core.decorators - ERROR - FAIL 20250401185504429922: error after 0.0052s - 
+2025-04-01 18:55:04,438 - core.decorators - ERROR - create_employee failed after 0.0086s: 
+2025-04-01 18:55:04,443 - core.database - ERROR - DB session error: 
+2025-04-01 18:55:04,495 - core.decorators - INFO - FUNC 20250401185504495516: create_employee called
+2025-04-01 18:55:04,501 - api.api - ERROR - Error in create_employee: 
+2025-04-01 18:55:04,502 - core.decorators - ERROR - FAIL 20250401185504495516: error after 0.0048s - 
+2025-04-01 18:55:04,503 - core.decorators - ERROR - create_employee failed after 0.0077s: 
+2025-04-01 18:55:04,507 - core.database - ERROR - DB session error: 
+2025-04-01 18:55:04,558 - core.decorators - INFO - FUNC 20250401185504558619: create_employee called
+2025-04-01 18:55:04,561 - core.decorators - INFO - FUNC 20250401185504560297: create_employee called
+2025-04-01 18:55:04,564 - core.decorators - INFO - FUNC 20250401185504564650: create_employee called
+2025-04-01 18:55:04,564 - core.decorators - INFO - FUNC 20250401185504564650: create_employee called
+2025-04-01 18:55:04,571 - api.api - ERROR - Error in create_employee: 
+2025-04-01 18:55:04,571 - core.decorators - ERROR - FAIL 20250401185504558619: error after 0.0125s - 
+2025-04-01 18:55:04,571 - core.decorators - ERROR - create_employee failed after 0.0132s: 
+2025-04-01 18:55:04,571 - api.api - ERROR - Error in create_employee: 
+2025-04-01 18:55:04,571 - core.decorators - ERROR - FAIL 20250401185504564650: error after 0.0072s - 
+2025-04-01 18:55:04,580 - core.decorators - ERROR - create_employee failed after 0.0156s: 
+2025-04-01 18:55:04,582 - api.api - ERROR - Error in create_employee: 
+2025-04-01 18:55:04,582 - core.decorators - ERROR - FAIL 20250401185504560297: error after 0.0204s - 
+2025-04-01 18:55:04,584 - core.decorators - ERROR - create_employee failed after 0.0237s: 
+2025-04-01 18:55:04,585 - api.api - ERROR - Error in create_employee: 
+2025-04-01 18:55:04,585 - core.decorators - ERROR - FAIL 20250401185504564650: error after 0.0204s - 
+2025-04-01 18:55:04,585 - core.decorators - ERROR - create_employee failed after 0.0204s: 
+2025-04-01 18:55:04,587 - core.database - ERROR - DB session error: 
+2025-04-01 18:55:04,587 - core.database - ERROR - DB session error: 
+2025-04-01 18:55:04,587 - core.database - ERROR - DB session error: 
+2025-04-01 18:55:04,595 - core.database - ERROR - DB session error: 
+2025-04-01 18:55:04,772 - core.decorators - INFO - FUNC 20250401185504772059: create_employee called
+2025-04-01 18:55:04,772 - core.decorators - INFO - FUNC 20250401185504772059: create_employee called
+2025-04-01 18:55:04,778 - core.decorators - INFO - FUNC 20250401185504778546: create_employee called
+2025-04-01 18:55:04,782 - core.decorators - INFO - FUNC 20250401185504782137: create_employee called
+2025-04-01 18:55:04,782 - api.api - ERROR - Error in create_employee: 
+2025-04-01 18:55:04,782 - core.decorators - ERROR - FAIL 20250401185504772059: error after 0.0101s - 
+2025-04-01 18:55:04,782 - core.decorators - ERROR - create_employee failed after 0.0101s: 
+2025-04-01 18:55:04,790 - api.api - ERROR - Error in create_employee: 
+2025-04-01 18:55:04,790 - core.decorators - ERROR - FAIL 20250401185504772059: error after 0.0181s - 
+2025-04-01 18:55:04,792 - core.decorators - ERROR - create_employee failed after 0.0200s: 
+2025-04-01 18:55:04,793 - api.api - ERROR - Error in create_employee: 
+2025-04-01 18:55:04,794 - core.decorators - ERROR - FAIL 20250401185504778546: error after 0.0144s - 
+2025-04-01 18:55:04,794 - core.decorators - ERROR - create_employee failed after 0.0165s: 
+2025-04-01 18:55:04,794 - api.api - ERROR - Error in create_employee: 
+2025-04-01 18:55:04,794 - core.decorators - ERROR - FAIL 20250401185504782137: error after 0.0129s - 
+2025-04-01 18:55:04,794 - core.decorators - ERROR - create_employee failed after 0.0129s: 
+2025-04-01 18:55:04,804 - core.database - ERROR - DB session error: 
+2025-04-01 18:55:04,804 - core.database - ERROR - DB session error: 
+2025-04-01 18:55:04,804 - core.database - ERROR - DB session error: 
+2025-04-01 18:55:04,804 - core.database - ERROR - DB session error: 
+2025-04-01 18:55:06,501 - core.decorators - INFO - FUNC 20250401185506501913: create_employee called
+2025-04-01 18:55:06,503 - core.decorators - INFO - FUNC 20250401185506503913: create_employee called
+2025-04-01 18:55:06,507 - api.api - ERROR - Error in create_employee: 
+2025-04-01 18:55:06,511 - core.decorators - ERROR - FAIL 20250401185506501913: error after 0.0090s - 
+2025-04-01 18:55:06,512 - core.decorators - ERROR - create_employee failed after 0.0104s: 
+2025-04-01 18:55:06,513 - api.api - ERROR - Error in create_employee: 
+2025-04-01 18:55:06,514 - core.decorators - ERROR - FAIL 20250401185506503913: error after 0.0093s - 
+2025-04-01 18:55:06,515 - core.decorators - ERROR - create_employee failed after 0.0113s: 
+2025-04-01 18:55:06,524 - core.database - ERROR - DB session error: 
+2025-04-01 18:55:06,526 - core.database - ERROR - DB session error: 
+2025-04-01 18:55:06,621 - core.decorators - INFO - FUNC 20250401185506621540: create_employee called
+2025-04-01 18:55:06,625 - core.decorators - INFO - FUNC 20250401185506624661: create_employee called
+2025-04-01 18:55:06,629 - core.decorators - INFO - FUNC 20250401185506629230: create_employee called
+2025-04-01 18:55:06,632 - core.decorators - INFO - FUNC 20250401185506632298: create_employee called
+2025-04-01 18:55:06,640 - api.api - ERROR - Error in create_employee: 
+2025-04-01 18:55:06,642 - core.decorators - ERROR - FAIL 20250401185506624661: error after 0.0164s - 
+2025-04-01 18:55:06,644 - core.decorators - ERROR - create_employee failed after 0.0195s: 
+2025-04-01 18:55:06,654 - api.api - ERROR - Error in create_employee: 
+2025-04-01 18:55:06,655 - core.decorators - ERROR - FAIL 20250401185506621540: error after 0.0326s - 
+2025-04-01 18:55:06,655 - core.decorators - ERROR - create_employee failed after 0.0344s: 
+2025-04-01 18:55:06,656 - api.api - ERROR - Error in create_employee: 
+2025-04-01 18:55:06,658 - core.decorators - ERROR - FAIL 20250401185506629230: error after 0.0274s - 
+2025-04-01 18:55:06,658 - core.decorators - ERROR - create_employee failed after 0.0291s: 
+2025-04-01 18:55:06,663 - api.api - ERROR - Error in create_employee: 
+2025-04-01 18:55:06,665 - core.decorators - ERROR - FAIL 20250401185506632298: error after 0.0326s - 
+2025-04-01 18:55:06,666 - core.decorators - ERROR - create_employee failed after 0.0342s: 
+2025-04-01 18:55:06,670 - core.database - ERROR - DB session error: 
+2025-04-01 18:55:06,676 - core.database - ERROR - DB session error: 
+2025-04-01 18:55:06,691 - core.database - ERROR - DB session error: 
+2025-04-01 18:55:06,694 - core.database - ERROR - DB session error: 
+2025-04-01 18:55:06,849 - core.decorators - INFO - FUNC 20250401185506849208: create_employee called
+2025-04-01 18:55:06,849 - api.api - ERROR - Error in create_employee: 
+2025-04-01 18:55:06,856 - core.decorators - ERROR - FAIL 20250401185506849208: error after 0.0071s - 
+2025-04-01 18:55:06,856 - core.decorators - ERROR - create_employee failed after 0.0071s: 
+2025-04-01 18:55:06,886 - core.decorators - INFO - FUNC 20250401185506886811: create_employee called
+2025-04-01 18:55:06,888 - core.decorators - INFO - FUNC 20250401185506888778: create_employee called
+2025-04-01 18:55:06,891 - core.decorators - INFO - FUNC 20250401185506891067: create_employee called
+2025-04-01 18:55:06,892 - core.database - ERROR - DB session error: 
+2025-04-01 18:55:06,902 - api.api - ERROR - Error in create_employee: 
+2025-04-01 18:55:06,904 - core.decorators - ERROR - FAIL 20250401185506886811: error after 0.0168s - 
+2025-04-01 18:55:06,905 - core.decorators - ERROR - create_employee failed after 0.0183s: 
+2025-04-01 18:55:06,906 - api.api - ERROR - Error in create_employee: 
+2025-04-01 18:55:06,906 - core.decorators - ERROR - FAIL 20250401185506891067: error after 0.0145s - 
+2025-04-01 18:55:06,908 - core.decorators - ERROR - create_employee failed after 0.0179s: 
+2025-04-01 18:55:06,909 - api.api - ERROR - Error in create_employee: 
+2025-04-01 18:55:06,913 - core.decorators - ERROR - FAIL 20250401185506888778: error after 0.0230s - 
+2025-04-01 18:55:06,913 - core.decorators - ERROR - create_employee failed after 0.0243s: 
+2025-04-01 18:55:06,916 - core.database - ERROR - DB session error: 
+2025-04-01 18:55:06,919 - core.database - ERROR - DB session error: 
+2025-04-01 18:55:06,923 - core.database - ERROR - DB session error: 
+2025-04-01 18:55:10,551 - core.decorators - INFO - FUNC 20250401185510551850: create_employee called
+2025-04-01 18:55:10,555 - core.decorators - INFO - FUNC 20250401185510554334: create_employee called
+2025-04-01 18:55:10,561 - api.api - ERROR - Error in create_employee: 
+2025-04-01 18:55:10,561 - core.decorators - ERROR - FAIL 20250401185510551850: error after 0.0077s - 
+2025-04-01 18:55:10,562 - core.decorators - ERROR - create_employee failed after 0.0107s: 
+2025-04-01 18:55:10,569 - api.api - ERROR - Error in create_employee: 
+2025-04-01 18:55:10,570 - core.decorators - ERROR - FAIL 20250401185510554334: error after 0.0140s - 
+2025-04-01 18:55:10,570 - core.decorators - ERROR - create_employee failed after 0.0165s: 
+2025-04-01 18:55:10,573 - core.database - ERROR - DB session error: 
+2025-04-01 18:55:10,582 - core.database - ERROR - DB session error: 
+2025-04-01 18:55:10,664 - core.decorators - INFO - FUNC 20250401185510664292: create_employee called
+2025-04-01 18:55:10,670 - core.decorators - INFO - FUNC 20250401185510670981: create_employee called
+2025-04-01 18:55:10,683 - api.api - ERROR - Error in create_employee: 
+2025-04-01 18:55:10,683 - core.decorators - ERROR - FAIL 20250401185510664292: error after 0.0161s - 
+2025-04-01 18:55:10,686 - core.decorators - ERROR - create_employee failed after 0.0221s: 
+2025-04-01 18:55:10,686 - api.api - ERROR - Error in create_employee: 
+2025-04-01 18:55:10,686 - core.decorators - ERROR - FAIL 20250401185510670981: error after 0.0154s - 
+2025-04-01 18:55:10,686 - core.decorators - ERROR - create_employee failed after 0.0154s: 
+2025-04-01 18:55:10,695 - core.database - ERROR - DB session error: 
+2025-04-01 18:55:10,705 - core.database - ERROR - DB session error: 
+2025-04-01 18:55:10,728 - core.decorators - INFO - FUNC 20250401185510728664: create_employee called
+2025-04-01 18:55:10,733 - core.decorators - INFO - FUNC 20250401185510733013: create_employee called
+2025-04-01 18:55:10,735 - core.decorators - INFO - FUNC 20250401185510735121: create_employee called
+2025-04-01 18:55:10,739 - core.decorators - INFO - FUNC 20250401185510738988: create_employee called
+2025-04-01 18:55:10,747 - api.api - ERROR - Error in create_employee: 
+2025-04-01 18:55:10,748 - core.decorators - ERROR - FAIL 20250401185510733013: error after 0.0142s - 
+2025-04-01 18:55:10,749 - core.decorators - ERROR - create_employee failed after 0.0163s: 
+2025-04-01 18:55:10,751 - api.api - ERROR - Error in create_employee: 
+2025-04-01 18:55:10,751 - core.decorators - ERROR - FAIL 20250401185510728664: error after 0.0211s - 
+2025-04-01 18:55:10,752 - core.decorators - ERROR - create_employee failed after 0.0235s: 
+2025-04-01 18:55:10,753 - api.api - ERROR - Error in create_employee: 
+2025-04-01 18:55:10,753 - core.decorators - ERROR - FAIL 20250401185510738988: error after 0.0144s - 
+2025-04-01 18:55:10,753 - core.decorators - ERROR - create_employee failed after 0.0145s: 
+2025-04-01 18:55:10,756 - api.api - ERROR - Error in create_employee: 
+2025-04-01 18:55:10,756 - core.decorators - ERROR - FAIL 20250401185510735121: error after 0.0216s - 
+2025-04-01 18:55:10,758 - core.decorators - ERROR - create_employee failed after 0.0234s: 
+2025-04-01 18:55:10,761 - core.database - ERROR - DB session error: 
+2025-04-01 18:55:10,764 - core.database - ERROR - DB session error: 
+2025-04-01 18:55:10,769 - core.database - ERROR - DB session error: 
+2025-04-01 18:55:10,771 - core.database - ERROR - DB session error: 
+2025-04-01 18:55:10,830 - core.decorators - INFO - FUNC 20250401185510828652: create_employee called
+2025-04-01 18:55:10,830 - core.decorators - INFO - FUNC 20250401185510830904: create_employee called
+2025-04-01 18:55:10,834 - api.api - ERROR - Error in create_employee: 
+2025-04-01 18:55:10,837 - core.decorators - ERROR - FAIL 20250401185510828652: error after 0.0074s - 
+2025-04-01 18:55:10,838 - core.decorators - ERROR - create_employee failed after 0.0097s: 
+2025-04-01 18:55:10,840 - api.api - ERROR - Error in create_employee: 
+2025-04-01 18:55:10,841 - core.decorators - ERROR - FAIL 20250401185510830904: error after 0.0104s - 
+2025-04-01 18:55:10,841 - core.decorators - ERROR - create_employee failed after 0.0108s: 
+2025-04-01 18:55:10,845 - core.decorators - INFO - FUNC 20250401185510845485: create_employee called
+2025-04-01 18:55:10,845 - core.database - ERROR - DB session error: 
+2025-04-01 18:55:10,845 - core.decorators - INFO - FUNC 20250401185510845485: create_employee called
+2025-04-01 18:55:10,855 - core.database - ERROR - DB session error: 
+2025-04-01 18:55:10,866 - api.api - ERROR - Error in create_employee: 
+2025-04-01 18:55:10,866 - core.decorators - ERROR - FAIL 20250401185510845485: error after 0.0215s - 
+2025-04-01 18:55:10,868 - core.decorators - ERROR - create_employee failed after 0.0220s: 
+2025-04-01 18:55:10,869 - api.api - ERROR - Error in create_employee: 
+2025-04-01 18:55:10,869 - core.decorators - ERROR - FAIL 20250401185510845485: error after 0.0237s - 
+2025-04-01 18:55:10,869 - core.decorators - ERROR - create_employee failed after 0.0237s: 
+2025-04-01 18:55:10,875 - core.database - ERROR - DB session error: 
+2025-04-01 18:55:10,877 - core.database - ERROR - DB session error: 
+2025-04-01 18:55:10,905 - core.decorators - INFO - FUNC 20250401185510905086: create_employee called
+2025-04-01 18:55:10,922 - api.api - ERROR - Error in create_employee: 
+2025-04-01 18:55:10,922 - core.decorators - ERROR - FAIL 20250401185510905086: error after 0.0175s - 
+2025-04-01 18:55:10,923 - core.decorators - ERROR - create_employee failed after 0.0187s: 
+2025-04-01 18:55:10,928 - core.database - ERROR - DB session error: 
+2025-04-01 18:55:10,940 - core.decorators - INFO - FUNC 20250401185510940422: create_employee called
+2025-04-01 18:55:10,949 - api.api - ERROR - Error in create_employee: 
+2025-04-01 18:55:10,949 - core.decorators - ERROR - FAIL 20250401185510940422: error after 0.0080s - 
+2025-04-01 18:55:10,950 - core.decorators - ERROR - create_employee failed after 0.0097s: 
+2025-04-01 18:55:10,953 - core.decorators - INFO - FUNC 20250401185510953794: create_employee called
+2025-04-01 18:55:10,957 - core.decorators - INFO - FUNC 20250401185510957153: create_employee called
+2025-04-01 18:55:10,963 - core.database - ERROR - DB session error: 
+2025-04-01 18:55:10,965 - api.api - ERROR - Error in create_employee: 
+2025-04-01 18:55:10,965 - core.decorators - ERROR - FAIL 20250401185510953794: error after 0.0119s - 
+2025-04-01 18:55:10,966 - core.decorators - ERROR - create_employee failed after 0.0129s: 
+2025-04-01 18:55:10,972 - core.database - ERROR - DB session error: 
+2025-04-01 18:55:10,976 - api.api - ERROR - Error in create_employee: 
+2025-04-01 18:55:10,977 - core.decorators - ERROR - FAIL 20250401185510957153: error after 0.0194s - 
+2025-04-01 18:55:10,979 - core.decorators - ERROR - create_employee failed after 0.0221s: 
+2025-04-01 18:55:11,000 - core.database - ERROR - DB session error: 
+2025-04-01 18:55:11,005 - core.decorators - INFO - FUNC 20250401185511005329: create_employee called
+2025-04-01 18:55:11,023 - api.api - ERROR - Error in create_employee: 
+2025-04-01 18:55:11,024 - core.decorators - ERROR - FAIL 20250401185511005329: error after 0.0173s - 
+2025-04-01 18:55:11,024 - core.decorators - ERROR - create_employee failed after 0.0196s: 
+2025-04-01 18:55:11,028 - core.decorators - INFO - FUNC 20250401185511028618: create_employee called
+2025-04-01 18:55:11,032 - core.database - ERROR - DB session error: 
+2025-04-01 18:55:11,038 - api.api - ERROR - Error in create_employee: 
+2025-04-01 18:55:11,040 - core.decorators - ERROR - FAIL 20250401185511028618: error after 0.0120s - 
+2025-04-01 18:55:11,051 - core.decorators - ERROR - create_employee failed after 0.0229s: 
+2025-04-01 18:55:11,063 - core.database - ERROR - DB session error: 
+2025-04-01 18:55:11,068 - core.decorators - INFO - FUNC 20250401185511068689: create_employee called
+2025-04-01 18:55:11,089 - api.api - ERROR - Error in create_employee: 
+2025-04-01 18:55:11,095 - core.decorators - ERROR - FAIL 20250401185511068689: error after 0.0218s - 
+2025-04-01 18:55:11,105 - core.decorators - ERROR - create_employee failed after 0.0371s: 
+2025-04-01 18:55:11,108 - core.decorators - INFO - FUNC 20250401185511108519: create_employee called
+2025-04-01 18:55:11,120 - core.database - ERROR - DB session error: 
+2025-04-01 18:55:11,124 - api.api - ERROR - Error in create_employee: 
+2025-04-01 18:55:11,125 - core.decorators - ERROR - FAIL 20250401185511108519: error after 0.0098s - 
+2025-04-01 18:55:11,127 - core.decorators - ERROR - create_employee failed after 0.0186s: 
+2025-04-01 18:55:11,141 - core.database - ERROR - DB session error: 
+2025-04-01 18:55:11,770 - core.decorators - INFO - FUNC 20250401185511770196: create_employee called
+2025-04-01 18:55:11,774 - core.decorators - INFO - FUNC 20250401185511774656: create_employee called
+2025-04-01 18:55:11,779 - api.api - ERROR - Error in create_employee: 
+2025-04-01 18:55:11,781 - core.decorators - ERROR - FAIL 20250401185511770196: error after 0.0060s - 
+2025-04-01 18:55:11,781 - core.decorators - ERROR - create_employee failed after 0.0115s: 
+2025-04-01 18:55:11,783 - api.api - ERROR - Error in create_employee: 
+2025-04-01 18:55:11,783 - core.decorators - ERROR - FAIL 20250401185511774656: error after 0.0078s - 
+2025-04-01 18:55:11,783 - core.decorators - ERROR - create_employee failed after 0.0087s: 
+2025-04-01 18:55:11,783 - core.database - ERROR - DB session error: 
+2025-04-01 18:55:11,783 - core.database - ERROR - DB session error: 
+2025-04-01 18:55:11,870 - core.decorators - INFO - FUNC 20250401185511870363: create_employee called
+2025-04-01 18:55:11,873 - core.decorators - INFO - FUNC 20250401185511873102: create_employee called
+2025-04-01 18:55:11,875 - core.decorators - INFO - FUNC 20250401185511875438: create_employee called
+2025-04-01 18:55:11,878 - core.decorators - INFO - FUNC 20250401185511878345: create_employee called
+2025-04-01 18:55:11,888 - api.api - ERROR - Error in create_employee: 
+2025-04-01 18:55:11,888 - core.decorators - ERROR - FAIL 20250401185511873102: error after 0.0146s - 
+2025-04-01 18:55:11,888 - core.decorators - ERROR - create_employee failed after 0.0151s: 
+2025-04-01 18:55:11,891 - api.api - ERROR - Error in create_employee: 
+2025-04-01 18:55:11,892 - core.decorators - ERROR - FAIL 20250401185511875438: error after 0.0172s - 
+2025-04-01 18:55:11,893 - core.decorators - ERROR - create_employee failed after 0.0178s: 
+2025-04-01 18:55:11,895 - api.api - ERROR - Error in create_employee: 
+2025-04-01 18:55:11,895 - core.decorators - ERROR - FAIL 20250401185511870363: error after 0.0244s - 
+2025-04-01 18:55:11,896 - core.decorators - ERROR - create_employee failed after 0.0261s: 
+2025-04-01 18:55:11,898 - api.api - ERROR - Error in create_employee: 
+2025-04-01 18:55:11,898 - core.decorators - ERROR - FAIL 20250401185511878345: error after 0.0205s - 
+2025-04-01 18:55:11,898 - core.decorators - ERROR - create_employee failed after 0.0205s: 
+2025-04-01 18:55:11,903 - core.database - ERROR - DB session error: 
+2025-04-01 18:55:11,905 - core.database - ERROR - DB session error: 
+2025-04-01 18:55:11,906 - core.database - ERROR - DB session error: 
+2025-04-01 18:55:11,916 - core.database - ERROR - DB session error: 
+2025-04-01 18:55:12,050 - core.decorators - INFO - FUNC 20250401185512050658: create_employee called
+2025-04-01 18:55:12,055 - api.api - ERROR - Error in create_employee: 
+2025-04-01 18:55:12,056 - core.decorators - ERROR - FAIL 20250401185512050658: error after 0.0052s - 
+2025-04-01 18:55:12,056 - core.decorators - ERROR - create_employee failed after 0.0057s: 
+2025-04-01 18:55:12,061 - core.database - ERROR - DB session error: 
+2025-04-01 18:55:12,068 - core.decorators - INFO - FUNC 20250401185512068519: create_employee called
+2025-04-01 18:55:12,075 - api.api - ERROR - Error in create_employee: 
+2025-04-01 18:55:12,075 - core.decorators - ERROR - FAIL 20250401185512068519: error after 0.0055s - 
+2025-04-01 18:55:12,076 - core.decorators - ERROR - create_employee failed after 0.0079s: 
+2025-04-01 18:55:12,080 - core.database - ERROR - DB session error: 
+2025-04-01 18:56:04,340 - main - INFO - Shutting down, closing connections...
+2025-04-01 18:56:04,342 - core.database - INFO - Database connections closed
+2025-04-01 18:56:04,343 - main - INFO - Database connections closed
+2025-04-01 18:56:10,384 - main - INFO - Starting server...
+2025-04-01 18:56:44,427 - main - INFO - Shutting down, closing connections...
+2025-04-01 18:56:44,429 - core.database - INFO - Database connections closed
+2025-04-01 18:56:44,430 - main - INFO - Database connections closed
+2025-04-01 18:56:50,146 - main - INFO - Starting server...
+2025-04-01 18:58:45,782 - core.decorators - INFO - FUNC 20250401185845782852: login_for_access_token called
+2025-04-01 18:58:46,205 - core.decorators - INFO - login_for_access_token took 0.4220s
+2025-04-01 18:58:46,206 - core.decorators - INFO - DONE 20250401185845782852: completed in 0.4230s
+2025-04-01 18:58:48,300 - main - INFO - WebSocket connection accepted
+2025-04-01 18:58:48,300 - main - INFO - WebSocket authenticated as admin
+2025-04-01 18:58:48,300 - main - INFO - WebSocket client connected: admin_2475570901264
+2025-04-01 18:58:48,357 - main - INFO - Received WebSocket message from admin_2475570901264: employee_id=1
+2025-04-01 18:58:48,710 - main - INFO - Received WebSocket message from admin_2475570901264: employee_id=2
+2025-04-01 18:58:49,026 - main - INFO - Received WebSocket message from admin_2475570901264: employee_id=3
+2025-04-01 18:58:49,343 - main - INFO - Received WebSocket message from admin_2475570901264: employee_id=4
+2025-04-01 18:58:49,667 - main - INFO - Received WebSocket message from admin_2475570901264: employee_id=5
+2025-04-01 18:58:50,004 - main - INFO - Received WebSocket message from admin_2475570901264: employee_id=6
+2025-04-01 18:58:50,319 - main - INFO - Received WebSocket message from admin_2475570901264: employee_id=7
+2025-04-01 18:58:50,655 - main - INFO - Received WebSocket message from admin_2475570901264: employee_id=8
+2025-04-01 18:58:50,977 - main - INFO - Received WebSocket message from admin_2475570901264: employee_id=9
+2025-04-01 18:58:51,294 - main - INFO - Received WebSocket message from admin_2475570901264: employee_id=10
+2025-04-01 18:58:51,619 - main - INFO - Received WebSocket message from admin_2475570901264: employee_id=11
+2025-04-01 18:58:51,933 - main - INFO - Received WebSocket message from admin_2475570901264: employee_id=12
+2025-04-01 18:58:52,264 - main - INFO - Received WebSocket message from admin_2475570901264: employee_id=13
+2025-04-01 18:58:52,593 - main - INFO - Received WebSocket message from admin_2475570901264: employee_id=14
+2025-04-01 18:58:52,920 - main - INFO - Received WebSocket message from admin_2475570901264: employee_id=15
+2025-04-01 18:58:53,236 - main - INFO - Received WebSocket message from admin_2475570901264: employee_id=16
+2025-04-01 18:58:53,552 - main - INFO - Received WebSocket message from admin_2475570901264: employee_id=17
+2025-04-01 18:58:53,862 - main - INFO - Received WebSocket message from admin_2475570901264: employee_id=18
+2025-04-01 18:58:54,193 - main - INFO - Received WebSocket message from admin_2475570901264: employee_id=19
+2025-04-01 18:58:54,533 - main - INFO - Received WebSocket message from admin_2475570901264: employee_id=20
+2025-04-01 18:58:55,380 - main - INFO - Received WebSocket message from admin_2475570901264: employee_id=21
+2025-04-01 18:58:55,719 - main - INFO - Received WebSocket message from admin_2475570901264: employee_id=22
+2025-04-01 18:58:56,033 - main - INFO - Received WebSocket message from admin_2475570901264: employee_id=23
+2025-04-01 18:58:56,376 - main - INFO - Received WebSocket message from admin_2475570901264: employee_id=24
+2025-04-01 18:58:56,701 - main - INFO - Received WebSocket message from admin_2475570901264: employee_id=25
+2025-04-01 18:58:57,042 - main - INFO - Received WebSocket message from admin_2475570901264: employee_id=26
+2025-04-01 18:58:57,371 - main - INFO - Received WebSocket message from admin_2475570901264: employee_id=27
+2025-04-01 18:58:57,704 - main - INFO - Received WebSocket message from admin_2475570901264: employee_id=28
+2025-04-01 18:58:58,065 - main - INFO - Received WebSocket message from admin_2475570901264: employee_id=29
+2025-04-01 18:58:58,405 - main - INFO - Received WebSocket message from admin_2475570901264: employee_id=30
+2025-04-01 18:58:58,739 - main - INFO - Received WebSocket message from admin_2475570901264: employee_id=31
+2025-04-01 18:58:59,067 - main - INFO - Received WebSocket message from admin_2475570901264: employee_id=32
+2025-04-01 18:58:59,383 - main - INFO - Received WebSocket message from admin_2475570901264: employee_id=33
+2025-04-01 18:58:59,712 - main - INFO - Received WebSocket message from admin_2475570901264: employee_id=34
+2025-04-01 18:59:00,027 - main - INFO - Received WebSocket message from admin_2475570901264: employee_id=35
+2025-04-01 18:59:00,357 - main - INFO - Received WebSocket message from admin_2475570901264: employee_id=36
+2025-04-01 18:59:00,672 - main - INFO - Received WebSocket message from admin_2475570901264: employee_id=37
+2025-04-01 18:59:00,987 - main - INFO - Received WebSocket message from admin_2475570901264: employee_id=38
+2025-04-01 18:59:01,299 - main - INFO - Received WebSocket message from admin_2475570901264: employee_id=39
+2025-04-01 18:59:01,616 - main - INFO - Received WebSocket message from admin_2475570901264: employee_id=40
+2025-04-01 18:59:02,443 - main - INFO - Received WebSocket message from admin_2475570901264: employee_id=41
+2025-04-01 18:59:02,762 - main - INFO - Received WebSocket message from admin_2475570901264: employee_id=42
+2025-04-01 18:59:03,086 - main - INFO - Received WebSocket message from admin_2475570901264: employee_id=43
+2025-04-01 18:59:03,396 - main - INFO - Received WebSocket message from admin_2475570901264: employee_id=44
+2025-04-01 18:59:03,720 - main - INFO - Received WebSocket message from admin_2475570901264: employee_id=45
+2025-04-01 18:59:04,035 - main - INFO - Received WebSocket message from admin_2475570901264: employee_id=46
+2025-04-01 18:59:04,349 - main - INFO - Received WebSocket message from admin_2475570901264: employee_id=47
+2025-04-01 18:59:04,665 - main - INFO - Received WebSocket message from admin_2475570901264: employee_id=48
+2025-04-01 18:59:04,987 - main - INFO - Received WebSocket message from admin_2475570901264: employee_id=49
+2025-04-01 18:59:05,324 - main - INFO - Received WebSocket message from admin_2475570901264: employee_id=50
+2025-04-01 18:59:05,642 - main - INFO - Received WebSocket message from admin_2475570901264: employee_id=51
+2025-04-01 18:59:05,960 - main - INFO - Received WebSocket message from admin_2475570901264: employee_id=52
+2025-04-01 18:59:06,300 - main - INFO - Received WebSocket message from admin_2475570901264: employee_id=53
+2025-04-01 18:59:06,627 - main - INFO - Received WebSocket message from admin_2475570901264: employee_id=54
+2025-04-01 18:59:06,942 - main - INFO - Received WebSocket message from admin_2475570901264: employee_id=55
+2025-04-01 18:59:07,253 - main - INFO - Received WebSocket message from admin_2475570901264: employee_id=56
+2025-04-01 18:59:07,565 - main - INFO - Received WebSocket message from admin_2475570901264: employee_id=57
+2025-04-01 18:59:07,877 - main - INFO - Received WebSocket message from admin_2475570901264: employee_id=58
+2025-04-01 18:59:08,202 - main - INFO - Received WebSocket message from admin_2475570901264: employee_id=59
+2025-04-01 18:59:08,507 - main - INFO - Received WebSocket message from admin_2475570901264: employee_id=60
+2025-04-01 18:59:09,331 - main - INFO - Received WebSocket message from admin_2475570901264: employee_id=61
+2025-04-01 18:59:09,642 - main - INFO - Received WebSocket message from admin_2475570901264: employee_id=62
+2025-04-01 18:59:09,965 - main - INFO - Received WebSocket message from admin_2475570901264: employee_id=63
+2025-04-01 18:59:10,274 - main - INFO - Received WebSocket message from admin_2475570901264: employee_id=64
+2025-04-01 18:59:10,596 - main - INFO - Received WebSocket message from admin_2475570901264: employee_id=65
+2025-04-01 18:59:10,911 - main - INFO - Received WebSocket message from admin_2475570901264: employee_id=66
+2025-04-01 18:59:11,229 - main - INFO - Received WebSocket message from admin_2475570901264: employee_id=67
+2025-04-01 18:59:11,543 - main - INFO - Received WebSocket message from admin_2475570901264: employee_id=68
+2025-04-01 18:59:11,869 - main - INFO - Received WebSocket message from admin_2475570901264: employee_id=69
+2025-04-01 18:59:12,186 - main - INFO - Received WebSocket message from admin_2475570901264: employee_id=70
+2025-04-01 18:59:12,509 - main - INFO - Received WebSocket message from admin_2475570901264: employee_id=71
+2025-04-01 18:59:12,824 - main - INFO - Received WebSocket message from admin_2475570901264: employee_id=72
+2025-04-01 18:59:13,144 - main - INFO - Received WebSocket message from admin_2475570901264: employee_id=73
+2025-04-01 18:59:13,461 - main - INFO - Received WebSocket message from admin_2475570901264: employee_id=74
+2025-04-01 18:59:13,777 - main - INFO - Received WebSocket message from admin_2475570901264: employee_id=75
+2025-04-01 18:59:14,105 - main - INFO - Received WebSocket message from admin_2475570901264: employee_id=76
+2025-04-01 18:59:14,430 - main - INFO - Received WebSocket message from admin_2475570901264: employee_id=77
+2025-04-01 18:59:14,749 - main - INFO - Received WebSocket message from admin_2475570901264: employee_id=78
+2025-04-01 18:59:15,076 - main - INFO - Received WebSocket message from admin_2475570901264: employee_id=79
+2025-04-01 18:59:15,417 - main - INFO - Received WebSocket message from admin_2475570901264: employee_id=80
+2025-04-01 18:59:15,848 - main - INFO - WebSocket client disconnected: admin_2475570901264
+2025-04-01 19:07:42,086 - main - INFO - Starting server...

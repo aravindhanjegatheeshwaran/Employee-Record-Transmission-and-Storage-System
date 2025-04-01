@@ -27,7 +27,7 @@ router = APIRouter(
 @router.post("/", response_model=EmployeeResponse, status_code=status.HTTP_201_CREATED)
 @log_execution_time
 @log_requests
-@rate_limit(calls=100, period=60)
+@rate_limit(calls=1000, period=60)
 async def create_employee(
     employee: EmployeeCreate,
     db: AsyncSession = Depends(get_db)
@@ -59,7 +59,7 @@ async def create_employee(
 @router.post("/bulk", response_model=BatchUploadResponse)
 @log_requests
 @log_execution_time
-@rate_limit(calls=10, period=60)
+@rate_limit(calls=100, period=60)
 async def create_employees_bulk(
     request: Request,
     employees: EmployeeBulkCreate,
@@ -118,7 +118,7 @@ async def create_employees_bulk(
 @router.get("/", response_model=List[EmployeeResponse])
 @log_requests
 @log_execution_time
-@rate_limit(calls=100, period=60)
+@rate_limit(calls=1000, period=60)
 async def get_employees(
     request: Request,
     skip: int = 0,
@@ -144,7 +144,7 @@ async def get_employees(
 @router.get("/{employee_id}", response_model=EmployeeResponse)
 @log_requests
 @log_execution_time
-@rate_limit(calls=200, period=60)
+@rate_limit(calls=2000, period=60)
 async def get_employee(
     request: Request,
     employee_id: int,

@@ -52,10 +52,18 @@ class EmployeeClient:
     
     def __post_init__(self):
         if self.comm_mode == CommunicationMode.KAFKA and not KAFKA_AVAILABLE:
-            raise ImportError("Kafka support requires aiokafka package")
+            raise ImportError(
+                "Kafka support requires aiokafka package. Please install it with:\n"
+                "pip install aiokafka==0.8.1\n"
+                "Or use HTTP mode with: --mode http"
+            )
         
         if self.comm_mode == CommunicationMode.WEBSOCKET and not WEBSOCKETS_AVAILABLE:
-            raise ImportError("WebSocket support requires websockets package")
+            raise ImportError(
+                "WebSocket support requires websockets package. Please install it with:\n"
+                "pip install websockets==11.0.3\n"
+                "Or use HTTP mode with: --mode http"
+            )
     
     async def initialize(self):
         logger.info(f"Setting up {self.comm_mode} client")
@@ -231,18 +239,32 @@ class EmployeeClient:
             
             if missing_fields:
                 raise Exception(f"Missing required fields: {', '.join(missing_fields)}")
-                
+            
+            # Send the employee record
+            employee_id = formatted_employee.get('employee_id')
+            logger.info(f"Sending employee {employee_id} via WebSocket")
             await self.websocket.send(json.dumps(formatted_employee))
             
+            # Wait for response with timeout
             response = await asyncio.wait_for(self.websocket.recv(), timeout=self.timeout)
-            return json.loads(response)
+            parsed_response = json.loads(response)
+            
+            # Add a small delay after each WebSocket message
+            await asyncio.sleep(0.1)
+            
+            return parsed_response
+        except websockets.exceptions.ConnectionClosed as e:
+            logger.error(f"WebSocket connection closed: {str(e)}")
+            logger.info("Reconnecting WebSocket...")
+            try:
+                await self.initialize_websocket()
+                # Retry sending after reconnection
+                return await self.send_employee_websocket(employee)
+            except Exception as reconnect_error:
+                logger.error(f"Failed to reconnect WebSocket: {str(reconnect_error)}")
+                raise
         except Exception as e:
             logger.error(f"WebSocket transmission error: {str(e)}")
-            
-            if isinstance(e, websockets.exceptions.ConnectionClosed):
-                logger.info("Reconnecting WebSocket...")
-                await self.initialize_websocket()
-            
             raise
     
     async def send_employee(self, employee: Dict[str, Any]) -> Dict[str, Any]:
@@ -257,27 +279,55 @@ class EmployeeClient:
     
     async def send_employees_concurrently(self, employees: List[Dict[str, Any]]) -> Tuple[List[Dict[str, Any]], List[Dict[str, Any]]]:
         tasks = []
-        for employee in employees:
-            tasks.append(self.send_employee(employee))
         
-        results = await gather_with_concurrency(self.max_workers, *tasks)
-        
-        successful = []
-        failed = []
-        
-        for i, result in enumerate(results):
-            if isinstance(result, Exception):
-                failed.append({
-                    **employees[i],
-                    "error": str(result)
-                })
-            else:
-                successful.append({
-                    **employees[i],
-                    "response": result
-                })
-        
-        return successful, failed
+        # For WebSocket mode, we'll process records one at a time
+        if self.comm_mode == CommunicationMode.WEBSOCKET:
+            logger.info("Using sequential processing for WebSocket mode")
+            successful = []
+            failed = []
+            
+            for employee in employees:
+                try:
+                    # Process one by one with delay between records
+                    result = await self.send_employee(employee)
+                    successful.append({
+                        **employee,
+                        "response": result
+                    })
+                    # Add extra delay between WebSocket operations
+                    await asyncio.sleep(0.2)
+                except Exception as e:
+                    failed.append({
+                        **employee,
+                        "error": str(e)
+                    })
+            
+            return successful, failed
+        else:
+            # For HTTP and Kafka, use concurrent processing
+            for employee in employees:
+                tasks.append(self.send_employee(employee))
+            
+            # Adjust concurrency based on communication mode
+            max_concurrent = 5 if self.comm_mode == CommunicationMode.HTTP else self.max_workers
+            results = await gather_with_concurrency(max_concurrent, *tasks)
+            
+            successful = []
+            failed = []
+            
+            for i, result in enumerate(results):
+                if isinstance(result, Exception):
+                    failed.append({
+                        **employees[i],
+                        "error": str(result)
+                    })
+                else:
+                    successful.append({
+                        **employees[i],
+                        "response": result
+                    })
+            
+            return successful, failed
     
     @log_execution_time
     async def process_csv_file(self, file_path: str) -> Tuple[int, int, List[Dict[str, Any]]]:
@@ -295,16 +345,29 @@ class EmployeeClient:
             failed_records = []
             batch_count = (len(employees) + self.batch_size - 1) // self.batch_size
             
-            for i in range(0, len(employees), self.batch_size):
-                batch = employees[i:i + self.batch_size]
-                batch_num = i // self.batch_size + 1
-                logger.info(f"Processing batch {batch_num}/{batch_count} ({len(batch)} records)")
+            # Use a smaller effective batch size and add delays between batches
+            effective_batch_size = min(self.batch_size, 20)  # Limit concurrent requests
+            
+            for i in range(0, len(employees), effective_batch_size):
+                batch = employees[i:i + effective_batch_size]
+                batch_num = i // effective_batch_size + 1
+                total_batches = (len(employees) + effective_batch_size - 1) // effective_batch_size
+                logger.info(f"Processing batch {batch_num}/{total_batches} ({len(batch)} records)")
+                
+                # Limit concurrency by using a max_workers setting
+                max_workers = min(self.max_workers, 10)  # Limit concurrent workers
                 
                 successful, failed = await self.send_employees_concurrently(batch)
                 successful_count += len(successful)
                 failed_records.extend(failed)
                 
                 logger.info(f"Batch {batch_num} result: {len(successful)} ok, {len(failed)} failed")
+                
+                # Add a delay between batches to avoid hitting rate limits
+                if i + effective_batch_size < len(employees):
+                    delay = 0.5  # Half second delay between batches
+                    logger.info(f"Waiting {delay}s before next batch...")
+                    await asyncio.sleep(delay)
             
             logger.info(f"CSV processing summary: {successful_count} successful, {len(failed_records)} failed")
             

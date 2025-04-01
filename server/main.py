@@ -162,9 +162,14 @@ manager = ConnectionManager()
 
 @app.websocket("/ws")
 async def websocket_endpoint(websocket: WebSocket):
-    await websocket.accept()
+    client_id = None
     
     try:
+        # Accept the connection first
+        await websocket.accept()
+        logger.info("WebSocket connection accepted")
+        
+        # Validate auth token
         headers = dict(websocket.headers)
         auth_header = headers.get("authorization", "")
         
@@ -173,7 +178,6 @@ async def websocket_endpoint(websocket: WebSocket):
                 "status": "error",
                 "message": "Unauthorized: Missing or invalid token"
             }))
-            await websocket.close()
             return
         
         token = auth_header.replace("Bearer ", "")
@@ -181,74 +185,100 @@ async def websocket_endpoint(websocket: WebSocket):
         try:
             user = await get_current_user(token)
             client_id = f"{user.username}_{id(websocket)}"
-        except Exception:
+            logger.info(f"WebSocket authenticated as {user.username}")
+        except Exception as auth_error:
+            logger.error(f"WebSocket authentication error: {str(auth_error)}")
             await websocket.send_text(json.dumps({
                 "status": "error",
                 "message": "Unauthorized: Invalid token"
             }))
-            await websocket.close()
             return
         
-        await manager.connect(websocket, client_id)
+        # Register the connection with the manager (don't accept again)
+        manager.active_connections[client_id] = websocket
+        logger.info(f"WebSocket client connected: {client_id}")
         
+        # Main message loop
         while True:
+            # Wait for messages
             data = await websocket.receive_text()
+            logger.debug(f"Received text message: {data[:100]}...")
+            
             try:
+                # Parse JSON data
                 employee_data = json.loads(data)
-                logger.info(f"Received WebSocket message: {employee_data}")
+                logger.info(f"Received WebSocket message from {client_id}: employee_id={employee_data.get('employee_id')}")
                 
+                # Get database session
                 db_gen = get_db()
                 db = await anext(db_gen.__aiter__())
                 
                 try:
+                    # Validate employee data
                     employee_id = employee_data.get("employee_id")
                     if not employee_id:
-                        await manager.send_response({
+                        await websocket.send_text(json.dumps({
                             "status": "error",
                             "message": "Invalid employee data: missing employee_id"
-                        }, websocket)
+                        }))
                         continue
                     
+                    # Check if employee exists
                     exists = await employee_repository.exists(db, employee_id)
                     if exists:
-                        await manager.send_response({
+                        await websocket.send_text(json.dumps({
                             "status": "error",
                             "message": f"Employee ID {employee_id} already exists"
-                        }, websocket)
+                        }))
                         continue
                     
+                    # Create employee
                     employee = EmployeeCreate(**employee_data)
                     new_employee = await employee_repository.create(db, employee.dict())
                     
                     await db.commit()
                     
-                    await manager.send_response({
+                    # Send success response
+                    await websocket.send_text(json.dumps({
                         "status": "success",
                         "message": f"Employee created: {employee_id}",
                         "employee_id": employee_id
-                    }, websocket)
-                except Exception as e:
+                    }))
+                    logger.info(f"Successfully created employee {employee_id} via WebSocket")
+                except Exception as db_error:
+                    # Handle database errors
                     await db.rollback()
-                    logger.error(f"Database error processing WebSocket message: {str(e)}")
-                    raise
+                    logger.error(f"Database error processing WebSocket message: {str(db_error)}")
+                    await websocket.send_text(json.dumps({
+                        "status": "error",
+                        "message": f"Database error: {str(db_error)}"
+                    }))
                 finally:
+                    # Always close the database session
                     await db.close()
                     
-            except json.JSONDecodeError:
-                await manager.send_response({
+            except json.JSONDecodeError as json_error:
+                # Handle invalid JSON
+                logger.warning(f"Invalid JSON from client {client_id}: {str(json_error)}")
+                await websocket.send_text(json.dumps({
                     "status": "error",
                     "message": "Invalid JSON data"
-                }, websocket)
-            except Exception as e:
-                logger.error(f"Error processing WebSocket message: {str(e)}")
-                await manager.send_response({
+                }))
+            except Exception as msg_error:
+                # Handle other message processing errors
+                logger.error(f"Error processing WebSocket message: {str(msg_error)}")
+                await websocket.send_text(json.dumps({
                     "status": "error",
-                    "message": f"Error: {str(e)}"
-                }, websocket)
+                    "message": f"Error: {str(msg_error)}"
+                }))
                 
     except WebSocketDisconnect:
-        manager.disconnect(client_id)
+        # Handle disconnection
+        logger.info(f"WebSocket client disconnected: {client_id}")
+        if client_id and client_id in manager.active_connections:
+            del manager.active_connections[client_id]
     except Exception as e:
+        # Handle other connection errors
         logger.error(f"WebSocket error: {str(e)}")
         try:
             await websocket.close()
