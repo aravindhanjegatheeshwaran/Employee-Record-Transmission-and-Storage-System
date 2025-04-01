@@ -257,7 +257,7 @@ def format_employee_record(record: Dict[str, Any]) -> Dict[str, Any]:
     for key, value in record.items():
         if value is not None:  # Skip None values
             # Convert date objects to string format
-            if isinstance(value, (datetime, date)):
+            if isinstance(value, date):
                 formatted[key] = value.isoformat()
             else:
                 formatted[key] = value

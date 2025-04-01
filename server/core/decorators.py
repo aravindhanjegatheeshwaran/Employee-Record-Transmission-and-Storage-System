@@ -104,13 +104,11 @@ def validate_input(validator_class):
         async def async_wrapper(*args, **kwargs):
             # Extract request body from kwargs or args
             request_body = None
-            param_name = None
             
             # Check in kwargs first
             for key, value in list(kwargs.items()):
                 if not isinstance(value, Request) and value is not None:
                     request_body = value
-                    param_name = key
                     break
             
             # If not found in kwargs, check in args
@@ -118,8 +116,6 @@ def validate_input(validator_class):
                 for i, arg in enumerate(args):
                     if not isinstance(arg, Request) and arg is not None:
                         request_body = arg
-                        # We can't easily get the parameter name from args
-                        # So we'll just replace the validated data later
                         break
             
             if not request_body:
@@ -139,9 +135,8 @@ def validate_input(validator_class):
                         request_dict = request_body.__dict__
                     validator_instance = validator_class(**request_dict)
                 
-                # Replace the original parameter with the validated instance
-                if param_name:
-                    kwargs[param_name] = validator_instance
+                # Here's the fix: we don't add the validated_data to kwargs
+                # Just validate and continue
                 
             except Exception as e:
                 logger.error(f"Validation error: {str(e)}")
@@ -152,8 +147,6 @@ def validate_input(validator_class):
             
             return await func(*args, **kwargs)
 
-        # ... rest of the decorator (sync_wrapper) would need similar changes
-        
         if asyncio.iscoroutinefunction(func):
             return async_wrapper
         return sync_wrapper
