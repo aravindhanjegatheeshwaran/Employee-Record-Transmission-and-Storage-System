@@ -1,0 +1,1031 @@
+2025-03-28 13:00:36,215 - main - INFO - Initializing database connection...
+2025-03-28 13:00:40,320 - main - ERROR - Failed to initialize database connection: Failed to initialize database connection: (2003, "Can't connect to MySQL server on 'localhost'")
+2025-03-28 13:03:45,854 - core.decorators - INFO - Function login_for_access_token called with request ID 20250328130345854684
+2025-03-28 13:03:46,279 - core.decorators - INFO - Function login_for_access_token executed in 0.4221 seconds
+2025-03-28 13:03:46,284 - core.decorators - INFO - Request 20250328130345854684 completed in 0.4269 seconds
+2025-03-28 13:10:38,759 - core.decorators - INFO - Function login_for_access_token called with request ID 20250328131038759622
+2025-03-28 13:10:39,188 - core.decorators - INFO - Function login_for_access_token executed in 0.4233 seconds
+2025-03-28 13:10:39,188 - core.decorators - INFO - Request 20250328131038759622 completed in 0.4241 seconds
+2025-03-28 14:16:38,629 - core.decorators - INFO - Function login_for_access_token called with request ID 20250328141638629565
+2025-03-28 14:16:39,064 - core.decorators - INFO - Function login_for_access_token executed in 0.4328 seconds
+2025-03-28 14:16:39,074 - core.decorators - INFO - Request 20250328141638629565 completed in 0.4422 seconds
+2025-03-28 14:16:39,234 - core.decorators - INFO - Function create_employee called with request ID 20250328141639234915
+2025-03-28 14:16:39,238 - core.decorators - ERROR - Function create_employee failed after 0.0010 seconds. Error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 14:16:39,239 - core.decorators - ERROR - Request 20250328141639234915 failed after 0.0027 seconds with error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 14:16:39,245 - core.decorators - ERROR - Traceback (most recent call last):
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 85, in wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 29, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 142, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 232, in async_wrapper
+    return await func(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^
+TypeError: create_employee() got an unexpected keyword argument 'validated_data'
+
+2025-03-28 14:16:39,583 - core.decorators - INFO - Function create_employee called with request ID 20250328141639583747
+2025-03-28 14:16:39,586 - core.decorators - ERROR - Function create_employee failed after 0.0000 seconds. Error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 14:16:39,587 - core.decorators - ERROR - Request 20250328141639583747 failed after 0.0014 seconds with error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 14:16:39,589 - core.decorators - ERROR - Traceback (most recent call last):
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 85, in wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 29, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 142, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 232, in async_wrapper
+    return await func(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^
+TypeError: create_employee() got an unexpected keyword argument 'validated_data'
+
+2025-03-28 14:16:39,594 - core.decorators - INFO - Function create_employee called with request ID 20250328141639594921
+2025-03-28 14:16:39,597 - core.decorators - ERROR - Function create_employee failed after 0.0005 seconds. Error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 14:16:39,598 - core.decorators - ERROR - Request 20250328141639594921 failed after 0.0018 seconds with error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 14:16:39,601 - core.decorators - ERROR - Traceback (most recent call last):
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 85, in wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 29, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 142, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 232, in async_wrapper
+    return await func(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^
+TypeError: create_employee() got an unexpected keyword argument 'validated_data'
+
+2025-03-28 14:16:39,607 - core.decorators - INFO - Function create_employee called with request ID 20250328141639607981
+2025-03-28 14:16:39,608 - core.decorators - ERROR - Function create_employee failed after 0.0000 seconds. Error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 14:16:39,610 - core.decorators - ERROR - Request 20250328141639607981 failed after 0.0012 seconds with error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 14:16:39,612 - core.decorators - ERROR - Traceback (most recent call last):
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 85, in wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 29, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 142, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 232, in async_wrapper
+    return await func(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^
+TypeError: create_employee() got an unexpected keyword argument 'validated_data'
+
+2025-03-28 14:16:39,620 - core.decorators - INFO - Function create_employee called with request ID 20250328141639620943
+2025-03-28 14:16:39,622 - core.decorators - ERROR - Function create_employee failed after 0.0000 seconds. Error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 14:16:39,624 - core.decorators - ERROR - Request 20250328141639620943 failed after 0.0017 seconds with error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 14:16:39,626 - core.decorators - ERROR - Traceback (most recent call last):
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 85, in wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 29, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 142, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 232, in async_wrapper
+    return await func(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^
+TypeError: create_employee() got an unexpected keyword argument 'validated_data'
+
+2025-03-28 14:16:39,632 - core.decorators - INFO - Function create_employee called with request ID 20250328141639632944
+2025-03-28 14:16:39,634 - core.decorators - ERROR - Function create_employee failed after 0.0014 seconds. Error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 14:16:39,635 - core.decorators - ERROR - Request 20250328141639632944 failed after 0.0024 seconds with error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 14:16:39,637 - core.decorators - ERROR - Traceback (most recent call last):
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 85, in wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 29, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 142, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 232, in async_wrapper
+    return await func(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^
+TypeError: create_employee() got an unexpected keyword argument 'validated_data'
+
+2025-03-28 14:16:39,676 - core.decorators - INFO - Function create_employee called with request ID 20250328141639676979
+2025-03-28 14:16:39,678 - core.decorators - ERROR - Function create_employee failed after 0.0012 seconds. Error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 14:16:39,678 - core.decorators - ERROR - Request 20250328141639676979 failed after 0.0012 seconds with error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 14:16:39,679 - core.decorators - ERROR - Traceback (most recent call last):
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 85, in wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 29, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 142, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 232, in async_wrapper
+    return await func(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^
+TypeError: create_employee() got an unexpected keyword argument 'validated_data'
+
+2025-03-28 14:16:39,708 - core.decorators - INFO - Function create_employee called with request ID 20250328141639708036
+2025-03-28 14:16:39,709 - core.decorators - ERROR - Function create_employee failed after 0.0000 seconds. Error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 14:16:39,709 - core.decorators - ERROR - Request 20250328141639708036 failed after 0.0000 seconds with error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 14:16:39,711 - core.decorators - ERROR - Traceback (most recent call last):
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 85, in wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 29, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 142, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 232, in async_wrapper
+    return await func(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^
+TypeError: create_employee() got an unexpected keyword argument 'validated_data'
+
+2025-03-28 14:16:39,741 - core.decorators - INFO - Function create_employee called with request ID 20250328141639741692
+2025-03-28 14:16:39,742 - core.decorators - ERROR - Function create_employee failed after 0.0000 seconds. Error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 14:16:39,743 - core.decorators - ERROR - Request 20250328141639741692 failed after 0.0010 seconds with error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 14:16:39,745 - core.decorators - ERROR - Traceback (most recent call last):
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 85, in wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 29, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 142, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 232, in async_wrapper
+    return await func(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^
+TypeError: create_employee() got an unexpected keyword argument 'validated_data'
+
+2025-03-28 14:16:39,780 - core.decorators - INFO - Function create_employee called with request ID 20250328141639780395
+2025-03-28 14:16:39,780 - core.decorators - ERROR - Function create_employee failed after 0.0000 seconds. Error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 14:16:39,782 - core.decorators - ERROR - Request 20250328141639780395 failed after 0.0014 seconds with error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 14:16:39,783 - core.decorators - ERROR - Traceback (most recent call last):
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 85, in wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 29, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 142, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 232, in async_wrapper
+    return await func(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^
+TypeError: create_employee() got an unexpected keyword argument 'validated_data'
+
+2025-03-28 14:16:40,710 - core.decorators - INFO - Function create_employee called with request ID 20250328141640710600
+2025-03-28 14:16:40,717 - core.decorators - ERROR - Function create_employee failed after 0.0011 seconds. Error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 14:16:40,719 - core.decorators - ERROR - Request 20250328141640710600 failed after 0.0031 seconds with error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 14:16:40,724 - core.decorators - ERROR - Traceback (most recent call last):
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 85, in wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 29, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 142, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 232, in async_wrapper
+    return await func(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^
+TypeError: create_employee() got an unexpected keyword argument 'validated_data'
+
+2025-03-28 14:16:40,809 - core.decorators - INFO - Function create_employee called with request ID 20250328141640809021
+2025-03-28 14:16:40,811 - core.decorators - ERROR - Function create_employee failed after 0.0010 seconds. Error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 14:16:40,812 - core.decorators - ERROR - Request 20250328141640809021 failed after 0.0020 seconds with error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 14:16:40,815 - core.decorators - ERROR - Traceback (most recent call last):
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 85, in wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 29, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 142, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 232, in async_wrapper
+    return await func(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^
+TypeError: create_employee() got an unexpected keyword argument 'validated_data'
+
+2025-03-28 14:16:40,873 - core.decorators - INFO - Function create_employee called with request ID 20250328141640873356
+2025-03-28 14:16:40,874 - core.decorators - ERROR - Function create_employee failed after 0.0000 seconds. Error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 14:16:40,875 - core.decorators - ERROR - Request 20250328141640873356 failed after 0.0012 seconds with error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 14:16:40,877 - core.decorators - ERROR - Traceback (most recent call last):
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 85, in wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 29, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 142, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 232, in async_wrapper
+    return await func(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^
+TypeError: create_employee() got an unexpected keyword argument 'validated_data'
+
+2025-03-28 14:16:40,882 - core.decorators - INFO - Function create_employee called with request ID 20250328141640882451
+2025-03-28 14:16:40,885 - core.decorators - ERROR - Function create_employee failed after 0.0006 seconds. Error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 14:16:40,886 - core.decorators - ERROR - Request 20250328141640882451 failed after 0.0016 seconds with error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 14:16:40,888 - core.decorators - ERROR - Traceback (most recent call last):
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 85, in wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 29, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 142, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 232, in async_wrapper
+    return await func(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^
+TypeError: create_employee() got an unexpected keyword argument 'validated_data'
+
+2025-03-28 14:16:40,997 - core.decorators - INFO - Function create_employee called with request ID 20250328141640997056
+2025-03-28 14:16:40,998 - core.decorators - ERROR - Function create_employee failed after 0.0000 seconds. Error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 14:16:40,998 - core.decorators - ERROR - Request 20250328141640997056 failed after 0.0000 seconds with error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 14:16:40,998 - core.decorators - ERROR - Traceback (most recent call last):
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 85, in wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 29, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 142, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 232, in async_wrapper
+    return await func(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^
+TypeError: create_employee() got an unexpected keyword argument 'validated_data'
+
+2025-03-28 14:16:41,069 - core.decorators - INFO - Function create_employee called with request ID 20250328141641069494
+2025-03-28 14:16:41,070 - core.decorators - ERROR - Function create_employee failed after 0.0005 seconds. Error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 14:16:41,071 - core.decorators - ERROR - Request 20250328141641069494 failed after 0.0011 seconds with error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 14:16:41,072 - core.decorators - ERROR - Traceback (most recent call last):
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 85, in wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 29, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 142, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 232, in async_wrapper
+    return await func(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^
+TypeError: create_employee() got an unexpected keyword argument 'validated_data'
+
+2025-03-28 14:16:41,105 - core.decorators - INFO - Function create_employee called with request ID 20250328141641105993
+2025-03-28 14:16:41,106 - core.decorators - ERROR - Function create_employee failed after 0.0000 seconds. Error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 14:16:41,107 - core.decorators - ERROR - Request 20250328141641105993 failed after 0.0012 seconds with error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 14:16:41,109 - core.decorators - ERROR - Traceback (most recent call last):
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 85, in wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 29, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 142, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 232, in async_wrapper
+    return await func(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^
+TypeError: create_employee() got an unexpected keyword argument 'validated_data'
+
+2025-03-28 14:16:41,142 - core.decorators - INFO - Function create_employee called with request ID 20250328141641142987
+2025-03-28 14:16:41,143 - core.decorators - ERROR - Function create_employee failed after 0.0000 seconds. Error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 14:16:41,144 - core.decorators - ERROR - Request 20250328141641142987 failed after 0.0010 seconds with error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 14:16:41,147 - core.decorators - ERROR - Traceback (most recent call last):
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 85, in wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 29, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 142, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 232, in async_wrapper
+    return await func(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^
+TypeError: create_employee() got an unexpected keyword argument 'validated_data'
+
+2025-03-28 14:16:49,607 - main - INFO - Closing database connection...
+2025-03-28 14:16:49,609 - main - INFO - Database connection closed successfully
+2025-03-28 14:16:55,092 - main - INFO - Initializing database connection...
+2025-03-28 14:16:59,186 - main - ERROR - Failed to initialize database connection: Failed to initialize database connection: (2003, "Can't connect to MySQL server on 'localhost'")
+2025-03-28 14:17:02,311 - core.decorators - INFO - Function login_for_access_token called with request ID 20250328141702311087
+2025-03-28 14:17:02,767 - core.decorators - INFO - Function login_for_access_token executed in 0.4538 seconds
+2025-03-28 14:17:02,769 - core.decorators - INFO - Request 20250328141702311087 completed in 0.4551 seconds
+2025-03-28 14:17:02,838 - core.decorators - INFO - Function create_employee called with request ID 20250328141702838214
+2025-03-28 14:17:02,843 - core.decorators - ERROR - Function create_employee failed after 0.0001 seconds. Error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 14:17:02,844 - core.decorators - ERROR - Request 20250328141702838214 failed after 0.0011 seconds with error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 14:17:02,846 - core.decorators - ERROR - Traceback (most recent call last):
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 85, in wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 29, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 142, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 232, in async_wrapper
+    return await func(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^
+TypeError: create_employee() got an unexpected keyword argument 'validated_data'
+
+2025-03-28 14:17:02,887 - core.decorators - INFO - Function create_employee called with request ID 20250328141702887356
+2025-03-28 14:17:02,888 - core.decorators - ERROR - Function create_employee failed after 0.0000 seconds. Error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 14:17:02,889 - core.decorators - ERROR - Request 20250328141702887356 failed after 0.0015 seconds with error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 14:17:02,891 - core.decorators - ERROR - Traceback (most recent call last):
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 85, in wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 29, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 142, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 232, in async_wrapper
+    return await func(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^
+TypeError: create_employee() got an unexpected keyword argument 'validated_data'
+
+2025-03-28 14:17:02,896 - core.decorators - INFO - Function create_employee called with request ID 20250328141702896700
+2025-03-28 14:17:02,897 - core.decorators - ERROR - Function create_employee failed after 0.0000 seconds. Error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 14:17:02,898 - core.decorators - ERROR - Request 20250328141702896700 failed after 0.0011 seconds with error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 14:17:02,899 - core.decorators - ERROR - Traceback (most recent call last):
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 85, in wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 29, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 142, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 232, in async_wrapper
+    return await func(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^
+TypeError: create_employee() got an unexpected keyword argument 'validated_data'
+
+2025-03-28 14:17:02,903 - core.decorators - INFO - Function create_employee called with request ID 20250328141702903709
+2025-03-28 14:17:02,905 - core.decorators - ERROR - Function create_employee failed after 0.0003 seconds. Error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 14:17:02,906 - core.decorators - ERROR - Request 20250328141702903709 failed after 0.0011 seconds with error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 14:17:02,907 - core.decorators - ERROR - Traceback (most recent call last):
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 85, in wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 29, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 142, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 232, in async_wrapper
+    return await func(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^
+TypeError: create_employee() got an unexpected keyword argument 'validated_data'
+
+2025-03-28 14:17:02,911 - core.decorators - INFO - Function create_employee called with request ID 20250328141702911603
+2025-03-28 14:17:02,912 - core.decorators - ERROR - Function create_employee failed after 0.0000 seconds. Error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 14:17:02,914 - core.decorators - ERROR - Request 20250328141702911603 failed after 0.0014 seconds with error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 14:17:02,915 - core.decorators - ERROR - Traceback (most recent call last):
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 85, in wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 29, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 142, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 232, in async_wrapper
+    return await func(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^
+TypeError: create_employee() got an unexpected keyword argument 'validated_data'
+
+2025-03-28 14:17:02,943 - core.decorators - INFO - Function create_employee called with request ID 20250328141702943278
+2025-03-28 14:17:02,944 - core.decorators - ERROR - Function create_employee failed after 0.0000 seconds. Error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 14:17:02,945 - core.decorators - ERROR - Request 20250328141702943278 failed after 0.0010 seconds with error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 14:17:02,948 - core.decorators - ERROR - Traceback (most recent call last):
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 85, in wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 29, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 142, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 232, in async_wrapper
+    return await func(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^
+TypeError: create_employee() got an unexpected keyword argument 'validated_data'
+
+2025-03-28 14:17:03,067 - core.decorators - INFO - Function create_employee called with request ID 20250328141703067829
+2025-03-28 14:17:03,068 - core.decorators - ERROR - Function create_employee failed after 0.0000 seconds. Error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 14:17:03,069 - core.decorators - ERROR - Request 20250328141703067829 failed after 0.0010 seconds with error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 14:17:03,070 - core.decorators - ERROR - Traceback (most recent call last):
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 85, in wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 29, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 142, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 232, in async_wrapper
+    return await func(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^
+TypeError: create_employee() got an unexpected keyword argument 'validated_data'
+
+2025-03-28 14:17:03,074 - core.decorators - INFO - Function create_employee called with request ID 20250328141703074027
+2025-03-28 14:17:03,075 - core.decorators - ERROR - Function create_employee failed after 0.0000 seconds. Error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 14:17:03,076 - core.decorators - ERROR - Request 20250328141703074027 failed after 0.0010 seconds with error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 14:17:03,077 - core.decorators - ERROR - Traceback (most recent call last):
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 85, in wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 29, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 142, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 232, in async_wrapper
+    return await func(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^
+TypeError: create_employee() got an unexpected keyword argument 'validated_data'
+
+2025-03-28 14:17:03,082 - core.decorators - INFO - Function create_employee called with request ID 20250328141703082410
+2025-03-28 14:17:03,082 - core.decorators - ERROR - Function create_employee failed after 0.0000 seconds. Error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 14:17:03,083 - core.decorators - ERROR - Request 20250328141703082410 failed after 0.0010 seconds with error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 14:17:03,085 - core.decorators - ERROR - Traceback (most recent call last):
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 85, in wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 29, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 142, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 232, in async_wrapper
+    return await func(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^
+TypeError: create_employee() got an unexpected keyword argument 'validated_data'
+
+2025-03-28 14:17:03,089 - core.decorators - INFO - Function create_employee called with request ID 20250328141703089514
+2025-03-28 14:17:03,090 - core.decorators - ERROR - Function create_employee failed after 0.0000 seconds. Error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 14:17:03,091 - core.decorators - ERROR - Request 20250328141703089514 failed after 0.0010 seconds with error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 14:17:03,092 - core.decorators - ERROR - Traceback (most recent call last):
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 85, in wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 29, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 142, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 232, in async_wrapper
+    return await func(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^
+TypeError: create_employee() got an unexpected keyword argument 'validated_data'
+
+2025-03-28 14:17:03,982 - core.decorators - INFO - Function create_employee called with request ID 20250328141703982263
+2025-03-28 14:17:03,986 - core.decorators - ERROR - Function create_employee failed after 0.0013 seconds. Error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 14:17:03,988 - core.decorators - ERROR - Request 20250328141703982263 failed after 0.0033 seconds with error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 14:17:03,993 - core.decorators - ERROR - Traceback (most recent call last):
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 85, in wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 29, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 142, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 232, in async_wrapper
+    return await func(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^
+TypeError: create_employee() got an unexpected keyword argument 'validated_data'
+
+2025-03-28 14:17:04,060 - core.decorators - INFO - Function create_employee called with request ID 20250328141704060504
+2025-03-28 14:17:04,062 - core.decorators - ERROR - Function create_employee failed after 0.0007 seconds. Error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 14:17:04,063 - core.decorators - ERROR - Request 20250328141704060504 failed after 0.0017 seconds with error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 14:17:04,064 - core.decorators - ERROR - Traceback (most recent call last):
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 85, in wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 29, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 142, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 232, in async_wrapper
+    return await func(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^
+TypeError: create_employee() got an unexpected keyword argument 'validated_data'
+
+2025-03-28 14:17:04,099 - core.decorators - INFO - Function create_employee called with request ID 20250328141704099863
+2025-03-28 14:17:04,100 - core.decorators - ERROR - Function create_employee failed after 0.0000 seconds. Error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 14:17:04,101 - core.decorators - ERROR - Request 20250328141704099863 failed after 0.0010 seconds with error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 14:17:04,103 - core.decorators - ERROR - Traceback (most recent call last):
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 85, in wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 29, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 142, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 232, in async_wrapper
+    return await func(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^
+TypeError: create_employee() got an unexpected keyword argument 'validated_data'
+
+2025-03-28 14:17:04,161 - core.decorators - INFO - Function create_employee called with request ID 20250328141704161227
+2025-03-28 14:17:04,161 - core.decorators - ERROR - Function create_employee failed after 0.0000 seconds. Error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 14:17:04,162 - core.decorators - ERROR - Request 20250328141704161227 failed after 0.0010 seconds with error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 14:17:04,164 - core.decorators - ERROR - Traceback (most recent call last):
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 85, in wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 29, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 142, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 232, in async_wrapper
+    return await func(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^
+TypeError: create_employee() got an unexpected keyword argument 'validated_data'
+
+2025-03-28 14:17:04,192 - core.decorators - INFO - Function create_employee called with request ID 20250328141704192799
+2025-03-28 14:17:04,193 - core.decorators - ERROR - Function create_employee failed after 0.0000 seconds. Error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 14:17:04,194 - core.decorators - ERROR - Request 20250328141704192799 failed after 0.0010 seconds with error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 14:17:04,196 - core.decorators - ERROR - Traceback (most recent call last):
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 85, in wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 29, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 142, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 232, in async_wrapper
+    return await func(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^
+TypeError: create_employee() got an unexpected keyword argument 'validated_data'
+
+2025-03-28 14:17:04,227 - core.decorators - INFO - Function create_employee called with request ID 20250328141704227551
+2025-03-28 14:17:04,228 - core.decorators - ERROR - Function create_employee failed after 0.0000 seconds. Error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 14:17:04,229 - core.decorators - ERROR - Request 20250328141704227551 failed after 0.0012 seconds with error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 14:17:04,230 - core.decorators - ERROR - Traceback (most recent call last):
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 85, in wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 29, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 142, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 232, in async_wrapper
+    return await func(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^
+TypeError: create_employee() got an unexpected keyword argument 'validated_data'
+
+2025-03-28 14:17:04,317 - core.decorators - INFO - Function create_employee called with request ID 20250328141704317192
+2025-03-28 14:17:04,318 - core.decorators - ERROR - Function create_employee failed after 0.0000 seconds. Error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 14:17:04,319 - core.decorators - ERROR - Request 20250328141704317192 failed after 0.0010 seconds with error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 14:17:04,320 - core.decorators - ERROR - Traceback (most recent call last):
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 85, in wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 29, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 142, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 232, in async_wrapper
+    return await func(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^
+TypeError: create_employee() got an unexpected keyword argument 'validated_data'
+
+2025-03-28 14:17:04,325 - core.decorators - INFO - Function create_employee called with request ID 20250328141704324875
+2025-03-28 14:17:04,326 - core.decorators - ERROR - Function create_employee failed after 0.0010 seconds. Error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 14:17:04,326 - core.decorators - ERROR - Request 20250328141704324875 failed after 0.0012 seconds with error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 14:17:04,328 - core.decorators - ERROR - Traceback (most recent call last):
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 85, in wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 29, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 142, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 232, in async_wrapper
+    return await func(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^
+TypeError: create_employee() got an unexpected keyword argument 'validated_data'
+
+2025-03-28 14:17:04,432 - core.decorators - INFO - Function create_employee called with request ID 20250328141704432093
+2025-03-28 14:17:04,432 - core.decorators - ERROR - Function create_employee failed after 0.0008 seconds. Error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 14:17:04,433 - core.decorators - ERROR - Request 20250328141704432093 failed after 0.0008 seconds with error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 14:17:04,435 - core.decorators - ERROR - Traceback (most recent call last):
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 85, in wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 29, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 142, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 232, in async_wrapper
+    return await func(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^
+TypeError: create_employee() got an unexpected keyword argument 'validated_data'
+
+2025-03-28 14:17:04,575 - core.decorators - INFO - Function create_employee called with request ID 20250328141704575703
+2025-03-28 14:17:04,579 - core.decorators - ERROR - Function create_employee failed after 0.0000 seconds. Error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 14:17:04,581 - core.decorators - ERROR - Request 20250328141704575703 failed after 0.0020 seconds with error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 14:17:04,584 - core.decorators - ERROR - Traceback (most recent call last):
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 85, in wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 29, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 142, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 232, in async_wrapper
+    return await func(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^
+TypeError: create_employee() got an unexpected keyword argument 'validated_data'
+
+2025-03-28 14:46:06,857 - main - INFO - Closing database connection...
+2025-03-28 14:46:06,857 - main - INFO - Database connection closed successfully
+2025-03-28 14:46:30,804 - main - INFO - Initializing database connection...
+2025-03-28 14:46:34,968 - main - ERROR - Failed to initialize database connection: Failed to initialize database connection: (2003, "Can't connect to MySQL server on 'localhost'")
+2025-03-28 15:06:10,709 - main - INFO - Closing database connection...
+2025-03-28 15:06:10,709 - main - INFO - Database connection closed successfully
+2025-03-28 15:06:17,546 - main - INFO - Initializing database connection...
+2025-03-28 15:06:21,663 - main - ERROR - Failed to initialize database connection: Failed to initialize database connection: (2003, "Can't connect to MySQL server on 'localhost'")
+2025-03-28 15:06:56,382 - main - INFO - Closing database connection...
+2025-03-28 15:06:56,383 - main - INFO - Database connection closed successfully
+2025-03-28 15:07:01,924 - main - INFO - Initializing database connection...
+2025-03-28 15:07:06,132 - main - ERROR - Failed to initialize database connection: Failed to initialize database connection: (2003, "Can't connect to MySQL server on 'localhost'")
+2025-03-28 15:08:11,410 - main - INFO - Closing database connection...
+2025-03-28 15:08:11,411 - main - INFO - Database connection closed successfully
+2025-03-28 15:08:16,328 - main - INFO - Initializing database connection...
+2025-03-28 15:08:16,395 - main - ERROR - Failed to initialize database connection: Failed to initialize database connection: (1049, "Unknown database 'employee_records'")
+2025-03-28 15:12:56,490 - main - INFO - Closing database connection...
+2025-03-28 15:12:56,491 - main - INFO - Database connection closed successfully
+2025-03-28 15:13:02,415 - main - INFO - Initializing database connection...
+2025-03-28 15:13:02,418 - core.database - ERROR - Error initializing database connection pool: (1049, "Unknown database 'employee_records'")
+2025-03-28 15:13:02,418 - main - ERROR - Failed to initialize database connection: Failed to initialize database connection: (1049, "Unknown database 'employee_records'")
+2025-03-28 15:13:09,000 - main - INFO - Closing database connection...
+2025-03-28 15:13:09,000 - main - INFO - Database connection closed successfully
+2025-03-28 15:13:15,650 - main - INFO - Initializing database connection...
+2025-03-28 15:13:15,672 - core.database - ERROR - Error initializing database connection pool: (1049, "Unknown database 'employee_records'")
+2025-03-28 15:13:15,672 - main - ERROR - Failed to initialize database connection: Failed to initialize database connection: (1049, "Unknown database 'employee_records'")
+2025-03-28 16:06:48,646 - main - INFO - Connecting to database...
+2025-03-28 16:07:20,202 - core.decorators - INFO - Function login_for_access_token called with request ID 20250328160720202758
+2025-03-28 16:07:20,590 - core.decorators - INFO - Function login_for_access_token executed in 0.3874 seconds
+2025-03-28 16:07:20,598 - core.decorators - INFO - Request 20250328160720202758 completed in 0.3953 seconds
+2025-03-28 16:07:20,733 - core.decorators - INFO - Function create_employee called with request ID 20250328160720733947
+2025-03-28 16:07:20,734 - core.decorators - ERROR - Function create_employee failed after 0.0000 seconds. Error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 16:07:20,734 - core.decorators - ERROR - Request 20250328160720733947 failed after 0.0000 seconds with error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 16:07:20,734 - core.decorators - ERROR - Traceback (most recent call last):
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 85, in wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 29, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 142, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 232, in async_wrapper
+    return await func(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^
+TypeError: create_employee() got an unexpected keyword argument 'validated_data'
+
+2025-03-28 16:07:20,804 - core.decorators - INFO - Function create_employee called with request ID 20250328160720804468
+2025-03-28 16:07:20,804 - core.decorators - ERROR - Function create_employee failed after 0.0000 seconds. Error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 16:07:20,804 - core.decorators - ERROR - Request 20250328160720804468 failed after 0.0000 seconds with error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 16:07:20,809 - core.decorators - ERROR - Traceback (most recent call last):
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 85, in wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 29, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 142, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 232, in async_wrapper
+    return await func(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^
+TypeError: create_employee() got an unexpected keyword argument 'validated_data'
+
+2025-03-28 16:07:20,815 - core.decorators - INFO - Function create_employee called with request ID 20250328160720815293
+2025-03-28 16:07:20,816 - core.decorators - ERROR - Function create_employee failed after 0.0000 seconds. Error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 16:07:20,818 - core.decorators - ERROR - Request 20250328160720815293 failed after 0.0010 seconds with error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 16:07:20,821 - core.decorators - ERROR - Traceback (most recent call last):
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 85, in wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 29, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 142, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 232, in async_wrapper
+    return await func(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^
+TypeError: create_employee() got an unexpected keyword argument 'validated_data'
+
+2025-03-28 16:07:20,832 - core.decorators - INFO - Function create_employee called with request ID 20250328160720832415
+2025-03-28 16:07:20,834 - core.decorators - ERROR - Function create_employee failed after 0.0000 seconds. Error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 16:07:20,835 - core.decorators - ERROR - Request 20250328160720832415 failed after 0.0014 seconds with error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 16:07:20,836 - core.decorators - ERROR - Traceback (most recent call last):
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 85, in wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 29, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 142, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 232, in async_wrapper
+    return await func(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^
+TypeError: create_employee() got an unexpected keyword argument 'validated_data'
+
+2025-03-28 16:07:20,842 - core.decorators - INFO - Function create_employee called with request ID 20250328160720842304
+2025-03-28 16:07:20,843 - core.decorators - ERROR - Function create_employee failed after 0.0000 seconds. Error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 16:07:20,844 - core.decorators - ERROR - Request 20250328160720842304 failed after 0.0010 seconds with error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 16:07:20,846 - core.decorators - ERROR - Traceback (most recent call last):
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 85, in wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 29, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 142, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 232, in async_wrapper
+    return await func(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^
+TypeError: create_employee() got an unexpected keyword argument 'validated_data'
+
+2025-03-28 16:07:20,858 - core.decorators - INFO - Function create_employee called with request ID 20250328160720858872
+2025-03-28 16:07:20,863 - core.decorators - ERROR - Function create_employee failed after 0.0020 seconds. Error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 16:07:20,868 - core.decorators - ERROR - Request 20250328160720858872 failed after 0.0070 seconds with error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 16:07:20,871 - core.decorators - ERROR - Traceback (most recent call last):
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 85, in wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 29, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 142, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 232, in async_wrapper
+    return await func(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^
+TypeError: create_employee() got an unexpected keyword argument 'validated_data'
+
+2025-03-28 16:07:21,070 - core.decorators - INFO - Function create_employee called with request ID 20250328160721070497
+2025-03-28 16:07:21,070 - core.decorators - ERROR - Function create_employee failed after 0.0000 seconds. Error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 16:07:21,072 - core.decorators - ERROR - Request 20250328160721070497 failed after 0.0016 seconds with error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 16:07:21,073 - core.decorators - ERROR - Traceback (most recent call last):
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 85, in wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 29, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 142, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 232, in async_wrapper
+    return await func(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^
+TypeError: create_employee() got an unexpected keyword argument 'validated_data'
+
+2025-03-28 16:07:21,079 - core.decorators - INFO - Function create_employee called with request ID 20250328160721079200
+2025-03-28 16:07:21,080 - core.decorators - ERROR - Function create_employee failed after 0.0010 seconds. Error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 16:07:21,080 - core.decorators - ERROR - Request 20250328160721079200 failed after 0.0010 seconds with error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 16:07:21,081 - core.decorators - ERROR - Traceback (most recent call last):
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 85, in wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 29, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 142, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 232, in async_wrapper
+    return await func(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^
+TypeError: create_employee() got an unexpected keyword argument 'validated_data'
+
+2025-03-28 16:07:21,083 - core.decorators - INFO - Function create_employee called with request ID 20250328160721083237
+2025-03-28 16:07:21,083 - core.decorators - ERROR - Function create_employee failed after 0.0000 seconds. Error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 16:07:21,087 - core.decorators - ERROR - Request 20250328160721083237 failed after 0.0040 seconds with error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 16:07:21,089 - core.decorators - ERROR - Traceback (most recent call last):
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 85, in wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 29, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 142, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 232, in async_wrapper
+    return await func(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^
+TypeError: create_employee() got an unexpected keyword argument 'validated_data'
+
+2025-03-28 16:07:21,093 - core.decorators - INFO - Function create_employee called with request ID 20250328160721093490
+2025-03-28 16:07:21,093 - core.decorators - ERROR - Function create_employee failed after 0.0000 seconds. Error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 16:07:21,094 - core.decorators - ERROR - Request 20250328160721093490 failed after 0.0010 seconds with error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 16:07:21,095 - core.decorators - ERROR - Traceback (most recent call last):
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 85, in wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 29, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 142, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 232, in async_wrapper
+    return await func(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^
+TypeError: create_employee() got an unexpected keyword argument 'validated_data'
+
+2025-03-28 16:07:21,899 - core.decorators - INFO - Function create_employee called with request ID 20250328160721899382
+2025-03-28 16:07:21,899 - core.decorators - ERROR - Function create_employee failed after 0.0000 seconds. Error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 16:07:21,899 - core.decorators - ERROR - Request 20250328160721899382 failed after 0.0000 seconds with error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 16:07:21,899 - core.decorators - ERROR - Traceback (most recent call last):
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 85, in wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 29, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 142, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 232, in async_wrapper
+    return await func(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^
+TypeError: create_employee() got an unexpected keyword argument 'validated_data'
+
+2025-03-28 16:07:21,993 - core.decorators - INFO - Function create_employee called with request ID 20250328160721993617
+2025-03-28 16:07:21,993 - core.decorators - ERROR - Function create_employee failed after 0.0000 seconds. Error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 16:07:21,999 - core.decorators - ERROR - Request 20250328160721993617 failed after 0.0060 seconds with error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 16:07:22,000 - core.decorators - ERROR - Traceback (most recent call last):
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 85, in wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 29, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 142, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 232, in async_wrapper
+    return await func(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^
+TypeError: create_employee() got an unexpected keyword argument 'validated_data'
+
+2025-03-28 16:07:22,005 - core.decorators - INFO - Function create_employee called with request ID 20250328160722005641
+2025-03-28 16:07:22,006 - core.decorators - ERROR - Function create_employee failed after 0.0000 seconds. Error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 16:07:22,007 - core.decorators - ERROR - Request 20250328160722005641 failed after 0.0010 seconds with error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 16:07:22,009 - core.decorators - ERROR - Traceback (most recent call last):
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 85, in wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 29, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 142, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 232, in async_wrapper
+    return await func(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^
+TypeError: create_employee() got an unexpected keyword argument 'validated_data'
+
+2025-03-28 16:07:22,111 - core.decorators - INFO - Function create_employee called with request ID 20250328160722111095
+2025-03-28 16:07:22,111 - core.decorators - ERROR - Function create_employee failed after 0.0000 seconds. Error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 16:07:22,111 - core.decorators - ERROR - Request 20250328160722111095 failed after 0.0000 seconds with error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 16:07:22,111 - core.decorators - ERROR - Traceback (most recent call last):
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 85, in wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 29, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 142, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 232, in async_wrapper
+    return await func(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^
+TypeError: create_employee() got an unexpected keyword argument 'validated_data'
+
+2025-03-28 16:07:22,244 - core.decorators - INFO - Function create_employee called with request ID 20250328160722244950
+2025-03-28 16:07:22,245 - core.decorators - ERROR - Function create_employee failed after 0.0000 seconds. Error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 16:07:22,246 - core.decorators - ERROR - Request 20250328160722244950 failed after 0.0010 seconds with error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 16:07:22,247 - core.decorators - ERROR - Traceback (most recent call last):
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 85, in wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 29, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 142, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 232, in async_wrapper
+    return await func(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^
+TypeError: create_employee() got an unexpected keyword argument 'validated_data'
+
+2025-03-28 16:07:22,376 - core.decorators - INFO - Function create_employee called with request ID 20250328160722376715
+2025-03-28 16:07:22,378 - core.decorators - ERROR - Function create_employee failed after 0.0007 seconds. Error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 16:07:22,379 - core.decorators - ERROR - Request 20250328160722376715 failed after 0.0018 seconds with error: create_employee() got an unexpected keyword argument 'validated_data'
+2025-03-28 16:07:22,380 - core.decorators - ERROR - Traceback (most recent call last):
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 85, in wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 29, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 142, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\server\core\decorators.py", line 232, in async_wrapper
+    return await func(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^
+TypeError: create_employee() got an unexpected keyword argument 'validated_data'
+
+2025-03-28 16:08:47,389 - main - INFO - Closing database connections...
+2025-03-28 16:08:47,391 - core.database - INFO - Database connection closed
+2025-03-28 16:08:47,391 - main - INFO - Database connection closed successfully
+2025-03-28 16:08:51,117 - main - INFO - Connecting to database...
+2025-03-28 16:09:01,617 - main - INFO - Closing database connections...
+2025-03-28 16:09:01,618 - core.database - INFO - Database connection closed
+2025-03-28 16:09:01,618 - main - INFO - Database connection closed successfully
+2025-03-28 16:09:04,933 - main - INFO - Connecting to database...
+2025-03-28 16:09:05,379 - core.decorators - INFO - Function login_for_access_token called with request ID 20250328160905379786
+2025-03-28 16:09:05,733 - core.decorators - INFO - Function login_for_access_token executed in 0.3542 seconds
+2025-03-28 16:09:05,733 - core.decorators - INFO - Request 20250328160905379786 completed in 0.3542 seconds

@@ -1,0 +1,960 @@
+2025-03-28 13:02:03,997 - config - INFO - Client configuration loaded: {
+  "SERVER_URL": "http://localhost:8000",
+  "COMM_MODE": "http",
+  "CSV_FILE_PATH": "./employee_data.csv",
+  "CSV_DELIMITER": ",",
+  "CSV_ENCODING": "utf-8",
+  "BATCH_SIZE": 50,
+  "MAX_RETRIES": 3,
+  "RETRY_DELAY": 1.0,
+  "TIMEOUT": 10.0,
+  "MAX_WORKERS": 10,
+  "KAFKA_BOOTSTRAP_SERVERS": "localhost:9092",
+  "KAFKA_TOPIC": "employee-records",
+  "WS_URL": "ws://localhost:8000/ws",
+  "AUTH_USERNAME": "admin"
+}
+2025-03-28 13:02:40,790 - config - INFO - Client configuration loaded: {
+  "SERVER_URL": "http://localhost:8000",
+  "COMM_MODE": "http",
+  "CSV_FILE_PATH": "./employee_data.csv",
+  "CSV_DELIMITER": ",",
+  "CSV_ENCODING": "utf-8",
+  "BATCH_SIZE": 50,
+  "MAX_RETRIES": 3,
+  "RETRY_DELAY": 1.0,
+  "TIMEOUT": 10.0,
+  "MAX_WORKERS": 10,
+  "KAFKA_BOOTSTRAP_SERVERS": "localhost:9092",
+  "KAFKA_TOPIC": "employee-records",
+  "WS_URL": "ws://localhost:8000/ws",
+  "AUTH_USERNAME": "admin"
+}
+2025-03-28 13:02:41,352 - __main__ - ERROR - CSV file not found: ./employee_data.csv
+2025-03-28 13:03:45,092 - config - INFO - Client configuration loaded: {
+  "SERVER_URL": "http://localhost:8000",
+  "COMM_MODE": "http",
+  "CSV_FILE_PATH": "./employee_data.csv",
+  "CSV_DELIMITER": ",",
+  "CSV_ENCODING": "utf-8",
+  "BATCH_SIZE": 50,
+  "MAX_RETRIES": 3,
+  "RETRY_DELAY": 1.0,
+  "TIMEOUT": 10.0,
+  "MAX_WORKERS": 10,
+  "KAFKA_BOOTSTRAP_SERVERS": "localhost:9092",
+  "KAFKA_TOPIC": "employee-records",
+  "WS_URL": "ws://localhost:8000/ws",
+  "AUTH_USERNAME": "admin"
+}
+2025-03-28 13:03:45,541 - __main__ - INFO - Starting employee record transmission using HTTP mode
+2025-03-28 13:03:45,541 - employee_client - INFO - Initializing CommunicationMode.HTTP client...
+2025-03-28 13:03:45,542 - employee_client - INFO - Authenticating with server...
+2025-03-28 13:03:46,324 - employee_client - INFO - Authentication successful
+2025-03-28 13:03:46,326 - employee_client - INFO - CommunicationMode.HTTP client initialized successfully
+2025-03-28 13:03:46,328 - employee_client - INFO - Parsing CSV file: ./employee_data.csv
+2025-03-28 13:03:46,452 - utils - INFO - Successfully parsed 1000 rows from ./employee_data.csv
+2025-03-28 13:03:46,455 - employee_client - INFO - Found 1000 employee records in CSV file
+2025-03-28 13:03:46,456 - employee_client - INFO - Processing batch 1/20
+2025-03-28 13:03:46,458 - employee_client - ERROR - Error sending employee via HTTP: Object of type date is not JSON serializable
+2025-03-28 13:03:46,459 - utils - WARNING - Retry 1/3 for send_employee_http after error: Object of type date is not JSON serializable
+2025-03-28 13:03:46,459 - utils - WARNING - Waiting 1.00 seconds before retry...
+2025-03-28 13:03:46,460 - employee_client - ERROR - Error sending employee via HTTP: Object of type date is not JSON serializable
+2025-03-28 13:03:46,462 - utils - WARNING - Retry 1/3 for send_employee_http after error: Object of type date is not JSON serializable
+2025-03-28 13:03:46,463 - utils - WARNING - Waiting 1.00 seconds before retry...
+2025-03-28 13:03:46,464 - employee_client - ERROR - Error sending employee via HTTP: Object of type date is not JSON serializable
+2025-03-28 13:03:46,465 - utils - WARNING - Retry 1/3 for send_employee_http after error: Object of type date is not JSON serializable
+2025-03-28 13:03:46,467 - utils - WARNING - Waiting 1.00 seconds before retry...
+2025-03-28 13:03:46,469 - employee_client - ERROR - Error sending employee via HTTP: Object of type date is not JSON serializable
+2025-03-28 13:03:46,470 - utils - WARNING - Retry 1/3 for send_employee_http after error: Object of type date is not JSON serializable
+2025-03-28 13:03:46,471 - utils - WARNING - Waiting 1.00 seconds before retry...
+2025-03-28 13:03:46,472 - employee_client - ERROR - Error sending employee via HTTP: Object of type date is not JSON serializable
+2025-03-28 13:03:46,473 - utils - WARNING - Retry 1/3 for send_employee_http after error: Object of type date is not JSON serializable
+2025-03-28 13:03:46,474 - utils - WARNING - Waiting 1.00 seconds before retry...
+2025-03-28 13:03:46,477 - employee_client - ERROR - Error sending employee via HTTP: Object of type date is not JSON serializable
+2025-03-28 13:03:46,478 - utils - WARNING - Retry 1/3 for send_employee_http after error: Object of type date is not JSON serializable
+2025-03-28 13:03:46,479 - utils - WARNING - Waiting 1.00 seconds before retry...
+2025-03-28 13:03:46,480 - employee_client - ERROR - Error sending employee via HTTP: Object of type date is not JSON serializable
+2025-03-28 13:03:46,481 - utils - WARNING - Retry 1/3 for send_employee_http after error: Object of type date is not JSON serializable
+2025-03-28 13:03:46,481 - utils - WARNING - Waiting 1.00 seconds before retry...
+2025-03-28 13:03:46,484 - employee_client - ERROR - Error sending employee via HTTP: Object of type date is not JSON serializable
+2025-03-28 13:03:46,485 - utils - WARNING - Retry 1/3 for send_employee_http after error: Object of type date is not JSON serializable
+2025-03-28 13:03:46,486 - utils - WARNING - Waiting 1.00 seconds before retry...
+2025-03-28 13:03:46,488 - employee_client - ERROR - Error sending employee via HTTP: Object of type date is not JSON serializable
+2025-03-28 13:03:46,489 - utils - WARNING - Retry 1/3 for send_employee_http after error: Object of type date is not JSON serializable
+2025-03-28 13:03:46,490 - utils - WARNING - Waiting 1.00 seconds before retry...
+2025-03-28 13:03:46,491 - employee_client - ERROR - Error sending employee via HTTP: Object of type date is not JSON serializable
+2025-03-28 13:03:46,492 - utils - WARNING - Retry 1/3 for send_employee_http after error: Object of type date is not JSON serializable
+2025-03-28 13:03:46,493 - utils - WARNING - Waiting 1.00 seconds before retry...
+2025-03-28 13:03:47,470 - employee_client - ERROR - Error sending employee via HTTP: Object of type date is not JSON serializable
+2025-03-28 13:03:47,472 - utils - WARNING - Retry 2/3 for send_employee_http after error: Object of type date is not JSON serializable
+2025-03-28 13:03:47,473 - utils - WARNING - Waiting 2.00 seconds before retry...
+2025-03-28 13:03:47,476 - employee_client - ERROR - Error sending employee via HTTP: Object of type date is not JSON serializable
+2025-03-28 13:03:47,477 - utils - WARNING - Retry 2/3 for send_employee_http after error: Object of type date is not JSON serializable
+2025-03-28 13:03:47,479 - utils - WARNING - Waiting 2.00 seconds before retry...
+2025-03-28 13:03:47,481 - employee_client - ERROR - Error sending employee via HTTP: Object of type date is not JSON serializable
+2025-03-28 13:03:47,484 - utils - WARNING - Retry 2/3 for send_employee_http after error: Object of type date is not JSON serializable
+2025-03-28 13:03:47,487 - utils - WARNING - Waiting 2.00 seconds before retry...
+2025-03-28 13:03:47,490 - employee_client - ERROR - Error sending employee via HTTP: Object of type date is not JSON serializable
+2025-03-28 13:03:47,491 - utils - WARNING - Retry 2/3 for send_employee_http after error: Object of type date is not JSON serializable
+2025-03-28 13:03:47,498 - utils - WARNING - Waiting 2.00 seconds before retry...
+2025-03-28 13:03:47,501 - employee_client - ERROR - Error sending employee via HTTP: Object of type date is not JSON serializable
+2025-03-28 13:03:47,504 - utils - WARNING - Retry 2/3 for send_employee_http after error: Object of type date is not JSON serializable
+2025-03-28 13:03:47,509 - utils - WARNING - Waiting 2.00 seconds before retry...
+2025-03-28 13:03:47,511 - employee_client - ERROR - Error sending employee via HTTP: Object of type date is not JSON serializable
+2025-03-28 13:03:47,515 - utils - WARNING - Retry 2/3 for send_employee_http after error: Object of type date is not JSON serializable
+2025-03-28 13:03:47,517 - utils - WARNING - Waiting 2.00 seconds before retry...
+2025-03-28 13:03:47,521 - employee_client - ERROR - Error sending employee via HTTP: Object of type date is not JSON serializable
+2025-03-28 13:03:47,524 - utils - WARNING - Retry 2/3 for send_employee_http after error: Object of type date is not JSON serializable
+2025-03-28 13:03:47,527 - utils - WARNING - Waiting 2.00 seconds before retry...
+2025-03-28 13:03:47,529 - employee_client - ERROR - Error sending employee via HTTP: Object of type date is not JSON serializable
+2025-03-28 13:03:47,531 - utils - WARNING - Retry 2/3 for send_employee_http after error: Object of type date is not JSON serializable
+2025-03-28 13:03:47,534 - utils - WARNING - Waiting 2.00 seconds before retry...
+2025-03-28 13:03:47,536 - employee_client - ERROR - Error sending employee via HTTP: Object of type date is not JSON serializable
+2025-03-28 13:03:47,539 - utils - WARNING - Retry 2/3 for send_employee_http after error: Object of type date is not JSON serializable
+2025-03-28 13:03:47,540 - utils - WARNING - Waiting 2.00 seconds before retry...
+2025-03-28 13:03:47,541 - employee_client - ERROR - Error sending employee via HTTP: Object of type date is not JSON serializable
+2025-03-28 13:03:47,543 - utils - WARNING - Retry 2/3 for send_employee_http after error: Object of type date is not JSON serializable
+2025-03-28 13:03:47,544 - utils - WARNING - Waiting 2.00 seconds before retry...
+2025-03-28 13:03:49,482 - employee_client - ERROR - Error sending employee via HTTP: Object of type date is not JSON serializable
+2025-03-28 13:03:49,484 - utils - WARNING - Retry 3/3 for send_employee_http after error: Object of type date is not JSON serializable
+2025-03-28 13:03:49,485 - utils - WARNING - Waiting 4.00 seconds before retry...
+2025-03-28 13:03:49,487 - employee_client - ERROR - Error sending employee via HTTP: Object of type date is not JSON serializable
+2025-03-28 13:03:49,489 - utils - WARNING - Retry 3/3 for send_employee_http after error: Object of type date is not JSON serializable
+2025-03-28 13:03:49,491 - utils - WARNING - Waiting 4.00 seconds before retry...
+2025-03-28 13:03:49,493 - employee_client - ERROR - Error sending employee via HTTP: Object of type date is not JSON serializable
+2025-03-28 13:03:49,494 - utils - WARNING - Retry 3/3 for send_employee_http after error: Object of type date is not JSON serializable
+2025-03-28 13:03:49,498 - utils - WARNING - Waiting 4.00 seconds before retry...
+2025-03-28 13:03:49,501 - employee_client - ERROR - Error sending employee via HTTP: Object of type date is not JSON serializable
+2025-03-28 13:03:49,507 - utils - WARNING - Retry 3/3 for send_employee_http after error: Object of type date is not JSON serializable
+2025-03-28 13:03:49,509 - utils - WARNING - Waiting 4.00 seconds before retry...
+2025-03-28 13:03:49,511 - employee_client - ERROR - Error sending employee via HTTP: Object of type date is not JSON serializable
+2025-03-28 13:03:49,513 - utils - WARNING - Retry 3/3 for send_employee_http after error: Object of type date is not JSON serializable
+2025-03-28 13:03:49,517 - utils - WARNING - Waiting 4.00 seconds before retry...
+2025-03-28 13:03:49,522 - employee_client - ERROR - Error sending employee via HTTP: Object of type date is not JSON serializable
+2025-03-28 13:03:49,524 - utils - WARNING - Retry 3/3 for send_employee_http after error: Object of type date is not JSON serializable
+2025-03-28 13:03:49,527 - utils - WARNING - Waiting 4.00 seconds before retry...
+2025-03-28 13:03:49,529 - employee_client - ERROR - Error sending employee via HTTP: Object of type date is not JSON serializable
+2025-03-28 13:03:49,531 - utils - WARNING - Retry 3/3 for send_employee_http after error: Object of type date is not JSON serializable
+2025-03-28 13:03:49,531 - utils - WARNING - Waiting 4.00 seconds before retry...
+2025-03-28 13:03:49,536 - employee_client - ERROR - Error sending employee via HTTP: Object of type date is not JSON serializable
+2025-03-28 13:03:49,538 - utils - WARNING - Retry 3/3 for send_employee_http after error: Object of type date is not JSON serializable
+2025-03-28 13:03:49,539 - utils - WARNING - Waiting 4.00 seconds before retry...
+2025-03-28 13:03:49,540 - employee_client - ERROR - Error sending employee via HTTP: Object of type date is not JSON serializable
+2025-03-28 13:03:49,541 - utils - WARNING - Retry 3/3 for send_employee_http after error: Object of type date is not JSON serializable
+2025-03-28 13:03:49,542 - utils - WARNING - Waiting 4.00 seconds before retry...
+2025-03-28 13:03:49,564 - employee_client - ERROR - Error sending employee via HTTP: Object of type date is not JSON serializable
+2025-03-28 13:03:49,566 - utils - WARNING - Retry 3/3 for send_employee_http after error: Object of type date is not JSON serializable
+2025-03-28 13:03:49,567 - utils - WARNING - Waiting 4.00 seconds before retry...
+2025-03-28 13:03:53,493 - employee_client - ERROR - Error sending employee via HTTP: Object of type date is not JSON serializable
+2025-03-28 13:03:53,495 - utils - ERROR - Max retries (3) reached for send_employee_http
+2025-03-28 13:03:53,496 - utils - ERROR - Function send_employee_http failed after 7.0385 seconds. Error: Object of type date is not JSON serializable
+2025-03-28 13:03:53,631 - utils - ERROR - Traceback (most recent call last):
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\client\utils.py", line 21, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\client\utils.py", line 61, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\client\employee_client.py", line 188, in send_employee_http
+    async with self.session.post(
+               ^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\client\env\Lib\site-packages\aiohttp\client.py", line 1425, in __aenter__
+    self._resp: _RetType = await self._coro
+                           ^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\client\env\Lib\site-packages\aiohttp\client.py", line 521, in _request
+    data = payload.JsonPayload(json, dumps=self._json_serialize)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\client\env\Lib\site-packages\aiohttp\payload.py", line 448, in __init__
+    dumps(value).encode(encoding),
+    ^^^^^^^^^^^^
+  File "C:\Python312\Lib\json\__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\json\encoder.py", line 258, in iterencode
+    return _iterencode(o, 0)
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type date is not JSON serializable
+
+2025-03-28 13:03:53,663 - employee_client - ERROR - Error sending employee via HTTP: Object of type date is not JSON serializable
+2025-03-28 13:03:53,665 - utils - ERROR - Max retries (3) reached for send_employee_http
+2025-03-28 13:03:53,667 - utils - ERROR - Function send_employee_http failed after 7.2062 seconds. Error: Object of type date is not JSON serializable
+2025-03-28 13:03:53,675 - utils - ERROR - Traceback (most recent call last):
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\client\utils.py", line 21, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\client\utils.py", line 61, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\client\employee_client.py", line 188, in send_employee_http
+    async with self.session.post(
+               ^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\client\env\Lib\site-packages\aiohttp\client.py", line 1425, in __aenter__
+    self._resp: _RetType = await self._coro
+                           ^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\client\env\Lib\site-packages\aiohttp\client.py", line 521, in _request
+    data = payload.JsonPayload(json, dumps=self._json_serialize)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\client\env\Lib\site-packages\aiohttp\payload.py", line 448, in __init__
+    dumps(value).encode(encoding),
+    ^^^^^^^^^^^^
+  File "C:\Python312\Lib\json\__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\json\encoder.py", line 258, in iterencode
+    return _iterencode(o, 0)
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type date is not JSON serializable
+
+2025-03-28 13:03:53,694 - employee_client - ERROR - Error sending employee via HTTP: Object of type date is not JSON serializable
+2025-03-28 13:03:53,696 - utils - ERROR - Max retries (3) reached for send_employee_http
+2025-03-28 13:03:53,697 - utils - ERROR - Function send_employee_http failed after 7.2324 seconds. Error: Object of type date is not JSON serializable
+2025-03-28 13:03:53,702 - utils - ERROR - Traceback (most recent call last):
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\client\utils.py", line 21, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\client\utils.py", line 61, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\client\employee_client.py", line 188, in send_employee_http
+    async with self.session.post(
+               ^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\client\env\Lib\site-packages\aiohttp\client.py", line 1425, in __aenter__
+    self._resp: _RetType = await self._coro
+                           ^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\client\env\Lib\site-packages\aiohttp\client.py", line 521, in _request
+    data = payload.JsonPayload(json, dumps=self._json_serialize)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\client\env\Lib\site-packages\aiohttp\payload.py", line 448, in __init__
+    dumps(value).encode(encoding),
+    ^^^^^^^^^^^^
+  File "C:\Python312\Lib\json\__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\json\encoder.py", line 258, in iterencode
+    return _iterencode(o, 0)
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type date is not JSON serializable
+
+2025-03-28 13:03:53,716 - employee_client - ERROR - Error sending employee via HTTP: Object of type date is not JSON serializable
+2025-03-28 13:03:53,718 - utils - ERROR - Max retries (3) reached for send_employee_http
+2025-03-28 13:03:53,719 - utils - ERROR - Function send_employee_http failed after 7.2423 seconds. Error: Object of type date is not JSON serializable
+2025-03-28 13:03:53,722 - utils - ERROR - Traceback (most recent call last):
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\client\utils.py", line 21, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\client\utils.py", line 61, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\client\employee_client.py", line 188, in send_employee_http
+    async with self.session.post(
+               ^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\client\env\Lib\site-packages\aiohttp\client.py", line 1425, in __aenter__
+    self._resp: _RetType = await self._coro
+                           ^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\client\env\Lib\site-packages\aiohttp\client.py", line 521, in _request
+    data = payload.JsonPayload(json, dumps=self._json_serialize)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\client\env\Lib\site-packages\aiohttp\payload.py", line 448, in __init__
+    dumps(value).encode(encoding),
+    ^^^^^^^^^^^^
+  File "C:\Python312\Lib\json\__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\json\encoder.py", line 258, in iterencode
+    return _iterencode(o, 0)
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type date is not JSON serializable
+
+2025-03-28 13:03:53,730 - employee_client - ERROR - Error sending employee via HTTP: Object of type date is not JSON serializable
+2025-03-28 13:03:53,731 - utils - WARNING - Retry 1/3 for send_employee_http after error: Object of type date is not JSON serializable
+2025-03-28 13:03:53,732 - utils - WARNING - Waiting 1.00 seconds before retry...
+2025-03-28 13:03:53,733 - employee_client - ERROR - Error sending employee via HTTP: Object of type date is not JSON serializable
+2025-03-28 13:03:53,733 - utils - WARNING - Retry 1/3 for send_employee_http after error: Object of type date is not JSON serializable
+2025-03-28 13:03:53,734 - utils - WARNING - Waiting 1.00 seconds before retry...
+2025-03-28 13:03:53,734 - employee_client - ERROR - Error sending employee via HTTP: Object of type date is not JSON serializable
+2025-03-28 13:03:53,735 - utils - WARNING - Retry 1/3 for send_employee_http after error: Object of type date is not JSON serializable
+2025-03-28 13:03:53,735 - utils - WARNING - Waiting 1.00 seconds before retry...
+2025-03-28 13:03:53,736 - employee_client - ERROR - Error sending employee via HTTP: Object of type date is not JSON serializable
+2025-03-28 13:03:53,737 - utils - WARNING - Retry 1/3 for send_employee_http after error: Object of type date is not JSON serializable
+2025-03-28 13:03:53,738 - utils - WARNING - Waiting 1.00 seconds before retry...
+2025-03-28 13:03:53,739 - employee_client - ERROR - Error processing CSV file: Object of type date is not JSON serializable
+2025-03-28 13:03:53,740 - utils - ERROR - Function process_csv_file failed after 7.4117 seconds. Error: Object of type date is not JSON serializable
+2025-03-28 13:03:53,744 - utils - ERROR - Traceback (most recent call last):
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\client\utils.py", line 21, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\client\employee_client.py", line 325, in process_csv_file
+    successful, failed = await self.send_employees_concurrently(batch)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\client\employee_client.py", line 283, in send_employees_concurrently
+    results = await gather_with_concurrency(self.max_workers, *tasks)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\client\utils.py", line 275, in gather_with_concurrency
+    return await asyncio.gather(*(sem_task(task) for task in tasks))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\client\utils.py", line 273, in sem_task
+    return await task
+           ^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\client\employee_client.py", line 268, in send_employee
+    return await self.send_employee_http(employee)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\client\utils.py", line 21, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\client\utils.py", line 61, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\client\employee_client.py", line 188, in send_employee_http
+    async with self.session.post(
+               ^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\client\env\Lib\site-packages\aiohttp\client.py", line 1425, in __aenter__
+    self._resp: _RetType = await self._coro
+                           ^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\client\env\Lib\site-packages\aiohttp\client.py", line 521, in _request
+    data = payload.JsonPayload(json, dumps=self._json_serialize)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\client\env\Lib\site-packages\aiohttp\payload.py", line 448, in __init__
+    dumps(value).encode(encoding),
+    ^^^^^^^^^^^^
+  File "C:\Python312\Lib\json\__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\json\encoder.py", line 258, in iterencode
+    return _iterencode(o, 0)
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type date is not JSON serializable
+
+2025-03-28 13:03:53,757 - __main__ - ERROR - Error: Object of type date is not JSON serializable
+2025-03-28 13:03:53,758 - employee_client - INFO - Closing client...
+2025-03-28 13:03:53,758 - employee_client - ERROR - Error sending employee via HTTP: Session is closed
+2025-03-28 13:03:53,759 - utils - ERROR - Max retries (3) reached for send_employee_http
+2025-03-28 13:03:53,761 - utils - ERROR - Function send_employee_http failed after 7.2885 seconds. Error: Session is closed
+2025-03-28 13:03:53,762 - utils - ERROR - Traceback (most recent call last):
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\client\utils.py", line 21, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\client\utils.py", line 61, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\client\employee_client.py", line 188, in send_employee_http
+    async with self.session.post(
+               ^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\client\env\Lib\site-packages\aiohttp\client.py", line 1425, in __aenter__
+    self._resp: _RetType = await self._coro
+                           ^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\client\env\Lib\site-packages\aiohttp\client.py", line 512, in _request
+    raise RuntimeError("Session is closed")
+RuntimeError: Session is closed
+
+2025-03-28 13:03:53,768 - employee_client - ERROR - Error sending employee via HTTP: Session is closed
+2025-03-28 13:03:53,768 - utils - ERROR - Max retries (3) reached for send_employee_http
+2025-03-28 13:03:53,769 - utils - ERROR - Function send_employee_http failed after 7.2779 seconds. Error: Session is closed
+2025-03-28 13:03:53,770 - utils - ERROR - Traceback (most recent call last):
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\client\utils.py", line 21, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\client\utils.py", line 61, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\client\employee_client.py", line 188, in send_employee_http
+    async with self.session.post(
+               ^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\client\env\Lib\site-packages\aiohttp\client.py", line 1425, in __aenter__
+    self._resp: _RetType = await self._coro
+                           ^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\client\env\Lib\site-packages\aiohttp\client.py", line 512, in _request
+    raise RuntimeError("Session is closed")
+RuntimeError: Session is closed
+
+2025-03-28 13:03:53,774 - employee_client - ERROR - Error sending employee via HTTP: Session is closed
+2025-03-28 13:03:53,775 - utils - ERROR - Max retries (3) reached for send_employee_http
+2025-03-28 13:03:53,778 - utils - ERROR - Function send_employee_http failed after 7.3079 seconds. Error: Session is closed
+2025-03-28 13:03:53,779 - utils - ERROR - Traceback (most recent call last):
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\client\utils.py", line 21, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\client\utils.py", line 61, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\client\employee_client.py", line 188, in send_employee_http
+    async with self.session.post(
+               ^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\client\env\Lib\site-packages\aiohttp\client.py", line 1425, in __aenter__
+    self._resp: _RetType = await self._coro
+                           ^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\client\env\Lib\site-packages\aiohttp\client.py", line 512, in _request
+    raise RuntimeError("Session is closed")
+RuntimeError: Session is closed
+
+2025-03-28 13:03:53,783 - employee_client - ERROR - Error sending employee via HTTP: Session is closed
+2025-03-28 13:03:53,785 - utils - ERROR - Max retries (3) reached for send_employee_http
+2025-03-28 13:03:53,786 - utils - ERROR - Function send_employee_http failed after 7.2984 seconds. Error: Session is closed
+2025-03-28 13:03:53,787 - utils - ERROR - Traceback (most recent call last):
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\client\utils.py", line 21, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\client\utils.py", line 61, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\client\employee_client.py", line 188, in send_employee_http
+    async with self.session.post(
+               ^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\client\env\Lib\site-packages\aiohttp\client.py", line 1425, in __aenter__
+    self._resp: _RetType = await self._coro
+                           ^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\client\env\Lib\site-packages\aiohttp\client.py", line 512, in _request
+    raise RuntimeError("Session is closed")
+RuntimeError: Session is closed
+
+2025-03-28 13:03:53,791 - employee_client - ERROR - Error sending employee via HTTP: Session is closed
+2025-03-28 13:03:53,792 - utils - ERROR - Max retries (3) reached for send_employee_http
+2025-03-28 13:03:53,792 - utils - ERROR - Function send_employee_http failed after 7.3121 seconds. Error: Session is closed
+2025-03-28 13:03:53,793 - utils - ERROR - Traceback (most recent call last):
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\client\utils.py", line 21, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\client\utils.py", line 61, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\client\employee_client.py", line 188, in send_employee_http
+    async with self.session.post(
+               ^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\client\env\Lib\site-packages\aiohttp\client.py", line 1425, in __aenter__
+    self._resp: _RetType = await self._coro
+                           ^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\client\env\Lib\site-packages\aiohttp\client.py", line 512, in _request
+    raise RuntimeError("Session is closed")
+RuntimeError: Session is closed
+
+2025-03-28 13:03:53,798 - employee_client - ERROR - Error sending employee via HTTP: Session is closed
+2025-03-28 13:03:53,798 - utils - ERROR - Max retries (3) reached for send_employee_http
+2025-03-28 13:03:53,799 - utils - ERROR - Function send_employee_http failed after 7.3149 seconds. Error: Session is closed
+2025-03-28 13:03:53,800 - utils - ERROR - Traceback (most recent call last):
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\client\utils.py", line 21, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\client\utils.py", line 61, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\client\employee_client.py", line 188, in send_employee_http
+    async with self.session.post(
+               ^^^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\client\env\Lib\site-packages\aiohttp\client.py", line 1425, in __aenter__
+    self._resp: _RetType = await self._coro
+                           ^^^^^^^^^^^^^^^^
+  File "D:\Jan\Projects\Employee Record Transmission and Storage System\client\env\Lib\site-packages\aiohttp\client.py", line 512, in _request
+    raise RuntimeError("Session is closed")
+RuntimeError: Session is closed
+
+2025-03-28 13:03:53,805 - employee_client - INFO - Client closed successfully
+2025-03-28 13:03:53,805 - employee_client - ERROR - Error sending employee via HTTP: Session is closed
+2025-03-28 13:03:53,806 - utils - WARNING - Retry 1/3 for send_employee_http after error: Session is closed
+2025-03-28 13:03:53,806 - utils - WARNING - Waiting 1.00 seconds before retry...
+2025-03-28 13:03:53,807 - employee_client - ERROR - Error sending employee via HTTP: Session is closed
+2025-03-28 13:03:53,807 - utils - WARNING - Retry 1/3 for send_employee_http after error: Session is closed
+2025-03-28 13:03:53,808 - utils - WARNING - Waiting 1.00 seconds before retry...
+2025-03-28 13:03:53,808 - employee_client - ERROR - Error sending employee via HTTP: Session is closed
+2025-03-28 13:03:53,810 - utils - WARNING - Retry 1/3 for send_employee_http after error: Session is closed
+2025-03-28 13:03:53,810 - utils - WARNING - Waiting 1.00 seconds before retry...
+2025-03-28 13:03:53,811 - employee_client - ERROR - Error sending employee via HTTP: Session is closed
+2025-03-28 13:03:53,811 - utils - WARNING - Retry 1/3 for send_employee_http after error: Session is closed
+2025-03-28 13:03:53,812 - utils - WARNING - Waiting 1.00 seconds before retry...
+2025-03-28 13:03:53,812 - employee_client - ERROR - Error sending employee via HTTP: Session is closed
+2025-03-28 13:03:53,813 - utils - WARNING - Retry 1/3 for send_employee_http after error: Session is closed
+2025-03-28 13:03:53,814 - utils - WARNING - Waiting 1.00 seconds before retry...
+2025-03-28 13:03:53,814 - employee_client - ERROR - Error sending employee via HTTP: Session is closed
+2025-03-28 13:03:53,816 - utils - WARNING - Retry 1/3 for send_employee_http after error: Session is closed
+2025-03-28 13:03:53,817 - utils - WARNING - Waiting 1.00 seconds before retry...
+2025-03-28 13:10:37,949 - config - INFO - Client configuration loaded: {
+  "SERVER_URL": "http://localhost:8000",
+  "COMM_MODE": "http",
+  "CSV_FILE_PATH": "./employee_data.csv",
+  "CSV_DELIMITER": ",",
+  "CSV_ENCODING": "utf-8",
+  "BATCH_SIZE": 50,
+  "MAX_RETRIES": 3,
+  "RETRY_DELAY": 1.0,
+  "TIMEOUT": 10.0,
+  "MAX_WORKERS": 10,
+  "KAFKA_BOOTSTRAP_SERVERS": "localhost:9092",
+  "KAFKA_TOPIC": "employee-records",
+  "WS_URL": "ws://localhost:8000/ws",
+  "AUTH_USERNAME": "admin"
+}
+2025-03-28 13:10:38,470 - __main__ - INFO - Starting employee record transmission using HTTP mode
+2025-03-28 13:10:38,471 - employee_client - INFO - Initializing CommunicationMode.HTTP client...
+2025-03-28 13:10:38,471 - employee_client - INFO - Authenticating with server...
+2025-03-28 13:10:39,191 - employee_client - INFO - Authentication successful
+2025-03-28 13:10:39,191 - employee_client - INFO - CommunicationMode.HTTP client initialized successfully
+2025-03-28 13:10:39,192 - employee_client - INFO - Parsing CSV file: ./employee_data.csv
+2025-03-28 13:10:39,248 - utils - INFO - Successfully parsed 1000 rows from ./employee_data.csv
+2025-03-28 13:10:39,249 - employee_client - INFO - Found 1000 employee records in CSV file
+2025-03-28 13:10:39,250 - employee_client - INFO - Processing batch 1/20
+2025-03-28 13:10:39,251 - employee_client - ERROR - Error sending employee via HTTP: name 'date' is not defined
+2025-03-28 13:10:39,252 - utils - WARNING - Retry 1/3 for send_employee_http after error: name 'date' is not defined
+2025-03-28 13:10:39,252 - utils - WARNING - Waiting 1.00 seconds before retry...
+2025-03-28 13:10:39,252 - employee_client - ERROR - Error sending employee via HTTP: name 'date' is not defined
+2025-03-28 13:10:39,253 - utils - WARNING - Retry 1/3 for send_employee_http after error: name 'date' is not defined
+2025-03-28 13:10:39,254 - utils - WARNING - Waiting 1.00 seconds before retry...
+2025-03-28 13:10:39,255 - employee_client - ERROR - Error sending employee via HTTP: name 'date' is not defined
+2025-03-28 13:10:39,255 - utils - WARNING - Retry 1/3 for send_employee_http after error: name 'date' is not defined
+2025-03-28 13:10:39,256 - utils - WARNING - Waiting 1.00 seconds before retry...
+2025-03-28 13:10:39,257 - employee_client - ERROR - Error sending employee via HTTP: name 'date' is not defined
+2025-03-28 13:10:39,257 - utils - WARNING - Retry 1/3 for send_employee_http after error: name 'date' is not defined
+2025-03-28 13:10:39,258 - utils - WARNING - Waiting 1.00 seconds before retry...
+2025-03-28 13:10:39,259 - employee_client - ERROR - Error sending employee via HTTP: name 'date' is not defined
+2025-03-28 13:10:39,259 - utils - WARNING - Retry 1/3 for send_employee_http after error: name 'date' is not defined
+2025-03-28 13:10:39,260 - utils - WARNING - Waiting 1.00 seconds before retry...
+2025-03-28 13:10:39,260 - employee_client - ERROR - Error sending employee via HTTP: name 'date' is not defined
+2025-03-28 13:10:39,262 - utils - WARNING - Retry 1/3 for send_employee_http after error: name 'date' is not defined
+2025-03-28 13:10:39,263 - utils - WARNING - Waiting 1.00 seconds before retry...
+2025-03-28 13:10:39,263 - employee_client - ERROR - Error sending employee via HTTP: name 'date' is not defined
+2025-03-28 13:10:39,264 - utils - WARNING - Retry 1/3 for send_employee_http after error: name 'date' is not defined
+2025-03-28 13:10:39,265 - utils - WARNING - Waiting 1.00 seconds before retry...
+2025-03-28 13:10:39,266 - employee_client - ERROR - Error sending employee via HTTP: name 'date' is not defined
+2025-03-28 13:10:39,266 - utils - WARNING - Retry 1/3 for send_employee_http after error: name 'date' is not defined
+2025-03-28 13:10:39,268 - utils - WARNING - Waiting 1.00 seconds before retry...
+2025-03-28 13:10:39,268 - employee_client - ERROR - Error sending employee via HTTP: name 'date' is not defined
+2025-03-28 13:10:39,268 - utils - WARNING - Retry 1/3 for send_employee_http after error: name 'date' is not defined
+2025-03-28 13:10:39,270 - utils - WARNING - Waiting 1.00 seconds before retry...
+2025-03-28 13:10:39,271 - employee_client - ERROR - Error sending employee via HTTP: name 'date' is not defined
+2025-03-28 13:10:39,272 - utils - WARNING - Retry 1/3 for send_employee_http after error: name 'date' is not defined
+2025-03-28 13:10:39,273 - utils - WARNING - Waiting 1.00 seconds before retry...
+2025-03-28 13:10:40,274 - employee_client - ERROR - Error sending employee via HTTP: name 'date' is not defined
+2025-03-28 13:10:40,274 - utils - WARNING - Retry 2/3 for send_employee_http after error: name 'date' is not defined
+2025-03-28 13:10:40,275 - utils - WARNING - Waiting 2.00 seconds before retry...
+2025-03-28 13:10:40,275 - employee_client - ERROR - Error sending employee via HTTP: name 'date' is not defined
+2025-03-28 13:10:40,276 - utils - WARNING - Retry 2/3 for send_employee_http after error: name 'date' is not defined
+2025-03-28 13:10:40,276 - utils - WARNING - Waiting 2.00 seconds before retry...
+2025-03-28 13:10:40,278 - employee_client - ERROR - Error sending employee via HTTP: name 'date' is not defined
+2025-03-28 13:10:40,279 - utils - WARNING - Retry 2/3 for send_employee_http after error: name 'date' is not defined
+2025-03-28 13:10:40,280 - utils - WARNING - Waiting 2.00 seconds before retry...
+2025-03-28 13:10:40,281 - employee_client - ERROR - Error sending employee via HTTP: name 'date' is not defined
+2025-03-28 13:10:40,281 - utils - WARNING - Retry 2/3 for send_employee_http after error: name 'date' is not defined
+2025-03-28 13:10:40,282 - utils - WARNING - Waiting 2.00 seconds before retry...
+2025-03-28 13:10:40,282 - employee_client - ERROR - Error sending employee via HTTP: name 'date' is not defined
+2025-03-28 13:10:40,283 - utils - WARNING - Retry 2/3 for send_employee_http after error: name 'date' is not defined
+2025-03-28 13:10:40,283 - utils - WARNING - Waiting 2.00 seconds before retry...
+2025-03-28 13:10:40,284 - employee_client - ERROR - Error sending employee via HTTP: name 'date' is not defined
+2025-03-28 13:10:40,284 - utils - WARNING - Retry 2/3 for send_employee_http after error: name 'date' is not defined
+2025-03-28 13:10:40,285 - utils - WARNING - Waiting 2.00 seconds before retry...
+2025-03-28 13:10:40,286 - employee_client - ERROR - Error sending employee via HTTP: name 'date' is not defined
+2025-03-28 13:10:40,287 - utils - WARNING - Retry 2/3 for send_employee_http after error: name 'date' is not defined
+2025-03-28 13:10:40,289 - utils - WARNING - Waiting 2.00 seconds before retry...
+2025-03-28 13:10:40,289 - employee_client - ERROR - Error sending employee via HTTP: name 'date' is not defined
+2025-03-28 13:10:40,290 - utils - WARNING - Retry 2/3 for send_employee_http after error: name 'date' is not defined
+2025-03-28 13:10:40,291 - utils - WARNING - Waiting 2.00 seconds before retry...
+2025-03-28 13:10:40,292 - employee_client - ERROR - Error sending employee via HTTP: name 'date' is not defined
+2025-03-28 13:10:40,293 - utils - WARNING - Retry 2/3 for send_employee_http after error: name 'date' is not defined
+2025-03-28 13:10:40,294 - utils - WARNING - Waiting 2.00 seconds before retry...
+2025-03-28 13:10:40,296 - employee_client - ERROR - Error sending employee via HTTP: name 'date' is not defined
+2025-03-28 13:10:40,298 - utils - WARNING - Retry 2/3 for send_employee_http after error: name 'date' is not defined
+2025-03-28 13:10:40,299 - utils - WARNING - Waiting 2.00 seconds before retry...
+2025-03-28 13:10:42,270 - employee_client - ERROR - Error sending employee via HTTP: name 'date' is not defined
+2025-03-28 13:10:42,271 - utils - WARNING - Retry 3/3 for send_employee_http after error: name 'date' is not defined
+2025-03-28 13:10:42,271 - utils - WARNING - Waiting 4.00 seconds before retry...
+2025-03-28 13:10:42,271 - employee_client - ERROR - Error sending employee via HTTP: name 'date' is not defined
+2025-03-28 13:10:42,271 - utils - WARNING - Retry 3/3 for send_employee_http after error: name 'date' is not defined
+2025-03-28 13:10:42,272 - utils - WARNING - Waiting 4.00 seconds before retry...
+2025-03-28 13:10:42,272 - employee_client - ERROR - Error sending employee via HTTP: name 'date' is not defined
+2025-03-28 13:10:42,273 - utils - WARNING - Retry 3/3 for send_employee_http after error: name 'date' is not defined
+2025-03-28 13:10:42,273 - utils - WARNING - Waiting 4.00 seconds before retry...
+2025-03-28 13:10:42,273 - employee_client - ERROR - Error sending employee via HTTP: name 'date' is not defined
+2025-03-28 13:10:42,274 - utils - WARNING - Retry 3/3 for send_employee_http after error: name 'date' is not defined
+2025-03-28 13:10:42,274 - utils - WARNING - Waiting 4.00 seconds before retry...
+2025-03-28 13:10:42,274 - employee_client - ERROR - Error sending employee via HTTP: name 'date' is not defined
+2025-03-28 13:10:42,275 - utils - WARNING - Retry 3/3 for send_employee_http after error: name 'date' is not defined
+2025-03-28 13:10:42,275 - utils - WARNING - Waiting 4.00 seconds before retry...
+2025-03-28 13:10:42,275 - employee_client - ERROR - Error sending employee via HTTP: name 'date' is not defined
+2025-03-28 13:10:42,276 - utils - WARNING - Retry 3/3 for send_employee_http after error: name 'date' is not defined
+2025-03-28 13:10:42,277 - utils - WARNING - Waiting 4.00 seconds before retry...
+2025-03-28 13:10:42,278 - employee_client - ERROR - Error sending employee via HTTP: name 'date' is not defined
+2025-03-28 13:10:42,279 - utils - WARNING - Retry 3/3 for send_employee_http after error: name 'date' is not defined
+2025-03-28 13:10:42,280 - utils - WARNING - Waiting 4.00 seconds before retry...
+2025-03-28 13:10:42,280 - employee_client - ERROR - Error sending employee via HTTP: name 'date' is not defined
+2025-03-28 13:10:42,281 - utils - WARNING - Retry 3/3 for send_employee_http after error: name 'date' is not defined
+2025-03-28 13:10:42,281 - utils - WARNING - Waiting 4.00 seconds before retry...
+2025-03-28 13:10:42,306 - employee_client - ERROR - Error sending employee via HTTP: name 'date' is not defined
+2025-03-28 13:10:42,306 - utils - WARNING - Retry 3/3 for send_employee_http after error: name 'date' is not defined
+2025-03-28 13:10:42,307 - utils - WARNING - Waiting 4.00 seconds before retry...
+2025-03-28 13:10:42,307 - employee_client - ERROR - Error sending employee via HTTP: name 'date' is not defined
+2025-03-28 13:10:42,308 - utils - WARNING - Retry 3/3 for send_employee_http after error: name 'date' is not defined
+2025-03-28 13:10:42,308 - utils - WARNING - Waiting 4.00 seconds before retry...
+2025-03-28 13:10:46,263 - employee_client - INFO - Closing client...
+2025-03-28 13:10:46,265 - employee_client - INFO - Client closed successfully
+2025-03-28 13:10:46,276 - __main__ - INFO - Process interrupted by user
+2025-03-28 14:16:37,752 - config - INFO - Client configuration loaded: {
+  "SERVER_URL": "http://localhost:8000",
+  "COMM_MODE": "http",
+  "CSV_FILE_PATH": "./employee_data.csv",
+  "CSV_DELIMITER": ",",
+  "CSV_ENCODING": "utf-8",
+  "BATCH_SIZE": 50,
+  "MAX_RETRIES": 3,
+  "RETRY_DELAY": 1.0,
+  "TIMEOUT": 10.0,
+  "MAX_WORKERS": 10,
+  "KAFKA_BOOTSTRAP_SERVERS": "localhost:9092",
+  "KAFKA_TOPIC": "employee-records",
+  "WS_URL": "ws://localhost:8000/ws",
+  "AUTH_USERNAME": "admin"
+}
+2025-03-28 14:16:38,330 - __main__ - INFO - Starting employee record transmission using HTTP mode
+2025-03-28 14:16:38,330 - employee_client - INFO - Initializing CommunicationMode.HTTP client...
+2025-03-28 14:16:38,331 - employee_client - INFO - Authenticating with server...
+2025-03-28 14:16:39,076 - employee_client - INFO - Authentication successful
+2025-03-28 14:16:39,077 - employee_client - INFO - CommunicationMode.HTTP client initialized successfully
+2025-03-28 14:16:39,078 - employee_client - INFO - Parsing CSV file: ./employee_data.csv
+2025-03-28 14:16:39,099 - utils - INFO - Successfully parsed 1000 rows from ./employee_data.csv
+2025-03-28 14:16:39,105 - employee_client - INFO - Found 1000 employee records in CSV file
+2025-03-28 14:16:39,105 - employee_client - INFO - Processing batch 1/20
+2025-03-28 14:16:39,570 - employee_client - ERROR - Error sending employee via HTTP: Error 500: Internal Server Error
+2025-03-28 14:16:39,573 - utils - WARNING - Retry 1/3 for send_employee_http after error: Error 500: Internal Server Error
+2025-03-28 14:16:39,574 - utils - WARNING - Waiting 1.00 seconds before retry...
+2025-03-28 14:16:39,682 - employee_client - ERROR - Error sending employee via HTTP: Error 500: Internal Server Error
+2025-03-28 14:16:39,683 - utils - WARNING - Retry 1/3 for send_employee_http after error: Error 500: Internal Server Error
+2025-03-28 14:16:39,683 - utils - WARNING - Waiting 1.00 seconds before retry...
+2025-03-28 14:16:39,715 - employee_client - ERROR - Error sending employee via HTTP: Error 500: Internal Server Error
+2025-03-28 14:16:39,715 - utils - WARNING - Retry 1/3 for send_employee_http after error: Error 500: Internal Server Error
+2025-03-28 14:16:39,716 - utils - WARNING - Waiting 1.00 seconds before retry...
+2025-03-28 14:16:39,749 - employee_client - ERROR - Error sending employee via HTTP: Error 500: Internal Server Error
+2025-03-28 14:16:39,750 - utils - WARNING - Retry 1/3 for send_employee_http after error: Error 500: Internal Server Error
+2025-03-28 14:16:39,750 - utils - WARNING - Waiting 1.00 seconds before retry...
+2025-03-28 14:16:39,788 - employee_client - ERROR - Error sending employee via HTTP: Error 500: Internal Server Error
+2025-03-28 14:16:39,789 - utils - WARNING - Retry 1/3 for send_employee_http after error: Error 500: Internal Server Error
+2025-03-28 14:16:39,789 - utils - WARNING - Waiting 1.00 seconds before retry...
+2025-03-28 14:16:39,815 - employee_client - ERROR - Error sending employee via HTTP: Error 500: Internal Server Error
+2025-03-28 14:16:39,816 - utils - WARNING - Retry 1/3 for send_employee_http after error: Error 500: Internal Server Error
+2025-03-28 14:16:39,816 - utils - WARNING - Waiting 1.00 seconds before retry...
+2025-03-28 14:16:39,867 - employee_client - ERROR - Error sending employee via HTTP: Error 500: Internal Server Error
+2025-03-28 14:16:39,867 - utils - WARNING - Retry 1/3 for send_employee_http after error: Error 500: Internal Server Error
+2025-03-28 14:16:39,867 - utils - WARNING - Waiting 1.00 seconds before retry...
+2025-03-28 14:16:40,005 - employee_client - ERROR - Error sending employee via HTTP: Error 500: Internal Server Error
+2025-03-28 14:16:40,038 - utils - WARNING - Retry 1/3 for send_employee_http after error: Error 500: Internal Server Error
+2025-03-28 14:16:40,038 - utils - WARNING - Waiting 1.00 seconds before retry...
+2025-03-28 14:16:40,101 - employee_client - ERROR - Error sending employee via HTTP: Error 500: Internal Server Error
+2025-03-28 14:16:40,101 - utils - WARNING - Retry 1/3 for send_employee_http after error: Error 500: Internal Server Error
+2025-03-28 14:16:40,101 - utils - WARNING - Waiting 1.00 seconds before retry...
+2025-03-28 14:16:40,149 - employee_client - ERROR - Error sending employee via HTTP: Error 500: Internal Server Error
+2025-03-28 14:16:40,149 - utils - WARNING - Retry 1/3 for send_employee_http after error: Error 500: Internal Server Error
+2025-03-28 14:16:40,149 - utils - WARNING - Waiting 1.00 seconds before retry...
+2025-03-28 14:16:40,805 - employee_client - ERROR - Error sending employee via HTTP: Error 500: Internal Server Error
+2025-03-28 14:16:40,806 - utils - WARNING - Retry 2/3 for send_employee_http after error: Error 500: Internal Server Error
+2025-03-28 14:16:40,806 - utils - WARNING - Waiting 2.00 seconds before retry...
+2025-03-28 14:16:40,868 - employee_client - ERROR - Error sending employee via HTTP: Error 500: Internal Server Error
+2025-03-28 14:16:40,868 - utils - WARNING - Retry 2/3 for send_employee_http after error: Error 500: Internal Server Error
+2025-03-28 14:16:40,869 - utils - WARNING - Waiting 2.00 seconds before retry...
+2025-03-28 14:16:40,920 - employee_client - ERROR - Error sending employee via HTTP: Error 500: Internal Server Error
+2025-03-28 14:16:40,921 - utils - WARNING - Retry 2/3 for send_employee_http after error: Error 500: Internal Server Error
+2025-03-28 14:16:40,921 - utils - WARNING - Waiting 2.00 seconds before retry...
+2025-03-28 14:16:40,945 - employee_client - ERROR - Error sending employee via HTTP: Error 500: Internal Server Error
+2025-03-28 14:16:40,946 - utils - WARNING - Retry 2/3 for send_employee_http after error: Error 500: Internal Server Error
+2025-03-28 14:16:40,946 - utils - WARNING - Waiting 2.00 seconds before retry...
+2025-03-28 14:16:41,033 - employee_client - ERROR - Error sending employee via HTTP: Error 500: Internal Server Error
+2025-03-28 14:16:41,034 - utils - WARNING - Retry 2/3 for send_employee_http after error: Error 500: Internal Server Error
+2025-03-28 14:16:41,035 - utils - WARNING - Waiting 2.00 seconds before retry...
+2025-03-28 14:16:41,036 - employee_client - ERROR - Error sending employee via HTTP: [WinError 10053] An established connection was aborted by the software in your host machine
+2025-03-28 14:16:41,037 - utils - WARNING - Retry 2/3 for send_employee_http after error: [WinError 10053] An established connection was aborted by the software in your host machine
+2025-03-28 14:16:41,038 - utils - WARNING - Waiting 2.00 seconds before retry...
+2025-03-28 14:16:41,103 - employee_client - ERROR - Error sending employee via HTTP: Error 500: Internal Server Error
+2025-03-28 14:16:41,104 - utils - WARNING - Retry 2/3 for send_employee_http after error: Error 500: Internal Server Error
+2025-03-28 14:16:41,104 - utils - WARNING - Waiting 2.00 seconds before retry...
+2025-03-28 14:16:41,139 - employee_client - ERROR - Error sending employee via HTTP: Error 500: Internal Server Error
+2025-03-28 14:16:41,140 - utils - WARNING - Retry 2/3 for send_employee_http after error: Error 500: Internal Server Error
+2025-03-28 14:16:41,141 - utils - WARNING - Waiting 2.00 seconds before retry...
+2025-03-28 14:16:41,142 - employee_client - ERROR - Error sending employee via HTTP: [WinError 10053] An established connection was aborted by the software in your host machine
+2025-03-28 14:16:41,143 - utils - WARNING - Retry 2/3 for send_employee_http after error: [WinError 10053] An established connection was aborted by the software in your host machine
+2025-03-28 14:16:41,144 - utils - WARNING - Waiting 2.00 seconds before retry...
+2025-03-28 14:16:41,177 - employee_client - ERROR - Error sending employee via HTTP: Error 500: Internal Server Error
+2025-03-28 14:16:41,177 - utils - WARNING - Retry 2/3 for send_employee_http after error: Error 500: Internal Server Error
+2025-03-28 14:16:41,178 - utils - WARNING - Waiting 2.00 seconds before retry...
+2025-03-28 14:16:42,656 - employee_client - INFO - Closing client...
+2025-03-28 14:16:42,657 - employee_client - INFO - Client closed successfully
+2025-03-28 14:16:42,660 - __main__ - INFO - Process interrupted by user
+2025-03-28 14:17:01,499 - config - INFO - Client configuration loaded: {
+  "SERVER_URL": "http://localhost:8000",
+  "COMM_MODE": "http",
+  "CSV_FILE_PATH": "./employee_data.csv",
+  "CSV_DELIMITER": ",",
+  "CSV_ENCODING": "utf-8",
+  "BATCH_SIZE": 50,
+  "MAX_RETRIES": 3,
+  "RETRY_DELAY": 1.0,
+  "TIMEOUT": 10.0,
+  "MAX_WORKERS": 10,
+  "KAFKA_BOOTSTRAP_SERVERS": "localhost:9092",
+  "KAFKA_TOPIC": "employee-records",
+  "WS_URL": "ws://localhost:8000/ws",
+  "AUTH_USERNAME": "admin"
+}
+2025-03-28 14:17:01,966 - __main__ - INFO - Starting employee record transmission using HTTP mode
+2025-03-28 14:17:01,966 - employee_client - INFO - Initializing CommunicationMode.HTTP client...
+2025-03-28 14:17:01,967 - employee_client - INFO - Authenticating with server...
+2025-03-28 14:17:02,771 - employee_client - INFO - Authentication successful
+2025-03-28 14:17:02,772 - employee_client - INFO - CommunicationMode.HTTP client initialized successfully
+2025-03-28 14:17:02,772 - employee_client - INFO - Parsing CSV file: ./employee_data.csv
+2025-03-28 14:17:02,811 - utils - INFO - Successfully parsed 1000 rows from ./employee_data.csv
+2025-03-28 14:17:02,812 - employee_client - INFO - Found 1000 employee records in CSV file
+2025-03-28 14:17:02,814 - employee_client - INFO - Processing batch 1/20
+2025-03-28 14:17:02,884 - employee_client - ERROR - Error sending employee via HTTP: Error 500: Internal Server Error
+2025-03-28 14:17:02,885 - utils - WARNING - Retry 1/3 for send_employee_http after error: Error 500: Internal Server Error
+2025-03-28 14:17:02,885 - utils - WARNING - Waiting 1.00 seconds before retry...
+2025-03-28 14:17:02,953 - employee_client - ERROR - Error sending employee via HTTP: Error 500: Internal Server Error
+2025-03-28 14:17:02,953 - utils - WARNING - Retry 1/3 for send_employee_http after error: Error 500: Internal Server Error
+2025-03-28 14:17:02,954 - utils - WARNING - Waiting 1.00 seconds before retry...
+2025-03-28 14:17:02,977 - employee_client - ERROR - Error sending employee via HTTP: Error 500: Internal Server Error
+2025-03-28 14:17:02,977 - utils - WARNING - Retry 1/3 for send_employee_http after error: Error 500: Internal Server Error
+2025-03-28 14:17:02,977 - utils - WARNING - Waiting 1.00 seconds before retry...
+2025-03-28 14:17:03,005 - employee_client - ERROR - Error sending employee via HTTP: Error 500: Internal Server Error
+2025-03-28 14:17:03,005 - utils - WARNING - Retry 1/3 for send_employee_http after error: Error 500: Internal Server Error
+2025-03-28 14:17:03,005 - utils - WARNING - Waiting 1.00 seconds before retry...
+2025-03-28 14:17:03,035 - employee_client - ERROR - Error sending employee via HTTP: Error 500: Internal Server Error
+2025-03-28 14:17:03,035 - utils - WARNING - Retry 1/3 for send_employee_http after error: Error 500: Internal Server Error
+2025-03-28 14:17:03,036 - utils - WARNING - Waiting 1.00 seconds before retry...
+2025-03-28 14:17:03,058 - employee_client - ERROR - Error sending employee via HTTP: Error 500: Internal Server Error
+2025-03-28 14:17:03,059 - utils - WARNING - Retry 1/3 for send_employee_http after error: Error 500: Internal Server Error
+2025-03-28 14:17:03,059 - utils - WARNING - Waiting 1.00 seconds before retry...
+2025-03-28 14:17:03,180 - employee_client - ERROR - Error sending employee via HTTP: Error 500: Internal Server Error
+2025-03-28 14:17:03,180 - utils - WARNING - Retry 1/3 for send_employee_http after error: Error 500: Internal Server Error
+2025-03-28 14:17:03,180 - utils - WARNING - Waiting 1.00 seconds before retry...
+2025-03-28 14:17:03,181 - employee_client - ERROR - Error sending employee via HTTP: Error 500: Internal Server Error
+2025-03-28 14:17:03,183 - utils - WARNING - Retry 1/3 for send_employee_http after error: Error 500: Internal Server Error
+2025-03-28 14:17:03,183 - utils - WARNING - Waiting 1.00 seconds before retry...
+2025-03-28 14:17:03,318 - employee_client - ERROR - Error sending employee via HTTP: Error 500: Internal Server Error
+2025-03-28 14:17:03,318 - utils - WARNING - Retry 1/3 for send_employee_http after error: Error 500: Internal Server Error
+2025-03-28 14:17:03,318 - utils - WARNING - Waiting 1.00 seconds before retry...
+2025-03-28 14:17:03,318 - employee_client - ERROR - Error sending employee via HTTP: Error 500: Internal Server Error
+2025-03-28 14:17:03,321 - utils - WARNING - Retry 1/3 for send_employee_http after error: Error 500: Internal Server Error
+2025-03-28 14:17:03,321 - utils - WARNING - Waiting 1.00 seconds before retry...
+2025-03-28 14:17:04,057 - employee_client - ERROR - Error sending employee via HTTP: Error 500: Internal Server Error
+2025-03-28 14:17:04,057 - utils - WARNING - Retry 2/3 for send_employee_http after error: Error 500: Internal Server Error
+2025-03-28 14:17:04,058 - utils - WARNING - Waiting 2.00 seconds before retry...
+2025-03-28 14:17:04,096 - employee_client - ERROR - Error sending employee via HTTP: Error 500: Internal Server Error
+2025-03-28 14:17:04,097 - utils - WARNING - Retry 2/3 for send_employee_http after error: Error 500: Internal Server Error
+2025-03-28 14:17:04,098 - utils - WARNING - Waiting 2.00 seconds before retry...
+2025-03-28 14:17:04,130 - employee_client - ERROR - Error sending employee via HTTP: Error 500: Internal Server Error
+2025-03-28 14:17:04,132 - utils - WARNING - Retry 2/3 for send_employee_http after error: Error 500: Internal Server Error
+2025-03-28 14:17:04,133 - utils - WARNING - Waiting 2.00 seconds before retry...
+2025-03-28 14:17:04,191 - employee_client - ERROR - Error sending employee via HTTP: Error 500: Internal Server Error
+2025-03-28 14:17:04,191 - utils - WARNING - Retry 2/3 for send_employee_http after error: Error 500: Internal Server Error
+2025-03-28 14:17:04,192 - utils - WARNING - Waiting 2.00 seconds before retry...
+2025-03-28 14:17:04,221 - employee_client - ERROR - Error sending employee via HTTP: Error 500: Internal Server Error
+2025-03-28 14:17:04,222 - utils - WARNING - Retry 2/3 for send_employee_http after error: Error 500: Internal Server Error
+2025-03-28 14:17:04,222 - utils - WARNING - Waiting 2.00 seconds before retry...
+2025-03-28 14:17:04,253 - employee_client - ERROR - Error sending employee via HTTP: Error 500: Internal Server Error
+2025-03-28 14:17:04,255 - utils - WARNING - Retry 2/3 for send_employee_http after error: Error 500: Internal Server Error
+2025-03-28 14:17:04,255 - utils - WARNING - Waiting 2.00 seconds before retry...
+2025-03-28 14:17:04,357 - employee_client - ERROR - Error sending employee via HTTP: Error 500: Internal Server Error
+2025-03-28 14:17:04,358 - utils - WARNING - Retry 2/3 for send_employee_http after error: Error 500: Internal Server Error
+2025-03-28 14:17:04,359 - utils - WARNING - Waiting 2.00 seconds before retry...
+2025-03-28 14:17:04,386 - employee_client - ERROR - Error sending employee via HTTP: Error 500: Internal Server Error
+2025-03-28 14:17:04,386 - utils - WARNING - Retry 2/3 for send_employee_http after error: Error 500: Internal Server Error
+2025-03-28 14:17:04,387 - utils - WARNING - Waiting 2.00 seconds before retry...
+2025-03-28 14:17:04,465 - employee_client - ERROR - Error sending employee via HTTP: Error 500: Internal Server Error
+2025-03-28 14:17:04,465 - utils - WARNING - Retry 2/3 for send_employee_http after error: Error 500: Internal Server Error
+2025-03-28 14:17:04,466 - utils - WARNING - Waiting 2.00 seconds before retry...
+2025-03-28 14:17:04,636 - employee_client - ERROR - Error sending employee via HTTP: Error 500: Internal Server Error
+2025-03-28 14:17:04,637 - utils - WARNING - Retry 2/3 for send_employee_http after error: Error 500: Internal Server Error
+2025-03-28 14:17:04,638 - utils - WARNING - Waiting 2.00 seconds before retry...
+2025-03-28 14:17:04,926 - employee_client - INFO - Closing client...
+2025-03-28 14:17:04,927 - employee_client - INFO - Client closed successfully
+2025-03-28 14:17:04,931 - __main__ - INFO - Process interrupted by user
+2025-03-28 16:07:19,516 - config - INFO - Client configuration loaded: {
+  "SERVER_URL": "http://localhost:8000",
+  "COMM_MODE": "http",
+  "CSV_FILE_PATH": "./employee_data.csv",
+  "CSV_DELIMITER": ",",
+  "CSV_ENCODING": "utf-8",
+  "BATCH_SIZE": 50,
+  "MAX_RETRIES": 3,
+  "RETRY_DELAY": 1.0,
+  "TIMEOUT": 10.0,
+  "MAX_WORKERS": 10,
+  "KAFKA_BOOTSTRAP_SERVERS": "localhost:9092",
+  "KAFKA_TOPIC": "employee-records",
+  "WS_URL": "ws://localhost:8000/ws",
+  "AUTH_USERNAME": "admin"
+}
+2025-03-28 16:07:19,933 - __main__ - INFO - Starting employee record transmission using HTTP mode
+2025-03-28 16:07:19,933 - employee_client - INFO - Initializing CommunicationMode.HTTP client...
+2025-03-28 16:07:19,933 - employee_client - INFO - Authenticating with server...
+2025-03-28 16:07:20,606 - employee_client - INFO - Authentication successful
+2025-03-28 16:07:20,609 - employee_client - INFO - CommunicationMode.HTTP client initialized successfully
+2025-03-28 16:07:20,610 - employee_client - INFO - Parsing CSV file: ./employee_data.csv
+2025-03-28 16:07:20,700 - utils - INFO - Successfully parsed 1000 rows from ./employee_data.csv
+2025-03-28 16:07:20,706 - employee_client - INFO - Found 1000 employee records in CSV file
+2025-03-28 16:07:20,708 - employee_client - INFO - Processing batch 1/20
+2025-03-28 16:07:20,751 - employee_client - ERROR - Error sending employee via HTTP: Error 500: Internal Server Error
+2025-03-28 16:07:20,753 - utils - WARNING - Retry 1/3 for send_employee_http after error: Error 500: Internal Server Error
+2025-03-28 16:07:20,755 - utils - WARNING - Waiting 1.00 seconds before retry...
+2025-03-28 16:07:20,885 - employee_client - ERROR - Error sending employee via HTTP: Error 500: Internal Server Error
+2025-03-28 16:07:20,886 - utils - WARNING - Retry 1/3 for send_employee_http after error: Error 500: Internal Server Error
+2025-03-28 16:07:20,886 - utils - WARNING - Waiting 1.00 seconds before retry...
+2025-03-28 16:07:20,927 - employee_client - ERROR - Error sending employee via HTTP: Error 500: Internal Server Error
+2025-03-28 16:07:20,927 - utils - WARNING - Retry 1/3 for send_employee_http after error: Error 500: Internal Server Error
+2025-03-28 16:07:20,928 - utils - WARNING - Waiting 1.00 seconds before retry...
+2025-03-28 16:07:20,972 - employee_client - ERROR - Error sending employee via HTTP: Error 500: Internal Server Error
+2025-03-28 16:07:20,973 - utils - WARNING - Retry 1/3 for send_employee_http after error: Error 500: Internal Server Error
+2025-03-28 16:07:20,973 - utils - WARNING - Waiting 1.00 seconds before retry...
+2025-03-28 16:07:21,009 - employee_client - ERROR - Error sending employee via HTTP: Error 500: Internal Server Error
+2025-03-28 16:07:21,010 - utils - WARNING - Retry 1/3 for send_employee_http after error: Error 500: Internal Server Error
+2025-03-28 16:07:21,010 - utils - WARNING - Waiting 1.00 seconds before retry...
+2025-03-28 16:07:21,035 - employee_client - ERROR - Error sending employee via HTTP: Error 500: Internal Server Error
+2025-03-28 16:07:21,037 - utils - WARNING - Retry 1/3 for send_employee_http after error: Error 500: Internal Server Error
+2025-03-28 16:07:21,037 - utils - WARNING - Waiting 1.00 seconds before retry...
+2025-03-28 16:07:21,100 - employee_client - ERROR - Error sending employee via HTTP: Error 500: Internal Server Error
+2025-03-28 16:07:21,101 - utils - WARNING - Retry 1/3 for send_employee_http after error: Error 500: Internal Server Error
+2025-03-28 16:07:21,101 - utils - WARNING - Waiting 1.00 seconds before retry...
+2025-03-28 16:07:21,124 - employee_client - ERROR - Error sending employee via HTTP: Error 500: Internal Server Error
+2025-03-28 16:07:21,125 - utils - WARNING - Retry 1/3 for send_employee_http after error: Error 500: Internal Server Error
+2025-03-28 16:07:21,126 - utils - WARNING - Waiting 1.00 seconds before retry...
+2025-03-28 16:07:21,150 - employee_client - ERROR - Error sending employee via HTTP: Error 500: Internal Server Error
+2025-03-28 16:07:21,150 - utils - WARNING - Retry 1/3 for send_employee_http after error: Error 500: Internal Server Error
+2025-03-28 16:07:21,150 - utils - WARNING - Waiting 1.00 seconds before retry...
+2025-03-28 16:07:21,177 - employee_client - ERROR - Error sending employee via HTTP: Error 500: Internal Server Error
+2025-03-28 16:07:21,178 - utils - WARNING - Retry 1/3 for send_employee_http after error: Error 500: Internal Server Error
+2025-03-28 16:07:21,178 - utils - WARNING - Waiting 1.00 seconds before retry...
+2025-03-28 16:07:21,911 - employee_client - ERROR - Error sending employee via HTTP: Error 500: Internal Server Error
+2025-03-28 16:07:21,912 - utils - WARNING - Retry 2/3 for send_employee_http after error: Error 500: Internal Server Error
+2025-03-28 16:07:21,912 - utils - WARNING - Waiting 2.00 seconds before retry...
+2025-03-28 16:07:21,933 - employee_client - ERROR - Error sending employee via HTTP: [WinError 64] The specified network name is no longer available
+2025-03-28 16:07:21,933 - utils - WARNING - Retry 2/3 for send_employee_http after error: [WinError 64] The specified network name is no longer available
+2025-03-28 16:07:21,933 - utils - WARNING - Waiting 2.00 seconds before retry...
+2025-03-28 16:07:22,014 - employee_client - ERROR - Error sending employee via HTTP: Error 500: Internal Server Error
+2025-03-28 16:07:22,014 - utils - WARNING - Retry 2/3 for send_employee_http after error: Error 500: Internal Server Error
+2025-03-28 16:07:22,015 - utils - WARNING - Waiting 2.00 seconds before retry...
+2025-03-28 16:07:22,039 - employee_client - ERROR - Error sending employee via HTTP: Error 500: Internal Server Error
+2025-03-28 16:07:22,040 - utils - WARNING - Retry 2/3 for send_employee_http after error: Error 500: Internal Server Error
+2025-03-28 16:07:22,040 - utils - WARNING - Waiting 2.00 seconds before retry...
+2025-03-28 16:07:22,063 - employee_client - ERROR - Error sending employee via HTTP: [WinError 64] The specified network name is no longer available
+2025-03-28 16:07:22,063 - utils - WARNING - Retry 2/3 for send_employee_http after error: [WinError 64] The specified network name is no longer available
+2025-03-28 16:07:22,064 - utils - WARNING - Waiting 2.00 seconds before retry...
+2025-03-28 16:07:22,123 - employee_client - ERROR - Error sending employee via HTTP: Error 500: Internal Server Error
+2025-03-28 16:07:22,124 - utils - WARNING - Retry 2/3 for send_employee_http after error: Error 500: Internal Server Error
+2025-03-28 16:07:22,125 - utils - WARNING - Waiting 2.00 seconds before retry...
+2025-03-28 16:07:22,147 - employee_client - ERROR - Error sending employee via HTTP: [WinError 64] The specified network name is no longer available
+2025-03-28 16:07:22,147 - utils - WARNING - Retry 2/3 for send_employee_http after error: [WinError 64] The specified network name is no longer available
+2025-03-28 16:07:22,148 - utils - WARNING - Waiting 2.00 seconds before retry...
+2025-03-28 16:07:22,252 - employee_client - ERROR - Error sending employee via HTTP: Error 500: Internal Server Error
+2025-03-28 16:07:22,253 - utils - WARNING - Retry 2/3 for send_employee_http after error: Error 500: Internal Server Error
+2025-03-28 16:07:22,253 - utils - WARNING - Waiting 2.00 seconds before retry...
+2025-03-28 16:07:22,385 - employee_client - ERROR - Error sending employee via HTTP: Error 500: Internal Server Error
+2025-03-28 16:07:22,386 - utils - WARNING - Retry 2/3 for send_employee_http after error: Error 500: Internal Server Error
+2025-03-28 16:07:22,387 - utils - WARNING - Waiting 2.00 seconds before retry...
+2025-03-28 16:07:22,393 - employee_client - INFO - Closing client...
+2025-03-28 16:07:22,394 - employee_client - INFO - Client closed successfully
+2025-03-28 16:07:22,398 - __main__ - INFO - Process interrupted by user
+2025-03-28 16:09:04,658 - config - INFO - Client configuration loaded: {
+  "SERVER_URL": "http://localhost:8000",
+  "COMM_MODE": "http",
+  "CSV_FILE_PATH": "./employee_data.csv",
+  "CSV_DELIMITER": ",",
+  "CSV_ENCODING": "utf-8",
+  "BATCH_SIZE": 50,
+  "MAX_RETRIES": 3,
+  "RETRY_DELAY": 1.0,
+  "TIMEOUT": 10.0,
+  "MAX_WORKERS": 10,
+  "KAFKA_BOOTSTRAP_SERVERS": "localhost:9092",
+  "KAFKA_TOPIC": "employee-records",
+  "WS_URL": "ws://localhost:8000/ws",
+  "AUTH_USERNAME": "admin"
+}
+2025-03-28 16:09:05,108 - __main__ - INFO - Starting employee record transmission using HTTP mode
+2025-03-28 16:09:05,108 - employee_client - INFO - Initializing CommunicationMode.HTTP client...
+2025-03-28 16:09:05,108 - employee_client - INFO - Authenticating with server...
+2025-03-28 16:09:05,733 - employee_client - INFO - Authentication successful
+2025-03-28 16:09:05,733 - employee_client - INFO - CommunicationMode.HTTP client initialized successfully
+2025-03-28 16:09:05,747 - employee_client - INFO - Parsing CSV file: ./employee_data.csv
+2025-03-28 16:09:05,775 - utils - INFO - Successfully parsed 1000 rows from ./employee_data.csv
+2025-03-28 16:09:05,775 - employee_client - INFO - Found 1000 employee records in CSV file
+2025-03-28 16:09:05,776 - employee_client - INFO - Processing batch 1/20
+2025-03-28 16:09:05,785 - employee_client - ERROR - Error sending employee via HTTP: Error 405: {"detail":"Method Not Allowed"}
+2025-03-28 16:09:05,786 - utils - WARNING - Retry 1/3 for send_employee_http after error: Error 405: {"detail":"Method Not Allowed"}
+2025-03-28 16:09:05,786 - utils - WARNING - Waiting 1.00 seconds before retry...
+2025-03-28 16:09:05,792 - employee_client - ERROR - Error sending employee via HTTP: Error 405: {"detail":"Method Not Allowed"}
+2025-03-28 16:09:05,796 - utils - WARNING - Retry 1/3 for send_employee_http after error: Error 405: {"detail":"Method Not Allowed"}
+2025-03-28 16:09:05,796 - utils - WARNING - Waiting 1.00 seconds before retry...
+2025-03-28 16:09:05,797 - employee_client - ERROR - Error sending employee via HTTP: Error 405: {"detail":"Method Not Allowed"}
+2025-03-28 16:09:05,798 - utils - WARNING - Retry 1/3 for send_employee_http after error: Error 405: {"detail":"Method Not Allowed"}
+2025-03-28 16:09:05,799 - utils - WARNING - Waiting 1.00 seconds before retry...
+2025-03-28 16:09:05,799 - employee_client - ERROR - Error sending employee via HTTP: Error 405: {"detail":"Method Not Allowed"}
+2025-03-28 16:09:05,800 - utils - WARNING - Retry 1/3 for send_employee_http after error: Error 405: {"detail":"Method Not Allowed"}
+2025-03-28 16:09:05,801 - utils - WARNING - Waiting 1.00 seconds before retry...
+2025-03-28 16:09:05,802 - employee_client - ERROR - Error sending employee via HTTP: Error 405: {"detail":"Method Not Allowed"}
+2025-03-28 16:09:05,802 - utils - WARNING - Retry 1/3 for send_employee_http after error: Error 405: {"detail":"Method Not Allowed"}
+2025-03-28 16:09:05,803 - utils - WARNING - Waiting 1.00 seconds before retry...
+2025-03-28 16:09:05,803 - employee_client - ERROR - Error sending employee via HTTP: Error 405: {"detail":"Method Not Allowed"}
+2025-03-28 16:09:05,805 - utils - WARNING - Retry 1/3 for send_employee_http after error: Error 405: {"detail":"Method Not Allowed"}
+2025-03-28 16:09:05,806 - utils - WARNING - Waiting 1.00 seconds before retry...
+2025-03-28 16:09:06,031 - employee_client - ERROR - Error sending employee via HTTP: Error 405: {"detail":"Method Not Allowed"}
+2025-03-28 16:09:06,031 - utils - WARNING - Retry 1/3 for send_employee_http after error: Error 405: {"detail":"Method Not Allowed"}
+2025-03-28 16:09:06,031 - utils - WARNING - Waiting 1.00 seconds before retry...
+2025-03-28 16:09:06,031 - employee_client - ERROR - Error sending employee via HTTP: Error 405: {"detail":"Method Not Allowed"}
+2025-03-28 16:09:06,031 - utils - WARNING - Retry 1/3 for send_employee_http after error: Error 405: {"detail":"Method Not Allowed"}
+2025-03-28 16:09:06,031 - utils - WARNING - Waiting 1.00 seconds before retry...
+2025-03-28 16:09:06,031 - employee_client - ERROR - Error sending employee via HTTP: Error 405: {"detail":"Method Not Allowed"}
+2025-03-28 16:09:06,045 - utils - WARNING - Retry 1/3 for send_employee_http after error: Error 405: {"detail":"Method Not Allowed"}
+2025-03-28 16:09:06,045 - utils - WARNING - Waiting 1.00 seconds before retry...
+2025-03-28 16:09:06,046 - employee_client - ERROR - Error sending employee via HTTP: Error 405: {"detail":"Method Not Allowed"}
+2025-03-28 16:09:06,047 - utils - WARNING - Retry 1/3 for send_employee_http after error: Error 405: {"detail":"Method Not Allowed"}
+2025-03-28 16:09:06,047 - utils - WARNING - Waiting 1.00 seconds before retry...
+2025-03-28 16:09:06,800 - employee_client - ERROR - Error sending employee via HTTP: Error 405: {"detail":"Method Not Allowed"}
+2025-03-28 16:09:06,800 - utils - WARNING - Retry 2/3 for send_employee_http after error: Error 405: {"detail":"Method Not Allowed"}
+2025-03-28 16:09:06,800 - utils - WARNING - Waiting 2.00 seconds before retry...
+2025-03-28 16:09:06,800 - employee_client - ERROR - Error sending employee via HTTP: Error 405: {"detail":"Method Not Allowed"}
+2025-03-28 16:09:06,800 - utils - WARNING - Retry 2/3 for send_employee_http after error: Error 405: {"detail":"Method Not Allowed"}
+2025-03-28 16:09:06,800 - utils - WARNING - Waiting 2.00 seconds before retry...
+2025-03-28 16:09:06,808 - employee_client - ERROR - Error sending employee via HTTP: Error 405: {"detail":"Method Not Allowed"}
+2025-03-28 16:09:06,808 - utils - WARNING - Retry 2/3 for send_employee_http after error: Error 405: {"detail":"Method Not Allowed"}
+2025-03-28 16:09:06,809 - utils - WARNING - Waiting 2.00 seconds before retry...
+2025-03-28 16:09:06,810 - employee_client - ERROR - Error sending employee via HTTP: Error 405: {"detail":"Method Not Allowed"}
+2025-03-28 16:09:06,811 - utils - WARNING - Retry 2/3 for send_employee_http after error: Error 405: {"detail":"Method Not Allowed"}
+2025-03-28 16:09:06,811 - utils - WARNING - Waiting 2.00 seconds before retry...
+2025-03-28 16:09:06,812 - employee_client - ERROR - Error sending employee via HTTP: Error 405: {"detail":"Method Not Allowed"}
+2025-03-28 16:09:06,813 - utils - WARNING - Retry 2/3 for send_employee_http after error: Error 405: {"detail":"Method Not Allowed"}
+2025-03-28 16:09:06,813 - utils - WARNING - Waiting 2.00 seconds before retry...
+2025-03-28 16:09:06,814 - employee_client - ERROR - Error sending employee via HTTP: Error 405: {"detail":"Method Not Allowed"}
+2025-03-28 16:09:06,815 - utils - WARNING - Retry 2/3 for send_employee_http after error: Error 405: {"detail":"Method Not Allowed"}
+2025-03-28 16:09:06,815 - utils - WARNING - Waiting 2.00 seconds before retry...
+2025-03-28 16:09:07,051 - employee_client - ERROR - Error sending employee via HTTP: Error 405: {"detail":"Method Not Allowed"}
+2025-03-28 16:09:07,051 - utils - WARNING - Retry 2/3 for send_employee_http after error: Error 405: {"detail":"Method Not Allowed"}
+2025-03-28 16:09:07,051 - utils - WARNING - Waiting 2.00 seconds before retry...
+2025-03-28 16:09:07,051 - employee_client - ERROR - Error sending employee via HTTP: Error 405: {"detail":"Method Not Allowed"}
+2025-03-28 16:09:07,051 - utils - WARNING - Retry 2/3 for send_employee_http after error: Error 405: {"detail":"Method Not Allowed"}
+2025-03-28 16:09:07,051 - utils - WARNING - Waiting 2.00 seconds before retry...
+2025-03-28 16:09:07,051 - employee_client - ERROR - Error sending employee via HTTP: Error 405: {"detail":"Method Not Allowed"}
+2025-03-28 16:09:07,051 - utils - WARNING - Retry 2/3 for send_employee_http after error: Error 405: {"detail":"Method Not Allowed"}
+2025-03-28 16:09:07,051 - utils - WARNING - Waiting 2.00 seconds before retry...
+2025-03-28 16:09:07,058 - employee_client - ERROR - Error sending employee via HTTP: Error 405: {"detail":"Method Not Allowed"}
+2025-03-28 16:09:07,059 - utils - WARNING - Retry 2/3 for send_employee_http after error: Error 405: {"detail":"Method Not Allowed"}
+2025-03-28 16:09:07,059 - utils - WARNING - Waiting 2.00 seconds before retry...
+2025-03-28 16:09:07,538 - employee_client - INFO - Closing client...
+2025-03-28 16:09:07,538 - employee_client - INFO - Client closed successfully
+2025-03-28 16:09:07,538 - __main__ - INFO - Process interrupted by user

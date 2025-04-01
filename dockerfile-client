@@ -1,0 +1,26 @@
+# dockerfile-client
+
+FROM python:3.9-slim
+
+WORKDIR /app
+
+# Install dependencies
+COPY requirements-client.txt .
+RUN pip install --no-cache-dir -r requirements-client.txt
+
+# Copy client code and CSV file
+COPY client/ /app/client/
+COPY employee_data.csv /app/
+
+# Set environment variables
+ENV PYTHONPATH=/app
+ENV SERVER_URL=http://server:8000
+ENV CSV_FILE_PATH=/app/employee_data.csv
+ENV COMM_MODE=http
+ENV BATCH_SIZE=50
+ENV MAX_WORKERS=10
+ENV AUTH_USERNAME=admin
+ENV AUTH_PASSWORD=adminpassword
+
+# Run the client
+CMD ["python", "-m", "client.main", "--file", "/app/employee_data.csv"]

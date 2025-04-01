@@ -1,0 +1,53 @@
+# dockerfile-server
+
+FROM python:3.10-slim
+
+WORKDIR /app
+
+# Set environment variables
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    PYTHONPATH=/app
+
+# Install system dependencies
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends \
+        gcc \
+        default-libmysqlclient-dev \
+        pkg-config \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install Python dependencies
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy project files
+COPY . .
+
+# Expose port
+EXPOSE 8000
+
+# Create entrypoint script
+RUN echo '#!/bin/sh\n\
+# Create database if it doesn't exist\n\
+python -c "from dotenv import load_dotenv; load_dotenv(); import os, mysql.connector; \
+host=os.getenv(\"DB_HOST\"); user=os.getenv(\"DB_USER\"); password=os.getenv(\"DB_PASSWORD\"); \
+db_name=os.getenv(\"DB_NAME\"); \
+cnx = mysql.connector.connect(host=host, user=user, password=password); \
+cursor = cnx.cursor(); \
+cursor.execute(f\"CREATE DATABASE IF NOT EXISTS {db_name}\"); \
+cnx.close(); \
+print(f\"Database {db_name} created or already exists\")"\n\
+\n\
+# Run migrations\n\
+alembic upgrade head\n\
+\n\
+# Start the application\n\
+exec uvicorn main:app --host 0.0.0.0 --port 8000\n\
+' > /app/entrypoint.sh
+
+RUN chmod +x /app/entrypoint.sh
+
+# Command to run on container start
+CMD ["/app/entrypoint.sh"]

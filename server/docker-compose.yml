@@ -1,0 +1,43 @@
+# server/docker-compose.yml
+version: '3.8'
+
+services:
+  app:
+    build: .
+    ports:
+      - "8000:8000"
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      - DB_HOST=db
+      - DB_PORT=3306
+      - DB_USER=root
+      - DB_PASSWORD=happy
+      - DB_NAME=employee_records
+      - DATABASE_URL=mysql+aiomysql://root:happy@db:3306/employee_records
+      - SECRET_KEY=${SECRET_KEY:-your-secret-key-for-jwt}
+      - DEBUG=False
+    volumes:
+      - ./:/app
+    restart: unless-stopped
+
+  db:
+    image: mysql:8.0
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=happy
+      # Don't specify MYSQL_DATABASE here so our script can create it
+    volumes:
+      - mysql_data:/var/lib/mysql
+    command: --default-authentication-plugin=mysql_native_password
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-phappy"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  mysql_data:
