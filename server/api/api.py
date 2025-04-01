@@ -17,7 +17,6 @@ from schemas.schema import (
 from core.decorators import log_execution_time, log_requests, validate_input, rate_limit
 from core.security import get_current_active_user
 
-# Configure logging
 logger = logging.getLogger(__name__)
 
 router = APIRouter(
@@ -31,29 +30,25 @@ router = APIRouter(
 @log_execution_time
 @log_requests
 @rate_limit(calls=100, period=60)
-@validate_input(EmployeeCreate)  # This adds the validated_data parameter
+@validate_input(EmployeeCreate)
 async def create_employee(
     employee: EmployeeCreate,
-    validated_data: EmployeeCreate,  # Add this parameter
     session: AsyncSession = Depends(get_db)
 ):
-    """Create a new employee"""
-    # Use validated_data instead of employee
-    employee_id = validated_data.employee_id
+    employee_id = employee.employee_id
     
-    # Check if employee ID already exists
     exists = await employee_repository.exists(session, employee_id)
     if exists:
         raise HTTPException(
             status_code=status.HTTP_409_CONFLICT,
-            detail=f"Employee with ID {employee_id} already exists"
+            detail=f"Employee ID {employee_id} already exists"
         )
     
-    # Create employee
-    employee_data = validated_data.dict()
+    employee_data = employee.dict()
     new_employee = await employee_repository.create(session, employee_data)
     
     return new_employee
+
 
 @router.post("/bulk", response_model=BatchUploadResponse)
 @log_requests
@@ -65,7 +60,6 @@ async def create_employees_bulk(
     db: AsyncSession = Depends(get_db),
     current_user: dict = Depends(get_current_active_user)
 ):
-    """Create multiple employee records in bulk using ORM"""
     if not employees.employees:
         raise HTTPException(
             status_code=status.HTTP_400_BAD_REQUEST,
@@ -74,25 +68,20 @@ async def create_employees_bulk(
     
     successful_count = 0
     failed_records = []
-    
-    # Process each employee
     valid_employee_data = []
     
     for employee in employees.employees:
         try:
-            # Check if employee already exists
             exists = await employee_repository.exists(db, employee.employee_id)
             
             if exists:
                 failed_records.append({
                     "employee_id": employee.employee_id,
-                    "error": f"Employee with ID {employee.employee_id} already exists"
+                    "error": f"ID {employee.employee_id} already exists"
                 })
                 continue
             
-            # Validate the employee data
-            employee_data = employee.dict()
-            valid_employee_data.append(employee_data)
+            valid_employee_data.append(employee.dict())
             
         except Exception as e:
             failed_records.append({
@@ -101,7 +90,6 @@ async def create_employees_bulk(
             })
     
     try:
-        # Bulk create valid employees
         if valid_employee_data:
             created_employees = await employee_repository.create_many(db, valid_employee_data)
             successful_count = len(created_employees)
@@ -114,10 +102,10 @@ async def create_employees_bulk(
             message="Bulk upload completed"
         )
     except Exception as e:
-        logger.error(f"Failed to process bulk upload: {str(e)}")
+        logger.error(f"Bulk upload failed: {str(e)}")
         raise HTTPException(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-            detail=f"Failed to process bulk upload: {str(e)}"
+            detail=f"Bulk upload failed: {str(e)}"
         )
 
 
@@ -133,22 +121,18 @@ async def get_employees(
     db: AsyncSession = Depends(get_db),
     current_user: dict = Depends(get_current_active_user)
 ):
-    """Get list of employees with pagination and optional department filter using ORM"""
     try:
-        # Set up filters
         filters = {}
         if department:
             filters["department"] = department
         
-        # Get employees
         employees = await employee_repository.get_all(db, skip, limit, filters)
-        
         return [EmployeeResponse.from_orm(employee) for employee in employees]
     except Exception as e:
-        logger.error(f"Failed to retrieve employees: {str(e)}")
+        logger.error(f"Employee retrieval failed: {str(e)}")
         raise HTTPException(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-            detail=f"Failed to retrieve employees: {str(e)}"
+            detail=f"Failed to retrieve employees"
         )
 
 
@@ -162,24 +146,23 @@ async def get_employee(
     db: AsyncSession = Depends(get_db),
     current_user: dict = Depends(get_current_active_user)
 ):
-    """Get employee by ID using ORM"""
     try:
         employee = await employee_repository.get(db, employee_id)
         
         if not employee:
             raise HTTPException(
                 status_code=status.HTTP_404_NOT_FOUND,
-                detail=f"Employee with ID {employee_id} not found"
+                detail=f"Employee ID {employee_id} not found"
             )
         
         return EmployeeResponse.from_orm(employee)
     except HTTPException:
         raise
     except Exception as e:
-        logger.error(f"Failed to retrieve employee: {str(e)}")
+        logger.error(f"Employee lookup failed: {str(e)}")
         raise HTTPException(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-            detail=f"Failed to retrieve employee: {str(e)}"
+            detail="Failed to retrieve employee"
         )
 
 
@@ -195,21 +178,17 @@ async def update_employee(
     db: AsyncSession = Depends(get_db),
     current_user: dict = Depends(get_current_active_user)
 ):
-    """Update employee by ID using ORM"""
-    # Check if employee exists
     exists = await employee_repository.exists(db, employee_id)
     
     if not exists:
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND,
-            detail=f"Employee with ID {employee_id} not found"
+            detail=f"Employee ID {employee_id} not found"
         )
     
     try:
-        # Update employee
         employee_data = employee.dict(exclude_unset=True)
         
-        # If no fields to update
         if not employee_data:
             raise HTTPException(
                 status_code=status.HTTP_400_BAD_REQUEST,
@@ -221,17 +200,17 @@ async def update_employee(
         if not updated_employee:
             raise HTTPException(
                 status_code=status.HTTP_404_NOT_FOUND,
-                detail=f"Employee with ID {employee_id} not found after update"
+                detail=f"Employee ID {employee_id} not found after update"
             )
         
         return EmployeeResponse.from_orm(updated_employee)
     except HTTPException:
         raise
     except Exception as e:
-        logger.error(f"Failed to update employee: {str(e)}")
+        logger.error(f"Employee update failed: {str(e)}")
         raise HTTPException(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-            detail=f"Failed to update employee: {str(e)}"
+            detail="Failed to update employee"
         )
 
 
@@ -245,36 +224,33 @@ async def delete_employee(
     db: AsyncSession = Depends(get_db),
     current_user: dict = Depends(get_current_active_user)
 ):
-    """Delete employee by ID using ORM"""
-    # Check if employee exists
     exists = await employee_repository.exists(db, employee_id)
     
     if not exists:
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND,
-            detail=f"Employee with ID {employee_id} not found"
+            detail=f"Employee ID {employee_id} not found"
         )
     
     try:
-        # Delete employee
         deleted = await employee_repository.delete(db, employee_id)
         
         if deleted:
             return ResponseMessage(
-                message=f"Employee with ID {employee_id} deleted successfully"
+                message=f"Employee ID {employee_id} deleted successfully"
             )
         else:
             raise HTTPException(
                 status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-                detail=f"Failed to delete employee with ID {employee_id}"
+                detail=f"Failed to delete employee"
             )
     except HTTPException:
         raise
     except Exception as e:
-        logger.error(f"Failed to delete employee: {str(e)}")
+        logger.error(f"Employee deletion failed: {str(e)}")
         raise HTTPException(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-            detail=f"Failed to delete employee: {str(e)}"
+            detail="Failed to delete employee"
         )
 
 
@@ -287,13 +263,12 @@ async def get_employee_count_by_department_endpoint(
     db: AsyncSession = Depends(get_db),
     current_user: dict = Depends(get_current_active_user)
 ):
-    """Get employee count by department using ORM"""
     try:
         department_counts = await get_employee_count_by_department(db)
         return [EmployeeCount(**count) for count in department_counts]
     except Exception as e:
-        logger.error(f"Failed to retrieve department statistics: {str(e)}")
+        logger.error(f"Department stats failed: {str(e)}")
         raise HTTPException(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-            detail=f"Failed to retrieve department statistics: {str(e)}"
+            detail="Failed to retrieve department statistics"
         )

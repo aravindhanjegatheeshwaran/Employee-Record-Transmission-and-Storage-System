@@ -7,12 +7,10 @@ import time
 import os
 from contextlib import asynccontextmanager
 
-# Import the database connection, but not initialization functions
 from core.database import close_db
 from api import api, auth
 from api.api import router as employees_orm_router
 
-# Configure logging
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
@@ -26,36 +24,28 @@ logger = logging.getLogger(__name__)
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    # Startup: connect to database
-    logger.info("Connecting to database...")
-    # No database initialization needed - the database should exist and be migrated
-    
+    logger.info("Starting server...")
     yield
     
-    # Shutdown: close database connections
-    logger.info("Closing database connections...")
+    logger.info("Shutting down, closing connections...")
     try:
-        # Close the SQLAlchemy ORM database connection
         await close_db()
-        logger.info("Database connection closed successfully")
+        logger.info("Database connections closed")
     except Exception as e:
-        logger.error(f"Error closing database connections: {str(e)}")
+        logger.error(f"Error during shutdown: {str(e)}")
 
 
-# Create FastAPI app
 app = FastAPI(
     title="Employee Record System API",
-    description="API for managing employee records with SQLAlchemy ORM",
+    description="API for managing employee records",
     version="1.1.0",
     lifespan=lifespan
 )
 
-# Configure CORS
 origins = [
     "http://localhost",
     "http://localhost:8080",
     "http://localhost:3000",
-    # Add other origins as needed
 ]
 
 app.add_middleware(
@@ -67,7 +57,6 @@ app.add_middleware(
 )
 
 
-# Add request processing time middleware
 @app.middleware("http")
 async def add_process_time_header(request: Request, call_next):
     start_time = time.time()
@@ -77,17 +66,13 @@ async def add_process_time_header(request: Request, call_next):
     return response
 
 
-# Include routers
 app.include_router(auth.router)
 app.include_router(api.router)
-app.include_router(employees_orm_router)  # Add the ORM routes
+app.include_router(employees_orm_router)
 
 
 @app.get("/", tags=["health"])
 async def health_check():
-    """
-    Health check endpoint
-    """
     return {
         "status": "ok",
         "message": "Server is running",

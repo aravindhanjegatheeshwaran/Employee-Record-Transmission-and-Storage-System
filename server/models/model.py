@@ -5,7 +5,6 @@ from sqlalchemy.ext.declarative import declarative_base
 Base = declarative_base()
 
 class Employee(Base):
-    """Employee model for SQLAlchemy ORM"""
     __tablename__ = "employees"
 
     employee_id = Column(Integer, primary_key=True)
@@ -19,11 +18,10 @@ class Employee(Base):
     updated_at = Column(DateTime, server_default=func.now(), onupdate=func.now())
 
     def __repr__(self):
-        return f"<Employee(id={self.employee_id}, name='{self.name}', department='{self.department}')>"
+        return f"<Employee(id={self.employee_id}, name='{self.name}')>"
 
 
 class ProcessingLog(Base):
-    """Processing log model for SQLAlchemy ORM"""
     __tablename__ = "processing_logs"
 
     id = Column(Integer, primary_key=True, autoincrement=True)
@@ -33,4 +31,4 @@ class ProcessingLog(Base):
     processed_at = Column(DateTime, server_default=func.now())
 
     def __repr__(self):
-        return f"<ProcessingLog(id={self.id}, status='{self.status}', employee_id={self.employee_id})>"
+        return f"<ProcessingLog(id={self.id}, status='{self.status}')>"

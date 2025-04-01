@@ -1,16 +1,14 @@
 # client/config.py
 import os
-from typing import Optional, Dict, Any
+from typing import Optional
 from dotenv import load_dotenv
 import logging
 from enum import Enum
 import json
 from pydantic_settings import BaseSettings
 
-# Load environment variables from .env file
 load_dotenv()
 
-# Configure logging
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
@@ -23,20 +21,18 @@ logger = logging.getLogger(__name__)
 
 
 class CommunicationMode(str, Enum):
-    """Enum for communication mode"""
     HTTP = "http"
     WEBSOCKET = "websocket"
     KAFKA = "kafka"
 
 
 class ClientSettings(BaseSettings):
-    """Client settings"""
-    # Server connection
+    # Connection settings
     SERVER_URL: str = os.getenv("SERVER_URL", "http://localhost:8000")
     API_TOKEN: Optional[str] = os.getenv("API_TOKEN", None)
     COMM_MODE: CommunicationMode = CommunicationMode(os.getenv("COMM_MODE", "http"))
     
-    # CSV file settings
+    # File settings
     CSV_FILE_PATH: str = os.getenv("CSV_FILE_PATH", "employee_data.csv")
     CSV_DELIMITER: str = os.getenv("CSV_DELIMITER", ",")
     CSV_ENCODING: str = os.getenv("CSV_ENCODING", "utf-8")
@@ -48,28 +44,25 @@ class ClientSettings(BaseSettings):
     TIMEOUT: float = float(os.getenv("TIMEOUT", "10.0"))
     MAX_WORKERS: int = int(os.getenv("MAX_WORKERS", "10"))
     
-    # Kafka settings (used only if COMM_MODE is "kafka")
+    # Kafka settings
     KAFKA_BOOTSTRAP_SERVERS: str = os.getenv("KAFKA_BOOTSTRAP_SERVERS", "localhost:9092")
     KAFKA_TOPIC: str = os.getenv("KAFKA_TOPIC", "employee-records")
     
-    # WebSocket settings (used only if COMM_MODE is "websocket")
+    # WebSocket settings
     WS_URL: str = os.getenv("WS_URL", "ws://localhost:8000/ws")
     
-    # Authentication settings
+    # Auth settings
     AUTH_USERNAME: str = os.getenv("AUTH_USERNAME", "admin")
     AUTH_PASSWORD: str = os.getenv("AUTH_PASSWORD", "adminpassword")
     
     class Config:
-        """Pydantic config"""
         env_file = ".env"
 
 
-# Create instance of settings
 settings = ClientSettings()
 
-# Print configuration (excluding sensitive information)
-config_dict = settings.dict()
-config_dict.pop("API_TOKEN", None)
-config_dict.pop("AUTH_PASSWORD", None)
+config_display = settings.dict()
+config_display.pop("API_TOKEN", None)
+config_display.pop("AUTH_PASSWORD", None)
 
-logger.info(f"Client configuration loaded: {json.dumps(config_dict, indent=2, default=str)}")
+logger.info(f"Configuration loaded: {json.dumps(config_display, indent=2, default=str)}")

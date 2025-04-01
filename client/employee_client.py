@@ -4,31 +4,26 @@ import aiohttp
 import json
 import logging
 import time
-import sys
-import os
 from typing import List, Dict, Any, Optional, Tuple
-from dataclasses import dataclass, field, asdict
+from dataclasses import dataclass, field
 from datetime import datetime
 
 from config import settings, CommunicationMode
 from utils import (
     log_execution_time, 
     retry, 
-    process_in_batches, 
     parse_csv_file, 
     save_failed_records,
     format_employee_record,
     gather_with_concurrency
 )
 
-# For Kafka support if needed
 try:
     import aiokafka
     KAFKA_AVAILABLE = True
 except ImportError:
     KAFKA_AVAILABLE = False
 
-# For WebSockets support if needed
 try:
     import websockets
     WEBSOCKETS_AVAILABLE = True
@@ -40,7 +35,6 @@ logger = logging.getLogger(__name__)
 
 @dataclass
 class EmployeeClient:
-    """Client for sending employee records to the server"""
     server_url: str = field(default_factory=lambda: settings.SERVER_URL)
     auth_username: str = field(default_factory=lambda: settings.AUTH_USERNAME)
     auth_password: str = field(default_factory=lambda: settings.AUTH_PASSWORD)
@@ -51,64 +45,50 @@ class EmployeeClient:
     max_retries: int = field(default_factory=lambda: settings.MAX_RETRIES)
     retry_delay: float = field(default_factory=lambda: settings.RETRY_DELAY)
     
-    # Runtime state
     access_token: Optional[str] = field(default=None)
     session: Optional[aiohttp.ClientSession] = field(default=None)
     kafka_producer: Optional[Any] = field(default=None)
     websocket: Optional[Any] = field(default=None)
     
     def __post_init__(self):
-        # Validate communication mode
         if self.comm_mode == CommunicationMode.KAFKA and not KAFKA_AVAILABLE:
-            raise ImportError("Kafka support requires aiokafka package. "
-                              "Install it with 'pip install aiokafka'")
+            raise ImportError("Kafka support requires aiokafka package")
         
         if self.comm_mode == CommunicationMode.WEBSOCKET and not WEBSOCKETS_AVAILABLE:
-            raise ImportError("WebSocket support requires websockets package. "
-                              "Install it with 'pip install websockets'")
+            raise ImportError("WebSocket support requires websockets package")
     
     async def initialize(self):
-        """Initialize the client"""
-        logger.info(f"Initializing {self.comm_mode} client...")
-        
-        # Create HTTP session
+        logger.info(f"Setting up {self.comm_mode} client")
         self.session = aiohttp.ClientSession()
-        
-        # Authenticate and get token
         await self.authenticate()
         
-        # Initialize specific communication mode
         if self.comm_mode == CommunicationMode.KAFKA:
             await self.initialize_kafka()
         elif self.comm_mode == CommunicationMode.WEBSOCKET:
             await self.initialize_websocket()
         
-        logger.info(f"{self.comm_mode} client initialized successfully")
+        logger.info(f"Client ready")
     
     async def close(self):
-        """Close the client"""
-        logger.info("Closing client...")
+        logger.info("Cleaning up resources")
         
-        # Close specific communication mode resources
         if self.comm_mode == CommunicationMode.KAFKA and self.kafka_producer:
             await self.kafka_producer.stop()
         
         if self.comm_mode == CommunicationMode.WEBSOCKET and self.websocket:
             await self.websocket.close()
         
-        # Close HTTP session
         if self.session:
             await self.session.close()
         
-        logger.info("Client closed successfully")
+        logger.info("Resources released")
     
     @retry(max_retries=3, retry_delay=1.0)
     async def authenticate(self):
-        """Authenticate with the server and get access token"""
         if not self.session:
             self.session = aiohttp.ClientSession()
         
-        logger.info("Authenticating with server...")
+        logger.info("Getting authentication token")
         
         auth_url = f"{self.server_url}/token"
         form_data = {
@@ -120,25 +100,21 @@ class EmployeeClient:
             async with self.session.post(auth_url, data=form_data, timeout=self.timeout) as response:
                 if response.status != 200:
                     error_text = await response.text()
-                    raise Exception(f"Authentication failed: {response.status} - {error_text}")
+                    raise Exception(f"Auth failed: {response.status} - {error_text}")
                 
                 result = await response.json()
                 self.access_token = result.get("access_token")
                 
                 if not self.access_token:
-                    raise Exception("No access token received from server")
+                    raise Exception("No token received")
                 
                 logger.info("Authentication successful")
         except Exception as e:
-            logger.error(f"Authentication error: {str(e)}")
+            logger.error(f"Auth error: {str(e)}")
             raise
     
     async def initialize_kafka(self):
-        """Initialize Kafka producer"""
-        if not KAFKA_AVAILABLE:
-            raise ImportError("Kafka support requires aiokafka package")
-        
-        logger.info("Initializing Kafka producer...")
+        logger.info("Setting up Kafka producer")
         
         try:
             self.kafka_producer = aiokafka.AIOKafkaProducer(
@@ -147,17 +123,13 @@ class EmployeeClient:
             )
             
             await self.kafka_producer.start()
-            logger.info("Kafka producer initialized successfully")
+            logger.info("Kafka producer ready")
         except Exception as e:
-            logger.error(f"Failed to initialize Kafka producer: {str(e)}")
+            logger.error(f"Kafka setup failed: {str(e)}")
             raise
     
     async def initialize_websocket(self):
-        """Initialize WebSocket connection"""
-        if not WEBSOCKETS_AVAILABLE:
-            raise ImportError("WebSocket support requires websockets package")
-        
-        logger.info("Initializing WebSocket connection...")
+        logger.info("Opening WebSocket connection")
         
         try:
             headers = {"Authorization": f"Bearer {self.access_token}"}
@@ -165,17 +137,16 @@ class EmployeeClient:
                 settings.WS_URL,
                 extra_headers=headers
             )
-            logger.info("WebSocket connection initialized successfully")
+            logger.info("WebSocket connected")
         except Exception as e:
-            logger.error(f"Failed to initialize WebSocket connection: {str(e)}")
+            logger.error(f"WebSocket connection failed: {str(e)}")
             raise
     
     @log_execution_time
     @retry(max_retries=3, retry_delay=1.0)
     async def send_employee_http(self, employee: Dict[str, Any]) -> Dict[str, Any]:
-        """Send an employee record via HTTP API"""
         if not self.session:
-            raise Exception("Client not initialized. Call initialize() first.")
+            raise Exception("Client not initialized")
         
         if not self.access_token:
             await self.authenticate()
@@ -192,71 +163,56 @@ class EmployeeClient:
                 headers=headers,
                 timeout=self.timeout
             ) as response:
-                # Check for unauthorized and re-authenticate if needed
                 if response.status == 401:
-                    logger.warning("Authentication token expired, re-authenticating...")
+                    logger.warning("Token expired, renewing...")
                     await self.authenticate()
                     return await self.send_employee_http(employee)
                 
-                # Handle other error responses
                 if response.status >= 400:
                     error_text = await response.text()
-                    raise Exception(f"Error {response.status}: {error_text}")
+                    raise Exception(f"API error {response.status}: {error_text}")
                 
-                # Parse response
-                result = await response.json()
-                return result
+                return await response.json()
         except Exception as e:
-            logger.error(f"Error sending employee via HTTP: {str(e)}")
+            logger.error(f"HTTP transmission error: {str(e)}")
             raise
     
     @log_execution_time
     @retry(max_retries=3, retry_delay=1.0)
     async def send_employee_kafka(self, employee: Dict[str, Any]) -> Dict[str, Any]:
-        """Send an employee record via Kafka"""
         if not self.kafka_producer:
-            raise Exception("Kafka producer not initialized")
+            raise Exception("Kafka not initialized")
         
         try:
             formatted_employee = format_employee_record(employee)
-            
-            # Send the message to Kafka
             await self.kafka_producer.send_and_wait(
                 settings.KAFKA_TOPIC,
                 formatted_employee
             )
             
-            # Return a success response
             return {
                 "status": "success",
-                "message": f"Employee record sent to Kafka topic {settings.KAFKA_TOPIC}"
+                "message": f"Record sent to Kafka topic {settings.KAFKA_TOPIC}"
             }
         except Exception as e:
-            logger.error(f"Error sending employee via Kafka: {str(e)}")
+            logger.error(f"Kafka transmission error: {str(e)}")
             raise
     
     @log_execution_time
     @retry(max_retries=3, retry_delay=1.0)
     async def send_employee_websocket(self, employee: Dict[str, Any]) -> Dict[str, Any]:
-        """Send an employee record via WebSocket"""
         if not self.websocket:
-            raise Exception("WebSocket connection not initialized")
+            raise Exception("WebSocket not connected")
         
         try:
             formatted_employee = format_employee_record(employee)
-            
-            # Send the message via WebSocket
             await self.websocket.send(json.dumps(formatted_employee))
             
-            # Wait for acknowledgement from server
             response = await asyncio.wait_for(self.websocket.recv(), timeout=self.timeout)
-            result = json.loads(response)
-            
-            return result
+            return json.loads(response)
         except Exception as e:
-            logger.error(f"Error sending employee via WebSocket: {str(e)}")
+            logger.error(f"WebSocket transmission error: {str(e)}")
             
-            # Try to reconnect if WebSocket is closed
             if isinstance(e, websockets.exceptions.ConnectionClosed):
                 logger.info("Reconnecting WebSocket...")
                 await self.initialize_websocket()
@@ -264,7 +220,6 @@ class EmployeeClient:
             raise
     
     async def send_employee(self, employee: Dict[str, Any]) -> Dict[str, Any]:
-        """Send an employee record using the configured communication mode"""
         if self.comm_mode == CommunicationMode.HTTP:
             return await self.send_employee_http(employee)
         elif self.comm_mode == CommunicationMode.KAFKA:
@@ -272,18 +227,15 @@ class EmployeeClient:
         elif self.comm_mode == CommunicationMode.WEBSOCKET:
             return await self.send_employee_websocket(employee)
         else:
-            raise ValueError(f"Unsupported communication mode: {self.comm_mode}")
+            raise ValueError(f"Unsupported mode: {self.comm_mode}")
     
     async def send_employees_concurrently(self, employees: List[Dict[str, Any]]) -> Tuple[List[Dict[str, Any]], List[Dict[str, Any]]]:
-        """Send multiple employee records concurrently"""
         tasks = []
         for employee in employees:
             tasks.append(self.send_employee(employee))
         
-        # Use semaphore to limit concurrency
         results = await gather_with_concurrency(self.max_workers, *tasks)
         
-        # Process results
         successful = []
         failed = []
         
@@ -303,36 +255,34 @@ class EmployeeClient:
     
     @log_execution_time
     async def process_csv_file(self, file_path: str) -> Tuple[int, int, List[Dict[str, Any]]]:
-        """Process CSV file and send all employee records to server"""
         try:
-            # Parse CSV file
-            logger.info(f"Parsing CSV file: {file_path}")
+            logger.info(f"Reading CSV file: {file_path}")
             employees = parse_csv_file(
                 file_path, 
                 delimiter=settings.CSV_DELIMITER,
                 encoding=settings.CSV_ENCODING
             )
             
-            logger.info(f"Found {len(employees)} employee records in CSV file")
+            logger.info(f"Found {len(employees)} employee records")
             
-            # Process employees in batches
             successful_count = 0
             failed_records = []
+            batch_count = (len(employees) + self.batch_size - 1) // self.batch_size
             
             for i in range(0, len(employees), self.batch_size):
                 batch = employees[i:i + self.batch_size]
-                logger.info(f"Processing batch {i//self.batch_size + 1}/{(len(employees) + self.batch_size - 1)//self.batch_size}")
+                batch_num = i // self.batch_size + 1
+                logger.info(f"Processing batch {batch_num}/{batch_count} ({len(batch)} records)")
                 
                 successful, failed = await self.send_employees_concurrently(batch)
                 successful_count += len(successful)
                 failed_records.extend(failed)
                 
-                logger.info(f"Batch {i//self.batch_size + 1} completed: {len(successful)} successful, {len(failed)} failed")
+                logger.info(f"Batch {batch_num} result: {len(successful)} ok, {len(failed)} failed")
             
-            # Log summary
-            logger.info(f"CSV processing completed: {successful_count} successful, {len(failed_records)} failed")
+            logger.info(f"CSV processing summary: {successful_count} successful, {len(failed_records)} failed")
             
             return len(employees), successful_count, failed_records
         except Exception as e:
-            logger.error(f"Error processing CSV file: {str(e)}")
+            logger.error(f"CSV processing error: {str(e)}")
             raise
