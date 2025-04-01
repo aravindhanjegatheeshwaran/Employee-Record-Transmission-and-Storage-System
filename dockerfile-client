@@ -4,23 +4,30 @@ FROM python:3.9-slim
 
 WORKDIR /app
 
+# Copy requirements file
+COPY client/requirements.txt .
+
 # Install dependencies
-COPY requirements-client.txt .
-RUN pip install --no-cache-dir -r requirements-client.txt
+RUN pip install --no-cache-dir -r requirements.txt
+# Install aiohttp explicitly since it was commented in the requirements.txt
+RUN pip install aiohttp==3.8.6
 
 # Copy client code and CSV file
 COPY client/ /app/client/
-COPY employee_data.csv /app/
+COPY client/employee_data.csv /app/
 
 # Set environment variables
 ENV PYTHONPATH=/app
-ENV SERVER_URL=http://server:8000
+ENV SERVER_URL=http://app:8000
 ENV CSV_FILE_PATH=/app/employee_data.csv
 ENV COMM_MODE=http
 ENV BATCH_SIZE=50
 ENV MAX_WORKERS=10
 ENV AUTH_USERNAME=admin
 ENV AUTH_PASSWORD=adminpassword
+ENV KAFKA_BOOTSTRAP_SERVERS=kafka:9092
+ENV KAFKA_TOPIC=employee-records
+ENV WS_URL=ws://app:8000/ws
 
 # Run the client
 CMD ["python", "-m", "client.main", "--file", "/app/employee_data.csv"]

@@ -1,18 +1,15 @@
-# server/docker-compose.yml
 version: '3.8'
 
 services:
-  app:
+  server:
     build:
-      context: ..
+      context: .
       dockerfile: dockerfile-server
     ports:
       - "8000:8000"
     depends_on:
-      db:
-        condition: service_healthy
-      kafka:
-        condition: service_started
+      - db
+      - kafka
     environment:
       - DB_HOST=db
       - DB_PORT=3306
@@ -25,8 +22,23 @@ services:
       - KAFKA_BOOTSTRAP_SERVERS=kafka:9092
       - KAFKA_TOPIC=employee-records
     volumes:
-      - ./:/app
+      - ./server:/app
     restart: unless-stopped
+
+  client:
+    build:
+      context: .
+      dockerfile: dockerfile-client
+    environment:
+      - SERVER_URL=http://server:8000
+      - KAFKA_BOOTSTRAP_SERVERS=kafka:9092
+      - KAFKA_TOPIC=employee-records
+      - WS_URL=ws://server:8000/ws
+      - COMM_MODE=${COMM_MODE:-http}
+    depends_on:
+      - server
+      - kafka
+    restart: on-failure
 
   db:
     image: mysql:8.0
@@ -65,21 +77,6 @@ services:
     depends_on:
       - zookeeper
     restart: unless-stopped
-    
-  client:
-    build:
-      context: ..
-      dockerfile: dockerfile-client
-    environment:
-      - SERVER_URL=http://app:8000
-      - KAFKA_BOOTSTRAP_SERVERS=kafka:9092
-      - KAFKA_TOPIC=employee-records
-      - WS_URL=ws://app:8000/ws
-      - COMM_MODE=kafka
-    depends_on:
-      - app
-      - kafka
-    restart: on-failure
 
 volumes:
   mysql_data:

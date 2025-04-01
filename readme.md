@@ -1,154 +1,201 @@
 # Employee Record Transmission and Storage System
 
-A high-performance client-server system that processes employee records from CSV files and stores them in a MySQL database. The system demonstrates modern Python async programming techniques with a focus on reliability and performance.
+A high-performance client-server application for processing employee records from CSV files and storing them in a MySQL database. Built with modern Python async techniques, the system offers multiple communication protocols and efficient data handling.
 
 ## Features
 
 ### Server
-- FastAPI-based RESTful API with JWT authentication
+- FastAPI-based REST API with JWT authentication
+- WebSocket endpoint for real-time communication
+- Kafka consumer for message-based integration
 - Async database operations with SQLAlchemy ORM
-- Request validation with Pydantic
-- Rate limiting, logging, and error handling
-- Custom decorators for cross-cutting concerns
+- Rate limiting, validation, and comprehensive logging
 
 ### Client
-- Async CSV processing with batching
-- Multiple transport options (HTTP, Kafka, WebSocket)
-- Controlled concurrency with semaphores
-- Automatic retries with exponential backoff
-- Comprehensive error handling and reporting
+- Efficient CSV processing with batching
+- Multiple transport protocols (HTTP, WebSocket, Kafka)
+- Controlled concurrency with async semaphores
+- Auto-retry with exponential backoff
+- Detailed error tracking and reporting
 
 ## Tech Stack
 
-- **Backend**: Python 3.9+, FastAPI, SQLAlchemy, MySQL
+- **Python**: 3.9+ with asyncio
+- **Web Framework**: FastAPI
+- **Database**: MySQL with SQLAlchemy ORM
+- **Communication**: HTTP, WebSockets, Kafka
 - **Authentication**: JWT tokens
-- **Async**: asyncio, aiohttp
-- **Data Validation**: Pydantic
-- **Containers**: Docker, Docker Compose
-- **Optional**: Kafka, WebSockets
+- **Containerization**: Docker, Docker Compose
 
-## Project Structure
-
-```
-.
-├── client/                # Client application
-│   ├── config.py          # Client configuration
-│   ├── employee_client.py # Client implementation
-│   ├── main.py            # Client entry point 
-│   └── utils.py           # Utility functions
-├── server/                # Server application
-│   ├── api/               # API endpoints
-│   │   ├── api.py         # Main API routes
-│   │   └── auth.py        # Auth routes
-│   ├── core/              # Core components
-│   │   ├── database.py    # Database connection
-│   │   ├── decorators.py  # Function decorators
-│   │   └── security.py    # Security utilities
-│   ├── models/            # Database models
-│   │   └── model.py       # SQLAlchemy models
-│   ├── schemas/           # Data schemas
-│   │   └── schema.py      # Pydantic schemas
-│   └── main.py            # Server entry point
-├── dockerfile-client      # Client Dockerfile
-├── dockerfile-server      # Server Dockerfile
-└── docker-compose.yml     # Docker Compose configuration
-```
-
-## Setup
+## Getting Started
 
 ### Prerequisites
 - Python 3.9+
-- MySQL
-- Docker (optional)
+- MySQL database
+- Kafka (for Kafka mode)
+- Docker and Docker Compose (for containerized deployment)
 
-### Running with Docker
+### Manual Setup (venv)
+
+If you want to run without Docker, set up virtual environments for both client and server:
 
 ```bash
-# Start all services
-docker-compose up -d
+# Setup Server Environment
+cd server
+python -m venv env
+source env/bin/activate  # On Windows: env\Scripts\activate
+pip install -r requirements.txt
+deactivate
 
-# View logs
-docker-compose logs -f
+# Setup Client Environment
+cd ../client
+python -m venv env
+source env/bin/activate  # On Windows: env\Scripts\activate
+pip install -r requirements.txt
+# Enable aiohttp manually (it's commented in requirements.txt)
+pip install aiohttp==3.8.6
+deactivate
 ```
 
-### Manual Setup
+### Running the Application Manually
 
-#### Server Setup
+#### Running the Server
 
-1. Install server dependencies:
+1. Configure environment variables (if needed):
    ```bash
-   cd server
-   pip install -r requirements.txt
-   ```
-
-2. Setup environment variables:
-   ```bash
+   # Database connection
    export DB_HOST=localhost
    export DB_PORT=3306
    export DB_USER=root
-   export DB_PASSWORD=password
+   export DB_PASSWORD=your-password
    export DB_NAME=employee_records
+   
+   # Security
    export SECRET_KEY=your-secret-key
+   
+   # For Kafka mode
+   export KAFKA_BOOTSTRAP_SERVERS=localhost:9092
+   export KAFKA_TOPIC=employee-records
    ```
 
-3. Start the server:
+2. Start the server:
    ```bash
    cd server
-   uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+   source env/bin/activate  # On Windows: env\Scripts\activate
+   python main.py
    ```
 
-#### Client Setup
+#### Running the Client
 
-1. Install client dependencies:
+1. In a separate terminal window, run the client:
    ```bash
    cd client
-   pip install -r requirements.txt
+   source env/bin/activate  # On Windows: env\Scripts\activate
+   
+   # HTTP mode
+   python main.py --file employee_data.csv --mode http
+   
+   # WebSocket mode
+   python main.py --file employee_data.csv --mode websocket
+   
+   # Kafka mode (requires Kafka server)
+   python main.py --file employee_data.csv --mode kafka
    ```
 
-2. Setup environment variables:
-   ```bash
-   export SERVER_URL=http://localhost:8000
-   export COMM_MODE=http
-   export BATCH_SIZE=50
-   export MAX_WORKERS=10
-   ```
+#### Client Command-Line Options
 
-3. Run the client:
-   ```bash
-   cd client
-   python main.py --file employee_data.csv
-   ```
-
-## Usage
-
-### Client
-
-The client accepts several command-line options:
-
-```bash
-python main.py --help
+```
+--file, -f        Path to CSV file with employee data (default: employee_data.csv)
+--mode, -m        Communication mode: http, websocket, kafka (default: http)
+--batch-size, -b  Number of records to process in each batch (default: 50)
+--workers, -w     Number of concurrent workers (default: 10)
+--server, -s      Server URL (default: http://localhost:8000)
+--output, -o      Output file for failed records
 ```
 
-Example usage:
+### Docker Setup (Recommended)
+
+Run the complete system with Docker and Docker Compose:
+
 ```bash
-python main.py --file data.csv --mode http --batch-size 100 --workers 20
+# Build and start all services (server, client, database, kafka)
+docker-compose up -d --build
+
+# Check logs
+docker-compose logs -f
+
+# To run just the server components without the client
+docker-compose up -d --build server db zookeeper kafka
+
+# To run just the client with a specific mode
+docker-compose up -d --build client
 ```
 
-### Server API Endpoints
+#### Testing Different Communication Modes
 
-- `POST /token`: Authentication (get JWT token)
-- `GET /api/employees/`: List all employees
+You can change the communication mode for the client in Docker by setting the COMM_MODE environment variable:
+
+```bash
+# For HTTP mode
+docker-compose up -d -e COMM_MODE=http client
+
+# For WebSocket mode
+docker-compose up -d -e COMM_MODE=websocket client 
+
+# For Kafka mode
+docker-compose up -d -e COMM_MODE=kafka client
+```
+
+## Communication Modes
+
+The client supports three communication protocols:
+
+### HTTP Mode
+- RESTful API communication
+- Standard request-response pattern
+- Ideal for most use cases
+- Run with: `python main.py --file employee_data.csv --mode http`
+
+### WebSocket Mode
+- Real-time bidirectional communication
+- Persistent connection
+- Great for streaming data
+- Run with: `python main.py --file employee_data.csv --mode websocket`
+
+### Kafka Mode
+- Message-based asynchronous communication
+- High throughput, resilient delivery
+- Excellent for distributed systems
+- Run with: `python main.py --file employee_data.csv --mode kafka`
+- Note: Requires a running Kafka server
+
+## Client Command-Line Options
+
+```
+--file, -f        Path to CSV file with employee data
+--mode, -m        Communication mode (http, websocket, kafka)
+--batch-size, -b  Records per batch
+--workers, -w     Concurrent worker count
+--server, -s      Server URL
+--output, -o      Failed records output file
+```
+
+## API Endpoints
+
+- `POST /token`: Get JWT authentication token
+- `GET /api/employees/`: List employees (with pagination)
 - `GET /api/employees/{id}`: Get employee by ID
-- `POST /api/employees/`: Create a new employee
+- `POST /api/employees/`: Create employee
 - `POST /api/employees/bulk`: Bulk create employees
-- `PUT /api/employees/{id}`: Update an employee
-- `DELETE /api/employees/{id}`: Delete an employee
-- `GET /api/employees/stats/department`: Get employee counts by department
+- `PUT /api/employees/{id}`: Update employee
+- `DELETE /api/employees/{id}`: Delete employee
+- `GET /api/employees/stats/department`: Get department statistics
+- `WebSocket /ws`: WebSocket connection for real-time data transmission
 
-## Performance Optimization
+## Performance Features
 
-- Batch processing for database operations
-- Connection pooling for db connections
-- Async processing for I/O bound operations
-- Configurable parallelism
-- Bulk inserts for high throughput
+- Batch processing with optimized batch sizes
+- Connection pooling for database efficiency
+- Controlled parallelism with semaphores
+- Async I/O for non-blocking operations
+- Exponential backoff for resilient connections

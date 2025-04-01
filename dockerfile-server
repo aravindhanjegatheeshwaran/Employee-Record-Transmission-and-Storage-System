@@ -19,17 +19,36 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/*
 
 # Install Python dependencies
-COPY requirements.txt .
+COPY server/requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install aiokafka==0.8.1
 
 # Copy project files
-COPY . .
+COPY server/ .
 
 # Expose port
 EXPOSE 8000
 
 # Create entrypoint script
 RUN echo '#!/bin/sh\n\
+# Wait for Kafka to be ready\n\
+echo "Waiting for Kafka to be ready..."\n\
+python -c "\
+import socket, time\n\
+kafka_host=\"kafka\"\n\
+kafka_port=9092\n\
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)\n\
+while True:\n\
+    try:\n\
+        s.connect((kafka_host, kafka_port))\n\
+        s.close()\n\
+        break\n\
+    except socket.error:\n\
+        print(\"Waiting for Kafka...\")\n\
+        time.sleep(1)\n\
+"\n\
+echo "Kafka is ready!"\n\
+\n\
 # Create database if it doesn't exist\n\
 python -c "from dotenv import load_dotenv; load_dotenv(); import os, mysql.connector; \
 host=os.getenv(\"DB_HOST\"); user=os.getenv(\"DB_USER\"); password=os.getenv(\"DB_PASSWORD\"); \

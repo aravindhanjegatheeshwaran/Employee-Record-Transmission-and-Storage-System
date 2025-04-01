@@ -1,6 +1,7 @@
-# clinet/requirements.txt
-# aiohttp==3.8.6
+# client/requirements.txt
+aiohttp==3.8.6
 python-dotenv==1.0.0
 websockets==11.0.3
 aiokafka==0.8.1
 pydantic==2.4.2
+pydantic-settings==2.1.0
