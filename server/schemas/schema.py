@@ -44,7 +44,7 @@ class EmployeeResponse(EmployeeBase):
     updated_at: datetime
     
     class Config:
-        orm_mode = True
+        from_attributes = True
 
 
 class EmployeeBulkCreate(BaseModel):
@@ -68,7 +68,7 @@ class EmployeeCount(BaseModel):
     count: int
     
     class Config:
-        orm_mode = True
+        from_attributes = True
 
 
 class ProcessingLogCreate(BaseModel):
@@ -82,4 +82,4 @@ class ProcessingLogResponse(ProcessingLogCreate):
     processed_at: datetime
     
     class Config:
-        orm_mode = True
+        from_attributes = True

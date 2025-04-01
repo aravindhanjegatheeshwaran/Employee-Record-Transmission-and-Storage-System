@@ -4676,3 +4676,51 @@ employee_id
 2025-04-01 19:39:52,470 - main - INFO - Shutting down, closing connections...
 2025-04-01 19:39:52,472 - core.database - INFO - Database connections closed
 2025-04-01 19:39:52,472 - main - INFO - Database connections closed
+2025-04-01 19:40:04,759 - main - INFO - Starting server...
+2025-04-01 19:46:51,809 - main - INFO - Shutting down, closing connections...
+2025-04-01 19:46:51,810 - core.database - INFO - Database connections closed
+2025-04-01 19:46:51,811 - main - INFO - Database connections closed
+2025-04-01 19:46:56,721 - main - INFO - Starting server...
+2025-04-01 19:47:07,114 - main - INFO - Shutting down, closing connections...
+2025-04-01 19:47:07,115 - core.database - INFO - Database connections closed
+2025-04-01 19:47:07,115 - main - INFO - Database connections closed
+2025-04-01 19:47:10,992 - main - INFO - Starting server...
+2025-04-01 19:53:24,600 - core.decorators - INFO - FUNC 20250401195324600721: login_for_access_token called
+2025-04-01 19:53:24,963 - core.decorators - INFO - login_for_access_token took 0.3632s
+2025-04-01 19:53:24,964 - core.decorators - INFO - DONE 20250401195324600721: completed in 0.3642s
+2025-04-01 19:56:29,586 - main - INFO - Starting server...
+2025-04-01 19:56:55,364 - main - INFO - Shutting down, closing connections...
+2025-04-01 19:56:55,365 - core.database - INFO - Database connections closed
+2025-04-01 19:56:55,365 - main - INFO - Database connections closed
+2025-04-01 19:56:59,875 - main - INFO - Starting server...
+2025-04-01 19:57:03,575 - core.decorators - INFO - FUNC 20250401195703575940: login_for_access_token called
+2025-04-01 19:57:03,943 - core.decorators - INFO - login_for_access_token took 0.3670s
+2025-04-01 19:57:03,944 - core.decorators - INFO - DONE 20250401195703575940: completed in 0.3680s
+2025-04-01 19:58:28,819 - core.decorators - INFO - FUNC 20250401195828819459: login_for_access_token called
+2025-04-01 19:58:29,194 - core.decorators - INFO - login_for_access_token took 0.3741s
+2025-04-01 19:58:29,195 - core.decorators - INFO - DONE 20250401195828819459: completed in 0.3751s
+2025-04-01 19:59:41,522 - core.decorators - INFO - FUNC 20250401195941522561: login_for_access_token called
+2025-04-01 19:59:41,926 - core.decorators - INFO - login_for_access_token took 0.4040s
+2025-04-01 19:59:41,927 - core.decorators - INFO - DONE 20250401195941522561: completed in 0.4050s
+2025-04-01 20:01:39,466 - core.decorators - INFO - FUNC 20250401200139466400: login_for_access_token called
+2025-04-01 20:01:39,826 - core.decorators - INFO - login_for_access_token took 0.3588s
+2025-04-01 20:01:39,826 - core.decorators - INFO - DONE 20250401200139466400: completed in 0.3588s
+2025-04-01 20:03:27,550 - core.decorators - INFO - FUNC 20250401200327550049: login_for_access_token called
+2025-04-01 20:03:27,910 - core.decorators - INFO - login_for_access_token took 0.3591s
+2025-04-01 20:03:27,911 - core.decorators - INFO - DONE 20250401200327550049: completed in 0.3601s
+2025-04-01 20:06:01,308 - main - INFO - Starting server...
+2025-04-01 20:06:07,982 - core.decorators - INFO - FUNC 20250401200607982167: login_for_access_token called
+2025-04-01 20:06:08,362 - core.decorators - INFO - login_for_access_token took 0.3782s
+2025-04-01 20:06:08,363 - core.decorators - INFO - DONE 20250401200607982167: completed in 0.3802s
+2025-04-01 20:07:05,375 - core.decorators - INFO - FUNC 20250401200705374665: login_for_access_token called
+2025-04-01 20:07:05,746 - core.decorators - INFO - login_for_access_token took 0.3706s
+2025-04-01 20:07:05,747 - core.decorators - INFO - DONE 20250401200705374665: completed in 0.3716s
+2025-04-01 20:08:37,854 - core.decorators - INFO - FUNC 20250401200837854786: login_for_access_token called
+2025-04-01 20:08:38,236 - core.decorators - INFO - login_for_access_token took 0.3808s
+2025-04-01 20:08:38,236 - core.decorators - INFO - DONE 20250401200837854786: completed in 0.3818s
+2025-04-01 20:11:04,644 - core.decorators - INFO - FUNC 20250401201104644149: login_for_access_token called
+2025-04-01 20:11:05,017 - core.decorators - INFO - login_for_access_token took 0.3733s
+2025-04-01 20:11:05,018 - core.decorators - INFO - DONE 20250401201104644149: completed in 0.3743s
+2025-04-01 20:12:19,859 - core.decorators - INFO - FUNC 20250401201219859519: login_for_access_token called
+2025-04-01 20:12:20,224 - core.decorators - INFO - login_for_access_token took 0.3654s
+2025-04-01 20:12:20,224 - core.decorators - INFO - DONE 20250401201219859519: completed in 0.3654s

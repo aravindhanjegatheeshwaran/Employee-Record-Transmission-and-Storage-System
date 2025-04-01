@@ -3656,3 +3656,388 @@ pip install aiokafka==0.8.1
 Or use HTTP mode with: --mode http
 2025-04-01 19:40:06,908 - __main__ - ERROR - Please install the required packages in requirements.txt
 2025-04-01 19:40:06,909 - __main__ - ERROR - You can use HTTP mode as a fallback: --mode http
+2025-04-01 19:44:24,167 - config - INFO - Configuration loaded: {
+  "SERVER_URL": "http://localhost:8000",
+  "COMM_MODE": "http",
+  "CSV_FILE_PATH": "./employee_data.csv",
+  "CSV_DELIMITER": ",",
+  "CSV_ENCODING": "utf-8",
+  "BATCH_SIZE": 50,
+  "MAX_RETRIES": 3,
+  "RETRY_DELAY": 1.0,
+  "TIMEOUT": 10.0,
+  "MAX_WORKERS": 10,
+  "KAFKA_BOOTSTRAP_SERVERS": "kafka:9092",
+  "KAFKA_TOPIC": "employee-records",
+  "WS_URL": "ws://localhost:8000/ws",
+  "AUTH_USERNAME": "admin"
+}
+2025-04-01 19:44:24,692 - __main__ - INFO - Starting transmission using kafka mode
+2025-04-01 19:44:24,693 - __main__ - ERROR - Dependency error: Kafka support requires aiokafka package. Please install it with:
+pip install aiokafka==0.8.1
+Or use HTTP mode with: --mode http
+2025-04-01 19:44:24,693 - __main__ - ERROR - Please install the required packages in requirements.txt
+2025-04-01 19:44:24,694 - __main__ - ERROR - You can use HTTP mode as a fallback: --mode http
+2025-04-01 19:46:54,823 - config - INFO - Configuration loaded: {
+  "SERVER_URL": "http://localhost:8000",
+  "COMM_MODE": "http",
+  "CSV_FILE_PATH": "./employee_data.csv",
+  "CSV_DELIMITER": ",",
+  "CSV_ENCODING": "utf-8",
+  "BATCH_SIZE": 50,
+  "MAX_RETRIES": 3,
+  "RETRY_DELAY": 1.0,
+  "TIMEOUT": 10.0,
+  "MAX_WORKERS": 10,
+  "KAFKA_BOOTSTRAP_SERVERS": "kafka:9092",
+  "KAFKA_TOPIC": "employee-records",
+  "WS_URL": "ws://localhost:8000/ws",
+  "AUTH_USERNAME": "admin"
+}
+2025-04-01 19:46:55,603 - __main__ - INFO - Starting transmission using kafka mode
+2025-04-01 19:46:55,604 - __main__ - ERROR - Dependency error: Kafka support requires aiokafka package. Please install it with:
+pip install aiokafka==0.8.1
+Or use HTTP mode with: --mode http
+2025-04-01 19:46:55,605 - __main__ - ERROR - Please install the required packages in requirements.txt
+2025-04-01 19:46:55,605 - __main__ - ERROR - You can use HTTP mode as a fallback: --mode http
+2025-04-01 19:47:32,013 - config - INFO - Configuration loaded: {
+  "SERVER_URL": "http://localhost:8000",
+  "COMM_MODE": "http",
+  "CSV_FILE_PATH": "./employee_data.csv",
+  "CSV_DELIMITER": ",",
+  "CSV_ENCODING": "utf-8",
+  "BATCH_SIZE": 50,
+  "MAX_RETRIES": 3,
+  "RETRY_DELAY": 1.0,
+  "TIMEOUT": 10.0,
+  "MAX_WORKERS": 10,
+  "KAFKA_BOOTSTRAP_SERVERS": "kafka:9092",
+  "KAFKA_TOPIC": "employee-records",
+  "WS_URL": "ws://localhost:8000/ws",
+  "AUTH_USERNAME": "admin"
+}
+2025-04-01 19:47:32,533 - __main__ - INFO - Starting transmission using kafka mode
+2025-04-01 19:47:32,534 - __main__ - ERROR - Dependency error: Kafka support requires aiokafka package. Please install it with:
+pip install aiokafka==0.8.1
+Or use HTTP mode with: --mode http
+2025-04-01 19:47:32,535 - __main__ - ERROR - Please install the required packages in requirements.txt
+2025-04-01 19:47:32,535 - __main__ - ERROR - You can use HTTP mode as a fallback: --mode http
+2025-04-01 19:48:55,899 - config - INFO - Configuration loaded: {
+  "SERVER_URL": "http://localhost:8000",
+  "COMM_MODE": "http",
+  "CSV_FILE_PATH": "./employee_data.csv",
+  "CSV_DELIMITER": ",",
+  "CSV_ENCODING": "utf-8",
+  "BATCH_SIZE": 50,
+  "MAX_RETRIES": 3,
+  "RETRY_DELAY": 1.0,
+  "TIMEOUT": 10.0,
+  "MAX_WORKERS": 10,
+  "KAFKA_BOOTSTRAP_SERVERS": "kafka:9092",
+  "KAFKA_TOPIC": "employee-records",
+  "WS_URL": "ws://localhost:8000/ws",
+  "AUTH_USERNAME": "admin"
+}
+2025-04-01 19:48:56,549 - __main__ - INFO - Starting transmission using kafka mode
+2025-04-01 19:48:56,550 - __main__ - ERROR - Dependency error: Kafka support requires aiokafka package. Please install it with:
+pip install aiokafka==0.8.1
+Or use HTTP mode with: --mode http
+2025-04-01 19:48:56,551 - __main__ - ERROR - Please install the required packages in requirements.txt
+2025-04-01 19:48:56,551 - __main__ - ERROR - You can use HTTP mode as a fallback: --mode http
+2025-04-01 19:53:21,881 - config - INFO - Configuration loaded: {
+  "SERVER_URL": "http://localhost:8000",
+  "COMM_MODE": "http",
+  "CSV_FILE_PATH": "./employee_data.csv",
+  "CSV_DELIMITER": ",",
+  "CSV_ENCODING": "utf-8",
+  "BATCH_SIZE": 50,
+  "MAX_RETRIES": 3,
+  "RETRY_DELAY": 1.0,
+  "TIMEOUT": 10.0,
+  "MAX_WORKERS": 10,
+  "KAFKA_BOOTSTRAP_SERVERS": "kafka:9092",
+  "KAFKA_TOPIC": "employee-records",
+  "WS_URL": "ws://localhost:8000/ws",
+  "AUTH_USERNAME": "admin"
+}
+2025-04-01 19:53:22,544 - __main__ - INFO - Starting transmission using kafka mode
+2025-04-01 19:53:22,545 - employee_client - INFO - Setting up CommunicationMode.KAFKA client
+2025-04-01 19:53:22,546 - employee_client - INFO - Getting authentication token
+2025-04-01 19:53:24,967 - employee_client - INFO - Authentication successful
+2025-04-01 19:53:24,968 - employee_client - INFO - Setting up Kafka producer
+2025-04-01 19:53:24,968 - employee_client - ERROR - Kafka setup failed: name 'aiokafka' is not defined
+2025-04-01 19:53:24,969 - __main__ - ERROR - Error: name 'aiokafka' is not defined
+2025-04-01 19:53:24,969 - employee_client - INFO - Cleaning up resources
+2025-04-01 19:53:24,970 - employee_client - INFO - Resources released
+2025-04-01 19:57:00,998 - config - INFO - Configuration loaded: {
+  "SERVER_URL": "http://localhost:8000",
+  "COMM_MODE": "http",
+  "CSV_FILE_PATH": "./employee_data.csv",
+  "CSV_DELIMITER": ",",
+  "CSV_ENCODING": "utf-8",
+  "BATCH_SIZE": 50,
+  "MAX_RETRIES": 3,
+  "RETRY_DELAY": 1.0,
+  "TIMEOUT": 10.0,
+  "MAX_WORKERS": 10,
+  "KAFKA_BOOTSTRAP_SERVERS": "kafka:9092",
+  "KAFKA_TOPIC": "employee-records",
+  "WS_URL": "ws://localhost:8000/ws",
+  "AUTH_USERNAME": "admin"
+}
+2025-04-01 19:57:01,517 - __main__ - INFO - Starting transmission using kafka mode
+2025-04-01 19:57:01,517 - employee_client - INFO - Setting up CommunicationMode.KAFKA client
+2025-04-01 19:57:01,518 - employee_client - INFO - Getting authentication token
+2025-04-01 19:57:03,947 - employee_client - INFO - Authentication successful
+2025-04-01 19:57:03,948 - employee_client - INFO - Setting up Kafka producer
+2025-04-01 19:57:03,948 - employee_client - ERROR - Kafka setup failed: name 'aiokafka' is not defined
+2025-04-01 19:57:03,949 - __main__ - ERROR - Error: name 'aiokafka' is not defined
+2025-04-01 19:57:03,949 - employee_client - INFO - Cleaning up resources
+2025-04-01 19:57:03,950 - employee_client - INFO - Resources released
+2025-04-01 19:58:26,113 - config - INFO - Configuration loaded: {
+  "SERVER_URL": "http://localhost:8000",
+  "COMM_MODE": "http",
+  "CSV_FILE_PATH": "./employee_data.csv",
+  "CSV_DELIMITER": ",",
+  "CSV_ENCODING": "utf-8",
+  "BATCH_SIZE": 50,
+  "MAX_RETRIES": 3,
+  "RETRY_DELAY": 1.0,
+  "TIMEOUT": 10.0,
+  "MAX_WORKERS": 10,
+  "KAFKA_BOOTSTRAP_SERVERS": "kafka:9092",
+  "KAFKA_TOPIC": "employee-records",
+  "WS_URL": "ws://localhost:8000/ws",
+  "AUTH_USERNAME": "admin"
+}
+2025-04-01 19:58:26,760 - __main__ - INFO - Starting transmission using kafka mode
+2025-04-01 19:58:26,760 - employee_client - INFO - Setting up CommunicationMode.KAFKA client
+2025-04-01 19:58:26,761 - employee_client - INFO - Getting authentication token
+2025-04-01 19:58:29,198 - employee_client - INFO - Authentication successful
+2025-04-01 19:58:29,198 - employee_client - INFO - Setting up Kafka producer
+2025-04-01 19:58:29,202 - employee_client - ERROR - Kafka setup failed: No module named 'kafka.protocol.offset'
+2025-04-01 19:58:29,203 - __main__ - ERROR - Error: No module named 'kafka.protocol.offset'
+2025-04-01 19:58:29,203 - employee_client - INFO - Cleaning up resources
+2025-04-01 19:58:29,204 - employee_client - INFO - Resources released
+2025-04-01 19:59:38,957 - config - INFO - Configuration loaded: {
+  "SERVER_URL": "http://localhost:8000",
+  "COMM_MODE": "http",
+  "CSV_FILE_PATH": "./employee_data.csv",
+  "CSV_DELIMITER": ",",
+  "CSV_ENCODING": "utf-8",
+  "BATCH_SIZE": 50,
+  "MAX_RETRIES": 3,
+  "RETRY_DELAY": 1.0,
+  "TIMEOUT": 10.0,
+  "MAX_WORKERS": 10,
+  "KAFKA_BOOTSTRAP_SERVERS": "kafka:9092",
+  "KAFKA_TOPIC": "employee-records",
+  "WS_URL": "ws://localhost:8000/ws",
+  "AUTH_USERNAME": "admin"
+}
+2025-04-01 19:59:39,449 - __main__ - INFO - Starting transmission using kafka mode
+2025-04-01 19:59:39,449 - employee_client - INFO - Setting up CommunicationMode.KAFKA client
+2025-04-01 19:59:39,449 - employee_client - INFO - Getting authentication token
+2025-04-01 19:59:41,929 - employee_client - INFO - Authentication successful
+2025-04-01 19:59:41,930 - employee_client - INFO - Setting up Kafka producer
+2025-04-01 19:59:41,934 - employee_client - ERROR - Kafka setup failed: No module named 'kafka.protocol.offset'
+2025-04-01 19:59:41,934 - __main__ - ERROR - Error: No module named 'kafka.protocol.offset'
+2025-04-01 19:59:41,935 - employee_client - INFO - Cleaning up resources
+2025-04-01 19:59:41,936 - employee_client - INFO - Resources released
+2025-04-01 20:01:36,830 - config - INFO - Configuration loaded: {
+  "SERVER_URL": "http://localhost:8000",
+  "COMM_MODE": "http",
+  "CSV_FILE_PATH": "./employee_data.csv",
+  "CSV_DELIMITER": ",",
+  "CSV_ENCODING": "utf-8",
+  "BATCH_SIZE": 50,
+  "MAX_RETRIES": 3,
+  "RETRY_DELAY": 1.0,
+  "TIMEOUT": 10.0,
+  "MAX_WORKERS": 10,
+  "KAFKA_BOOTSTRAP_SERVERS": "kafka:9092",
+  "KAFKA_TOPIC": "employee-records",
+  "WS_URL": "ws://localhost:8000/ws",
+  "AUTH_USERNAME": "admin"
+}
+2025-04-01 20:01:37,356 - __main__ - INFO - Starting transmission using kafka mode
+2025-04-01 20:01:37,372 - employee_client - INFO - Setting up CommunicationMode.KAFKA client
+2025-04-01 20:01:37,372 - employee_client - INFO - Getting authentication token
+2025-04-01 20:01:39,829 - employee_client - INFO - Authentication successful
+2025-04-01 20:01:39,829 - employee_client - INFO - Setting up Kafka producer
+2025-04-01 20:01:39,833 - employee_client - ERROR - Kafka setup failed: No module named 'kafka.protocol.offset'
+2025-04-01 20:01:39,834 - __main__ - ERROR - Error: No module named 'kafka.protocol.offset'
+2025-04-01 20:01:39,834 - employee_client - INFO - Cleaning up resources
+2025-04-01 20:01:39,835 - employee_client - INFO - Resources released
+2025-04-01 20:03:25,112 - config - INFO - Configuration loaded: {
+  "SERVER_URL": "http://localhost:8000",
+  "COMM_MODE": "http",
+  "CSV_FILE_PATH": "./employee_data.csv",
+  "CSV_DELIMITER": ",",
+  "CSV_ENCODING": "utf-8",
+  "BATCH_SIZE": 50,
+  "MAX_RETRIES": 3,
+  "RETRY_DELAY": 1.0,
+  "TIMEOUT": 10.0,
+  "MAX_WORKERS": 10,
+  "KAFKA_BOOTSTRAP_SERVERS": "kafka:9092",
+  "KAFKA_TOPIC": "employee-records",
+  "WS_URL": "ws://localhost:8000/ws",
+  "AUTH_USERNAME": "admin"
+}
+2025-04-01 20:03:25,475 - __main__ - INFO - Starting transmission using kafka mode
+2025-04-01 20:03:25,475 - employee_client - INFO - Setting up CommunicationMode.KAFKA client
+2025-04-01 20:03:25,475 - employee_client - INFO - Getting authentication token
+2025-04-01 20:03:27,913 - employee_client - INFO - Authentication successful
+2025-04-01 20:03:27,913 - employee_client - INFO - Setting up Kafka producer
+2025-04-01 20:03:27,921 - employee_client - ERROR - Kafka setup failed: No module named 'kafka.vendor.six.moves'
+2025-04-01 20:03:27,921 - __main__ - ERROR - Error: No module named 'kafka.vendor.six.moves'
+2025-04-01 20:03:27,921 - employee_client - INFO - Cleaning up resources
+2025-04-01 20:03:27,928 - employee_client - INFO - Resources released
+2025-04-01 20:06:05,470 - config - INFO - Configuration loaded: {
+  "SERVER_URL": "http://localhost:8000",
+  "COMM_MODE": "http",
+  "CSV_FILE_PATH": "./employee_data.csv",
+  "CSV_DELIMITER": ",",
+  "CSV_ENCODING": "utf-8",
+  "BATCH_SIZE": 50,
+  "MAX_RETRIES": 3,
+  "RETRY_DELAY": 1.0,
+  "TIMEOUT": 10.0,
+  "MAX_WORKERS": 10,
+  "KAFKA_BOOTSTRAP_SERVERS": "kafka:9092",
+  "KAFKA_TOPIC": "employee-records",
+  "WS_URL": "ws://localhost:8000/ws",
+  "AUTH_USERNAME": "admin"
+}
+2025-04-01 20:06:05,895 - __main__ - INFO - Starting transmission using kafka mode
+2025-04-01 20:06:05,895 - employee_client - INFO - Setting up CommunicationMode.KAFKA client
+2025-04-01 20:06:05,895 - employee_client - INFO - Getting authentication token
+2025-04-01 20:06:08,366 - employee_client - INFO - Authentication successful
+2025-04-01 20:06:08,366 - employee_client - INFO - Setting up Kafka producer
+2025-04-01 20:06:08,382 - employee_client - ERROR - Kafka setup failed: No module named 'kafka.vendor.six.moves'
+2025-04-01 20:06:08,383 - __main__ - ERROR - Error: No module named 'kafka.vendor.six.moves'
+2025-04-01 20:06:08,383 - employee_client - INFO - Cleaning up resources
+2025-04-01 20:06:08,384 - employee_client - INFO - Resources released
+2025-04-01 20:07:02,736 - config - INFO - Configuration loaded: {
+  "SERVER_URL": "http://localhost:8000",
+  "COMM_MODE": "http",
+  "CSV_FILE_PATH": "./employee_data.csv",
+  "CSV_DELIMITER": ",",
+  "CSV_ENCODING": "utf-8",
+  "BATCH_SIZE": 50,
+  "MAX_RETRIES": 3,
+  "RETRY_DELAY": 1.0,
+  "TIMEOUT": 10.0,
+  "MAX_WORKERS": 10,
+  "KAFKA_BOOTSTRAP_SERVERS": "kafka:9092",
+  "KAFKA_TOPIC": "employee-records",
+  "WS_URL": "ws://localhost:8000/ws",
+  "AUTH_USERNAME": "admin"
+}
+2025-04-01 20:07:03,311 - __main__ - INFO - Starting transmission using kafka mode
+2025-04-01 20:07:03,311 - employee_client - INFO - Setting up CommunicationMode.KAFKA client
+2025-04-01 20:07:03,312 - employee_client - INFO - Getting authentication token
+2025-04-01 20:07:05,750 - employee_client - INFO - Authentication successful
+2025-04-01 20:07:05,750 - employee_client - INFO - Setting up Kafka producer
+2025-04-01 20:07:05,754 - employee_client - ERROR - Kafka setup failed: cannot import name 'StaleLeaderEpochCodeError' from 'kafka.errors' (D:\Jan\Projects\Employee Record Transmission and Storage System\client\env\Lib\site-packages\kafka\errors.py)
+2025-04-01 20:07:05,755 - __main__ - ERROR - Error: cannot import name 'StaleLeaderEpochCodeError' from 'kafka.errors' (D:\Jan\Projects\Employee Record Transmission and Storage System\client\env\Lib\site-packages\kafka\errors.py)
+2025-04-01 20:07:05,756 - employee_client - INFO - Cleaning up resources
+2025-04-01 20:07:05,757 - employee_client - INFO - Resources released
+2025-04-01 20:08:35,295 - config - INFO - Configuration loaded: {
+  "SERVER_URL": "http://localhost:8000",
+  "COMM_MODE": "http",
+  "CSV_FILE_PATH": "./employee_data.csv",
+  "CSV_DELIMITER": ",",
+  "CSV_ENCODING": "utf-8",
+  "BATCH_SIZE": 50,
+  "MAX_RETRIES": 3,
+  "RETRY_DELAY": 1.0,
+  "TIMEOUT": 10.0,
+  "MAX_WORKERS": 10,
+  "KAFKA_BOOTSTRAP_SERVERS": "kafka:9092",
+  "KAFKA_TOPIC": "employee-records",
+  "WS_URL": "ws://localhost:8000/ws",
+  "AUTH_USERNAME": "admin"
+}
+2025-04-01 20:08:35,792 - __main__ - INFO - Starting transmission using kafka mode
+2025-04-01 20:08:35,792 - employee_client - INFO - Setting up CommunicationMode.KAFKA client
+2025-04-01 20:08:35,793 - employee_client - INFO - Getting authentication token
+2025-04-01 20:08:38,238 - employee_client - INFO - Authentication successful
+2025-04-01 20:08:38,239 - employee_client - INFO - Setting up Kafka producer
+2025-04-01 20:08:38,243 - employee_client - ERROR - Kafka setup failed: cannot import name 'StaleLeaderEpochCodeError' from 'kafka.errors' (D:\Jan\Projects\Employee Record Transmission and Storage System\client\env\Lib\site-packages\kafka\errors.py)
+2025-04-01 20:08:38,244 - __main__ - ERROR - Error: cannot import name 'StaleLeaderEpochCodeError' from 'kafka.errors' (D:\Jan\Projects\Employee Record Transmission and Storage System\client\env\Lib\site-packages\kafka\errors.py)
+2025-04-01 20:08:38,245 - employee_client - INFO - Cleaning up resources
+2025-04-01 20:08:38,246 - employee_client - INFO - Resources released
+2025-04-01 20:11:01,974 - config - INFO - Configuration loaded: {
+  "SERVER_URL": "http://localhost:8000",
+  "COMM_MODE": "http",
+  "CSV_FILE_PATH": "./employee_data.csv",
+  "CSV_DELIMITER": ",",
+  "CSV_ENCODING": "utf-8",
+  "BATCH_SIZE": 50,
+  "MAX_RETRIES": 3,
+  "RETRY_DELAY": 1.0,
+  "TIMEOUT": 10.0,
+  "MAX_WORKERS": 10,
+  "KAFKA_BOOTSTRAP_SERVERS": "kafka:9092",
+  "KAFKA_TOPIC": "employee-records",
+  "WS_URL": "ws://localhost:8000/ws",
+  "AUTH_USERNAME": "admin"
+}
+2025-04-01 20:11:02,606 - __main__ - INFO - Starting transmission using kafka mode
+2025-04-01 20:11:02,606 - employee_client - INFO - Setting up CommunicationMode.KAFKA client
+2025-04-01 20:11:02,607 - employee_client - INFO - Getting authentication token
+2025-04-01 20:11:05,020 - employee_client - INFO - Authentication successful
+2025-04-01 20:11:05,021 - employee_client - INFO - Setting up Kafka producer
+2025-04-01 20:11:05,026 - employee_client - ERROR - Kafka setup failed: cannot import name 'StaleLeaderEpochCodeError' from 'kafka.errors' (D:\Jan\Projects\Employee Record Transmission and Storage System\client\env\Lib\site-packages\kafka\errors.py)
+2025-04-01 20:11:05,026 - __main__ - ERROR - Error: cannot import name 'StaleLeaderEpochCodeError' from 'kafka.errors' (D:\Jan\Projects\Employee Record Transmission and Storage System\client\env\Lib\site-packages\kafka\errors.py)
+2025-04-01 20:11:05,027 - employee_client - INFO - Cleaning up resources
+2025-04-01 20:11:05,028 - employee_client - INFO - Resources released
+2025-04-01 20:12:17,187 - config - INFO - Configuration loaded: {
+  "SERVER_URL": "http://localhost:8000",
+  "COMM_MODE": "http",
+  "CSV_FILE_PATH": "./employee_data.csv",
+  "CSV_DELIMITER": ",",
+  "CSV_ENCODING": "utf-8",
+  "BATCH_SIZE": 50,
+  "MAX_RETRIES": 3,
+  "RETRY_DELAY": 1.0,
+  "TIMEOUT": 10.0,
+  "MAX_WORKERS": 10,
+  "KAFKA_BOOTSTRAP_SERVERS": "kafka:9092",
+  "KAFKA_TOPIC": "employee-records",
+  "WS_URL": "ws://localhost:8000/ws",
+  "AUTH_USERNAME": "admin"
+}
+2025-04-01 20:12:17,804 - __main__ - INFO - Starting transmission using kafka mode
+2025-04-01 20:12:17,805 - employee_client - INFO - Setting up CommunicationMode.KAFKA client
+2025-04-01 20:12:17,805 - employee_client - INFO - Getting authentication token
+2025-04-01 20:12:20,224 - employee_client - INFO - Authentication successful
+2025-04-01 20:12:20,224 - employee_client - INFO - Setting up Kafka producer
+2025-04-01 20:12:20,224 - employee_client - ERROR - Kafka setup failed: cannot import name 'StaleLeaderEpochCodeError' from 'kafka.errors' (D:\Jan\Projects\Employee Record Transmission and Storage System\client\env\Lib\site-packages\kafka\errors.py)
+2025-04-01 20:12:20,224 - __main__ - ERROR - Error: cannot import name 'StaleLeaderEpochCodeError' from 'kafka.errors' (D:\Jan\Projects\Employee Record Transmission and Storage System\client\env\Lib\site-packages\kafka\errors.py)
+2025-04-01 20:12:20,224 - employee_client - INFO - Cleaning up resources
+2025-04-01 20:12:20,236 - employee_client - INFO - Resources released
+2025-04-01 20:15:49,065 - config - INFO - Configuration loaded: {
+  "SERVER_URL": "http://localhost:8000",
+  "COMM_MODE": "http",
+  "CSV_FILE_PATH": "./employee_data.csv",
+  "CSV_DELIMITER": ",",
+  "CSV_ENCODING": "utf-8",
+  "BATCH_SIZE": 50,
+  "MAX_RETRIES": 3,
+  "RETRY_DELAY": 1.0,
+  "TIMEOUT": 10.0,
+  "MAX_WORKERS": 10,
+  "KAFKA_BOOTSTRAP_SERVERS": "kafka:9092",
+  "KAFKA_TOPIC": "employee-records",
+  "WS_URL": "ws://localhost:8000/ws",
+  "AUTH_USERNAME": "admin"
+}
+2025-04-01 20:15:49,670 - __main__ - INFO - Starting transmission using kafka mode
+2025-04-01 20:15:49,671 - __main__ - ERROR - Dependency error: Kafka support requires aiokafka package. Please install it with:
+pip install aiokafka==0.8.1
+Or use HTTP mode with: --mode http
+2025-04-01 20:15:49,672 - __main__ - ERROR - Please install the required packages in requirements.txt
+2025-04-01 20:15:49,672 - __main__ - ERROR - You can use HTTP mode as a fallback: --mode http

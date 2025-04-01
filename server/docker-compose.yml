@@ -1,10 +1,9 @@
-# server/docker-compose.yml
 version: '3.8'
 
 services:
-  app:
+  server:
     build:
-      context: ..
+      context: .
       dockerfile: dockerfile-server
     ports:
       - "8000:8000"
@@ -12,7 +11,7 @@ services:
       db:
         condition: service_healthy
       kafka:
-        condition: service_started
+        condition: service_healthy
     environment:
       - DB_HOST=db
       - DB_PORT=3306
@@ -25,8 +24,29 @@ services:
       - KAFKA_BOOTSTRAP_SERVERS=kafka:9092
       - KAFKA_TOPIC=employee-records
     volumes:
-      - ./:/app
+      - ./server:/app
     restart: unless-stopped
+    networks:
+      - app_network
+
+  client:
+    build:
+      context: .
+      dockerfile: dockerfile-client
+    environment:
+      - SERVER_URL=http://server:8000
+      - KAFKA_BOOTSTRAP_SERVERS=kafka:9092
+      - KAFKA_TOPIC=employee-records
+      - WS_URL=ws://server:8000/ws
+      - COMM_MODE=${COMM_MODE:-http}
+      - AUTH_USERNAME=admin
+      - AUTH_PASSWORD=adminpassword
+    depends_on:
+      server:
+        condition: service_healthy
+    restart: on-failure
+    networks:
+      - app_network
 
   db:
     image: mysql:8.0
@@ -34,7 +54,7 @@ services:
       - "3306:3306"
     environment:
       - MYSQL_ROOT_PASSWORD=happy
-      # Don't specify MYSQL_DATABASE here so our script can create it
+      - MYSQL_DATABASE=employee_records
     volumes:
       - mysql_data:/var/lib/mysql
     command: --default-authentication-plugin=mysql_native_password
@@ -44,42 +64,53 @@ services:
       interval: 5s
       timeout: 5s
       retries: 10
-      
+    networks:
+      - app_network
+
   zookeeper:
-    image: wurstmeister/zookeeper:3.4.6
+    image: confluentinc/cp-zookeeper:7.3.2
     ports:
       - "2181:2181"
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
+    volumes:
+      - zookeeper_data:/var/lib/zookeeper
     restart: unless-stopped
-    
+    networks:
+      - app_network
+
   kafka:
-    image: wurstmeister/kafka:2.13-2.8.1
+    image: confluentinc/cp-kafka:7.3.2
     ports:
       - "9092:9092"
     environment:
-      KAFKA_ADVERTISED_HOST_NAME: kafka
+      KAFKA_BROKER_ID: 1
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
-      KAFKA_CREATE_TOPICS: "employee-records:1:1"
-      KAFKA_AUTO_CREATE_TOPICS_ENABLE: "true"
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT
+      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
+      KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
     volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
+      - kafka_data:/var/lib/kafka
     depends_on:
-      - zookeeper
+      zookeeper:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "kafka-topics", "--list", "--bootstrap-server", "localhost:9092"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
     restart: unless-stopped
-    
-  client:
-    build:
-      context: ..
-      dockerfile: dockerfile-client
-    environment:
-      - SERVER_URL=http://app:8000
-      - KAFKA_BOOTSTRAP_SERVERS=kafka:9092
-      - KAFKA_TOPIC=employee-records
-      - WS_URL=ws://app:8000/ws
-      - COMM_MODE=kafka
-    depends_on:
-      - app
-      - kafka
-    restart: on-failure
+    networks:
+      - app_network
 
 volumes:
   mysql_data:
+  kafka_data:
+  zookeeper_data:
+
+networks:
+  app_network:

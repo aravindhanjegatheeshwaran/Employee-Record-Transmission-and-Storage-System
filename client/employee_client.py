@@ -6,7 +6,6 @@ import logging
 import time
 from typing import List, Dict, Any, Optional, Tuple
 from dataclasses import dataclass, field
-from datetime import datetime
 
 from config import settings, CommunicationMode
 from utils import (
@@ -20,6 +19,22 @@ from utils import (
 
 try:
     import aiokafka
+    
+    # Check for compatibility
+    try:
+        # First, check if the module is available
+        import kafka.errors
+        # Then try to access the problematic class - if it fails, we'll handle it
+        try:
+            from kafka.errors import StaleLeaderEpochCodeError
+        except ImportError:
+            # Patch the missing error class if needed
+            # This avoids the StaleLeaderEpochCodeError import error
+            if not hasattr(kafka.errors, 'StaleLeaderEpochCodeError'):
+                setattr(kafka.errors, 'StaleLeaderEpochCodeError', type('StaleLeaderEpochCodeError', (kafka.errors.KafkaError,), {}))
+    except ImportError:
+        pass
+        
     KAFKA_AVAILABLE = True
 except ImportError:
     KAFKA_AVAILABLE = False
@@ -125,6 +140,13 @@ class EmployeeClient:
         logger.info("Setting up Kafka producer")
         
         try:
+            # Check if aiokafka is available again just to be safe
+            if not KAFKA_AVAILABLE:
+                raise ImportError("Kafka support requires aiokafka package")
+                
+            # Import again to make the symbol available in this scope
+            import aiokafka
+            
             self.kafka_producer = aiokafka.AIOKafkaProducer(
                 bootstrap_servers=settings.KAFKA_BOOTSTRAP_SERVERS,
                 value_serializer=lambda v: json.dumps(v).encode('utf-8')
