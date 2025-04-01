@@ -992,3 +992,237 @@ RuntimeError: Session is closed
   "AUTH_USERNAME": "admin"
 }
 2025-04-01 16:45:32,284 - __main__ - ERROR - CSV file not found: client/employee_data.csv
+2025-04-01 17:56:07,772 - config - INFO - Configuration loaded: {
+  "SERVER_URL": "http://localhost:8000",
+  "COMM_MODE": "http",
+  "CSV_FILE_PATH": "./employee_data.csv",
+  "CSV_DELIMITER": ",",
+  "CSV_ENCODING": "utf-8",
+  "BATCH_SIZE": 50,
+  "MAX_RETRIES": 3,
+  "RETRY_DELAY": 1.0,
+  "TIMEOUT": 10.0,
+  "MAX_WORKERS": 10,
+  "KAFKA_BOOTSTRAP_SERVERS": "localhost:9092",
+  "KAFKA_TOPIC": "employee-records",
+  "WS_URL": "ws://localhost:8000/ws",
+  "AUTH_USERNAME": "admin"
+}
+2025-04-01 17:56:09,325 - __main__ - INFO - Starting transmission using http mode
+2025-04-01 17:56:09,325 - employee_client - INFO - Setting up CommunicationMode.HTTP client
+2025-04-01 17:56:09,326 - employee_client - INFO - Getting authentication token
+2025-04-01 17:56:10,139 - employee_client - INFO - Authentication successful
+2025-04-01 17:56:10,139 - employee_client - INFO - Client ready
+2025-04-01 17:56:10,139 - employee_client - INFO - Reading CSV file: ./employee_data.csv
+2025-04-01 17:56:10,250 - employee_client - INFO - Found 1000 employee records
+2025-04-01 17:56:10,253 - employee_client - INFO - Processing batch 1/20 (50 records)
+2025-04-01 17:56:10,262 - employee_client - ERROR - HTTP transmission error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:56:10,263 - utils - WARNING - Retry 1/3 after error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:56:10,270 - employee_client - ERROR - HTTP transmission error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:56:10,275 - utils - WARNING - Retry 1/3 after error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:56:10,277 - employee_client - ERROR - HTTP transmission error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:56:10,280 - utils - WARNING - Retry 1/3 after error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:56:10,280 - employee_client - ERROR - HTTP transmission error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:56:10,280 - utils - WARNING - Retry 1/3 after error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:56:10,290 - employee_client - ERROR - HTTP transmission error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:56:10,292 - utils - WARNING - Retry 1/3 after error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:56:10,292 - employee_client - ERROR - HTTP transmission error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:56:10,294 - utils - WARNING - Retry 1/3 after error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:56:10,521 - employee_client - ERROR - HTTP transmission error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:56:10,522 - utils - WARNING - Retry 1/3 after error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:56:10,523 - employee_client - ERROR - HTTP transmission error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:56:10,523 - utils - WARNING - Retry 1/3 after error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:56:10,526 - employee_client - ERROR - HTTP transmission error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:56:10,526 - utils - WARNING - Retry 1/3 after error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:56:10,527 - employee_client - ERROR - HTTP transmission error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:56:10,528 - utils - WARNING - Retry 1/3 after error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:56:11,273 - employee_client - ERROR - HTTP transmission error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:56:11,273 - utils - WARNING - Retry 2/3 after error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:56:11,273 - employee_client - ERROR - HTTP transmission error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:56:11,273 - utils - WARNING - Retry 2/3 after error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:56:11,273 - employee_client - ERROR - HTTP transmission error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:56:11,273 - utils - WARNING - Retry 2/3 after error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:56:11,279 - employee_client - ERROR - HTTP transmission error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:56:11,279 - utils - WARNING - Retry 2/3 after error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:56:11,281 - employee_client - ERROR - HTTP transmission error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:56:11,282 - utils - WARNING - Retry 2/3 after error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:56:11,304 - employee_client - ERROR - HTTP transmission error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:56:11,305 - utils - WARNING - Retry 2/3 after error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:56:11,533 - employee_client - ERROR - HTTP transmission error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:56:11,533 - utils - WARNING - Retry 2/3 after error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:56:11,533 - employee_client - ERROR - HTTP transmission error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:56:11,533 - utils - WARNING - Retry 2/3 after error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:56:11,533 - employee_client - ERROR - HTTP transmission error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:56:11,541 - utils - WARNING - Retry 2/3 after error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:56:11,541 - employee_client - ERROR - HTTP transmission error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:56:11,543 - utils - WARNING - Retry 2/3 after error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:56:12,585 - employee_client - INFO - Cleaning up resources
+2025-04-01 17:56:12,587 - employee_client - INFO - Resources released
+2025-04-01 17:56:12,589 - __main__ - INFO - Process interrupted by user
+2025-04-01 17:56:36,224 - config - INFO - Configuration loaded: {
+  "SERVER_URL": "http://localhost:8000",
+  "COMM_MODE": "http",
+  "CSV_FILE_PATH": "./employee_data.csv",
+  "CSV_DELIMITER": ",",
+  "CSV_ENCODING": "utf-8",
+  "BATCH_SIZE": 50,
+  "MAX_RETRIES": 3,
+  "RETRY_DELAY": 1.0,
+  "TIMEOUT": 10.0,
+  "MAX_WORKERS": 10,
+  "KAFKA_BOOTSTRAP_SERVERS": "localhost:9092",
+  "KAFKA_TOPIC": "employee-records",
+  "WS_URL": "ws://localhost:8000/ws",
+  "AUTH_USERNAME": "admin"
+}
+2025-04-01 17:56:36,895 - __main__ - INFO - Starting transmission using http mode
+2025-04-01 17:56:36,897 - employee_client - INFO - Setting up CommunicationMode.HTTP client
+2025-04-01 17:56:36,898 - employee_client - INFO - Getting authentication token
+2025-04-01 17:56:37,637 - employee_client - INFO - Authentication successful
+2025-04-01 17:56:37,637 - employee_client - INFO - Client ready
+2025-04-01 17:56:37,638 - employee_client - INFO - Reading CSV file: ./employee_data.csv
+2025-04-01 17:56:37,667 - employee_client - INFO - Found 1000 employee records
+2025-04-01 17:56:37,668 - employee_client - INFO - Processing batch 1/20 (50 records)
+2025-04-01 17:56:37,674 - employee_client - ERROR - HTTP transmission error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:56:37,674 - utils - WARNING - Retry 1/3 after error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:56:37,684 - employee_client - ERROR - HTTP transmission error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:56:37,685 - utils - WARNING - Retry 1/3 after error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:56:37,686 - employee_client - ERROR - HTTP transmission error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:56:37,687 - utils - WARNING - Retry 1/3 after error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:56:37,688 - employee_client - ERROR - HTTP transmission error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:56:37,688 - utils - WARNING - Retry 1/3 after error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:56:37,689 - employee_client - ERROR - HTTP transmission error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:56:37,690 - utils - WARNING - Retry 1/3 after error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:56:37,690 - employee_client - ERROR - HTTP transmission error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:56:37,691 - utils - WARNING - Retry 1/3 after error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:56:37,947 - employee_client - ERROR - HTTP transmission error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:56:37,947 - utils - WARNING - Retry 1/3 after error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:56:37,948 - employee_client - ERROR - HTTP transmission error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:56:37,949 - utils - WARNING - Retry 1/3 after error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:56:37,949 - employee_client - ERROR - HTTP transmission error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:56:37,951 - utils - WARNING - Retry 1/3 after error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:56:37,952 - employee_client - ERROR - HTTP transmission error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:56:37,952 - utils - WARNING - Retry 1/3 after error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:56:38,695 - employee_client - ERROR - HTTP transmission error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:56:38,695 - utils - WARNING - Retry 2/3 after error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:56:38,696 - employee_client - ERROR - HTTP transmission error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:56:38,696 - utils - WARNING - Retry 2/3 after error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:56:38,697 - employee_client - ERROR - HTTP transmission error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:56:38,698 - utils - WARNING - Retry 2/3 after error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:56:38,701 - employee_client - ERROR - HTTP transmission error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:56:38,701 - utils - WARNING - Retry 2/3 after error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:56:38,701 - employee_client - ERROR - HTTP transmission error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:56:38,703 - utils - WARNING - Retry 2/3 after error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:56:38,703 - employee_client - ERROR - HTTP transmission error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:56:38,705 - utils - WARNING - Retry 2/3 after error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:56:38,898 - employee_client - INFO - Cleaning up resources
+2025-04-01 17:56:38,903 - employee_client - INFO - Resources released
+2025-04-01 17:56:38,908 - __main__ - INFO - Process interrupted by user
+2025-04-01 17:58:15,528 - config - INFO - Configuration loaded: {
+  "SERVER_URL": "http://localhost:8000",
+  "COMM_MODE": "http",
+  "CSV_FILE_PATH": "./employee_data.csv",
+  "CSV_DELIMITER": ",",
+  "CSV_ENCODING": "utf-8",
+  "BATCH_SIZE": 50,
+  "MAX_RETRIES": 3,
+  "RETRY_DELAY": 1.0,
+  "TIMEOUT": 10.0,
+  "MAX_WORKERS": 10,
+  "KAFKA_BOOTSTRAP_SERVERS": "localhost:9092",
+  "KAFKA_TOPIC": "employee-records",
+  "WS_URL": "ws://localhost:8000/ws",
+  "AUTH_USERNAME": "admin"
+}
+2025-04-01 17:58:16,229 - __main__ - INFO - Starting transmission using http mode
+2025-04-01 17:58:16,230 - employee_client - INFO - Setting up CommunicationMode.HTTP client
+2025-04-01 17:58:16,231 - employee_client - INFO - Getting authentication token
+2025-04-01 17:58:16,921 - employee_client - INFO - Authentication successful
+2025-04-01 17:58:16,921 - employee_client - INFO - Client ready
+2025-04-01 17:58:16,921 - employee_client - INFO - Reading CSV file: ./employee_data.csv
+2025-04-01 17:58:16,954 - employee_client - INFO - Found 1000 employee records
+2025-04-01 17:58:16,956 - employee_client - INFO - Processing batch 1/20 (50 records)
+2025-04-01 17:58:16,969 - employee_client - ERROR - HTTP transmission error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:58:16,975 - utils - WARNING - Retry 1/3 after error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:58:17,080 - employee_client - ERROR - HTTP transmission error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:58:17,080 - utils - WARNING - Retry 1/3 after error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:58:17,082 - employee_client - ERROR - HTTP transmission error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:58:17,083 - utils - WARNING - Retry 1/3 after error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:58:17,084 - employee_client - ERROR - HTTP transmission error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:58:17,084 - utils - WARNING - Retry 1/3 after error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:58:17,087 - employee_client - ERROR - HTTP transmission error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:58:17,088 - utils - WARNING - Retry 1/3 after error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:58:17,089 - employee_client - ERROR - HTTP transmission error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:58:17,089 - utils - WARNING - Retry 1/3 after error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:58:17,250 - employee_client - ERROR - HTTP transmission error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:58:17,251 - utils - WARNING - Retry 1/3 after error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:58:17,252 - employee_client - ERROR - HTTP transmission error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:58:17,252 - utils - WARNING - Retry 1/3 after error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:58:17,255 - employee_client - ERROR - HTTP transmission error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:58:17,255 - utils - WARNING - Retry 1/3 after error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:58:17,256 - employee_client - ERROR - HTTP transmission error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:58:17,257 - utils - WARNING - Retry 1/3 after error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:58:17,992 - employee_client - ERROR - HTTP transmission error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:58:17,993 - utils - WARNING - Retry 2/3 after error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:58:18,116 - employee_client - ERROR - HTTP transmission error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:58:18,116 - utils - WARNING - Retry 2/3 after error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:58:18,118 - employee_client - ERROR - HTTP transmission error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:58:18,119 - utils - WARNING - Retry 2/3 after error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:58:18,120 - employee_client - ERROR - HTTP transmission error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:58:18,120 - utils - WARNING - Retry 2/3 after error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:58:18,121 - employee_client - ERROR - HTTP transmission error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:58:18,122 - utils - WARNING - Retry 2/3 after error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:58:18,122 - employee_client - ERROR - HTTP transmission error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:58:18,122 - utils - WARNING - Retry 2/3 after error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:58:18,278 - employee_client - ERROR - HTTP transmission error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:58:18,278 - utils - WARNING - Retry 2/3 after error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:58:18,280 - employee_client - ERROR - HTTP transmission error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:58:18,280 - utils - WARNING - Retry 2/3 after error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:58:18,281 - employee_client - ERROR - HTTP transmission error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:58:18,281 - utils - WARNING - Retry 2/3 after error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:58:18,288 - employee_client - ERROR - HTTP transmission error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:58:18,288 - utils - WARNING - Retry 2/3 after error: API error 405: {"detail":"Method Not Allowed"}
+2025-04-01 17:58:18,375 - employee_client - INFO - Cleaning up resources
+2025-04-01 17:58:18,377 - employee_client - INFO - Resources released
+2025-04-01 17:58:18,379 - __main__ - INFO - Process interrupted by user
+2025-04-01 17:59:25,352 - config - INFO - Configuration loaded: {
+  "SERVER_URL": "http://localhost:8000",
+  "COMM_MODE": "http",
+  "CSV_FILE_PATH": "./employee_data.csv",
+  "CSV_DELIMITER": ",",
+  "CSV_ENCODING": "utf-8",
+  "BATCH_SIZE": 50,
+  "MAX_RETRIES": 3,
+  "RETRY_DELAY": 1.0,
+  "TIMEOUT": 10.0,
+  "MAX_WORKERS": 10,
+  "KAFKA_BOOTSTRAP_SERVERS": "localhost:9092",
+  "KAFKA_TOPIC": "employee-records",
+  "WS_URL": "ws://localhost:8000/ws",
+  "AUTH_USERNAME": "admin"
+}
+2025-04-01 17:59:26,030 - __main__ - INFO - Starting transmission using websocket mode
+2025-04-01 17:59:26,031 - employee_client - INFO - Setting up CommunicationMode.WEBSOCKET client
+2025-04-01 17:59:26,032 - employee_client - INFO - Getting authentication token
+2025-04-01 17:59:26,730 - employee_client - INFO - Authentication successful
+2025-04-01 17:59:26,731 - employee_client - INFO - Opening WebSocket connection
+2025-04-01 17:59:28,825 - employee_client - ERROR - WebSocket connection failed: server rejected WebSocket connection: HTTP 404
+2025-04-01 17:59:28,826 - __main__ - ERROR - Error: server rejected WebSocket connection: HTTP 404
+2025-04-01 17:59:28,827 - employee_client - INFO - Cleaning up resources
+2025-04-01 17:59:28,828 - employee_client - INFO - Resources released
+2025-04-01 17:59:55,038 - config - INFO - Configuration loaded: {
+  "SERVER_URL": "http://localhost:8000",
+  "COMM_MODE": "http",
+  "CSV_FILE_PATH": "./employee_data.csv",
+  "CSV_DELIMITER": ",",
+  "CSV_ENCODING": "utf-8",
+  "BATCH_SIZE": 50,
+  "MAX_RETRIES": 3,
+  "RETRY_DELAY": 1.0,
+  "TIMEOUT": 10.0,
+  "MAX_WORKERS": 10,
+  "KAFKA_BOOTSTRAP_SERVERS": "localhost:9092",
+  "KAFKA_TOPIC": "employee-records",
+  "WS_URL": "ws://localhost:8000/ws",
+  "AUTH_USERNAME": "admin"
+}

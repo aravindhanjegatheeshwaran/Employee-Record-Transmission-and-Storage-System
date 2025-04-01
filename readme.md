@@ -66,7 +66,40 @@ docker-compose --version
 - Kafka at localhost:9092
 - Client processing employee data records
 
-9. To stop all services:
+9. Troubleshooting common errors:
+- If you encounter a 405 Method Not Allowed error:
+  - The API endpoint in client/employee_client.py has been corrected from `/api/employees/` to `/api/employees` (without trailing slash)
+  - Verify that all HTTP methods match between client and server (POST, GET, etc.)
+  - Check server logs for more details on the rejected request
+
+- If you encounter a 404 error with WebSocket mode:
+  - When running directly on your machine (not in Docker), make sure to use `ws://localhost:8000/ws` as the WebSocket URL
+  - When running in Docker, make sure the client is using `ws://server:8000/ws` as the WebSocket URL
+  - Use the included test script to verify WebSocket connectivity:
+    ```bash
+    # For direct connection to localhost
+    python test_websocket.py --server http://localhost:8000
+    
+    # For Docker setup
+    python test_websocket.py --server http://localhost:8000 --ws ws://localhost:8000/ws
+    ```
+  - Check the server logs to ensure the WebSocket endpoint is properly registered
+
+- If you encounter a "Kafka support requires aiokafka package" error:
+  - Install the required package:
+    ```bash
+    pip install aiokafka==0.8.1
+    ```
+  - Or, when using Docker, make sure the packages are properly installed in the image
+
+- If you encounter a "WebSocket support requires websockets package" error:
+  - Install the required package:
+    ```bash
+    pip install websockets==11.0.3
+    ```
+  - Or, when using Docker, make sure the packages are properly installed in the image
+
+10. To stop all services:
     docker-compose down
 3. Testing Different Communication Modes
 You can run the client with different communication protocols:
@@ -129,13 +162,29 @@ Our docker-compose.yml file includes:
 
 All these components are connected with proper networking and volume configuration for persistent storage.
 Manual Setup (Alternative to Docker)
-1. Create Python Virtual Environments
+1. Install Dependencies
+
+**The Easy Way** - Use the provided scripts:
+
+For Windows:
+```batch
+install_dependencies.bat
+```
+
+For Linux/MacOS:
+```bash
+chmod +x install_dependencies.sh
+./install_dependencies.sh
+```
+
+**Manual Way** - Create Python Virtual Environments:
 ```bash
 # Setup Server Environment
 cd server
 python -m venv env
 source env/bin/activate  # On Windows: env\Scripts\activate
 pip install -r requirements.txt
+pip install aiokafka==0.8.1 websockets==11.0.3  # Install optional packages
 deactivate
 
 # Setup Client Environment
@@ -144,7 +193,17 @@ python -m venv env
 source env/bin/activate  # On Windows: env\Scripts\activate
 pip install -r requirements.txt
 pip install aiohttp==3.8.6  # Install aiohttp explicitly
+pip install aiokafka==0.8.1  # Required for Kafka mode
+pip install websockets==11.0.3  # Required for WebSocket mode
 deactivate
+```
+
+⚠️ **Important for Windows Users**: If you're getting ImportError when running the application:
+
+```powershell
+# Open PowerShell or Command Prompt
+cd "path\to\Employee Record Transmission and Storage System"
+pip install aiokafka==0.8.1 websockets==11.0.3
 ```
 2. Setup MySQL Manually
 ```bash
@@ -199,7 +258,7 @@ python main.py --mode http     # HTTP mode
 python main.py --mode websocket  # WebSocket mode
 python main.py --mode kafka    # Kafka mode
 ```
-Useful Docker Commands
+## Useful Docker Commands
 ```bash
 # View all running containers
 docker ps
@@ -213,3 +272,12 @@ docker-compose down
 # Restart a specific service
 docker-compose restart server
 ```
+
+## Communication Protocol Details
+
+For detailed documentation on how WebSocket and Kafka are implemented in the server and client code, please refer to the [protocol_implementation.md](protocol_implementation.md) file. This document provides a comprehensive explanation of:
+
+- WebSocket server and client implementation
+- Kafka producer and consumer implementation
+- Protocol comparison
+- Testing and troubleshooting each protocol
