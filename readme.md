@@ -77,10 +77,49 @@ pip install aiohttp==3.8.6  # Install aiohttp explicitly
 deactivate
 ```
 
-### 2. Setup External Dependencies
+### 2. Setup External Dependencies Manually
 
-- **MySQL**: Install and run MySQL server
-- **Kafka**: Install and run Kafka and Zookeeper (required for Kafka mode)
+#### MySQL Setup:
+
+```bash
+# For Ubuntu/Debian
+sudo apt update
+sudo apt install mysql-server
+
+# Start MySQL service
+sudo systemctl start mysql
+sudo systemctl enable mysql
+
+# Log in and create database
+sudo mysql -u root
+```
+
+Inside MySQL prompt:
+```sql
+CREATE DATABASE employee_records;
+CREATE USER 'root'@'localhost' IDENTIFIED BY 'happy';
+GRANT ALL PRIVILEGES ON employee_records.* TO 'root'@'localhost';
+FLUSH PRIVILEGES;
+EXIT;
+```
+
+#### Kafka Setup:
+
+```bash
+# Download Kafka
+wget https://downloads.apache.org/kafka/3.4.0/kafka_2.13-3.4.0.tgz
+tar -xzf kafka_2.13-3.4.0.tgz
+cd kafka_2.13-3.4.0
+
+# Start Zookeeper (in terminal 1)
+bin/zookeeper-server-start.sh config/zookeeper.properties
+
+# Start Kafka (in terminal 2)
+bin/kafka-server-start.sh config/server.properties
+
+# Create a topic (in terminal 3)
+bin/kafka-topics.sh --create --topic employee-records --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1
+```
 
 ### 3. Run the Server
 
@@ -112,14 +151,233 @@ The Docker setup includes the following services:
 - **zookeeper**: Zookeeper service for Kafka
 - **kafka**: Kafka message broker for asynchronous communication
 
-## Running Specific Components
+## Step-by-Step Docker Installation Guide
 
-```bash
-# Run just the server with database and messaging
-docker-compose up -d server db zookeeper kafka
+### 1. Install Docker and Docker Compose
 
-# Run just the client (with a specific mode)
-docker-compose up -d -e COMM_MODE=kafka client
+#### For Windows:
+1. Download Docker Desktop from the [official website](https://www.docker.com/products/docker-desktop)
+2. Run the installer and follow the on-screen instructions
+3. After installation, start Docker Desktop from the Start menu
+4. Wait for Docker to start completely (the whale icon in the taskbar will stop animating)
+5. Open Command Prompt or PowerShell to verify installation:
+   ```
+   docker --version
+   docker-compose --version
+   ```
+
+#### For Mac:
+1. Download Docker Desktop for Mac from the [official website](https://www.docker.com/products/docker-desktop)
+2. Open the .dmg file and drag Docker to the Applications folder
+3. Start Docker from the Applications folder
+4. Wait for Docker to start completely (the whale icon in the menu bar will stop animating)
+5. Open Terminal to verify installation:
+   ```
+   docker --version
+   docker-compose --version
+   ```
+
+#### For Linux (Manual Installation):
+1. Update package index:
+   ```
+   sudo apt-get update
+   ```
+2. Install prerequisites:
+   ```
+   sudo apt-get install ca-certificates curl gnupg lsb-release
+   ```
+3. Add Docker's official GPG key:
+   ```
+   sudo mkdir -p /etc/apt/keyrings
+   curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+   ```
+4. Set up the repository:
+   ```
+   echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+   ```
+5. Install Docker Engine:
+   ```
+   sudo apt-get update
+   sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
+   ```
+6. Verify installation:
+   ```
+   docker --version
+   docker compose version
+   ```
+
+### 2. Setup MySQL and Kafka with Docker (Individual Components)
+
+You can run MySQL and Kafka as individual Docker containers for development or testing.
+
+#### Setup MySQL:
+
+1. Pull the MySQL Docker image:
+   ```
+   docker pull mysql:8.0
+   ```
+
+2. Create and run a MySQL container:
+   ```
+   docker run --name mysql-container -e MYSQL_ROOT_PASSWORD=happy -e MYSQL_DATABASE=employee_records -p 3306:3306 -d mysql:8.0
+   ```
+
+3. Verify the MySQL container is running:
+   ```
+   docker ps
+   ```
+
+4. Test connection to MySQL:
+   ```
+   docker exec -it mysql-container mysql -uroot -phappy -e "SHOW DATABASES;"
+   ```
+
+#### Setup Kafka with Zookeeper:
+
+1. Pull the required Docker images:
+   ```
+   docker pull confluentinc/cp-zookeeper:7.3.2
+   docker pull confluentinc/cp-kafka:7.3.2
+   ```
+
+2. Create a Docker network for Kafka and Zookeeper:
+   ```
+   docker network create kafka-network
+   ```
+
+3. Start Zookeeper container:
+   ```
+   docker run --name zookeeper-container --network kafka-network -p 2181:2181 -d confluentinc/cp-zookeeper:7.3.2 -e ZOOKEEPER_CLIENT_PORT=2181 -e ZOOKEEPER_TICK_TIME=2000
+   ```
+
+4. Start Kafka container:
+   ```
+   docker run --name kafka-container --network kafka-network -p 9092:9092 -d confluentinc/cp-kafka:7.3.2 -e KAFKA_BROKER_ID=1 -e KAFKA_ZOOKEEPER_CONNECT=zookeeper-container:2181 -e KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://kafka-container:9092,PLAINTEXT_HOST://localhost:9092 -e KAFKA_LISTENER_SECURITY_PROTOCOL_MAP=PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT -e KAFKA_INTER_BROKER_LISTENER_NAME=PLAINTEXT -e KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR=1 -e KAFKA_AUTO_CREATE_TOPICS_ENABLE=true
+   ```
+
+5. Verify Kafka and Zookeeper containers are running:
+   ```
+   docker ps
+   ```
+
+6. Create a Kafka topic for employee records:
+   ```
+   docker exec -it kafka-container kafka-topics --create --topic employee-records --bootstrap-server kafka-container:9092 --partitions 1 --replication-factor 1
+   ```
+
+7. List the created topics to verify:
+   ```
+   docker exec -it kafka-container kafka-topics --list --bootstrap-server kafka-container:9092
+   ```
+
+### 3. Running the Complete System with Docker Compose
+
+Docker Compose simplifies managing multiple containers. Follow these steps to run the entire application stack:
+
+1. Create a new directory for your project and navigate to it:
+   ```
+   mkdir employee-system
+   cd employee-system
+   ```
+
+2. Download or copy all project files to this directory, including:
+   - docker-compose.yml
+   - dockerfile-client
+   - dockerfile-server
+   - client/ directory
+   - server/ directory
+
+3. Build and start all services with a single command:
+   ```
+   docker-compose up -d --build
+   ```
+   This will:
+   - Build the server image
+   - Build the client image
+   - Start MySQL database
+   - Start Zookeeper
+   - Start Kafka
+   - Connect all services together
+
+4. Check if all containers are running:
+   ```
+   docker-compose ps
+   ```
+
+5. View the logs to ensure everything is working:
+   ```
+   docker-compose logs -f
+   ```
+
+6. To stop all services:
+   ```
+   docker-compose down
+   ```
+
+### 4. Testing Different Communication Modes
+
+To test the client with different communication protocols:
+
+1. For HTTP mode (default):
+   ```
+   docker-compose up -d -e COMM_MODE=http client
+   ```
+
+2. For WebSocket mode:
+   ```
+   docker-compose up -d -e COMM_MODE=websocket client
+   ```
+
+3. For Kafka mode:
+   ```
+   docker-compose up -d -e COMM_MODE=kafka client
+   ```
+
+### 5. Running Specific Components
+
+You can run just certain parts of the system if needed:
+
+1. Run just the server with database and messaging:
+   ```
+   docker-compose up -d server db zookeeper kafka
+   ```
+
+2. Run only the data infrastructure (without applications):
+   ```
+   docker-compose up -d db zookeeper kafka
+   ```
+
+### 6. Useful Docker Commands
+
+Here are some helpful Docker commands for managing your containers:
+
+```
+# View all running containers
+docker ps
+
+# Check logs of a specific container
+docker logs [container_name]
+
+# Stop all containers from the composition
+docker-compose down
+
+# Restart a specific service
+docker-compose restart [service_name]
+
+# Execute a command inside a container (e.g., MySQL)
+docker exec -it db mysql -uroot -phappy
+
+# Check resource usage of containers
+docker stats
+
+# Clean up unused resources
+docker system prune
+
+# View networks
+docker network ls
+
+# Inspect a container
+docker inspect [container_name]
 ```
 
 ## Client Command-Line Options
