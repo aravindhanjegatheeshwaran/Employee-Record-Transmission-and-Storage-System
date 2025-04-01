@@ -60,7 +60,7 @@ docker --version
 docker-compose --version
 ```
 
-### 2. Running the Application
+### 2. Running the Application with Docker in WSL
 
 1. Clone or download this repository to your local machine
 2. Navigate to the project directory:
@@ -68,29 +68,128 @@ docker-compose --version
    cd "Employee Record Transmission and storage System"
    ```
 
-3. Start all services with Docker Compose:
+3. Make sure your docker-compose.yml is properly configured:
+   ```yaml
+   version: '3.8'
+
+   services:
+     server:
+       build:
+         context: .
+         dockerfile: dockerfile-server
+       ports:
+         - "8000:8000"
+       depends_on:
+         db:
+           condition: service_healthy
+         kafka:
+           condition: service_started
+       environment:
+         - DB_HOST=db
+         - DB_PORT=3306
+         - DB_USER=root
+         - DB_PASSWORD=happy
+         - DB_NAME=employee_records
+         - DATABASE_URL=mysql+aiomysql://root:happy@db:3306/employee_records
+         - SECRET_KEY=${SECRET_KEY:-your-secret-key-for-jwt}
+         - DEBUG=False
+         - KAFKA_BOOTSTRAP_SERVERS=kafka:9092
+         - KAFKA_TOPIC=employee-records
+       volumes:
+         - ./server:/app
+       restart: unless-stopped
+
+     client:
+       build:
+         context: .
+         dockerfile: dockerfile-client
+       environment:
+         - SERVER_URL=http://server:8000
+         - KAFKA_BOOTSTRAP_SERVERS=kafka:9092
+         - KAFKA_TOPIC=employee-records
+         - WS_URL=ws://server:8000/ws
+         - COMM_MODE=${COMM_MODE:-http}
+         - AUTH_USERNAME=admin
+         - AUTH_PASSWORD=adminpassword
+       depends_on:
+         - server
+       restart: on-failure
+
+     db:
+       image: mysql:8.0
+       ports:
+         - "3306:3306"
+       environment:
+         - MYSQL_ROOT_PASSWORD=happy
+         - MYSQL_DATABASE=employee_records
+       volumes:
+         - mysql_data:/var/lib/mysql
+       command: --default-authentication-plugin=mysql_native_password
+       restart: unless-stopped
+       healthcheck:
+         test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-phappy"]
+         interval: 5s
+         timeout: 5s
+         retries: 10
+         
+     zookeeper:
+       image: confluentinc/cp-zookeeper:7.3.2
+       ports:
+         - "2181:2181"
+       environment:
+         ZOOKEEPER_CLIENT_PORT: 2181
+         ZOOKEEPER_TICK_TIME: 2000
+       restart: unless-stopped
+       
+     kafka:
+       image: confluentinc/cp-kafka:7.3.2
+       ports:
+         - "9092:9092"
+       environment:
+         KAFKA_BROKER_ID: 1
+         KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+         KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092,PLAINTEXT_HOST://localhost:9092
+         KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
+         KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
+         KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+         KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
+         KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
+       depends_on:
+         - zookeeper
+       restart: unless-stopped
+
+   volumes:
+     mysql_data:
    ```
+
+4. Start all services with Docker Compose (in PowerShell):
+   ```powershell
    docker-compose up -d --build
    ```
 
-4. Check if all containers are running correctly:
-   ```
+5. Check if all containers are running correctly:
+   ```powershell
    docker-compose ps
    ```
 
-5. View the logs to ensure everything started properly:
-   ```
+6. View the logs to ensure everything started properly:
+   ```powershell
    docker-compose logs -f
    ```
 
-6. The application is now running with:
+7. Create the Kafka topic if it wasn't automatically created:
+   ```powershell
+   docker-compose exec kafka kafka-topics --create --topic employee-records --bootstrap-server kafka:9092 --partitions 1 --replication-factor 1
+   ```
+
+8. The application is now running with:
    - Server API at http://localhost:8000
    - MySQL database at localhost:3306
    - Kafka at localhost:9092
    - Client processing employee data records
 
-7. To stop all services:
-   ```
+9. To stop all services:
+   ```powershell
    docker-compose down
    ```
 
@@ -154,30 +253,50 @@ docker run --name mysql-database -e MYSQL_ROOT_PASSWORD=happy \
 docker logs mysql-database
 ```
 
-#### Kafka and Zookeeper:
+#### Setting up Kafka in WSL (Windows Subsystem for Linux):
 
 ```bash
 # Create a network for Kafka components
 docker network create kafka-net
 
-# Run Zookeeper
-docker run --name zookeeper --network kafka-net -p 2181:2181 -d \
-  confluentinc/cp-zookeeper:7.3.2 \
-  -e ZOOKEEPER_CLIENT_PORT=2181 -e ZOOKEEPER_TICK_TIME=2000
+# Run Zookeeper container
+docker run --name zookeeper-container --network kafka-net -p 2181:2181 -d confluentinc/cp-zookeeper:7.3.2
 
-# Run Kafka
-docker run --name kafka --network kafka-net -p 9092:9092 -d \
+# Run Kafka container with proper environment variables
+docker run --name kafka-container --network kafka-net -p 9092:9092 -d \
   confluentinc/cp-kafka:7.3.2 \
   -e KAFKA_BROKER_ID=1 \
-  -e KAFKA_ZOOKEEPER_CONNECT=zookeeper:2181 \
-  -e KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://kafka:9092,PLAINTEXT_HOST://localhost:9092 \
-  -e KAFKA_LISTENER_SECURITY_PROTOCOL_MAP=PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT \
-  -e KAFKA_INTER_BROKER_LISTENER_NAME=PLAINTEXT \
+  -e KAFKA_ZOOKEEPER_CONNECT=zookeeper-container:2181 \
+  -e KAFKA_ADVERTISED_LISTENERS="PLAINTEXT://kafka-container:9092,PLAINTEXT_HOST://localhost:9092" \
+  -e KAFKA_LISTENER_SECURITY_PROTOCOL_MAP="PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT" \
+  -e KAFKA_INTER_BROKER_LISTENER_NAME="PLAINTEXT" \
   -e KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR=1
 
+# Wait a moment for Kafka to initialize
+sleep 10
+
 # Create the employee-records topic
-docker exec -it kafka kafka-topics --create --topic employee-records \
-  --bootstrap-server kafka:9092 --partitions 1 --replication-factor 1
+docker exec -it kafka-container kafka-topics --create \
+  --topic employee-records \
+  --bootstrap-server kafka-container:9092 \
+  --partitions 1 \
+  --replication-factor 1
+
+# List topics to verify
+docker exec -it kafka-container kafka-topics --list \
+  --bootstrap-server kafka-container:9092
+```
+
+> **Important**: If you encounter errors with command arguments in Windows, use these alternative commands with properly quoted parameters:
+
+```powershell
+# For PowerShell
+docker run --name kafka-container --network kafka-net -p 9092:9092 -d confluentinc/cp-kafka:7.3.2 -e "KAFKA_BROKER_ID=1" -e "KAFKA_ZOOKEEPER_CONNECT=zookeeper-container:2181" -e "KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://kafka-container:9092,PLAINTEXT_HOST://localhost:9092" -e "KAFKA_LISTENER_SECURITY_PROTOCOL_MAP=PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT" -e "KAFKA_INTER_BROKER_LISTENER_NAME=PLAINTEXT" -e "KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR=1"
+```
+
+```cmd
+:: For CMD
+docker run --name kafka-container --network kafka-net -p 9092:9092 -d confluentinc/cp-kafka:7.3.2 -e KAFKA_BROKER_ID=1 -e KAFKA_ZOOKEEPER_CONNECT=zookeeper-container:2181 -e KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://kafka-container:9092,PLAINTEXT_HOST://localhost:9092 -e KAFKA_LISTENER_SECURITY_PROTOCOL_MAP=PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT -e KAFKA_INTER_BROKER_LISTENER_NAME=PLAINTEXT -e KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR=1
 ```
 
 ### 2. Docker Compose Configuration
