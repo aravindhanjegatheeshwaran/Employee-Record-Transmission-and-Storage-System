@@ -6,7 +6,12 @@ import os
 from datetime import datetime
 from unittest.mock import patch, MagicMock, AsyncMock
 
-from client.client import EmployeeClient
+import sys
+import os
+
+# Add parent directory to path to make imports work
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+from client.employee_client import EmployeeClient
 from client.config import CommunicationMode
 
 

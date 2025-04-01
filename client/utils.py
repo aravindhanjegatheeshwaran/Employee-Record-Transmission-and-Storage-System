@@ -94,7 +94,7 @@ def parse_csv_file(file_path, delimiter=',', encoding='utf-8', convert_date=True
             rows = []
             
             for i, row in enumerate(reader, 1):
-                processed_row = {k: (v if v else None) for k, v in row.items()}
+                processed_row = {k: (v.strip() if v else None) for k, v in row.items()}
                 
                 for key, value in processed_row.items():
                     if value is None:
@@ -126,6 +126,15 @@ def parse_csv_file(file_path, delimiter=',', encoding='utf-8', convert_date=True
                     'date_of_joining': processed_row.get('Date of Joining'),
                 }
                 
+                # Skip rows with missing required fields
+                required_fields = ['employee_id', 'name', 'email', 'department', 'designation', 'salary', 'date_of_joining']
+                missing_fields = [field for field in required_fields if field not in mapped_row or mapped_row[field] is None]
+                
+                if missing_fields:
+                    logger.warning(f"Row {i} is missing required fields: {', '.join(missing_fields)}")
+                    continue
+                
+                logger.debug(f"Parsed row {i}: {mapped_row}")
                 rows.append(mapped_row)
             
             return rows
@@ -174,6 +183,9 @@ def format_employee_record(record):
                 formatted[key] = value.isoformat()
             else:
                 formatted[key] = value
+    
+    # Add debug logging for formatted record
+    logger.debug(f"Formatted employee record: {formatted}")
     
     return formatted
 

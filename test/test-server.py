@@ -2,21 +2,26 @@ import pytest
 import asyncio
 from datetime import date, datetime, timedelta
 from unittest.mock import patch, AsyncMock, MagicMock
+import sys
+import os
+
+# Add parent directory to path to make imports work
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 from fastapi import FastAPI
 from fastapi.testclient import TestClient
 from fastapi.security import OAuth2PasswordBearer
 
 from server.main import app
-from server.core.database import db
+from server.core.database import get_db
 from server.core.security import (
     get_password_hash, 
     create_access_token, 
     get_current_user,
     verify_password
 )
-from server.models.employee import Employee
-from server.schemas.employee import EmployeeCreate, EmployeeUpdate
+from server.models.model import Employee  # Updated import
+from server.schemas.schema import EmployeeCreate, EmployeeUpdate  # Updated import
 
 
 # Fixtures
@@ -50,43 +55,64 @@ def test_token():
 @pytest.fixture(autouse=True)
 def mock_db():
     """Mock database operations"""
-    # Mock fetch_one to simulate employee existence check
-    async def mock_fetch_one(query, params=None):
-        if "WHERE employee_id = " in query and params and params[0] == 1001:
-            return (1001, "Existing User", "existing@example.com", "IT", "Developer", 70000, date(2022, 1, 1))
-        return None
+    # Create mock AsyncSession
+    mock_session = AsyncMock()
     
-    # Mock fetch_all to return sample data
-    async def mock_fetch_all(query, params=None):
-        if "FROM employees" in query:
-            return [
-                (1001, "User 1", "user1@example.com", "Engineering", "Developer", 75000, date(2023, 1, 15), 
-                 datetime.now(), datetime.now()),
-                (1002, "User 2", "user2@example.com", "Marketing", "Manager", 85000, date(2022, 6, 10), 
-                 datetime.now(), datetime.now())
-            ]
-        elif "FROM departments" in query:
-            return [
-                ("Engineering", 10),
-                ("Marketing", 5)
-            ]
-        return []
+    # Mock execute to return sample data
+    mock_session.execute.return_value.scalar_one_or_none.side_effect = [
+        # First call - check employee exists
+        Employee(
+            employee_id=1001,
+            name="Existing User",
+            email="existing@example.com",
+            department="IT",
+            designation="Developer",
+            salary=70000,
+            date_of_joining=date(2022, 1, 1),
+            created_at=datetime.now(),
+            updated_at=datetime.now()
+        ),
+        # Subsequent calls - for other employee lookups
+        None
+    ]
     
-    # Mock execute to simulate successful database operations
-    async def mock_execute(query, params=None):
-        return 1
+    # Mock execute to return list of employees
+    mock_session.execute.return_value.scalars.return_value.all.return_value = [
+        Employee(
+            employee_id=1001,
+            name="User 1",
+            email="user1@example.com",
+            department="Engineering",
+            designation="Developer",
+            salary=75000,
+            date_of_joining=date(2023, 1, 15),
+            created_at=datetime.now(),
+            updated_at=datetime.now()
+        ),
+        Employee(
+            employee_id=1002,
+            name="User 2",
+            email="user2@example.com",
+            department="Marketing",
+            designation="Manager",
+            salary=85000,
+            date_of_joining=date(2022, 6, 10),
+            created_at=datetime.now(),
+            updated_at=datetime.now()
+        )
+    ]
     
-    # Mock execute_many for batch operations
-    async def mock_execute_many(query, params_list=None):
-        return len(params_list) if params_list else 0
+    # Mock commit operation
+    mock_session.commit = AsyncMock()
     
-    # Create mock db object
-    with patch('server.core.database.db') as mock_db:
-        mock_db.fetch_one = AsyncMock(side_effect=mock_fetch_one)
-        mock_db.fetch_all = AsyncMock(side_effect=mock_fetch_all)
-        mock_db.execute = AsyncMock(side_effect=mock_execute)
-        mock_db.execute_many = AsyncMock(side_effect=mock_execute_many)
-        yield mock_db
+    # Mock close operation
+    mock_session.close = AsyncMock()
+    
+    # Mock the get_db dependency
+    with patch('server.api.api.get_db') as mock_get_db:
+        mock_get_db.return_value.__aenter__.return_value = mock_session
+        mock_get_db.return_value.__aexit__.return_value = None
+        yield mock_session
 
 
 # Authentication mocking
@@ -94,7 +120,7 @@ def mock_db():
 def mock_auth():
     """Mock authentication dependencies"""
     # Mock get_current_user to bypass authentication
-    with patch('server.api.employee.get_current_active_user') as mock_auth:
+    with patch('server.core.security.get_current_active_user') as mock_auth:
         mock_auth.return_value = {"username": "test_user"}
         yield mock_auth
 

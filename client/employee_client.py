@@ -157,6 +157,16 @@ class EmployeeClient:
         try:
             formatted_employee = format_employee_record(employee)
             
+            # Log formatted employee data for debugging
+            logger.info(f"Sending employee data: {formatted_employee}")
+            
+            # Verify required fields are present
+            required_fields = ['employee_id', 'name', 'email', 'department', 'designation', 'salary', 'date_of_joining']
+            missing_fields = [field for field in required_fields if field not in formatted_employee or formatted_employee[field] is None]
+            
+            if missing_fields:
+                raise Exception(f"Missing required fields: {', '.join(missing_fields)}")
+            
             async with self.session.post(
                 url, 
                 json=formatted_employee,
@@ -185,6 +195,14 @@ class EmployeeClient:
         
         try:
             formatted_employee = format_employee_record(employee)
+            
+            # Verify required fields are present
+            required_fields = ['employee_id', 'name', 'email', 'department', 'designation', 'salary', 'date_of_joining']
+            missing_fields = [field for field in required_fields if field not in formatted_employee or formatted_employee[field] is None]
+            
+            if missing_fields:
+                raise Exception(f"Missing required fields: {', '.join(missing_fields)}")
+            
             await self.kafka_producer.send_and_wait(
                 settings.KAFKA_TOPIC,
                 formatted_employee
@@ -206,6 +224,14 @@ class EmployeeClient:
         
         try:
             formatted_employee = format_employee_record(employee)
+            
+            # Verify required fields are present
+            required_fields = ['employee_id', 'name', 'email', 'department', 'designation', 'salary', 'date_of_joining']
+            missing_fields = [field for field in required_fields if field not in formatted_employee or formatted_employee[field] is None]
+            
+            if missing_fields:
+                raise Exception(f"Missing required fields: {', '.join(missing_fields)}")
+                
             await self.websocket.send(json.dumps(formatted_employee))
             
             response = await asyncio.wait_for(self.websocket.recv(), timeout=self.timeout)
