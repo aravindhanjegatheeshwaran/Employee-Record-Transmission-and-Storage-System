@@ -1029,3 +1029,4 @@ TypeError: create_employee() got an unexpected keyword argument 'validated_data'
 2025-03-28 16:09:05,379 - core.decorators - INFO - Function login_for_access_token called with request ID 20250328160905379786
 2025-03-28 16:09:05,733 - core.decorators - INFO - Function login_for_access_token executed in 0.3542 seconds
 2025-03-28 16:09:05,733 - core.decorators - INFO - Request 20250328160905379786 completed in 0.3542 seconds
+2025-04-01 17:15:20,474 - main - INFO - Starting server...

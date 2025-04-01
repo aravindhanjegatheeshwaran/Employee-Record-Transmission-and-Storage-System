@@ -270,15 +270,5 @@ async def health_check():
 
 
 if __name__ == "__main__":
-    import uvicorn
-    
-    # Get configuration from environment variables
-    host = os.getenv("HOST", "0.0.0.0")
-    port = int(os.getenv("PORT", 8000))
-    reload = bool(os.getenv("DEBUG", "True").lower() == "true")
-    
-    print(f"Starting server on {host}:{port}")
-    print("Press CTRL+C to stop")
-    
-    # Run the application directly
-    uvicorn.run(app, host=host, port=port, reload=reload)
+    import uvicorn    
+    uvicorn.run('main:app', host='0.0.0.0', port=8000, reload=True)
