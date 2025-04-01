@@ -77,50 +77,6 @@ pip install aiohttp==3.8.6  # Install aiohttp explicitly
 deactivate
 ```
 
-### 2. Setup External Dependencies Manually
-
-#### MySQL Setup:
-
-```bash
-# For Ubuntu/Debian
-sudo apt update
-sudo apt install mysql-server
-
-# Start MySQL service
-sudo systemctl start mysql
-sudo systemctl enable mysql
-
-# Log in and create database
-sudo mysql -u root
-```
-
-Inside MySQL prompt:
-```sql
-CREATE DATABASE employee_records;
-CREATE USER 'root'@'localhost' IDENTIFIED BY 'happy';
-GRANT ALL PRIVILEGES ON employee_records.* TO 'root'@'localhost';
-FLUSH PRIVILEGES;
-EXIT;
-```
-
-#### Kafka Setup:
-
-```bash
-# Download Kafka
-wget https://downloads.apache.org/kafka/3.4.0/kafka_2.13-3.4.0.tgz
-tar -xzf kafka_2.13-3.4.0.tgz
-cd kafka_2.13-3.4.0
-
-# Start Zookeeper (in terminal 1)
-bin/zookeeper-server-start.sh config/zookeeper.properties
-
-# Start Kafka (in terminal 2)
-bin/kafka-server-start.sh config/server.properties
-
-# Create a topic (in terminal 3)
-bin/kafka-topics.sh --create --topic employee-records --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1
-```
-
 ### 3. Run the Server
 
 ```bash
@@ -140,71 +96,6 @@ python main.py --mode http     # HTTP mode
 python main.py --mode websocket  # WebSocket mode
 python main.py --mode kafka    # Kafka mode
 ```
-
-## Docker Services Overview
-
-The Docker setup includes the following services:
-
-- **server**: FastAPI application that provides the API endpoints, WebSocket connection, and Kafka consumer
-- **client**: Python application that processes the CSV file and sends records to the server
-- **db**: MySQL database for storing employee records
-- **zookeeper**: Zookeeper service for Kafka
-- **kafka**: Kafka message broker for asynchronous communication
-
-## Step-by-Step Docker Installation Guide
-
-### 1. Install Docker and Docker Compose
-
-#### For Windows:
-1. Download Docker Desktop from the [official website](https://www.docker.com/products/docker-desktop)
-2. Run the installer and follow the on-screen instructions
-3. After installation, start Docker Desktop from the Start menu
-4. Wait for Docker to start completely (the whale icon in the taskbar will stop animating)
-5. Open Command Prompt or PowerShell to verify installation:
-   ```
-   docker --version
-   docker-compose --version
-   ```
-
-#### For Mac:
-1. Download Docker Desktop for Mac from the [official website](https://www.docker.com/products/docker-desktop)
-2. Open the .dmg file and drag Docker to the Applications folder
-3. Start Docker from the Applications folder
-4. Wait for Docker to start completely (the whale icon in the menu bar will stop animating)
-5. Open Terminal to verify installation:
-   ```
-   docker --version
-   docker-compose --version
-   ```
-
-#### For Linux (Manual Installation):
-1. Update package index:
-   ```
-   sudo apt-get update
-   ```
-2. Install prerequisites:
-   ```
-   sudo apt-get install ca-certificates curl gnupg lsb-release
-   ```
-3. Add Docker's official GPG key:
-   ```
-   sudo mkdir -p /etc/apt/keyrings
-   curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
-   ```
-4. Set up the repository:
-   ```
-   echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-   ```
-5. Install Docker Engine:
-   ```
-   sudo apt-get update
-   sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
-   ```
-6. Verify installation:
-   ```
-   docker --version
-   docker compose version
-   ```
 
 ### 2. Setup MySQL and Kafka with Docker (Individual Components)
 
