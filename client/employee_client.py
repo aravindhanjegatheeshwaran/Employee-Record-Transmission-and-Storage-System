@@ -151,7 +151,7 @@ class EmployeeClient:
         if not self.access_token:
             await self.authenticate()
         
-        url = f"{self.server_url}/api/employees"
+        url = f"{self.server_url}/api/employees/"
         headers = {"Authorization": f"Bearer {self.access_token}"}
         
         try:

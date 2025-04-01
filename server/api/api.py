@@ -26,7 +26,7 @@ router = APIRouter(
 )
 
 
-@router.post("/employees", response_model=EmployeeResponse, status_code=status.HTTP_201_CREATED)
+@router.post("/", response_model=EmployeeResponse, status_code=status.HTTP_201_CREATED)
 @log_execution_time
 @log_requests
 @rate_limit(calls=100, period=60)

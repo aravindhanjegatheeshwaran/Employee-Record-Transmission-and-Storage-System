@@ -1030,3 +1030,715 @@ TypeError: create_employee() got an unexpected keyword argument 'validated_data'
 2025-03-28 16:09:05,733 - core.decorators - INFO - Function login_for_access_token executed in 0.3542 seconds
 2025-03-28 16:09:05,733 - core.decorators - INFO - Request 20250328160905379786 completed in 0.3542 seconds
 2025-04-01 17:15:20,474 - main - INFO - Starting server...
+2025-04-01 17:56:09,725 - core.decorators - INFO - FUNC 20250401175609724321: login_for_access_token called
+2025-04-01 17:56:10,131 - core.decorators - INFO - login_for_access_token took 0.4050s
+2025-04-01 17:56:10,134 - core.decorators - INFO - DONE 20250401175609724321: completed in 0.4080s
+2025-04-01 17:56:37,183 - core.decorators - INFO - FUNC 20250401175637183835: login_for_access_token called
+2025-04-01 17:56:37,634 - core.decorators - INFO - login_for_access_token took 0.4489s
+2025-04-01 17:56:37,635 - core.decorators - INFO - DONE 20250401175637183835: completed in 0.4499s
+2025-04-01 17:58:16,520 - core.decorators - INFO - FUNC 20250401175816520106: login_for_access_token called
+2025-04-01 17:58:16,911 - core.decorators - INFO - login_for_access_token took 0.3900s
+2025-04-01 17:58:16,919 - core.decorators - INFO - DONE 20250401175816520106: completed in 0.3979s
+2025-04-01 17:59:26,320 - core.decorators - INFO - FUNC 20250401175926320032: login_for_access_token called
+2025-04-01 17:59:26,721 - core.decorators - INFO - login_for_access_token took 0.4002s
+2025-04-01 17:59:26,728 - core.decorators - INFO - DONE 20250401175926320032: completed in 0.4071s
+2025-04-01 18:05:24,543 - core.decorators - INFO - FUNC 20250401180524543451: login_for_access_token called
+2025-04-01 18:05:24,917 - core.decorators - INFO - login_for_access_token took 0.3741s
+2025-04-01 18:05:24,917 - core.decorators - INFO - DONE 20250401180524543451: completed in 0.3741s
+2025-04-01 18:05:30,145 - core.decorators - INFO - FUNC 20250401180530145144: login_for_access_token called
+2025-04-01 18:05:30,526 - core.decorators - INFO - login_for_access_token took 0.3811s
+2025-04-01 18:05:30,526 - core.decorators - INFO - DONE 20250401180530145144: completed in 0.3811s
+2025-04-01 18:07:34,564 - core.decorators - INFO - FUNC 20250401180734564814: login_for_access_token called
+2025-04-01 18:07:34,950 - core.decorators - INFO - login_for_access_token took 0.3858s
+2025-04-01 18:07:34,950 - core.decorators - INFO - DONE 20250401180734564814: completed in 0.3858s
+2025-04-01 18:07:42,817 - core.decorators - INFO - FUNC 20250401180742817691: login_for_access_token called
+2025-04-01 18:07:43,209 - core.decorators - INFO - login_for_access_token took 0.3917s
+2025-04-01 18:07:43,209 - core.decorators - INFO - DONE 20250401180742817691: completed in 0.3923s
+2025-04-01 18:10:40,418 - main - INFO - Shutting down, closing connections...
+2025-04-01 18:10:40,420 - core.database - INFO - Database connections closed
+2025-04-01 18:10:40,420 - main - INFO - Database connections closed
+2025-04-01 18:11:41,258 - main - INFO - Starting server...
+2025-04-01 18:12:42,090 - core.decorators - INFO - FUNC 20250401181242090060: login_for_access_token called
+2025-04-01 18:12:42,650 - core.decorators - INFO - login_for_access_token took 0.5608s
+2025-04-01 18:12:42,650 - core.decorators - INFO - DONE 20250401181242090060: completed in 0.5608s
+2025-04-01 18:12:44,845 - main - ERROR - WebSocket error: Expected ASGI message "websocket.send" or "websocket.close", but got 'websocket.accept'
+2025-04-01 18:12:47,009 - main - ERROR - WebSocket error: Expected ASGI message "websocket.send" or "websocket.close", but got 'websocket.accept'
+2025-04-01 18:12:48,018 - main - ERROR - WebSocket error: Expected ASGI message "websocket.send" or "websocket.close", but got 'websocket.accept'
+2025-04-01 18:12:48,039 - main - ERROR - WebSocket error: Expected ASGI message "websocket.send" or "websocket.close", but got 'websocket.accept'
+2025-04-01 18:12:48,039 - main - ERROR - WebSocket error: Expected ASGI message "websocket.send" or "websocket.close", but got 'websocket.accept'
+2025-04-01 18:12:48,039 - main - ERROR - WebSocket error: Expected ASGI message "websocket.send" or "websocket.close", but got 'websocket.accept'
+2025-04-01 18:12:48,046 - main - ERROR - WebSocket error: Expected ASGI message "websocket.send" or "websocket.close", but got 'websocket.accept'
+2025-04-01 18:12:48,056 - main - ERROR - WebSocket error: Expected ASGI message "websocket.send" or "websocket.close", but got 'websocket.accept'
+2025-04-01 18:12:48,058 - main - ERROR - WebSocket error: Expected ASGI message "websocket.send" or "websocket.close", but got 'websocket.accept'
+2025-04-01 18:12:48,062 - main - ERROR - WebSocket error: Expected ASGI message "websocket.send" or "websocket.close", but got 'websocket.accept'
+2025-04-01 18:12:48,064 - main - ERROR - WebSocket error: Expected ASGI message "websocket.send" or "websocket.close", but got 'websocket.accept'
+2025-04-01 18:12:50,096 - main - ERROR - WebSocket error: Expected ASGI message "websocket.send" or "websocket.close", but got 'websocket.accept'
+2025-04-01 18:12:52,078 - main - ERROR - WebSocket error: Expected ASGI message "websocket.send" or "websocket.close", but got 'websocket.accept'
+2025-04-01 18:12:52,138 - main - ERROR - WebSocket error: Expected ASGI message "websocket.send" or "websocket.close", but got 'websocket.accept'
+2025-04-01 18:12:52,146 - main - ERROR - WebSocket error: Expected ASGI message "websocket.send" or "websocket.close", but got 'websocket.accept'
+2025-04-01 18:12:52,149 - main - ERROR - WebSocket error: Expected ASGI message "websocket.send" or "websocket.close", but got 'websocket.accept'
+2025-04-01 18:12:52,151 - main - ERROR - WebSocket error: Expected ASGI message "websocket.send" or "websocket.close", but got 'websocket.accept'
+2025-04-01 18:12:52,159 - main - ERROR - WebSocket error: Expected ASGI message "websocket.send" or "websocket.close", but got 'websocket.accept'
+2025-04-01 18:12:52,162 - main - ERROR - WebSocket error: Expected ASGI message "websocket.send" or "websocket.close", but got 'websocket.accept'
+2025-04-01 18:12:52,165 - main - ERROR - WebSocket error: Expected ASGI message "websocket.send" or "websocket.close", but got 'websocket.accept'
+2025-04-01 18:12:52,169 - main - ERROR - WebSocket error: Expected ASGI message "websocket.send" or "websocket.close", but got 'websocket.accept'
+2025-04-01 18:14:54,886 - core.decorators - INFO - FUNC 20250401181454886922: login_for_access_token called
+2025-04-01 18:14:55,251 - core.decorators - INFO - login_for_access_token took 0.3644s
+2025-04-01 18:14:55,251 - core.decorators - INFO - DONE 20250401181454886922: completed in 0.3644s
+2025-04-01 18:16:01,707 - main - INFO - Shutting down, closing connections...
+2025-04-01 18:16:01,707 - core.database - INFO - Database connections closed
+2025-04-01 18:16:01,711 - main - INFO - Database connections closed
+2025-04-01 18:16:06,130 - main - INFO - Starting server...
+2025-04-01 18:16:19,032 - core.decorators - INFO - FUNC 20250401181619032644: login_for_access_token called
+2025-04-01 18:16:19,426 - core.decorators - INFO - login_for_access_token took 0.3942s
+2025-04-01 18:16:19,426 - core.decorators - INFO - DONE 20250401181619032644: completed in 0.3942s
+2025-04-01 18:16:19,584 - core.decorators - INFO - FUNC 20250401181619584059: create_employee called
+2025-04-01 18:16:19,607 - core.decorators - ERROR - Validation error: 7 validation errors for EmployeeCreate
+name
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+email
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+department
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+designation
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+salary
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+date_of_joining
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+employee_id
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+2025-04-01 18:16:19,612 - core.decorators - ERROR - FAIL 20250401181619584059: error after 0.0279s - 
+2025-04-01 18:16:19,614 - core.decorators - ERROR - create_employee failed after 0.0302s: 
+2025-04-01 18:16:19,636 - core.decorators - INFO - FUNC 20250401181619636981: create_employee called
+2025-04-01 18:16:19,637 - core.decorators - ERROR - Validation error: 7 validation errors for EmployeeCreate
+name
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+email
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+department
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+designation
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+salary
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+date_of_joining
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+employee_id
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+2025-04-01 18:16:19,642 - core.decorators - ERROR - FAIL 20250401181619636981: error after 0.0050s - 
+2025-04-01 18:16:19,643 - core.decorators - ERROR - create_employee failed after 0.0062s: 
+2025-04-01 18:16:19,649 - core.decorators - INFO - FUNC 20250401181619649904: create_employee called
+2025-04-01 18:16:19,649 - core.decorators - ERROR - Validation error: 7 validation errors for EmployeeCreate
+name
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+email
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+department
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+designation
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+salary
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+date_of_joining
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+employee_id
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+2025-04-01 18:16:19,658 - core.decorators - ERROR - FAIL 20250401181619649904: error after 0.0089s - 
+2025-04-01 18:16:19,659 - core.decorators - ERROR - create_employee failed after 0.0098s: 
+2025-04-01 18:16:19,660 - core.decorators - INFO - FUNC 20250401181619660657: create_employee called
+2025-04-01 18:16:19,662 - core.decorators - ERROR - Validation error: 7 validation errors for EmployeeCreate
+name
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+email
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+department
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+designation
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+salary
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+date_of_joining
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+employee_id
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+2025-04-01 18:16:19,670 - core.decorators - ERROR - FAIL 20250401181619660657: error after 0.0090s - 
+2025-04-01 18:16:19,671 - core.decorators - ERROR - create_employee failed after 0.0100s: 
+2025-04-01 18:16:19,672 - core.decorators - INFO - FUNC 20250401181619671680: create_employee called
+2025-04-01 18:16:19,672 - core.decorators - ERROR - Validation error: 7 validation errors for EmployeeCreate
+name
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+email
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+department
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+designation
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+salary
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+date_of_joining
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+employee_id
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+2025-04-01 18:16:19,677 - core.decorators - ERROR - FAIL 20250401181619671680: error after 0.0047s - 
+2025-04-01 18:16:19,678 - core.decorators - ERROR - create_employee failed after 0.0067s: 
+2025-04-01 18:16:19,680 - core.decorators - INFO - FUNC 20250401181619680342: create_employee called
+2025-04-01 18:16:19,680 - core.decorators - ERROR - Validation error: 7 validation errors for EmployeeCreate
+name
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+email
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+department
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+designation
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+salary
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+date_of_joining
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+employee_id
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+2025-04-01 18:16:19,680 - core.decorators - ERROR - FAIL 20250401181619680342: error after 0.0000s - 
+2025-04-01 18:16:19,680 - core.decorators - ERROR - create_employee failed after 0.0006s: 
+2025-04-01 18:16:19,777 - core.decorators - INFO - FUNC 20250401181619777060: create_employee called
+2025-04-01 18:16:19,778 - core.decorators - ERROR - Validation error: 7 validation errors for EmployeeCreate
+name
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+email
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+department
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+designation
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+salary
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+date_of_joining
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+employee_id
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+2025-04-01 18:16:19,783 - core.decorators - ERROR - FAIL 20250401181619777060: error after 0.0040s - 
+2025-04-01 18:16:19,783 - core.decorators - ERROR - create_employee failed after 0.0060s: 
+2025-04-01 18:16:19,784 - core.decorators - INFO - FUNC 20250401181619784056: create_employee called
+2025-04-01 18:16:19,785 - core.decorators - ERROR - Validation error: 7 validation errors for EmployeeCreate
+name
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+email
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+department
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+designation
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+salary
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+date_of_joining
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+employee_id
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+2025-04-01 18:16:19,789 - core.decorators - ERROR - FAIL 20250401181619784056: error after 0.0050s - 
+2025-04-01 18:16:19,790 - core.decorators - ERROR - create_employee failed after 0.0050s: 
+2025-04-01 18:16:19,790 - core.decorators - INFO - FUNC 20250401181619790057: create_employee called
+2025-04-01 18:16:19,791 - core.decorators - ERROR - Validation error: 7 validation errors for EmployeeCreate
+name
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+email
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+department
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+designation
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+salary
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+date_of_joining
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+employee_id
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+2025-04-01 18:16:19,796 - core.decorators - ERROR - FAIL 20250401181619790057: error after 0.0050s - 
+2025-04-01 18:16:19,796 - core.decorators - ERROR - create_employee failed after 0.0060s: 
+2025-04-01 18:16:19,798 - core.decorators - INFO - FUNC 20250401181619797058: create_employee called
+2025-04-01 18:16:19,798 - core.decorators - ERROR - Validation error: 7 validation errors for EmployeeCreate
+name
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+email
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+department
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+designation
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+salary
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+date_of_joining
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+employee_id
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+2025-04-01 18:16:19,803 - core.decorators - ERROR - FAIL 20250401181619797058: error after 0.0040s - 
+2025-04-01 18:16:19,803 - core.decorators - ERROR - create_employee failed after 0.0060s: 
+2025-04-01 18:16:20,635 - core.decorators - INFO - FUNC 20250401181620635045: create_employee called
+2025-04-01 18:16:20,635 - core.decorators - ERROR - Validation error: 7 validation errors for EmployeeCreate
+name
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+email
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+department
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+designation
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+salary
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+date_of_joining
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+employee_id
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+2025-04-01 18:16:20,635 - core.decorators - ERROR - FAIL 20250401181620635045: error after 0.0000s - 
+2025-04-01 18:16:20,642 - core.decorators - ERROR - create_employee failed after 0.0073s: 
+2025-04-01 18:16:20,724 - core.decorators - INFO - FUNC 20250401181620724813: create_employee called
+2025-04-01 18:16:20,727 - core.decorators - ERROR - Validation error: 7 validation errors for EmployeeCreate
+name
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+email
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+department
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+designation
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+salary
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+date_of_joining
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+employee_id
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+2025-04-01 18:16:20,734 - core.decorators - ERROR - FAIL 20250401181620724813: error after 0.0000s - 
+2025-04-01 18:16:20,734 - core.decorators - ERROR - create_employee failed after 0.0094s: 
+2025-04-01 18:16:20,742 - core.decorators - INFO - FUNC 20250401181620742351: create_employee called
+2025-04-01 18:16:20,743 - core.decorators - ERROR - Validation error: 7 validation errors for EmployeeCreate
+name
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+email
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+department
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+designation
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+salary
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+date_of_joining
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+employee_id
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+2025-04-01 18:16:20,749 - core.decorators - ERROR - FAIL 20250401181620742351: error after 0.0060s - 
+2025-04-01 18:16:20,749 - core.decorators - ERROR - create_employee failed after 0.0070s: 
+2025-04-01 18:16:20,751 - core.decorators - INFO - FUNC 20250401181620751977: create_employee called
+2025-04-01 18:16:20,752 - core.decorators - ERROR - Validation error: 7 validation errors for EmployeeCreate
+name
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+email
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+department
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+designation
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+salary
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+date_of_joining
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+employee_id
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+2025-04-01 18:16:20,757 - core.decorators - ERROR - FAIL 20250401181620751977: error after 0.0049s - 
+2025-04-01 18:16:20,757 - core.decorators - ERROR - create_employee failed after 0.0053s: 
+2025-04-01 18:16:20,764 - core.decorators - INFO - FUNC 20250401181620764458: create_employee called
+2025-04-01 18:16:20,765 - core.decorators - ERROR - Validation error: 7 validation errors for EmployeeCreate
+name
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+email
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+department
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+designation
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+salary
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+date_of_joining
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+employee_id
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+2025-04-01 18:16:20,770 - core.decorators - ERROR - FAIL 20250401181620764458: error after 0.0050s - 
+2025-04-01 18:16:20,771 - core.decorators - ERROR - create_employee failed after 0.0070s: 
+2025-04-01 18:16:20,774 - core.decorators - INFO - FUNC 20250401181620774458: create_employee called
+2025-04-01 18:16:20,780 - core.decorators - ERROR - Validation error: 7 validation errors for EmployeeCreate
+name
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+email
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+department
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+designation
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+salary
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+date_of_joining
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+employee_id
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+2025-04-01 18:16:20,787 - core.decorators - ERROR - FAIL 20250401181620774458: error after 0.0074s - 
+2025-04-01 18:16:20,790 - core.decorators - ERROR - create_employee failed after 0.0157s: 
+2025-04-01 18:16:20,862 - core.decorators - INFO - FUNC 20250401181620862855: create_employee called
+2025-04-01 18:16:20,863 - core.decorators - ERROR - Validation error: 7 validation errors for EmployeeCreate
+name
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+email
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+department
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+designation
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+salary
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+date_of_joining
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+employee_id
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+2025-04-01 18:16:20,868 - core.decorators - ERROR - FAIL 20250401181620862855: error after 0.0050s - 
+2025-04-01 18:16:20,868 - core.decorators - ERROR - create_employee failed after 0.0060s: 
+2025-04-01 18:16:20,878 - core.decorators - INFO - FUNC 20250401181620878867: create_employee called
+2025-04-01 18:16:20,879 - core.decorators - ERROR - Validation error: 7 validation errors for EmployeeCreate
+name
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+email
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+department
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+designation
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+salary
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+date_of_joining
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+employee_id
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+2025-04-01 18:16:20,884 - core.decorators - ERROR - FAIL 20250401181620878867: error after 0.0046s - 
+2025-04-01 18:16:20,885 - core.decorators - ERROR - create_employee failed after 0.0063s: 
+2025-04-01 18:16:20,886 - core.decorators - INFO - FUNC 20250401181620886151: create_employee called
+2025-04-01 18:16:20,886 - core.decorators - ERROR - Validation error: 7 validation errors for EmployeeCreate
+name
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+email
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+department
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+designation
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+salary
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+date_of_joining
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+employee_id
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+2025-04-01 18:16:20,936 - core.decorators - ERROR - FAIL 20250401181620886151: error after 0.0504s - 
+2025-04-01 18:16:20,977 - core.decorators - ERROR - create_employee failed after 0.0914s: 
+2025-04-01 18:16:20,990 - core.decorators - INFO - FUNC 20250401181620990746: create_employee called
+2025-04-01 18:16:20,994 - core.decorators - ERROR - Validation error: 7 validation errors for EmployeeCreate
+name
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+email
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+department
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+designation
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+salary
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+date_of_joining
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+employee_id
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+2025-04-01 18:16:21,039 - core.decorators - ERROR - FAIL 20250401181620990746: error after 0.0459s - 
+2025-04-01 18:16:21,046 - core.decorators - ERROR - create_employee failed after 0.0561s: 
+2025-04-01 18:16:22,658 - core.decorators - INFO - FUNC 20250401181622658918: create_employee called
+2025-04-01 18:16:22,658 - core.decorators - ERROR - Validation error: 7 validation errors for EmployeeCreate
+name
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+email
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+department
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+designation
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+salary
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+date_of_joining
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+employee_id
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+2025-04-01 18:16:22,668 - core.decorators - ERROR - FAIL 20250401181622658918: error after 0.0094s - 
+2025-04-01 18:16:22,668 - core.decorators - ERROR - create_employee failed after 0.0094s: 
+2025-04-01 18:16:22,776 - core.decorators - INFO - FUNC 20250401181622776946: create_employee called
+2025-04-01 18:16:22,776 - core.decorators - ERROR - Validation error: 7 validation errors for EmployeeCreate
+name
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+email
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+department
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+designation
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+salary
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+date_of_joining
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+employee_id
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+2025-04-01 18:16:22,789 - core.decorators - ERROR - FAIL 20250401181622776946: error after 0.0129s - 
+2025-04-01 18:16:22,790 - core.decorators - ERROR - create_employee failed after 0.0136s: 
+2025-04-01 18:16:22,791 - core.decorators - INFO - FUNC 20250401181622791085: create_employee called
+2025-04-01 18:16:22,792 - core.decorators - ERROR - Validation error: 7 validation errors for EmployeeCreate
+name
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+email
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+department
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+designation
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+salary
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+date_of_joining
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+employee_id
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+2025-04-01 18:16:22,796 - core.decorators - ERROR - FAIL 20250401181622791085: error after 0.0047s - 
+2025-04-01 18:16:22,797 - core.decorators - ERROR - create_employee failed after 0.0068s: 
+2025-04-01 18:16:22,799 - core.decorators - INFO - FUNC 20250401181622799160: create_employee called
+2025-04-01 18:16:22,800 - core.decorators - ERROR - Validation error: 7 validation errors for EmployeeCreate
+name
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+email
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+department
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+designation
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+salary
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+date_of_joining
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+employee_id
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+2025-04-01 18:16:22,804 - core.decorators - ERROR - FAIL 20250401181622799160: error after 0.0046s - 
+2025-04-01 18:16:22,805 - core.decorators - ERROR - create_employee failed after 0.0066s: 
+2025-04-01 18:16:22,831 - core.decorators - INFO - FUNC 20250401181622831225: create_employee called
+2025-04-01 18:16:22,832 - core.decorators - ERROR - Validation error: 7 validation errors for EmployeeCreate
+name
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+email
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+department
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+designation
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+salary
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+date_of_joining
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+employee_id
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+2025-04-01 18:16:22,837 - core.decorators - ERROR - FAIL 20250401181622831225: error after 0.0050s - 
+2025-04-01 18:16:22,837 - core.decorators - ERROR - create_employee failed after 0.0060s: 
+2025-04-01 18:16:22,837 - core.decorators - INFO - FUNC 20250401181622837222: create_employee called
+2025-04-01 18:16:22,837 - core.decorators - ERROR - Validation error: 7 validation errors for EmployeeCreate
+name
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+email
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+department
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+designation
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+salary
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+date_of_joining
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+employee_id
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+2025-04-01 18:16:22,844 - core.decorators - ERROR - FAIL 20250401181622837222: error after 0.0077s - 
+2025-04-01 18:16:22,844 - core.decorators - ERROR - create_employee failed after 0.0077s: 
