@@ -37,32 +37,68 @@ python -c "\
 import socket, time\n\
 kafka_host=\"kafka\"\n\
 kafka_port=9092\n\
+max_retries=30\n\
+retry_count=0\n\
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)\n\
-while True:\n\
+while retry_count < max_retries:\n\
     try:\n\
         s.connect((kafka_host, kafka_port))\n\
         s.close()\n\
+        print(\"Kafka is available!\")\n\
         break\n\
     except socket.error:\n\
-        print(\"Waiting for Kafka...\")\n\
-        time.sleep(1)\n\
+        print(f\"Waiting for Kafka... {retry_count}/{max_retries}\")\n\
+        retry_count += 1\n\
+        time.sleep(2)\n\
 "\n\
-echo "Kafka is ready!"\n\
+echo "Proceeding with startup..."\n\
+\n\
+# Wait for MySQL to be ready\n\
+echo "Waiting for MySQL..."\n\
+python -c "\
+import time, os\n\
+import mysql.connector\n\
+host=os.getenv(\"DB_HOST\")\n\
+user=os.getenv(\"DB_USER\")\n\
+password=os.getenv(\"DB_PASSWORD\")\n\
+max_retries=30\n\
+retry_count=0\n\
+while retry_count < max_retries:\n\
+    try:\n\
+        mysql.connector.connect(host=host, user=user, password=password)\n\
+        print(\"MySQL is available!\")\n\
+        break\n\
+    except Exception as e:\n\
+        print(f\"Waiting for MySQL... {retry_count}/{max_retries}\")\n\
+        retry_count += 1\n\
+        time.sleep(2)\n\
+"\n\
 \n\
 # Create database if it doesn't exist\n\
-python -c "from dotenv import load_dotenv; load_dotenv(); import os, mysql.connector; \
-host=os.getenv(\"DB_HOST\"); user=os.getenv(\"DB_USER\"); password=os.getenv(\"DB_PASSWORD\"); \
-db_name=os.getenv(\"DB_NAME\"); \
-cnx = mysql.connector.connect(host=host, user=user, password=password); \
-cursor = cnx.cursor(); \
-cursor.execute(f\"CREATE DATABASE IF NOT EXISTS {db_name}\"); \
-cnx.close(); \
-print(f\"Database {db_name} created or already exists\")"\n\
+python -c "\
+from dotenv import load_dotenv\n\
+load_dotenv()\n\
+import os, mysql.connector\n\
+host=os.getenv(\"DB_HOST\")\n\
+user=os.getenv(\"DB_USER\")\n\
+password=os.getenv(\"DB_PASSWORD\")\n\
+db_name=os.getenv(\"DB_NAME\")\n\
+try:\n\
+    cnx = mysql.connector.connect(host=host, user=user, password=password)\n\
+    cursor = cnx.cursor()\n\
+    cursor.execute(f\"CREATE DATABASE IF NOT EXISTS {db_name}\")\n\
+    cnx.close()\n\
+    print(f\"Database {db_name} created or already exists\")\n\
+except Exception as e:\n\
+    print(f\"Error creating database: {e}\")\n\
+"\n\
 \n\
 # Run migrations\n\
+echo "Running database migrations..."\n\
 alembic upgrade head\n\
 \n\
 # Start the application\n\
+echo "Starting FastAPI server..."\n\
 exec uvicorn main:app --host 0.0.0.0 --port 8000\n\
 ' > /app/entrypoint.sh
 

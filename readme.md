@@ -27,17 +27,38 @@ A high-performance client-server application for processing employee records fro
 - **Authentication**: JWT tokens
 - **Containerization**: Docker, Docker Compose
 
-## Getting Started
+## Quick Start with Docker
 
-### Prerequisites
-- Python 3.9+
-- MySQL database
-- Kafka (for Kafka mode)
-- Docker and Docker Compose (for containerized deployment)
+The easiest way to run the complete system is with Docker Compose:
 
-### Manual Setup (venv)
+```bash
+# Build and start all services
+docker-compose up -d --build
 
-If you want to run without Docker, set up virtual environments for both client and server:
+# Check logs
+docker-compose logs -f
+```
+
+### Testing Different Communication Modes
+
+The client supports three communication modes which can be specified through the COMM_MODE environment variable:
+
+```bash
+# For HTTP mode (default)
+docker-compose up -d -e COMM_MODE=http client
+
+# For WebSocket mode
+docker-compose up -d -e COMM_MODE=websocket client 
+
+# For Kafka mode
+docker-compose up -d -e COMM_MODE=kafka client
+```
+
+## Manual Setup (if needed)
+
+If you prefer to run without Docker, follow these steps:
+
+### 1. Create Python Virtual Environments
 
 ```bash
 # Setup Server Environment
@@ -52,57 +73,58 @@ cd ../client
 python -m venv env
 source env/bin/activate  # On Windows: env\Scripts\activate
 pip install -r requirements.txt
-# Enable aiohttp manually (it's commented in requirements.txt)
-pip install aiohttp==3.8.6
+pip install aiohttp==3.8.6  # Install aiohttp explicitly
 deactivate
 ```
 
-### Running the Application Manually
+### 2. Setup External Dependencies
 
-#### Running the Server
+- **MySQL**: Install and run MySQL server
+- **Kafka**: Install and run Kafka and Zookeeper (required for Kafka mode)
 
-1. Configure environment variables (if needed):
-   ```bash
-   # Database connection
-   export DB_HOST=localhost
-   export DB_PORT=3306
-   export DB_USER=root
-   export DB_PASSWORD=your-password
-   export DB_NAME=employee_records
-   
-   # Security
-   export SECRET_KEY=your-secret-key
-   
-   # For Kafka mode
-   export KAFKA_BOOTSTRAP_SERVERS=localhost:9092
-   export KAFKA_TOPIC=employee-records
-   ```
+### 3. Run the Server
 
-2. Start the server:
-   ```bash
-   cd server
-   source env/bin/activate  # On Windows: env\Scripts\activate
-   python main.py
-   ```
+```bash
+cd server
+source env/bin/activate  # On Windows: env\Scripts\activate
+python main.py
+```
 
-#### Running the Client
+### 4. Run the Client
 
-1. In a separate terminal window, run the client:
-   ```bash
-   cd client
-   source env/bin/activate  # On Windows: env\Scripts\activate
-   
-   # HTTP mode
-   python main.py --file employee_data.csv --mode http
-   
-   # WebSocket mode
-   python main.py --file employee_data.csv --mode websocket
-   
-   # Kafka mode (requires Kafka server)
-   python main.py --file employee_data.csv --mode kafka
-   ```
+```bash
+cd client
+source env/bin/activate  # On Windows: env\Scripts\activate
 
-#### Client Command-Line Options
+# Using command-line options to specify the mode:
+python main.py --mode http     # HTTP mode
+python main.py --mode websocket  # WebSocket mode
+python main.py --mode kafka    # Kafka mode
+```
+
+## Docker Services Overview
+
+The Docker setup includes the following services:
+
+- **server**: FastAPI application that provides the API endpoints, WebSocket connection, and Kafka consumer
+- **client**: Python application that processes the CSV file and sends records to the server
+- **db**: MySQL database for storing employee records
+- **zookeeper**: Zookeeper service for Kafka
+- **kafka**: Kafka message broker for asynchronous communication
+
+## Running Specific Components
+
+```bash
+# Run just the server with database and messaging
+docker-compose up -d server db zookeeper kafka
+
+# Run just the client (with a specific mode)
+docker-compose up -d -e COMM_MODE=kafka client
+```
+
+## Client Command-Line Options
+
+When running the client manually, the following options are available:
 
 ```
 --file, -f        Path to CSV file with employee data (default: employee_data.csv)
@@ -111,73 +133,6 @@ deactivate
 --workers, -w     Number of concurrent workers (default: 10)
 --server, -s      Server URL (default: http://localhost:8000)
 --output, -o      Output file for failed records
-```
-
-### Docker Setup (Recommended)
-
-Run the complete system with Docker and Docker Compose:
-
-```bash
-# Build and start all services (server, client, database, kafka)
-docker-compose up -d --build
-
-# Check logs
-docker-compose logs -f
-
-# To run just the server components without the client
-docker-compose up -d --build server db zookeeper kafka
-
-# To run just the client with a specific mode
-docker-compose up -d --build client
-```
-
-#### Testing Different Communication Modes
-
-You can change the communication mode for the client in Docker by setting the COMM_MODE environment variable:
-
-```bash
-# For HTTP mode
-docker-compose up -d -e COMM_MODE=http client
-
-# For WebSocket mode
-docker-compose up -d -e COMM_MODE=websocket client 
-
-# For Kafka mode
-docker-compose up -d -e COMM_MODE=kafka client
-```
-
-## Communication Modes
-
-The client supports three communication protocols:
-
-### HTTP Mode
-- RESTful API communication
-- Standard request-response pattern
-- Ideal for most use cases
-- Run with: `python main.py --file employee_data.csv --mode http`
-
-### WebSocket Mode
-- Real-time bidirectional communication
-- Persistent connection
-- Great for streaming data
-- Run with: `python main.py --file employee_data.csv --mode websocket`
-
-### Kafka Mode
-- Message-based asynchronous communication
-- High throughput, resilient delivery
-- Excellent for distributed systems
-- Run with: `python main.py --file employee_data.csv --mode kafka`
-- Note: Requires a running Kafka server
-
-## Client Command-Line Options
-
-```
---file, -f        Path to CSV file with employee data
---mode, -m        Communication mode (http, websocket, kafka)
---batch-size, -b  Records per batch
---workers, -w     Concurrent worker count
---server, -s      Server URL
---output, -o      Failed records output file
 ```
 
 ## API Endpoints
@@ -191,11 +146,3 @@ The client supports three communication protocols:
 - `DELETE /api/employees/{id}`: Delete employee
 - `GET /api/employees/stats/department`: Get department statistics
 - `WebSocket /ws`: WebSocket connection for real-time data transmission
-
-## Performance Features
-
-- Batch processing with optimized batch sizes
-- Connection pooling for database efficiency
-- Controlled parallelism with semaphores
-- Async I/O for non-blocking operations
-- Exponential backoff for resilient connections
