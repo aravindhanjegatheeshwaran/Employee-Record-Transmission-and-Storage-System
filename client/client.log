@@ -2274,3 +2274,379 @@ RuntimeError: Session is closed
 2025-04-01 18:34:36,889 - employee_client - INFO - Cleaning up resources
 2025-04-01 18:34:36,891 - employee_client - INFO - Resources released
 2025-04-01 18:34:36,897 - __main__ - INFO - Process interrupted by user
+2025-04-01 18:43:08,129 - config - INFO - Configuration loaded: {
+  "SERVER_URL": "http://localhost:8000",
+  "COMM_MODE": "http",
+  "CSV_FILE_PATH": "./employee_data.csv",
+  "CSV_DELIMITER": ",",
+  "CSV_ENCODING": "utf-8",
+  "BATCH_SIZE": 50,
+  "MAX_RETRIES": 3,
+  "RETRY_DELAY": 1.0,
+  "TIMEOUT": 10.0,
+  "MAX_WORKERS": 10,
+  "KAFKA_BOOTSTRAP_SERVERS": "localhost:9092",
+  "KAFKA_TOPIC": "employee-records",
+  "WS_URL": "ws://localhost:8000/ws",
+  "AUTH_USERNAME": "admin"
+}
+2025-04-01 18:43:08,772 - __main__ - INFO - Starting transmission using http mode
+2025-04-01 18:43:08,774 - employee_client - INFO - Setting up CommunicationMode.HTTP client
+2025-04-01 18:43:08,774 - employee_client - INFO - Getting authentication token
+2025-04-01 18:43:09,582 - employee_client - INFO - Authentication successful
+2025-04-01 18:43:09,584 - employee_client - INFO - Client ready
+2025-04-01 18:43:09,584 - employee_client - INFO - Reading CSV file: ./employee_data.csv
+2025-04-01 18:43:09,687 - employee_client - INFO - Found 1000 employee records
+2025-04-01 18:43:09,692 - employee_client - INFO - Processing batch 1/20 (50 records)
+2025-04-01 18:43:09,694 - employee_client - INFO - Sending employee data: {'employee_id': 1, 'name': 'Jivin Sanghvi', 'email': 'jayeshsachdeva@rau-shetty.com', 'department': 'Admin', 'designation': 'HR Executive', 'salary': 1494496, 'date_of_joining': '2023-03-24'}
+2025-04-01 18:43:09,696 - employee_client - INFO - Sending employee data: {'employee_id': 2, 'name': 'Ryan Bala', 'email': 'dhanush10@hotmail.com', 'department': 'Admin', 'designation': 'Senior Software Engineer', 'salary': 981164, 'date_of_joining': '2017-01-31'}
+2025-04-01 18:43:09,697 - employee_client - INFO - Sending employee data: {'employee_id': 3, 'name': 'Miraan Chacko', 'email': 'ddave@gmail.com', 'department': 'R&D', 'designation': 'HR Executive', 'salary': 1289428, 'date_of_joining': '2020-10-26'}
+2025-04-01 18:43:09,699 - employee_client - INFO - Sending employee data: {'employee_id': 4, 'name': 'Zain Handa', 'email': 'gopalaaina@lall.com', 'department': 'Sales', 'designation': 'Marketing Specialist', 'salary': 1927130, 'date_of_joining': '2017-09-15'}
+2025-04-01 18:43:09,701 - employee_client - INFO - Sending employee data: {'employee_id': 5, 'name': 'Siya Kale', 'email': 'hariaarush@hotmail.com', 'department': 'HR', 'designation': 'Sales Executive', 'salary': 1223716, 'date_of_joining': '2017-09-03'}
+2025-04-01 18:43:09,702 - employee_client - INFO - Sending employee data: {'employee_id': 6, 'name': 'Charvi Kaur', 'email': 'shalvchandran@yahoo.com', 'department': 'Sales', 'designation': 'Finance Analyst', 'salary': 1612976, 'date_of_joining': '2018-04-16'}
+2025-04-01 18:43:09,703 - employee_client - INFO - Sending employee data: {'employee_id': 7, 'name': 'Aradhya Luthra', 'email': 'vasadivyansh@hotmail.com', 'department': 'IT', 'designation': 'Finance Analyst', 'salary': 1524128, 'date_of_joining': '2018-09-11'}
+2025-04-01 18:43:09,705 - employee_client - INFO - Sending employee data: {'employee_id': 8, 'name': 'Adah Borde', 'email': 'wagarwal@ranganathan.info', 'department': 'HR', 'designation': 'Finance Analyst', 'salary': 1537758, 'date_of_joining': '2015-11-16'}
+2025-04-01 18:43:09,706 - employee_client - INFO - Sending employee data: {'employee_id': 9, 'name': 'Lavanya Kalla', 'email': 'iloyal@yahoo.com', 'department': 'IT', 'designation': 'Marketing Specialist', 'salary': 1270886, 'date_of_joining': '2019-03-31'}
+2025-04-01 18:43:09,713 - employee_client - INFO - Sending employee data: {'employee_id': 10, 'name': 'Ranbir Ravi', 'email': 'hazel37@dalia.info', 'department': 'Engineering', 'designation': 'HR Executive', 'salary': 1403010, 'date_of_joining': '2018-01-01'}
+2025-04-01 18:43:09,742 - employee_client - ERROR - HTTP transmission error: API error 500: Internal Server Error
+2025-04-01 18:43:09,742 - utils - WARNING - Retry 1/3 after error: API error 500: Internal Server Error
+2025-04-01 18:43:09,818 - employee_client - ERROR - HTTP transmission error: API error 500: Internal Server Error
+2025-04-01 18:43:09,818 - utils - WARNING - Retry 1/3 after error: API error 500: Internal Server Error
+2025-04-01 18:43:09,851 - employee_client - ERROR - HTTP transmission error: API error 500: Internal Server Error
+2025-04-01 18:43:09,851 - utils - WARNING - Retry 1/3 after error: API error 500: Internal Server Error
+2025-04-01 18:43:09,884 - employee_client - ERROR - HTTP transmission error: API error 500: Internal Server Error
+2025-04-01 18:43:09,885 - utils - WARNING - Retry 1/3 after error: API error 500: Internal Server Error
+2025-04-01 18:43:09,917 - employee_client - ERROR - HTTP transmission error: API error 500: Internal Server Error
+2025-04-01 18:43:09,917 - utils - WARNING - Retry 1/3 after error: API error 500: Internal Server Error
+2025-04-01 18:43:09,955 - employee_client - ERROR - HTTP transmission error: API error 500: Internal Server Error
+2025-04-01 18:43:09,955 - utils - WARNING - Retry 1/3 after error: API error 500: Internal Server Error
+2025-04-01 18:43:10,019 - employee_client - ERROR - HTTP transmission error: API error 500: Internal Server Error
+2025-04-01 18:43:10,020 - utils - WARNING - Retry 1/3 after error: API error 500: Internal Server Error
+2025-04-01 18:43:10,054 - employee_client - ERROR - HTTP transmission error: API error 500: Internal Server Error
+2025-04-01 18:43:10,055 - utils - WARNING - Retry 1/3 after error: API error 500: Internal Server Error
+2025-04-01 18:43:10,089 - employee_client - ERROR - HTTP transmission error: API error 500: Internal Server Error
+2025-04-01 18:43:10,089 - utils - WARNING - Retry 1/3 after error: API error 500: Internal Server Error
+2025-04-01 18:43:10,126 - employee_client - ERROR - HTTP transmission error: API error 500: Internal Server Error
+2025-04-01 18:43:10,126 - utils - WARNING - Retry 1/3 after error: API error 500: Internal Server Error
+2025-04-01 18:43:10,745 - employee_client - INFO - Sending employee data: {'employee_id': 1, 'name': 'Jivin Sanghvi', 'email': 'jayeshsachdeva@rau-shetty.com', 'department': 'Admin', 'designation': 'HR Executive', 'salary': 1494496, 'date_of_joining': '2023-03-24'}
+2025-04-01 18:43:10,821 - employee_client - INFO - Sending employee data: {'employee_id': 4, 'name': 'Zain Handa', 'email': 'gopalaaina@lall.com', 'department': 'Sales', 'designation': 'Marketing Specialist', 'salary': 1927130, 'date_of_joining': '2017-09-15'}
+2025-04-01 18:43:10,832 - employee_client - ERROR - HTTP transmission error: API error 500: Internal Server Error
+2025-04-01 18:43:10,834 - utils - WARNING - Retry 2/3 after error: API error 500: Internal Server Error
+2025-04-01 18:43:10,863 - employee_client - INFO - Sending employee data: {'employee_id': 2, 'name': 'Ryan Bala', 'email': 'dhanush10@hotmail.com', 'department': 'Admin', 'designation': 'Senior Software Engineer', 'salary': 981164, 'date_of_joining': '2017-01-31'}
+2025-04-01 18:43:10,864 - employee_client - INFO - Sending employee data: {'employee_id': 6, 'name': 'Charvi Kaur', 'email': 'shalvchandran@yahoo.com', 'department': 'Sales', 'designation': 'Finance Analyst', 'salary': 1612976, 'date_of_joining': '2018-04-16'}
+2025-04-01 18:43:10,867 - employee_client - ERROR - HTTP transmission error: [WinError 10053] An established connection was aborted by the software in your host machine
+2025-04-01 18:43:10,868 - utils - WARNING - Retry 2/3 after error: [WinError 10053] An established connection was aborted by the software in your host machine
+2025-04-01 18:43:10,920 - employee_client - INFO - Sending employee data: {'employee_id': 10, 'name': 'Ranbir Ravi', 'email': 'hazel37@dalia.info', 'department': 'Engineering', 'designation': 'HR Executive', 'salary': 1403010, 'date_of_joining': '2018-01-01'}
+2025-04-01 18:43:10,935 - employee_client - INFO - Sending employee data: {'employee_id': 8, 'name': 'Adah Borde', 'email': 'wagarwal@ranganathan.info', 'department': 'HR', 'designation': 'Finance Analyst', 'salary': 1537758, 'date_of_joining': '2015-11-16'}
+2025-04-01 18:43:10,958 - employee_client - ERROR - HTTP transmission error: API error 500: Internal Server Error
+2025-04-01 18:43:10,958 - utils - WARNING - Retry 2/3 after error: API error 500: Internal Server Error
+2025-04-01 18:43:10,997 - employee_client - ERROR - HTTP transmission error: API error 500: Internal Server Error
+2025-04-01 18:43:10,997 - utils - WARNING - Retry 2/3 after error: API error 500: Internal Server Error
+2025-04-01 18:43:11,024 - employee_client - INFO - Sending employee data: {'employee_id': 7, 'name': 'Aradhya Luthra', 'email': 'vasadivyansh@hotmail.com', 'department': 'IT', 'designation': 'Finance Analyst', 'salary': 1524128, 'date_of_joining': '2018-09-11'}
+2025-04-01 18:43:11,029 - employee_client - ERROR - HTTP transmission error: [WinError 64] The specified network name is no longer available
+2025-04-01 18:43:11,031 - utils - WARNING - Retry 2/3 after error: [WinError 64] The specified network name is no longer available
+2025-04-01 18:43:11,049 - employee_client - INFO - Sending employee data: {'employee_id': 9, 'name': 'Lavanya Kalla', 'email': 'iloyal@yahoo.com', 'department': 'IT', 'designation': 'Marketing Specialist', 'salary': 1270886, 'date_of_joining': '2019-03-31'}
+2025-04-01 18:43:11,055 - employee_client - ERROR - HTTP transmission error: API error 500: Internal Server Error
+2025-04-01 18:43:11,060 - utils - WARNING - Retry 2/3 after error: API error 500: Internal Server Error
+2025-04-01 18:43:11,079 - employee_client - INFO - Sending employee data: {'employee_id': 3, 'name': 'Miraan Chacko', 'email': 'ddave@gmail.com', 'department': 'R&D', 'designation': 'HR Executive', 'salary': 1289428, 'date_of_joining': '2020-10-26'}
+2025-04-01 18:43:11,088 - employee_client - ERROR - HTTP transmission error: [WinError 64] The specified network name is no longer available
+2025-04-01 18:43:11,088 - utils - WARNING - Retry 2/3 after error: [WinError 64] The specified network name is no longer available
+2025-04-01 18:43:11,137 - employee_client - INFO - Sending employee data: {'employee_id': 5, 'name': 'Siya Kale', 'email': 'hariaarush@hotmail.com', 'department': 'HR', 'designation': 'Sales Executive', 'salary': 1223716, 'date_of_joining': '2017-09-03'}
+2025-04-01 18:43:11,147 - employee_client - ERROR - HTTP transmission error: API error 500: Internal Server Error
+2025-04-01 18:43:11,147 - utils - WARNING - Retry 2/3 after error: API error 500: Internal Server Error
+2025-04-01 18:43:11,212 - employee_client - ERROR - HTTP transmission error: API error 500: Internal Server Error
+2025-04-01 18:43:11,212 - utils - WARNING - Retry 2/3 after error: API error 500: Internal Server Error
+2025-04-01 18:43:11,282 - employee_client - INFO - Cleaning up resources
+2025-04-01 18:43:11,282 - employee_client - INFO - Resources released
+2025-04-01 18:43:11,290 - __main__ - INFO - Process interrupted by user
+2025-04-01 18:47:31,987 - config - INFO - Configuration loaded: {
+  "SERVER_URL": "http://localhost:8000",
+  "COMM_MODE": "http",
+  "CSV_FILE_PATH": "./employee_data.csv",
+  "CSV_DELIMITER": ",",
+  "CSV_ENCODING": "utf-8",
+  "BATCH_SIZE": 50,
+  "MAX_RETRIES": 3,
+  "RETRY_DELAY": 1.0,
+  "TIMEOUT": 10.0,
+  "MAX_WORKERS": 10,
+  "KAFKA_BOOTSTRAP_SERVERS": "localhost:9092",
+  "KAFKA_TOPIC": "employee-records",
+  "WS_URL": "ws://localhost:8000/ws",
+  "AUTH_USERNAME": "admin"
+}
+2025-04-01 18:47:32,479 - __main__ - INFO - Starting transmission using http mode
+2025-04-01 18:47:32,480 - employee_client - INFO - Setting up CommunicationMode.HTTP client
+2025-04-01 18:47:32,481 - employee_client - INFO - Getting authentication token
+2025-04-01 18:47:33,182 - employee_client - INFO - Authentication successful
+2025-04-01 18:47:33,182 - employee_client - INFO - Client ready
+2025-04-01 18:47:33,182 - employee_client - INFO - Reading CSV file: ./employee_data.csv
+2025-04-01 18:47:33,220 - employee_client - INFO - Found 1000 employee records
+2025-04-01 18:47:33,221 - employee_client - INFO - Processing batch 1/20 (50 records)
+2025-04-01 18:47:33,221 - employee_client - INFO - Sending employee data: {'employee_id': 1, 'name': 'Jivin Sanghvi', 'email': 'jayeshsachdeva@rau-shetty.com', 'department': 'Admin', 'designation': 'HR Executive', 'salary': 1494496, 'date_of_joining': '2023-03-24'}
+2025-04-01 18:47:33,222 - employee_client - INFO - Sending employee data: {'employee_id': 2, 'name': 'Ryan Bala', 'email': 'dhanush10@hotmail.com', 'department': 'Admin', 'designation': 'Senior Software Engineer', 'salary': 981164, 'date_of_joining': '2017-01-31'}
+2025-04-01 18:47:33,223 - employee_client - INFO - Sending employee data: {'employee_id': 3, 'name': 'Miraan Chacko', 'email': 'ddave@gmail.com', 'department': 'R&D', 'designation': 'HR Executive', 'salary': 1289428, 'date_of_joining': '2020-10-26'}
+2025-04-01 18:47:33,224 - employee_client - INFO - Sending employee data: {'employee_id': 4, 'name': 'Zain Handa', 'email': 'gopalaaina@lall.com', 'department': 'Sales', 'designation': 'Marketing Specialist', 'salary': 1927130, 'date_of_joining': '2017-09-15'}
+2025-04-01 18:47:33,225 - employee_client - INFO - Sending employee data: {'employee_id': 5, 'name': 'Siya Kale', 'email': 'hariaarush@hotmail.com', 'department': 'HR', 'designation': 'Sales Executive', 'salary': 1223716, 'date_of_joining': '2017-09-03'}
+2025-04-01 18:47:33,227 - employee_client - INFO - Sending employee data: {'employee_id': 6, 'name': 'Charvi Kaur', 'email': 'shalvchandran@yahoo.com', 'department': 'Sales', 'designation': 'Finance Analyst', 'salary': 1612976, 'date_of_joining': '2018-04-16'}
+2025-04-01 18:47:33,227 - employee_client - INFO - Sending employee data: {'employee_id': 7, 'name': 'Aradhya Luthra', 'email': 'vasadivyansh@hotmail.com', 'department': 'IT', 'designation': 'Finance Analyst', 'salary': 1524128, 'date_of_joining': '2018-09-11'}
+2025-04-01 18:47:33,228 - employee_client - INFO - Sending employee data: {'employee_id': 8, 'name': 'Adah Borde', 'email': 'wagarwal@ranganathan.info', 'department': 'HR', 'designation': 'Finance Analyst', 'salary': 1537758, 'date_of_joining': '2015-11-16'}
+2025-04-01 18:47:33,229 - employee_client - INFO - Sending employee data: {'employee_id': 9, 'name': 'Lavanya Kalla', 'email': 'iloyal@yahoo.com', 'department': 'IT', 'designation': 'Marketing Specialist', 'salary': 1270886, 'date_of_joining': '2019-03-31'}
+2025-04-01 18:47:33,230 - employee_client - INFO - Sending employee data: {'employee_id': 10, 'name': 'Ranbir Ravi', 'email': 'hazel37@dalia.info', 'department': 'Engineering', 'designation': 'HR Executive', 'salary': 1403010, 'date_of_joining': '2018-01-01'}
+2025-04-01 18:47:33,534 - utils - INFO - send_employee_http completed in 0.3139s
+2025-04-01 18:47:33,535 - employee_client - INFO - Sending employee data: {'employee_id': 11, 'name': 'Umang Mani', 'email': 'pdara@gmail.com', 'department': 'Operations', 'designation': 'Software Engineer', 'salary': 1746054, 'date_of_joining': '2019-07-27'}
+2025-04-01 18:47:33,538 - utils - INFO - send_employee_http completed in 0.3167s
+2025-04-01 18:47:33,540 - employee_client - INFO - Sending employee data: {'employee_id': 12, 'name': 'Renee Kannan', 'email': 'kalemannat@sagar.com', 'department': 'HR', 'designation': 'Senior Software Engineer', 'salary': 323342, 'date_of_joining': '2024-01-11'}
+2025-04-01 18:47:33,543 - utils - INFO - send_employee_http completed in 0.3121s
+2025-04-01 18:47:33,545 - employee_client - INFO - Sending employee data: {'employee_id': 13, 'name': 'Nitara Borde', 'email': 'priyanshsinha@yahoo.com', 'department': 'Operations', 'designation': 'Senior Software Engineer', 'salary': 661509, 'date_of_joining': '2022-03-12'}
+2025-04-01 18:47:33,546 - utils - INFO - send_employee_http completed in 0.3189s
+2025-04-01 18:47:33,547 - employee_client - INFO - Sending employee data: {'employee_id': 14, 'name': 'Jayant Bir', 'email': 'neysaghosh@arya.com', 'department': 'IT', 'designation': 'Senior Software Engineer', 'salary': 1629811, 'date_of_joining': '2020-08-28'}
+2025-04-01 18:47:33,581 - utils - INFO - send_employee_http completed in 0.3515s
+2025-04-01 18:47:33,581 - employee_client - INFO - Sending employee data: {'employee_id': 15, 'name': 'Taran Sarna', 'email': 'fbhandari@wagle.com', 'department': 'HR', 'designation': 'Manager', 'salary': 1522595, 'date_of_joining': '2019-06-05'}
+2025-04-01 18:47:33,584 - utils - INFO - send_employee_http completed in 0.3598s
+2025-04-01 18:47:33,596 - employee_client - INFO - Sending employee data: {'employee_id': 16, 'name': 'Zara Varma', 'email': 'gatik74@sachar.com', 'department': 'R&D', 'designation': 'Manager', 'salary': 1156750, 'date_of_joining': '2025-01-29'}
+2025-04-01 18:47:33,670 - utils - INFO - send_employee_http completed in 0.4434s
+2025-04-01 18:47:33,671 - employee_client - INFO - Sending employee data: {'employee_id': 17, 'name': 'Zara Sankaran', 'email': 'yramachandran@sur.biz', 'department': 'Engineering', 'designation': 'Admin Assistant', 'salary': 1244948, 'date_of_joining': '2018-10-26'}
+2025-04-01 18:47:33,674 - utils - INFO - send_employee_http completed in 0.4482s
+2025-04-01 18:47:33,675 - employee_client - INFO - Sending employee data: {'employee_id': 18, 'name': 'Jayan Ganesh', 'email': 'veerdugal@dugar.com', 'department': 'R&D', 'designation': 'Software Engineer', 'salary': 737680, 'date_of_joining': '2023-07-18'}
+2025-04-01 18:47:33,675 - utils - INFO - send_employee_http completed in 0.4454s
+2025-04-01 18:47:33,675 - employee_client - INFO - Sending employee data: {'employee_id': 19, 'name': 'Kiaan Chaudhary', 'email': 'yasminraja@yahoo.com', 'department': 'Admin', 'designation': 'Admin Assistant', 'salary': 323512, 'date_of_joining': '2022-04-14'}
+2025-04-01 18:47:33,675 - utils - INFO - send_employee_http completed in 0.4516s
+2025-04-01 18:47:33,675 - employee_client - INFO - Sending employee data: {'employee_id': 20, 'name': 'Zeeshan Bera', 'email': 'adira60@kamdar.net', 'department': 'Engineering', 'designation': 'Senior Software Engineer', 'salary': 332423, 'date_of_joining': '2016-03-13'}
+2025-04-01 18:47:34,998 - utils - INFO - send_employee_http completed in 1.4627s
+2025-04-01 18:47:35,000 - employee_client - INFO - Sending employee data: {'employee_id': 21, 'name': 'Adah Sastry', 'email': 'rajmadhup@ganesh.com', 'department': 'Admin', 'designation': 'Operations Manager', 'salary': 1223521, 'date_of_joining': '2020-03-17'}
+2025-04-01 18:47:36,927 - utils - INFO - send_employee_http completed in 3.2522s
+2025-04-01 18:47:36,927 - employee_client - INFO - Sending employee data: {'employee_id': 22, 'name': 'Shlok Sane', 'email': 'grovermohanlal@mannan.info', 'department': 'Support', 'designation': 'Team Lead', 'salary': 1280281, 'date_of_joining': '2017-11-24'}
+2025-04-01 18:47:36,929 - utils - INFO - send_employee_http completed in 1.9286s
+2025-04-01 18:47:36,930 - utils - INFO - send_employee_http completed in 3.3853s
+2025-04-01 18:47:36,930 - employee_client - INFO - Sending employee data: {'employee_id': 23, 'name': 'Fateh Badami', 'email': 'zarabatra@walla.net', 'department': 'HR', 'designation': 'Software Engineer', 'salary': 566676, 'date_of_joining': '2021-05-02'}
+2025-04-01 18:47:36,932 - employee_client - INFO - Sending employee data: {'employee_id': 24, 'name': 'Indrajit Sheth', 'email': 'tchana@tara.com', 'department': 'Support', 'designation': 'Team Lead', 'salary': 919280, 'date_of_joining': '2020-08-06'}
+2025-04-01 18:47:36,933 - utils - INFO - send_employee_http completed in 3.3863s
+2025-04-01 18:47:36,933 - employee_client - INFO - Sending employee data: {'employee_id': 25, 'name': 'Anahi Mann', 'email': 'sanghajiya@gmail.com', 'department': 'Support', 'designation': 'Team Lead', 'salary': 1084532, 'date_of_joining': '2018-09-25'}
+2025-04-01 18:47:36,938 - utils - INFO - send_employee_http completed in 3.3987s
+2025-04-01 18:47:36,939 - employee_client - INFO - Sending employee data: {'employee_id': 26, 'name': 'Stuvan Raj', 'email': 'shray81@deo.com', 'department': 'IT', 'designation': 'Senior Software Engineer', 'salary': 900984, 'date_of_joining': '2016-12-07'}
+2025-04-01 18:47:36,941 - utils - INFO - send_employee_http completed in 3.3605s
+2025-04-01 18:47:36,941 - employee_client - INFO - Sending employee data: {'employee_id': 27, 'name': 'Purab Bhardwaj', 'email': 'tsinghal@gmail.com', 'department': 'Engineering', 'designation': 'Senior Software Engineer', 'salary': 1060909, 'date_of_joining': '2021-11-13'}
+2025-04-01 18:47:36,946 - utils - INFO - send_employee_http completed in 3.2744s
+2025-04-01 18:47:36,947 - employee_client - INFO - Sending employee data: {'employee_id': 28, 'name': 'Siya Date', 'email': 'devanshchad@mander-sangha.info', 'department': 'Admin', 'designation': 'Admin Assistant', 'salary': 403613, 'date_of_joining': '2018-06-09'}
+2025-04-01 18:47:36,948 - utils - INFO - send_employee_http completed in 3.2731s
+2025-04-01 18:47:36,950 - utils - INFO - send_employee_http completed in 3.3535s
+2025-04-01 18:47:36,950 - employee_client - INFO - Sending employee data: {'employee_id': 29, 'name': 'Kashvi Wadhwa', 'email': 'sluthra@salvi.biz', 'department': 'Finance', 'designation': 'Marketing Specialist', 'salary': 1971565, 'date_of_joining': '2020-10-03'}
+2025-04-01 18:47:36,950 - employee_client - INFO - Sending employee data: {'employee_id': 30, 'name': 'Gokul Mandal', 'email': 'raghav82@yahoo.com', 'department': 'Sales', 'designation': 'Operations Manager', 'salary': 1359900, 'date_of_joining': '2018-07-15'}
+2025-04-01 18:47:36,959 - utils - INFO - send_employee_http completed in 3.2845s
+2025-04-01 18:47:36,960 - employee_client - INFO - Sending employee data: {'employee_id': 31, 'name': 'Umang Lalla', 'email': 'shlok61@balay.com', 'department': 'Support', 'designation': 'Manager', 'salary': 347781, 'date_of_joining': '2018-10-14'}
+2025-04-01 18:47:37,588 - utils - INFO - send_employee_http completed in 0.6604s
+2025-04-01 18:47:37,588 - employee_client - INFO - Sending employee data: {'employee_id': 32, 'name': 'Jivin Bandi', 'email': 'seher48@hotmail.com', 'department': 'Finance', 'designation': 'Team Lead', 'salary': 1433467, 'date_of_joining': '2016-09-10'}
+2025-04-01 18:47:38,001 - utils - INFO - send_employee_http completed in 1.0540s
+2025-04-01 18:47:38,001 - employee_client - INFO - Sending employee data: {'employee_id': 33, 'name': 'Faiyaz Dugal', 'email': 'samilavanya@hotmail.com', 'department': 'HR', 'designation': 'Marketing Specialist', 'salary': 538978, 'date_of_joining': '2015-08-03'}
+2025-04-01 18:47:38,013 - utils - INFO - send_employee_http completed in 1.0818s
+2025-04-01 18:47:38,014 - employee_client - INFO - Sending employee data: {'employee_id': 34, 'name': 'Ehsaan Sabharwal', 'email': 'psrivastava@gmail.com', 'department': 'HR', 'designation': 'Admin Assistant', 'salary': 589652, 'date_of_joining': '2018-03-18'}
+2025-04-01 18:47:38,016 - utils - INFO - send_employee_http completed in 1.0859s
+2025-04-01 18:47:38,017 - employee_client - INFO - Sending employee data: {'employee_id': 35, 'name': 'Vihaan Chakrabarti', 'email': 'skeer@hotmail.com', 'department': 'Marketing', 'designation': 'Software Engineer', 'salary': 1824108, 'date_of_joining': '2020-01-28'}
+2025-04-01 18:47:38,028 - utils - INFO - send_employee_http completed in 1.0949s
+2025-04-01 18:47:38,029 - employee_client - INFO - Sending employee data: {'employee_id': 36, 'name': 'Faiyaz Edwin', 'email': 'ladveer@dora.com', 'department': 'Marketing', 'designation': 'Sales Executive', 'salary': 1844480, 'date_of_joining': '2016-02-09'}
+2025-04-01 18:47:38,031 - utils - INFO - send_employee_http completed in 1.0808s
+2025-04-01 18:47:38,031 - utils - INFO - send_employee_http completed in 1.0808s
+2025-04-01 18:47:38,031 - employee_client - INFO - Sending employee data: {'employee_id': 37, 'name': 'Jiya Lad', 'email': 'adira54@vig.org', 'department': 'Admin', 'designation': 'Software Engineer', 'salary': 780667, 'date_of_joining': '2020-04-12'}
+2025-04-01 18:47:38,033 - employee_client - INFO - Sending employee data: {'employee_id': 38, 'name': 'Dhanush Dua', 'email': 'dhawanpranay@yahoo.com', 'department': 'Operations', 'designation': 'Team Lead', 'salary': 1755100, 'date_of_joining': '2019-01-22'}
+2025-04-01 18:47:38,043 - utils - INFO - send_employee_http completed in 1.1041s
+2025-04-01 18:47:38,044 - employee_client - INFO - Sending employee data: {'employee_id': 39, 'name': 'Sana Madan', 'email': 'dattakimaya@hotmail.com', 'department': 'Admin', 'designation': 'Manager', 'salary': 1075528, 'date_of_joining': '2015-02-24'}
+2025-04-01 18:47:38,046 - utils - INFO - send_employee_http completed in 1.1043s
+2025-04-01 18:47:38,047 - employee_client - INFO - Sending employee data: {'employee_id': 40, 'name': 'Aaryahi Bajwa', 'email': 'madhupsaini@yahoo.com', 'department': 'R&D', 'designation': 'Marketing Specialist', 'salary': 1285566, 'date_of_joining': '2015-03-08'}
+2025-04-01 18:47:38,057 - utils - INFO - send_employee_http completed in 1.0972s
+2025-04-01 18:47:38,058 - employee_client - INFO - Sending employee data: {'employee_id': 41, 'name': 'Rhea Gupta', 'email': 'elanka@mahal-khalsa.com', 'department': 'Marketing', 'designation': 'Operations Manager', 'salary': 637393, 'date_of_joining': '2016-09-18'}
+2025-04-01 18:47:38,204 - utils - INFO - send_employee_http completed in 0.6161s
+2025-04-01 18:47:38,205 - employee_client - INFO - Sending employee data: {'employee_id': 42, 'name': 'Amira Buch', 'email': 'dugalhazel@sundaram.com', 'department': 'IT', 'designation': 'Admin Assistant', 'salary': 1600019, 'date_of_joining': '2023-03-04'}
+2025-04-01 18:47:38,772 - utils - INFO - send_employee_http completed in 0.7710s
+2025-04-01 18:47:38,773 - employee_client - INFO - Sending employee data: {'employee_id': 43, 'name': 'Jivin Din', 'email': 'mehulhegde@yahoo.com', 'department': 'IT', 'designation': 'Finance Analyst', 'salary': 790188, 'date_of_joining': '2019-01-10'}
+2025-04-01 18:47:39,029 - utils - INFO - send_employee_http completed in 0.9846s
+2025-04-01 18:47:39,029 - employee_client - INFO - Sending employee data: {'employee_id': 44, 'name': 'Anya Chaudhary', 'email': 'qyadav@hotmail.com', 'department': 'Operations', 'designation': 'Finance Analyst', 'salary': 1947631, 'date_of_joining': '2025-01-29'}
+2025-04-01 18:47:39,031 - utils - INFO - send_employee_http completed in 1.0135s
+2025-04-01 18:47:39,031 - employee_client - INFO - Sending employee data: {'employee_id': 45, 'name': 'Yuvaan Warrior', 'email': 'rhea53@badal.com', 'department': 'IT', 'designation': 'Finance Analyst', 'salary': 815534, 'date_of_joining': '2016-07-26'}
+2025-04-01 18:47:39,033 - utils - INFO - send_employee_http completed in 1.0183s
+2025-04-01 18:47:39,033 - utils - INFO - send_employee_http completed in 0.8279s
+2025-04-01 18:47:39,033 - employee_client - INFO - Sending employee data: {'employee_id': 46, 'name': 'Priyansh Khurana', 'email': 'rwagle@hotmail.com', 'department': 'HR', 'designation': 'Software Engineer', 'salary': 1922706, 'date_of_joining': '2018-12-08'}
+2025-04-01 18:47:39,034 - employee_client - INFO - Sending employee data: {'employee_id': 47, 'name': 'Alia Talwar', 'email': 'trivedirati@hotmail.com', 'department': 'Admin', 'designation': 'Finance Analyst', 'salary': 1980541, 'date_of_joining': '2022-04-21'}
+2025-04-01 18:47:39,040 - utils - INFO - send_employee_http completed in 1.0098s
+2025-04-01 18:47:39,046 - employee_client - INFO - Sending employee data: {'employee_id': 48, 'name': 'Sahil Batra', 'email': 'gatikthakkar@korpal.net', 'department': 'Support', 'designation': 'Software Engineer', 'salary': 1359593, 'date_of_joining': '2022-03-23'}
+2025-04-01 18:47:39,065 - utils - INFO - send_employee_http completed in 1.0180s
+2025-04-01 18:47:39,065 - employee_client - INFO - Sending employee data: {'employee_id': 49, 'name': 'Onkar Basak', 'email': 'sulechirag@hotmail.com', 'department': 'Engineering', 'designation': 'Software Engineer', 'salary': 639065, 'date_of_joining': '2016-07-14'}
+2025-04-01 18:47:39,067 - utils - INFO - send_employee_http completed in 1.0090s
+2025-04-01 18:47:39,067 - employee_client - INFO - Sending employee data: {'employee_id': 50, 'name': 'Farhan Boase', 'email': 'ezacharia@yahoo.com', 'department': 'Sales', 'designation': 'Finance Analyst', 'salary': 1185046, 'date_of_joining': '2016-09-10'}
+2025-04-01 18:47:39,067 - utils - INFO - send_employee_http completed in 1.0343s
+2025-04-01 18:47:39,071 - utils - INFO - send_employee_http completed in 1.0421s
+2025-04-01 18:47:39,294 - utils - INFO - send_employee_http completed in 0.5215s
+2025-04-01 18:47:39,498 - utils - INFO - send_employee_http completed in 0.4652s
+2025-04-01 18:47:39,499 - utils - INFO - send_employee_http completed in 0.4533s
+2025-04-01 18:47:39,500 - utils - INFO - send_employee_http completed in 0.4710s
+2025-04-01 18:47:39,504 - utils - INFO - send_employee_http completed in 0.4691s
+2025-04-01 18:47:39,507 - utils - INFO - send_employee_http completed in 0.4760s
+2025-04-01 18:47:39,860 - utils - INFO - send_employee_http completed in 0.7931s
+2025-04-01 18:47:39,862 - utils - INFO - send_employee_http completed in 0.7969s
+2025-04-01 18:47:39,863 - employee_client - INFO - Batch 1 result: 50 ok, 0 failed
+2025-04-01 18:47:39,864 - employee_client - INFO - Processing batch 2/20 (50 records)
+2025-04-01 18:47:39,865 - employee_client - INFO - Sending employee data: {'employee_id': 51, 'name': 'Shray Reddy', 'email': 'sarmahazel@hotmail.com', 'department': 'Engineering', 'designation': 'Senior Software Engineer', 'salary': 557291, 'date_of_joining': '2020-11-16'}
+2025-04-01 18:47:39,867 - employee_client - INFO - Sending employee data: {'employee_id': 52, 'name': 'Rania Sarraf', 'email': 'gchakrabarti@ranganathan-kumer.com', 'department': 'IT', 'designation': 'Software Engineer', 'salary': 1021637, 'date_of_joining': '2024-03-10'}
+2025-04-01 18:47:39,869 - employee_client - INFO - Sending employee data: {'employee_id': 53, 'name': 'Kabir Kar', 'email': 'kotadamini@gmail.com', 'department': 'HR', 'designation': 'Sales Executive', 'salary': 828874, 'date_of_joining': '2022-12-02'}
+2025-04-01 18:47:39,870 - employee_client - INFO - Sending employee data: {'employee_id': 54, 'name': 'Lakshay Dugar', 'email': 'kjohal@kulkarni.com', 'department': 'Sales', 'designation': 'Team Lead', 'salary': 1385092, 'date_of_joining': '2019-08-06'}
+2025-04-01 18:47:39,871 - employee_client - INFO - Sending employee data: {'employee_id': 55, 'name': 'Kabir Raval', 'email': 'taran87@hotmail.com', 'department': 'Admin', 'designation': 'Operations Manager', 'salary': 550787, 'date_of_joining': '2025-01-18'}
+2025-04-01 18:47:39,872 - employee_client - INFO - Sending employee data: {'employee_id': 56, 'name': 'Vivaan Hegde', 'email': 'aniruddhbhalla@yahoo.com', 'department': 'Marketing', 'designation': 'Finance Analyst', 'salary': 667319, 'date_of_joining': '2023-01-01'}
+2025-04-01 18:47:39,874 - employee_client - INFO - Sending employee data: {'employee_id': 57, 'name': 'Ranbir Mallick', 'email': 'sanghaamani@yahoo.com', 'department': 'R&D', 'designation': 'Sales Executive', 'salary': 1038027, 'date_of_joining': '2021-05-06'}
+2025-04-01 18:47:39,874 - employee_client - INFO - Sending employee data: {'employee_id': 58, 'name': 'Inaaya  Sheth', 'email': 'fchand@gmail.com', 'department': 'Support', 'designation': 'Marketing Specialist', 'salary': 562764, 'date_of_joining': '2022-08-05'}
+2025-04-01 18:47:39,877 - employee_client - INFO - Sending employee data: {'employee_id': 59, 'name': 'Anahita Soni', 'email': 'hsane@yahoo.com', 'department': 'Engineering', 'designation': 'Senior Software Engineer', 'salary': 355786, 'date_of_joining': '2020-04-08'}
+2025-04-01 18:47:39,878 - employee_client - INFO - Sending employee data: {'employee_id': 60, 'name': 'Vritika Sunder', 'email': 'devansh44@yahoo.com', 'department': 'R&D', 'designation': 'HR Executive', 'salary': 1296289, 'date_of_joining': '2017-08-16'}
+2025-04-01 18:47:39,918 - utils - INFO - send_employee_http completed in 0.0507s
+2025-04-01 18:47:39,919 - employee_client - INFO - Sending employee data: {'employee_id': 61, 'name': 'Adira Sathe', 'email': 'sachdevkanav@hotmail.com', 'department': 'Admin', 'designation': 'Finance Analyst', 'salary': 1174225, 'date_of_joining': '2019-07-14'}
+2025-04-01 18:47:39,925 - utils - INFO - send_employee_http completed in 0.0603s
+2025-04-01 18:47:39,925 - employee_client - INFO - Sending employee data: {'employee_id': 62, 'name': 'Darshit Chanda', 'email': 'kagate@vaidya-setty.com', 'department': 'HR', 'designation': 'Admin Assistant', 'salary': 1578805, 'date_of_joining': '2024-11-20'}
+2025-04-01 18:47:40,168 - utils - INFO - send_employee_http completed in 0.2971s
+2025-04-01 18:47:40,170 - employee_client - INFO - Sending employee data: {'employee_id': 63, 'name': 'Madhav Devi', 'email': 'jloke@kale.biz', 'department': 'Finance', 'designation': 'Finance Analyst', 'salary': 391273, 'date_of_joining': '2015-11-07'}
+2025-04-01 18:47:40,175 - utils - INFO - send_employee_http completed in 0.3049s
+2025-04-01 18:47:40,176 - employee_client - INFO - Sending employee data: {'employee_id': 64, 'name': 'Shray Dugal', 'email': 'parinaaz41@bhardwaj-venkatesh.com', 'department': 'R&D', 'designation': 'Finance Analyst', 'salary': 1678206, 'date_of_joining': '2017-08-20'}
+2025-04-01 18:47:40,176 - utils - INFO - send_employee_http completed in 0.3070s
+2025-04-01 18:47:40,176 - utils - INFO - send_employee_http completed in 0.3034s
+2025-04-01 18:47:40,176 - employee_client - INFO - Sending employee data: {'employee_id': 65, 'name': 'Shayak Rastogi', 'email': 'semkanav@dube.com', 'department': 'Finance', 'designation': 'Team Lead', 'salary': 1078161, 'date_of_joining': '2015-11-17'}
+2025-04-01 18:47:40,176 - employee_client - INFO - Sending employee data: {'employee_id': 66, 'name': 'Kanav Dayal', 'email': 'neelofartank@hotmail.com', 'department': 'IT', 'designation': 'Manager', 'salary': 487648, 'date_of_joining': '2023-11-28'}
+2025-04-01 18:47:40,183 - utils - INFO - send_employee_http completed in 0.3082s
+2025-04-01 18:47:40,183 - employee_client - INFO - Sending employee data: {'employee_id': 67, 'name': 'Keya Dugal', 'email': 'trivediela@yahoo.com', 'department': 'IT', 'designation': 'HR Executive', 'salary': 1141392, 'date_of_joining': '2023-09-19'}
+2025-04-01 18:47:40,190 - utils - INFO - send_employee_http completed in 0.3152s
+2025-04-01 18:47:40,190 - employee_client - INFO - Sending employee data: {'employee_id': 68, 'name': 'Vardaniya Kannan', 'email': 'ritviksekhon@hotmail.com', 'department': 'IT', 'designation': 'Operations Manager', 'salary': 1527424, 'date_of_joining': '2022-03-16'}
+2025-04-01 18:47:40,260 - utils - INFO - send_employee_http completed in 0.3822s
+2025-04-01 18:47:40,260 - employee_client - INFO - Sending employee data: {'employee_id': 69, 'name': 'Ryan Saxena', 'email': 'varmahrishita@de.com', 'department': 'IT', 'designation': 'Sales Executive', 'salary': 887040, 'date_of_joining': '2019-11-30'}
+2025-04-01 18:47:40,532 - utils - INFO - send_employee_http completed in 0.6133s
+2025-04-01 18:47:40,533 - employee_client - INFO - Sending employee data: {'employee_id': 70, 'name': 'Divij Magar', 'email': 'kchadha@chakrabarti.info', 'department': 'Finance', 'designation': 'Software Engineer', 'salary': 1306389, 'date_of_joining': '2015-02-20'}
+2025-04-01 18:47:40,536 - utils - INFO - send_employee_http completed in 0.6582s
+2025-04-01 18:47:40,537 - employee_client - INFO - Sending employee data: {'employee_id': 71, 'name': 'Saanvi Mall', 'email': 'veerkaur@buch.org', 'department': 'Operations', 'designation': 'Finance Analyst', 'salary': 836461, 'date_of_joining': '2018-12-04'}
+2025-04-01 18:47:40,537 - utils - INFO - send_employee_http completed in 0.6119s
+2025-04-01 18:47:40,537 - employee_client - INFO - Sending employee data: {'employee_id': 72, 'name': 'Manikya Bedi', 'email': 'divij84@bali.com', 'department': 'Engineering', 'designation': 'HR Executive', 'salary': 1118791, 'date_of_joining': '2018-03-12'}
+2025-04-01 18:47:40,957 - utils - INFO - send_employee_http completed in 0.7817s
+2025-04-01 18:47:40,957 - employee_client - INFO - Sending employee data: {'employee_id': 73, 'name': 'Mohanlal Dash', 'email': 'wabletrisha@cherian.info', 'department': 'IT', 'designation': 'Manager', 'salary': 325920, 'date_of_joining': '2018-12-05'}
+2025-04-01 18:47:40,957 - utils - INFO - send_employee_http completed in 0.7817s
+2025-04-01 18:47:40,962 - employee_client - INFO - Sending employee data: {'employee_id': 74, 'name': 'Kismat Balay', 'email': 'pbhattacharyya@hotmail.com', 'department': 'Finance', 'designation': 'Marketing Specialist', 'salary': 1903514, 'date_of_joining': '2017-08-14'}
+2025-04-01 18:47:40,973 - utils - INFO - send_employee_http completed in 0.7975s
+2025-04-01 18:47:40,975 - employee_client - INFO - Sending employee data: {'employee_id': 75, 'name': 'Suhana Deshpande', 'email': 'nehmat44@gmail.com', 'department': 'HR', 'designation': 'Sales Executive', 'salary': 1188182, 'date_of_joining': '2022-02-15'}
+2025-04-01 18:47:40,983 - utils - INFO - send_employee_http completed in 0.7932s
+2025-04-01 18:47:40,983 - employee_client - INFO - Sending employee data: {'employee_id': 76, 'name': 'Ehsaan Sekhon', 'email': 'lcontractor@gmail.com', 'department': 'Finance', 'designation': 'Marketing Specialist', 'salary': 1228696, 'date_of_joining': '2018-02-14'}
+2025-04-01 18:47:40,999 - utils - INFO - send_employee_http completed in 0.8159s
+2025-04-01 18:47:41,000 - employee_client - INFO - Sending employee data: {'employee_id': 77, 'name': 'Aarav Shroff', 'email': 'vkhare@shah.com', 'department': 'HR', 'designation': 'Senior Software Engineer', 'salary': 1559135, 'date_of_joining': '2024-08-18'}
+2025-04-01 18:47:41,002 - utils - INFO - send_employee_http completed in 0.8319s
+2025-04-01 18:47:41,002 - employee_client - INFO - Sending employee data: {'employee_id': 78, 'name': 'Ritvik Saini', 'email': 'gangulyyakshit@yahoo.com', 'department': 'Operations', 'designation': 'Manager', 'salary': 820512, 'date_of_joining': '2016-03-17'}
+2025-04-01 18:47:41,002 - utils - INFO - send_employee_http completed in 0.7427s
+2025-04-01 18:47:41,002 - employee_client - INFO - Sending employee data: {'employee_id': 79, 'name': 'Fateh Deol', 'email': 'johalaarna@hotmail.com', 'department': 'Operations', 'designation': 'Finance Analyst', 'salary': 1936154, 'date_of_joining': '2016-08-08'}
+2025-04-01 18:47:41,193 - utils - INFO - send_employee_http completed in 0.6594s
+2025-04-01 18:47:41,193 - employee_client - INFO - Sending employee data: {'employee_id': 80, 'name': 'Vritika Sha', 'email': 'divitahluwalia@hotmail.com', 'department': 'Admin', 'designation': 'HR Executive', 'salary': 729717, 'date_of_joining': '2022-07-07'}
+2025-04-01 18:47:41,410 - utils - INFO - send_employee_http completed in 0.4530s
+2025-04-01 18:47:41,411 - employee_client - INFO - Sending employee data: {'employee_id': 81, 'name': 'Taimur Dhawan', 'email': 'tooraayush@yahoo.com', 'department': 'Engineering', 'designation': 'Marketing Specialist', 'salary': 1157923, 'date_of_joining': '2022-01-16'}
+2025-04-01 18:47:41,414 - utils - INFO - send_employee_http completed in 0.4114s
+2025-04-01 18:47:41,414 - employee_client - INFO - Sending employee data: {'employee_id': 82, 'name': 'Shanaya Dave', 'email': 'amirabhat@hotmail.com', 'department': 'Support', 'designation': 'Software Engineer', 'salary': 1754070, 'date_of_joining': '2021-04-28'}
+2025-04-01 18:47:41,421 - utils - INFO - send_employee_http completed in 0.4211s
+2025-04-01 18:47:41,422 - employee_client - INFO - Sending employee data: {'employee_id': 83, 'name': 'Oorja Sha', 'email': 'ritvikgrover@grover.com', 'department': 'Finance', 'designation': 'Senior Software Engineer', 'salary': 1208345, 'date_of_joining': '2022-01-28'}
+2025-04-01 18:47:41,424 - utils - INFO - send_employee_http completed in 0.4410s
+2025-04-01 18:47:41,425 - utils - INFO - send_employee_http completed in 0.4634s
+2025-04-01 18:47:41,426 - utils - INFO - send_employee_http completed in 0.4511s
+2025-04-01 18:47:41,426 - utils - INFO - send_employee_http completed in 0.8886s
+2025-04-01 18:47:41,426 - employee_client - INFO - Sending employee data: {'employee_id': 84, 'name': 'Veer Dewan', 'email': 'elagaba@hotmail.com', 'department': 'Marketing', 'designation': 'Team Lead', 'salary': 1926181, 'date_of_joining': '2019-05-08'}
+2025-04-01 18:47:41,430 - employee_client - INFO - Sending employee data: {'employee_id': 85, 'name': 'Anaya Tak', 'email': 'arnav76@gmail.com', 'department': 'HR', 'designation': 'Software Engineer', 'salary': 1298050, 'date_of_joining': '2023-02-03'}
+2025-04-01 18:47:41,430 - employee_client - INFO - Sending employee data: {'employee_id': 86, 'name': 'Mahika Rajan', 'email': 'sairasharma@yahoo.com', 'department': 'Marketing', 'designation': 'Operations Manager', 'salary': 899864, 'date_of_joining': '2018-02-21'}
+2025-04-01 18:47:41,433 - employee_client - INFO - Sending employee data: {'employee_id': 87, 'name': 'Yakshit Kota', 'email': 'riaan17@hotmail.com', 'department': 'R&D', 'designation': 'Operations Manager', 'salary': 1126914, 'date_of_joining': '2019-04-29'}
+2025-04-01 18:47:41,435 - utils - INFO - send_employee_http completed in 0.8980s
+2025-04-01 18:47:41,436 - employee_client - INFO - Sending employee data: {'employee_id': 88, 'name': 'Taimur Chhabra', 'email': 'reyansh64@gmail.com', 'department': 'Operations', 'designation': 'Team Lead', 'salary': 603571, 'date_of_joining': '2018-05-12'}
+2025-04-01 18:47:41,437 - utils - INFO - send_employee_http completed in 0.4351s
+2025-04-01 18:47:41,440 - employee_client - INFO - Sending employee data: {'employee_id': 89, 'name': 'Ojas Chacko', 'email': 'urvi06@yahoo.com', 'department': 'Finance', 'designation': 'Marketing Specialist', 'salary': 1266224, 'date_of_joining': '2015-02-21'}
+2025-04-01 18:47:41,826 - utils - INFO - send_employee_http completed in 0.6330s
+2025-04-01 18:47:41,827 - employee_client - INFO - Sending employee data: {'employee_id': 90, 'name': 'Shalv Shan', 'email': 'zeeshanmammen@hotmail.com', 'department': 'Operations', 'designation': 'Marketing Specialist', 'salary': 1828253, 'date_of_joining': '2017-11-21'}
+2025-04-01 18:47:42,071 - utils - INFO - send_employee_http completed in 0.6572s
+2025-04-01 18:47:42,071 - employee_client - INFO - Sending employee data: {'employee_id': 91, 'name': 'Inaaya  Khanna', 'email': 'svirk@yahoo.com', 'department': 'Sales', 'designation': 'HR Executive', 'salary': 1685210, 'date_of_joining': '2020-01-04'}
+2025-04-01 18:47:42,071 - utils - INFO - send_employee_http completed in 0.6490s
+2025-04-01 18:47:42,071 - employee_client - INFO - Sending employee data: {'employee_id': 92, 'name': 'Pihu Saha', 'email': 'jayant91@gmail.com', 'department': 'Support', 'designation': 'Senior Software Engineer', 'salary': 1997285, 'date_of_joining': '2016-04-13'}
+2025-04-01 18:47:42,083 - utils - INFO - send_employee_http completed in 0.6714s
+2025-04-01 18:47:42,083 - employee_client - INFO - Sending employee data: {'employee_id': 93, 'name': 'Saanvi Chaudry', 'email': 'regelagan@sami-arora.org', 'department': 'Admin', 'designation': 'Senior Software Engineer', 'salary': 1277622, 'date_of_joining': '2018-06-21'}
+2025-04-01 18:47:42,084 - utils - INFO - send_employee_http completed in 0.6587s
+2025-04-01 18:47:42,084 - employee_client - INFO - Sending employee data: {'employee_id': 94, 'name': 'Madhup Ravi', 'email': 'kohliindrajit@din.com', 'department': 'Admin', 'designation': 'Admin Assistant', 'salary': 1864098, 'date_of_joining': '2023-07-10'}
+2025-04-01 18:47:42,087 - utils - INFO - send_employee_http completed in 0.6575s
+2025-04-01 18:47:42,087 - utils - INFO - send_employee_http completed in 0.6466s
+2025-04-01 18:47:42,089 - employee_client - INFO - Sending employee data: {'employee_id': 95, 'name': 'Abram Datta', 'email': 'mastershayak@gmail.com', 'department': 'Sales', 'designation': 'HR Executive', 'salary': 1228302, 'date_of_joining': '2017-08-21'}
+2025-04-01 18:47:42,089 - employee_client - INFO - Sending employee data: {'employee_id': 96, 'name': 'Azad Dyal', 'email': 'zain42@chaudhry-singh.info', 'department': 'Finance', 'designation': 'Team Lead', 'salary': 1195540, 'date_of_joining': '2023-03-07'}
+2025-04-01 18:47:42,093 - utils - INFO - send_employee_http completed in 0.6639s
+2025-04-01 18:47:42,097 - employee_client - INFO - Sending employee data: {'employee_id': 97, 'name': 'Onkar Mahajan', 'email': 'kimayabakshi@hotmail.com', 'department': 'IT', 'designation': 'Team Lead', 'salary': 448613, 'date_of_joining': '2022-08-01'}
+2025-04-01 18:47:42,099 - utils - INFO - send_employee_http completed in 0.6637s
+2025-04-01 18:47:42,099 - employee_client - INFO - Sending employee data: {'employee_id': 98, 'name': 'Yashvi Kala', 'email': 'bhattacharyyayuvraj@jaggi-shenoy.com', 'department': 'Sales', 'designation': 'Software Engineer', 'salary': 967450, 'date_of_joining': '2017-06-24'}
+2025-04-01 18:47:42,102 - utils - INFO - send_employee_http completed in 0.6698s
+2025-04-01 18:47:42,103 - employee_client - INFO - Sending employee data: {'employee_id': 99, 'name': 'Hunar Keer', 'email': 'ranialal@rajagopal-devi.net', 'department': 'Admin', 'designation': 'Senior Software Engineer', 'salary': 415547, 'date_of_joining': '2017-12-17'}
+2025-04-01 18:47:42,350 - utils - INFO - send_employee_http completed in 0.5235s
+2025-04-01 18:47:42,350 - employee_client - INFO - Sending employee data: {'employee_id': 100, 'name': 'Neelofar Handa', 'email': 'yasmingola@yahoo.com', 'department': 'Operations', 'designation': 'Team Lead', 'salary': 1553873, 'date_of_joining': '2018-11-09'}
+2025-04-01 18:47:42,560 - utils - INFO - send_employee_http completed in 0.4621s
+2025-04-01 18:47:42,610 - utils - INFO - send_employee_http completed in 0.5388s
+2025-04-01 18:47:42,614 - utils - INFO - send_employee_http completed in 0.5427s
+2025-04-01 18:47:42,615 - utils - INFO - send_employee_http completed in 0.5122s
+2025-04-01 18:47:42,615 - utils - INFO - send_employee_http completed in 0.5261s
+2025-04-01 18:47:42,630 - utils - INFO - send_employee_http completed in 0.5472s
+2025-04-01 18:47:42,632 - utils - INFO - send_employee_http completed in 0.5332s
+2025-04-01 18:47:42,632 - utils - INFO - send_employee_http completed in 0.5431s
+2025-04-01 18:47:42,642 - utils - INFO - send_employee_http completed in 0.5580s
+2025-04-01 18:47:42,881 - utils - INFO - send_employee_http completed in 0.5304s
+2025-04-01 18:47:42,881 - employee_client - INFO - Batch 2 result: 50 ok, 0 failed
+2025-04-01 18:47:42,883 - employee_client - INFO - Processing batch 3/20 (50 records)
+2025-04-01 18:47:42,885 - employee_client - INFO - Sending employee data: {'employee_id': 101, 'name': 'Saanvi Bhasin', 'email': 'qram@yahoo.com', 'department': 'Finance', 'designation': 'Senior Software Engineer', 'salary': 411963, 'date_of_joining': '2017-07-15'}
+2025-04-01 18:47:42,886 - employee_client - INFO - Sending employee data: {'employee_id': 102, 'name': 'Ivan Shroff', 'email': 'rheachadha@yahoo.com', 'department': 'Finance', 'designation': 'Marketing Specialist', 'salary': 639049, 'date_of_joining': '2024-09-22'}
+2025-04-01 18:47:42,887 - employee_client - INFO - Sending employee data: {'employee_id': 103, 'name': 'Azad Sachar', 'email': 'aarushbrahmbhatt@iyer.com', 'department': 'HR', 'designation': 'Operations Manager', 'salary': 1339264, 'date_of_joining': '2021-05-16'}
+2025-04-01 18:47:42,889 - employee_client - INFO - Sending employee data: {'employee_id': 104, 'name': 'Aarav Balasubramanian', 'email': 'zgoyal@sarraf-chander.com', 'department': 'Sales', 'designation': 'Finance Analyst', 'salary': 1379893, 'date_of_joining': '2016-02-02'}
+2025-04-01 18:47:42,891 - employee_client - INFO - Sending employee data: {'employee_id': 105, 'name': 'Ivan Dani', 'email': 'onkargade@vyas-chacko.org', 'department': 'HR', 'designation': 'Sales Executive', 'salary': 1387756, 'date_of_joining': '2020-02-08'}
+2025-04-01 18:47:42,892 - employee_client - INFO - Sending employee data: {'employee_id': 106, 'name': 'Eva Dayal', 'email': 'alisha64@dave.info', 'department': 'Operations', 'designation': 'Operations Manager', 'salary': 1718054, 'date_of_joining': '2023-11-27'}
+2025-04-01 18:47:42,892 - employee_client - INFO - Sending employee data: {'employee_id': 107, 'name': 'Hunar Banerjee', 'email': 'ykhare@buch.com', 'department': 'Engineering', 'designation': 'Marketing Specialist', 'salary': 1597703, 'date_of_joining': '2016-03-17'}
+2025-04-01 18:47:42,892 - employee_client - INFO - Sending employee data: {'employee_id': 108, 'name': 'Prerak Jani', 'email': 'vedikasastry@yahoo.com', 'department': 'Finance', 'designation': 'Operations Manager', 'salary': 1256523, 'date_of_joining': '2015-02-10'}
+2025-04-01 18:47:42,892 - employee_client - INFO - Sending employee data: {'employee_id': 109, 'name': 'Alia Kapoor', 'email': 'amanishere@gmail.com', 'department': 'IT', 'designation': 'Software Engineer', 'salary': 1643330, 'date_of_joining': '2023-08-17'}
+2025-04-01 18:47:42,892 - employee_client - INFO - Sending employee data: {'employee_id': 110, 'name': 'Onkar Anand', 'email': 'evachahal@doctor.com', 'department': 'R&D', 'designation': 'Senior Software Engineer', 'salary': 637443, 'date_of_joining': '2020-08-28'}
+2025-04-01 18:47:43,164 - employee_client - ERROR - HTTP transmission error: API error 429: {"detail":"Too many requests. Try again in 60 seconds."}
+2025-04-01 18:47:43,165 - utils - WARNING - Retry 1/3 after error: API error 429: {"detail":"Too many requests. Try again in 60 seconds."}
+2025-04-01 18:47:43,166 - employee_client - ERROR - HTTP transmission error: API error 429: {"detail":"Too many requests. Try again in 60 seconds."}
+2025-04-01 18:47:43,167 - utils - WARNING - Retry 1/3 after error: API error 429: {"detail":"Too many requests. Try again in 60 seconds."}
+2025-04-01 18:47:43,168 - employee_client - ERROR - HTTP transmission error: API error 429: {"detail":"Too many requests. Try again in 60 seconds."}
+2025-04-01 18:47:43,169 - utils - WARNING - Retry 1/3 after error: API error 429: {"detail":"Too many requests. Try again in 60 seconds."}
+2025-04-01 18:47:43,170 - employee_client - ERROR - HTTP transmission error: API error 429: {"detail":"Too many requests. Try again in 60 seconds."}
+2025-04-01 18:47:43,171 - utils - WARNING - Retry 1/3 after error: API error 429: {"detail":"Too many requests. Try again in 60 seconds."}
+2025-04-01 18:47:43,171 - employee_client - ERROR - HTTP transmission error: API error 429: {"detail":"Too many requests. Try again in 60 seconds."}
+2025-04-01 18:47:43,172 - utils - WARNING - Retry 1/3 after error: API error 429: {"detail":"Too many requests. Try again in 60 seconds."}
+2025-04-01 18:47:43,172 - employee_client - ERROR - HTTP transmission error: API error 429: {"detail":"Too many requests. Try again in 60 seconds."}
+2025-04-01 18:47:43,173 - utils - WARNING - Retry 1/3 after error: API error 429: {"detail":"Too many requests. Try again in 60 seconds."}
+2025-04-01 18:47:43,173 - employee_client - ERROR - HTTP transmission error: API error 429: {"detail":"Too many requests. Try again in 60 seconds."}
+2025-04-01 18:47:43,173 - utils - WARNING - Retry 1/3 after error: API error 429: {"detail":"Too many requests. Try again in 60 seconds."}
+2025-04-01 18:47:43,173 - employee_client - ERROR - HTTP transmission error: API error 429: {"detail":"Too many requests. Try again in 60 seconds."}
+2025-04-01 18:47:43,177 - utils - WARNING - Retry 1/3 after error: API error 429: {"detail":"Too many requests. Try again in 60 seconds."}
+2025-04-01 18:47:43,178 - employee_client - ERROR - HTTP transmission error: API error 429: {"detail":"Too many requests. Try again in 60 seconds."}
+2025-04-01 18:47:43,179 - utils - WARNING - Retry 1/3 after error: API error 429: {"detail":"Too many requests. Try again in 60 seconds."}
+2025-04-01 18:47:43,439 - employee_client - ERROR - HTTP transmission error: API error 429: {"detail":"Too many requests. Try again in 60 seconds."}
+2025-04-01 18:47:43,439 - utils - WARNING - Retry 1/3 after error: API error 429: {"detail":"Too many requests. Try again in 60 seconds."}
+2025-04-01 18:47:44,161 - employee_client - INFO - Sending employee data: {'employee_id': 106, 'name': 'Eva Dayal', 'email': 'alisha64@dave.info', 'department': 'Operations', 'designation': 'Operations Manager', 'salary': 1718054, 'date_of_joining': '2023-11-27'}
+2025-04-01 18:47:44,162 - employee_client - INFO - Sending employee data: {'employee_id': 103, 'name': 'Azad Sachar', 'email': 'aarushbrahmbhatt@iyer.com', 'department': 'HR', 'designation': 'Operations Manager', 'salary': 1339264, 'date_of_joining': '2021-05-16'}
+2025-04-01 18:47:44,174 - employee_client - INFO - Sending employee data: {'employee_id': 105, 'name': 'Ivan Dani', 'email': 'onkargade@vyas-chacko.org', 'department': 'HR', 'designation': 'Sales Executive', 'salary': 1387756, 'date_of_joining': '2020-02-08'}
+2025-04-01 18:47:44,175 - employee_client - INFO - Sending employee data: {'employee_id': 109, 'name': 'Alia Kapoor', 'email': 'amanishere@gmail.com', 'department': 'IT', 'designation': 'Software Engineer', 'salary': 1643330, 'date_of_joining': '2023-08-17'}
+2025-04-01 18:47:44,175 - employee_client - INFO - Sending employee data: {'employee_id': 104, 'name': 'Aarav Balasubramanian', 'email': 'zgoyal@sarraf-chander.com', 'department': 'Sales', 'designation': 'Finance Analyst', 'salary': 1379893, 'date_of_joining': '2016-02-02'}
+2025-04-01 18:47:44,178 - employee_client - INFO - Sending employee data: {'employee_id': 101, 'name': 'Saanvi Bhasin', 'email': 'qram@yahoo.com', 'department': 'Finance', 'designation': 'Senior Software Engineer', 'salary': 411963, 'date_of_joining': '2017-07-15'}
+2025-04-01 18:47:44,179 - employee_client - INFO - Sending employee data: {'employee_id': 107, 'name': 'Hunar Banerjee', 'email': 'ykhare@buch.com', 'department': 'Engineering', 'designation': 'Marketing Specialist', 'salary': 1597703, 'date_of_joining': '2016-03-17'}
+2025-04-01 18:47:44,180 - employee_client - INFO - Sending employee data: {'employee_id': 102, 'name': 'Ivan Shroff', 'email': 'rheachadha@yahoo.com', 'department': 'Finance', 'designation': 'Marketing Specialist', 'salary': 639049, 'date_of_joining': '2024-09-22'}
+2025-04-01 18:47:44,182 - employee_client - INFO - Sending employee data: {'employee_id': 108, 'name': 'Prerak Jani', 'email': 'vedikasastry@yahoo.com', 'department': 'Finance', 'designation': 'Operations Manager', 'salary': 1256523, 'date_of_joining': '2015-02-10'}
+2025-04-01 18:47:44,184 - employee_client - ERROR - HTTP transmission error: API error 429: {"detail":"Too many requests. Try again in 60 seconds."}
+2025-04-01 18:47:44,184 - utils - WARNING - Retry 2/3 after error: API error 429: {"detail":"Too many requests. Try again in 60 seconds."}
+2025-04-01 18:47:44,184 - employee_client - ERROR - HTTP transmission error: API error 429: {"detail":"Too many requests. Try again in 60 seconds."}
+2025-04-01 18:47:44,187 - utils - WARNING - Retry 2/3 after error: API error 429: {"detail":"Too many requests. Try again in 60 seconds."}
+2025-04-01 18:47:44,237 - employee_client - ERROR - HTTP transmission error: API error 429: {"detail":"Too many requests. Try again in 60 seconds."}
+2025-04-01 18:47:44,242 - utils - WARNING - Retry 2/3 after error: API error 429: {"detail":"Too many requests. Try again in 60 seconds."}
+2025-04-01 18:47:44,243 - employee_client - ERROR - HTTP transmission error: API error 429: {"detail":"Too many requests. Try again in 60 seconds."}
+2025-04-01 18:47:44,243 - utils - WARNING - Retry 2/3 after error: API error 429: {"detail":"Too many requests. Try again in 60 seconds."}
+2025-04-01 18:47:44,254 - employee_client - ERROR - HTTP transmission error: API error 429: {"detail":"Too many requests. Try again in 60 seconds."}
+2025-04-01 18:47:44,254 - utils - WARNING - Retry 2/3 after error: API error 429: {"detail":"Too many requests. Try again in 60 seconds."}
+2025-04-01 18:47:44,254 - employee_client - ERROR - HTTP transmission error: API error 429: {"detail":"Too many requests. Try again in 60 seconds."}
+2025-04-01 18:47:44,254 - utils - WARNING - Retry 2/3 after error: API error 429: {"detail":"Too many requests. Try again in 60 seconds."}
+2025-04-01 18:47:44,258 - employee_client - ERROR - HTTP transmission error: API error 429: {"detail":"Too many requests. Try again in 60 seconds."}
+2025-04-01 18:47:44,259 - utils - WARNING - Retry 2/3 after error: API error 429: {"detail":"Too many requests. Try again in 60 seconds."}
+2025-04-01 18:47:44,259 - employee_client - ERROR - HTTP transmission error: API error 429: {"detail":"Too many requests. Try again in 60 seconds."}
+2025-04-01 18:47:44,259 - utils - WARNING - Retry 2/3 after error: API error 429: {"detail":"Too many requests. Try again in 60 seconds."}
+2025-04-01 18:47:44,259 - employee_client - ERROR - HTTP transmission error: API error 429: {"detail":"Too many requests. Try again in 60 seconds."}
+2025-04-01 18:47:44,259 - utils - WARNING - Retry 2/3 after error: API error 429: {"detail":"Too many requests. Try again in 60 seconds."}
+2025-04-01 18:47:44,461 - employee_client - INFO - Sending employee data: {'employee_id': 110, 'name': 'Onkar Anand', 'email': 'evachahal@doctor.com', 'department': 'R&D', 'designation': 'Senior Software Engineer', 'salary': 637443, 'date_of_joining': '2020-08-28'}
+2025-04-01 18:47:44,466 - employee_client - ERROR - HTTP transmission error: API error 429: {"detail":"Too many requests. Try again in 60 seconds."}
+2025-04-01 18:47:44,466 - utils - WARNING - Retry 2/3 after error: API error 429: {"detail":"Too many requests. Try again in 60 seconds."}
+2025-04-01 18:47:45,258 - employee_client - INFO - Cleaning up resources
+2025-04-01 18:47:45,261 - employee_client - INFO - Resources released
+2025-04-01 18:47:45,270 - __main__ - INFO - Process interrupted by user

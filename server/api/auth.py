@@ -28,9 +28,6 @@ async def login_for_access_token(
     request: Request,
     form_data: OAuth2PasswordRequestForm = Depends()
 ):
-    """
-    OAuth2 compatible token login, get an access token for future requests
-    """
     user = authenticate_user(USERS, form_data.username, form_data.password)
     if not user:
         raise HTTPException(

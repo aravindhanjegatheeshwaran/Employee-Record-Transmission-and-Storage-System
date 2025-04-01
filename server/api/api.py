@@ -1,4 +1,3 @@
-# server/api/api.py
 from fastapi import APIRouter, Depends, HTTPException, status, Request
 from sqlalchemy.ext.asyncio import AsyncSession
 from typing import List, Optional
@@ -25,30 +24,37 @@ router = APIRouter(
     responses={404: {"description": "Not found"}},
 )
 
-
 @router.post("/", response_model=EmployeeResponse, status_code=status.HTTP_201_CREATED)
 @log_execution_time
 @log_requests
 @rate_limit(calls=100, period=60)
-@validate_input(EmployeeCreate)
 async def create_employee(
     employee: EmployeeCreate,
-    session: AsyncSession = Depends(get_db)
+    db: AsyncSession = Depends(get_db)
 ):
+    logger.debug(f"Received employee data: {employee.dict()}")
+    logger.debug(f"DB session type: {type(db)}")
+    
     employee_id = employee.employee_id
     
-    exists = await employee_repository.exists(session, employee_id)
-    if exists:
+    try:
+        exists = await employee_repository.exists(db, employee_id)
+        if exists:
+            raise HTTPException(
+                status_code=status.HTTP_409_CONFLICT,
+                detail=f"Employee ID {employee_id} already exists"
+            )
+        
+        employee_data = employee.dict()
+        new_employee = await employee_repository.create(db, employee_data)
+        
+        return new_employee
+    except Exception as e:
+        logger.error(f"Error in create_employee: {str(e)}")
         raise HTTPException(
-            status_code=status.HTTP_409_CONFLICT,
-            detail=f"Employee ID {employee_id} already exists"
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=f"Error creating employee: {str(e)}"
         )
-    
-    employee_data = employee.dict()
-    new_employee = await employee_repository.create(session, employee_data)
-    
-    return new_employee
-
 
 @router.post("/bulk", response_model=BatchUploadResponse)
 @log_requests
@@ -60,36 +66,37 @@ async def create_employees_bulk(
     db: AsyncSession = Depends(get_db),
     current_user: dict = Depends(get_current_active_user)
 ):
-    if not employees.employees:
-        raise HTTPException(
-            status_code=status.HTTP_400_BAD_REQUEST,
-            detail="No employee records provided"
-        )
-    
-    successful_count = 0
-    failed_records = []
-    valid_employee_data = []
-    
-    for employee in employees.employees:
-        try:
-            exists = await employee_repository.exists(db, employee.employee_id)
-            
-            if exists:
-                failed_records.append({
-                    "employee_id": employee.employee_id,
-                    "error": f"ID {employee.employee_id} already exists"
-                })
-                continue
-            
-            valid_employee_data.append(employee.dict())
-            
-        except Exception as e:
-            failed_records.append({
-                "employee_id": getattr(employee, "employee_id", "unknown"),
-                "error": str(e)
-            })
-    
     try:
+        if not employees.employees:
+            raise HTTPException(
+                status_code=status.HTTP_400_BAD_REQUEST,
+                detail="No employee records provided"
+            )
+        
+        successful_count = 0
+        failed_records = []
+        valid_employee_data = []
+        
+        for employee in employees.employees:
+            try:
+                exists = await employee_repository.exists(db, employee.employee_id)
+                
+                if exists:
+                    failed_records.append({
+                        "employee_id": employee.employee_id,
+                        "error": f"ID {employee.employee_id} already exists"
+                    })
+                    continue
+                
+                valid_employee_data.append(employee.dict())
+                
+            except Exception as e:
+                logger.error(f"Error processing employee in bulk upload: {str(e)}")
+                failed_records.append({
+                    "employee_id": getattr(employee, "employee_id", "unknown"),
+                    "error": str(e)
+                })
+        
         if valid_employee_data:
             created_employees = await employee_repository.create_many(db, valid_employee_data)
             successful_count = len(created_employees)
@@ -107,7 +114,6 @@ async def create_employees_bulk(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
             detail=f"Bulk upload failed: {str(e)}"
         )
-
 
 @router.get("/", response_model=List[EmployeeResponse])
 @log_requests
@@ -134,7 +140,6 @@ async def get_employees(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
             detail=f"Failed to retrieve employees"
         )
-
 
 @router.get("/{employee_id}", response_model=EmployeeResponse)
 @log_requests
@@ -164,7 +169,6 @@ async def get_employee(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
             detail="Failed to retrieve employee"
         )
-
 
 @router.put("/{employee_id}", response_model=EmployeeResponse)
 @log_requests
@@ -213,7 +217,6 @@ async def update_employee(
             detail="Failed to update employee"
         )
 
-
 @router.delete("/{employee_id}", response_model=ResponseMessage)
 @log_requests
 @log_execution_time
@@ -252,7 +255,6 @@ async def delete_employee(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
             detail="Failed to delete employee"
         )
-
 
 @router.get("/stats/department", response_model=List[EmployeeCount])
 @log_requests

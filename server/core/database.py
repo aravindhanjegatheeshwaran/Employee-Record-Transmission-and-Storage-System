@@ -1,4 +1,3 @@
-# server/core/database.py
 import os
 import logging
 from typing import Dict, List, Any, Optional, TypeVar, Generic
@@ -41,8 +40,6 @@ async_session = sessionmaker(
     expire_on_commit=False
 )
 
-
-@asynccontextmanager
 async def get_db():
     session = async_session()
     try:
@@ -54,7 +51,6 @@ async def get_db():
         raise
     finally:
         await session.close()
-
 
 class Repository(Generic[T]):
     def __init__(self, model_class):
@@ -132,12 +128,19 @@ class Repository(Generic[T]):
         return result.scalar()
     
     async def exists(self, session: AsyncSession, id_value: Any) -> bool:
-        result = await session.execute(
-            select(func.count(self.model_class.employee_id))
-            .where(self.model_class.employee_id == id_value)
-        )
-        return result.scalar() > 0
-
+        actual_session = session
+        
+        logger.debug(f"exists: session type = {type(session)}")
+        
+        try:
+            result = await actual_session.execute(
+                select(func.count(self.model_class.employee_id))
+                .where(self.model_class.employee_id == id_value)
+            )
+            return result.scalar() > 0
+        except AttributeError as e:
+            logger.error(f"Session error in exists: {e}")
+            raise ValueError(f"Invalid session object: {type(session)}. Please provide a valid AsyncSession object.")
 
 async def create_database():
     temp_engine = create_async_engine(
@@ -157,7 +160,6 @@ async def create_database():
                 logger.info(f"Database '{DB_NAME}' already exists")
     finally:
         await temp_engine.dispose()
-
 
 async def init_db(create_db=True):
     try:
@@ -180,15 +182,12 @@ async def init_db(create_db=True):
     
     logger.info("Database ready")
 
-
 async def close_db():
     await engine.dispose()
     logger.info("Database connections closed")
 
-
 employee_repository = Repository(Employee)
 processing_log_repository = Repository(ProcessingLog)
-
 
 async def get_employee_count_by_department(session: AsyncSession) -> List[Dict[str, Any]]:
     query = select(
@@ -198,7 +197,6 @@ async def get_employee_count_by_department(session: AsyncSession) -> List[Dict[s
     
     result = await session.execute(query)
     return [{"department": dept, "count": count} for dept, count in result.all()]
-
 
 def get_database_url():
     return DATABASE_URL.replace('+aiomysql', '+pymysql')

@@ -3181,3 +3181,921 @@ employee_id
 2025-04-01 18:23:57,542 - main - ERROR - WebSocket error: Expected ASGI message "websocket.send" or "websocket.close", but got 'websocket.accept'
 2025-04-01 18:23:57,544 - main - ERROR - WebSocket error: Expected ASGI message "websocket.send" or "websocket.close", but got 'websocket.accept'
 2025-04-01 18:23:57,550 - main - ERROR - WebSocket error: Expected ASGI message "websocket.send" or "websocket.close", but got 'websocket.accept'
+2025-04-01 18:34:28,458 - main - INFO - Starting server...
+2025-04-01 18:34:35,181 - core.decorators - INFO - FUNC 20250401183435181751: login_for_access_token called
+2025-04-01 18:34:35,562 - core.decorators - INFO - login_for_access_token took 0.3801s
+2025-04-01 18:34:35,563 - core.decorators - INFO - DONE 20250401183435181751: completed in 0.3812s
+2025-04-01 18:34:35,708 - core.decorators - INFO - FUNC 20250401183435707804: create_employee called
+2025-04-01 18:34:35,711 - core.decorators - ERROR - Validation error: 7 validation errors for EmployeeCreate
+name
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+email
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+department
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+designation
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+salary
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+date_of_joining
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+employee_id
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+2025-04-01 18:34:35,717 - core.decorators - ERROR - FAIL 20250401183435707804: error after 0.0059s - 
+2025-04-01 18:34:35,717 - core.decorators - ERROR - create_employee failed after 0.0101s: 
+2025-04-01 18:34:35,740 - core.decorators - INFO - FUNC 20250401183435740414: create_employee called
+2025-04-01 18:34:35,740 - core.decorators - ERROR - Validation error: 7 validation errors for EmployeeCreate
+name
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+email
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+department
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+designation
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+salary
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+date_of_joining
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+employee_id
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+2025-04-01 18:34:35,747 - core.decorators - ERROR - FAIL 20250401183435740414: error after 0.0067s - 
+2025-04-01 18:34:35,747 - core.decorators - ERROR - create_employee failed after 0.0067s: 
+2025-04-01 18:34:35,753 - core.decorators - INFO - FUNC 20250401183435753196: create_employee called
+2025-04-01 18:34:35,753 - core.decorators - ERROR - Validation error: 7 validation errors for EmployeeCreate
+name
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+email
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+department
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+designation
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+salary
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+date_of_joining
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+employee_id
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+2025-04-01 18:34:35,761 - core.decorators - ERROR - FAIL 20250401183435753196: error after 0.0078s - 
+2025-04-01 18:34:35,761 - core.decorators - ERROR - create_employee failed after 0.0078s: 
+2025-04-01 18:34:35,763 - core.decorators - INFO - FUNC 20250401183435763085: create_employee called
+2025-04-01 18:34:35,764 - core.decorators - ERROR - Validation error: 7 validation errors for EmployeeCreate
+name
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+email
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+department
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+designation
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+salary
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+date_of_joining
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+employee_id
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+2025-04-01 18:34:35,766 - core.decorators - ERROR - FAIL 20250401183435763085: error after 0.0021s - 
+2025-04-01 18:34:35,770 - core.decorators - ERROR - create_employee failed after 0.0074s: 
+2025-04-01 18:34:35,773 - core.decorators - INFO - FUNC 20250401183435771013: create_employee called
+2025-04-01 18:34:35,773 - core.decorators - ERROR - Validation error: 7 validation errors for EmployeeCreate
+name
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+email
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+department
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+designation
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+salary
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+date_of_joining
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+employee_id
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+2025-04-01 18:34:35,779 - core.decorators - ERROR - FAIL 20250401183435771013: error after 0.0056s - 
+2025-04-01 18:34:35,779 - core.decorators - ERROR - create_employee failed after 0.0086s: 
+2025-04-01 18:34:35,780 - core.decorators - INFO - FUNC 20250401183435780661: create_employee called
+2025-04-01 18:34:35,782 - core.decorators - ERROR - Validation error: 7 validation errors for EmployeeCreate
+name
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+email
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+department
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+designation
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+salary
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+date_of_joining
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+employee_id
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+2025-04-01 18:34:35,786 - core.decorators - ERROR - FAIL 20250401183435780661: error after 0.0043s - 
+2025-04-01 18:34:35,786 - core.decorators - ERROR - create_employee failed after 0.0060s: 
+2025-04-01 18:34:35,905 - core.decorators - INFO - FUNC 20250401183435905319: create_employee called
+2025-04-01 18:34:35,906 - core.decorators - ERROR - Validation error: 7 validation errors for EmployeeCreate
+name
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+email
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+department
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+designation
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+salary
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+date_of_joining
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+employee_id
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+2025-04-01 18:34:35,908 - core.decorators - ERROR - FAIL 20250401183435905319: error after 0.0020s - 
+2025-04-01 18:34:35,911 - core.decorators - ERROR - create_employee failed after 0.0062s: 
+2025-04-01 18:34:35,912 - core.decorators - INFO - FUNC 20250401183435912486: create_employee called
+2025-04-01 18:34:35,912 - core.decorators - ERROR - Validation error: 7 validation errors for EmployeeCreate
+name
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+email
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+department
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+designation
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+salary
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+date_of_joining
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+employee_id
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+2025-04-01 18:34:35,917 - core.decorators - ERROR - FAIL 20250401183435912486: error after 0.0051s - 
+2025-04-01 18:34:35,917 - core.decorators - ERROR - create_employee failed after 0.0051s: 
+2025-04-01 18:34:35,940 - core.decorators - INFO - FUNC 20250401183435940088: create_employee called
+2025-04-01 18:34:35,940 - core.decorators - ERROR - Validation error: 7 validation errors for EmployeeCreate
+name
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+email
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+department
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+designation
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+salary
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+date_of_joining
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+employee_id
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+2025-04-01 18:34:35,946 - core.decorators - ERROR - FAIL 20250401183435940088: error after 0.0056s - 
+2025-04-01 18:34:35,947 - core.decorators - ERROR - create_employee failed after 0.0073s: 
+2025-04-01 18:34:35,955 - core.decorators - INFO - FUNC 20250401183435955913: create_employee called
+2025-04-01 18:34:35,957 - core.decorators - ERROR - Validation error: 7 validation errors for EmployeeCreate
+name
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+email
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+department
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+designation
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+salary
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+date_of_joining
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+employee_id
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+2025-04-01 18:34:35,963 - core.decorators - ERROR - FAIL 20250401183435955913: error after 0.0060s - 
+2025-04-01 18:34:35,964 - core.decorators - ERROR - create_employee failed after 0.0087s: 
+2025-04-01 18:34:36,762 - core.decorators - INFO - FUNC 20250401183436762551: create_employee called
+2025-04-01 18:34:36,763 - core.decorators - ERROR - Validation error: 7 validation errors for EmployeeCreate
+name
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+email
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+department
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+designation
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+salary
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+date_of_joining
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+employee_id
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+2025-04-01 18:34:36,768 - core.decorators - ERROR - FAIL 20250401183436762551: error after 0.0049s - 
+2025-04-01 18:34:36,769 - core.decorators - ERROR - create_employee failed after 0.0069s: 
+2025-04-01 18:34:36,813 - core.decorators - INFO - FUNC 20250401183436813907: create_employee called
+2025-04-01 18:34:36,813 - core.decorators - ERROR - Validation error: 7 validation errors for EmployeeCreate
+name
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+email
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+department
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+designation
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+salary
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+date_of_joining
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+employee_id
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+2025-04-01 18:34:36,816 - core.decorators - ERROR - FAIL 20250401183436813907: error after 0.0024s - 
+2025-04-01 18:34:36,821 - core.decorators - ERROR - create_employee failed after 0.0082s: 
+2025-04-01 18:34:36,823 - core.decorators - INFO - FUNC 20250401183436823374: create_employee called
+2025-04-01 18:34:36,823 - core.decorators - ERROR - Validation error: 7 validation errors for EmployeeCreate
+name
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+email
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+department
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+designation
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+salary
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+date_of_joining
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+employee_id
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+2025-04-01 18:34:36,827 - core.decorators - ERROR - FAIL 20250401183436823374: error after 0.0044s - 
+2025-04-01 18:34:36,827 - core.decorators - ERROR - create_employee failed after 0.0044s: 
+2025-04-01 18:34:36,841 - core.decorators - INFO - FUNC 20250401183436841535: create_employee called
+2025-04-01 18:34:36,841 - core.decorators - ERROR - Validation error: 7 validation errors for EmployeeCreate
+name
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+email
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+department
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+designation
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+salary
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+date_of_joining
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+employee_id
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+2025-04-01 18:34:36,846 - core.decorators - ERROR - FAIL 20250401183436841535: error after 0.0050s - 
+2025-04-01 18:34:36,847 - core.decorators - ERROR - create_employee failed after 0.0062s: 
+2025-04-01 18:34:36,849 - core.decorators - INFO - FUNC 20250401183436849175: create_employee called
+2025-04-01 18:34:36,849 - core.decorators - ERROR - Validation error: 7 validation errors for EmployeeCreate
+name
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+email
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+department
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+designation
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+salary
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+date_of_joining
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+employee_id
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+2025-04-01 18:34:36,852 - core.decorators - ERROR - FAIL 20250401183436849175: error after 0.0033s - 
+2025-04-01 18:34:36,855 - core.decorators - ERROR - create_employee failed after 0.0066s: 
+2025-04-01 18:34:36,857 - core.decorators - INFO - FUNC 20250401183436857685: create_employee called
+2025-04-01 18:34:36,857 - core.decorators - ERROR - Validation error: 7 validation errors for EmployeeCreate
+name
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+email
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+department
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+designation
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+salary
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+date_of_joining
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+employee_id
+  Field required [type=missing, input_value={'gen': <async_generator ...textmanager decorator.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/missing
+2025-04-01 18:34:36,866 - core.decorators - ERROR - FAIL 20250401183436857685: error after 0.0087s - 
+2025-04-01 18:34:36,867 - core.decorators - ERROR - create_employee failed after 0.0093s: 
+2025-04-01 18:41:52,156 - main - INFO - Shutting down, closing connections...
+2025-04-01 18:41:52,158 - core.database - INFO - Database connections closed
+2025-04-01 18:41:52,159 - main - INFO - Database connections closed
+2025-04-01 18:41:56,869 - main - INFO - Starting server...
+2025-04-01 18:42:04,558 - main - INFO - Shutting down, closing connections...
+2025-04-01 18:42:04,559 - core.database - INFO - Database connections closed
+2025-04-01 18:42:04,561 - main - INFO - Database connections closed
+2025-04-01 18:42:08,586 - main - INFO - Starting server...
+2025-04-01 18:42:20,380 - main - INFO - Shutting down, closing connections...
+2025-04-01 18:42:20,382 - core.database - INFO - Database connections closed
+2025-04-01 18:42:20,383 - main - INFO - Database connections closed
+2025-04-01 18:42:38,948 - main - INFO - Starting server...
+2025-04-01 18:42:51,970 - main - INFO - Shutting down, closing connections...
+2025-04-01 18:42:51,972 - core.database - INFO - Database connections closed
+2025-04-01 18:42:51,972 - main - INFO - Database connections closed
+2025-04-01 18:42:57,522 - main - INFO - Starting server...
+2025-04-01 18:43:09,070 - core.decorators - INFO - FUNC 20250401184309070468: login_for_access_token called
+2025-04-01 18:43:09,570 - core.decorators - INFO - login_for_access_token took 0.4978s
+2025-04-01 18:43:09,575 - core.decorators - INFO - DONE 20250401184309070468: completed in 0.5044s
+2025-04-01 18:43:09,728 - core.decorators - INFO - FUNC 20250401184309728544: create_employee called
+2025-04-01 18:43:09,730 - core.decorators - ERROR - FAIL 20250401184309728544: error after 0.0000s - '_AsyncGeneratorContextManager' object has no attribute 'execute'
+2025-04-01 18:43:09,730 - core.decorators - ERROR - create_employee failed after 0.0024s: '_AsyncGeneratorContextManager' object has no attribute 'execute'
+2025-04-01 18:43:09,793 - core.decorators - INFO - FUNC 20250401184309793840: create_employee called
+2025-04-01 18:43:09,795 - core.decorators - ERROR - FAIL 20250401184309793840: error after 0.0000s - '_AsyncGeneratorContextManager' object has no attribute 'execute'
+2025-04-01 18:43:09,796 - core.decorators - ERROR - create_employee failed after 0.0022s: '_AsyncGeneratorContextManager' object has no attribute 'execute'
+2025-04-01 18:43:09,799 - core.decorators - INFO - FUNC 20250401184309798109: create_employee called
+2025-04-01 18:43:09,800 - core.decorators - ERROR - FAIL 20250401184309798109: error after 0.0006s - '_AsyncGeneratorContextManager' object has no attribute 'execute'
+2025-04-01 18:43:09,802 - core.decorators - ERROR - create_employee failed after 0.0036s: '_AsyncGeneratorContextManager' object has no attribute 'execute'
+2025-04-01 18:43:09,803 - core.decorators - INFO - FUNC 20250401184309803910: create_employee called
+2025-04-01 18:43:09,804 - core.decorators - ERROR - FAIL 20250401184309803910: error after 0.0000s - '_AsyncGeneratorContextManager' object has no attribute 'execute'
+2025-04-01 18:43:09,806 - core.decorators - ERROR - create_employee failed after 0.0028s: '_AsyncGeneratorContextManager' object has no attribute 'execute'
+2025-04-01 18:43:09,808 - core.decorators - INFO - FUNC 20250401184309808204: create_employee called
+2025-04-01 18:43:09,809 - core.decorators - ERROR - FAIL 20250401184309808204: error after 0.0000s - '_AsyncGeneratorContextManager' object has no attribute 'execute'
+2025-04-01 18:43:09,810 - core.decorators - ERROR - create_employee failed after 0.0023s: '_AsyncGeneratorContextManager' object has no attribute 'execute'
+2025-04-01 18:43:09,812 - core.decorators - INFO - FUNC 20250401184309812168: create_employee called
+2025-04-01 18:43:09,813 - core.decorators - ERROR - FAIL 20250401184309812168: error after 0.0000s - '_AsyncGeneratorContextManager' object has no attribute 'execute'
+2025-04-01 18:43:09,814 - core.decorators - ERROR - create_employee failed after 0.0020s: '_AsyncGeneratorContextManager' object has no attribute 'execute'
+2025-04-01 18:43:10,002 - core.decorators - INFO - FUNC 20250401184310001945: create_employee called
+2025-04-01 18:43:10,003 - core.decorators - ERROR - FAIL 20250401184310001945: error after 0.0000s - '_AsyncGeneratorContextManager' object has no attribute 'execute'
+2025-04-01 18:43:10,004 - core.decorators - ERROR - create_employee failed after 0.0026s: '_AsyncGeneratorContextManager' object has no attribute 'execute'
+2025-04-01 18:43:10,006 - core.decorators - INFO - FUNC 20250401184310006119: create_employee called
+2025-04-01 18:43:10,006 - core.decorators - ERROR - FAIL 20250401184310006119: error after 0.0000s - '_AsyncGeneratorContextManager' object has no attribute 'execute'
+2025-04-01 18:43:10,009 - core.decorators - ERROR - create_employee failed after 0.0029s: '_AsyncGeneratorContextManager' object has no attribute 'execute'
+2025-04-01 18:43:10,011 - core.decorators - INFO - FUNC 20250401184310011449: create_employee called
+2025-04-01 18:43:10,012 - core.decorators - ERROR - FAIL 20250401184310011449: error after 0.0000s - '_AsyncGeneratorContextManager' object has no attribute 'execute'
+2025-04-01 18:43:10,013 - core.decorators - ERROR - create_employee failed after 0.0022s: '_AsyncGeneratorContextManager' object has no attribute 'execute'
+2025-04-01 18:43:10,014 - core.decorators - INFO - FUNC 20250401184310014127: create_employee called
+2025-04-01 18:43:10,015 - core.decorators - ERROR - FAIL 20250401184310014127: error after 0.0000s - '_AsyncGeneratorContextManager' object has no attribute 'execute'
+2025-04-01 18:43:10,016 - core.decorators - ERROR - create_employee failed after 0.0026s: '_AsyncGeneratorContextManager' object has no attribute 'execute'
+2025-04-01 18:43:10,825 - core.decorators - INFO - FUNC 20250401184310825170: create_employee called
+2025-04-01 18:43:10,828 - core.decorators - ERROR - FAIL 20250401184310825170: error after 0.0000s - '_AsyncGeneratorContextManager' object has no attribute 'execute'
+2025-04-01 18:43:10,829 - core.decorators - ERROR - create_employee failed after 0.0040s: '_AsyncGeneratorContextManager' object has no attribute 'execute'
+2025-04-01 18:43:10,953 - core.decorators - INFO - FUNC 20250401184310953235: create_employee called
+2025-04-01 18:43:10,954 - core.decorators - ERROR - FAIL 20250401184310953235: error after 0.0010s - '_AsyncGeneratorContextManager' object has no attribute 'execute'
+2025-04-01 18:43:10,955 - core.decorators - ERROR - create_employee failed after 0.0010s: '_AsyncGeneratorContextManager' object has no attribute 'execute'
+2025-04-01 18:43:10,990 - core.decorators - INFO - FUNC 20250401184310990712: create_employee called
+2025-04-01 18:43:10,991 - core.decorators - ERROR - FAIL 20250401184310990712: error after 0.0000s - '_AsyncGeneratorContextManager' object has no attribute 'execute'
+2025-04-01 18:43:10,993 - core.decorators - ERROR - create_employee failed after 0.0030s: '_AsyncGeneratorContextManager' object has no attribute 'execute'
+2025-04-01 18:43:11,054 - core.decorators - INFO - FUNC 20250401184311054288: create_employee called
+2025-04-01 18:43:11,055 - core.decorators - ERROR - FAIL 20250401184311054288: error after 0.0000s - '_AsyncGeneratorContextManager' object has no attribute 'execute'
+2025-04-01 18:43:11,055 - core.decorators - ERROR - create_employee failed after 0.0016s: '_AsyncGeneratorContextManager' object has no attribute 'execute'
+2025-04-01 18:43:11,143 - core.decorators - INFO - FUNC 20250401184311143129: create_employee called
+2025-04-01 18:43:11,144 - core.decorators - ERROR - FAIL 20250401184311143129: error after 0.0000s - '_AsyncGeneratorContextManager' object has no attribute 'execute'
+2025-04-01 18:43:11,144 - core.decorators - ERROR - create_employee failed after 0.0018s: '_AsyncGeneratorContextManager' object has no attribute 'execute'
+2025-04-01 18:43:11,207 - core.decorators - INFO - FUNC 20250401184311207387: create_employee called
+2025-04-01 18:43:11,208 - core.decorators - ERROR - FAIL 20250401184311207387: error after 0.0000s - '_AsyncGeneratorContextManager' object has no attribute 'execute'
+2025-04-01 18:43:11,209 - core.decorators - ERROR - create_employee failed after 0.0018s: '_AsyncGeneratorContextManager' object has no attribute 'execute'
+2025-04-01 18:43:56,316 - main - INFO - Shutting down, closing connections...
+2025-04-01 18:43:56,318 - core.database - INFO - Database connections closed
+2025-04-01 18:43:56,319 - main - INFO - Database connections closed
+2025-04-01 18:44:01,077 - main - INFO - Starting server...
+2025-04-01 18:44:51,983 - main - INFO - Shutting down, closing connections...
+2025-04-01 18:44:51,985 - core.database - INFO - Database connections closed
+2025-04-01 18:44:51,985 - main - INFO - Database connections closed
+2025-04-01 18:44:57,750 - main - INFO - Starting server...
+2025-04-01 18:45:06,866 - main - INFO - Shutting down, closing connections...
+2025-04-01 18:45:06,866 - core.database - INFO - Database connections closed
+2025-04-01 18:45:06,866 - main - INFO - Database connections closed
+2025-04-01 18:45:11,388 - main - INFO - Starting server...
+2025-04-01 18:45:18,490 - main - INFO - Shutting down, closing connections...
+2025-04-01 18:45:18,492 - core.database - INFO - Database connections closed
+2025-04-01 18:45:18,493 - main - INFO - Database connections closed
+2025-04-01 18:45:22,984 - main - INFO - Starting server...
+2025-04-01 18:45:37,607 - main - INFO - Shutting down, closing connections...
+2025-04-01 18:45:37,608 - core.database - INFO - Database connections closed
+2025-04-01 18:45:37,608 - main - INFO - Database connections closed
+2025-04-01 18:45:45,100 - main - INFO - Starting server...
+2025-04-01 18:46:18,755 - main - INFO - Shutting down, closing connections...
+2025-04-01 18:46:18,757 - core.database - INFO - Database connections closed
+2025-04-01 18:46:18,757 - main - INFO - Database connections closed
+2025-04-01 18:46:30,591 - main - INFO - Starting server...
+2025-04-01 18:46:42,467 - main - INFO - Shutting down, closing connections...
+2025-04-01 18:46:42,471 - core.database - INFO - Database connections closed
+2025-04-01 18:46:42,472 - main - INFO - Database connections closed
+2025-04-01 18:46:48,660 - main - INFO - Starting server...
+2025-04-01 18:47:32,783 - core.decorators - INFO - FUNC 20250401184732783183: login_for_access_token called
+2025-04-01 18:47:33,167 - core.decorators - INFO - login_for_access_token took 0.3830s
+2025-04-01 18:47:33,178 - core.decorators - INFO - DONE 20250401184732783183: completed in 0.3946s
+2025-04-01 18:47:33,244 - core.decorators - INFO - FUNC 20250401184733244566: create_employee called
+2025-04-01 18:47:33,256 - core.decorators - INFO - FUNC 20250401184733256879: create_employee called
+2025-04-01 18:47:33,260 - core.decorators - INFO - FUNC 20250401184733260012: create_employee called
+2025-04-01 18:47:33,262 - core.decorators - INFO - FUNC 20250401184733262584: create_employee called
+2025-04-01 18:47:33,264 - core.decorators - INFO - FUNC 20250401184733264711: create_employee called
+2025-04-01 18:47:33,265 - core.decorators - INFO - FUNC 20250401184733265716: create_employee called
+2025-04-01 18:47:33,495 - core.decorators - INFO - DONE 20250401184733244566: completed in 0.2511s
+2025-04-01 18:47:33,496 - core.decorators - INFO - create_employee took 0.2522s
+2025-04-01 18:47:33,506 - core.decorators - INFO - DONE 20250401184733256879: completed in 0.2495s
+2025-04-01 18:47:33,508 - core.decorators - INFO - create_employee took 0.2514s
+2025-04-01 18:47:33,511 - core.decorators - INFO - DONE 20250401184733262584: completed in 0.2484s
+2025-04-01 18:47:33,512 - core.decorators - INFO - create_employee took 0.2500s
+2025-04-01 18:47:33,515 - core.decorators - INFO - DONE 20250401184733264711: completed in 0.2509s
+2025-04-01 18:47:33,516 - core.decorators - INFO - create_employee took 0.2521s
+2025-04-01 18:47:33,545 - core.decorators - INFO - DONE 20250401184733260012: completed in 0.2845s
+2025-04-01 18:47:33,546 - core.decorators - INFO - create_employee took 0.2860s
+2025-04-01 18:47:33,550 - core.decorators - INFO - FUNC 20250401184733550938: create_employee called
+2025-04-01 18:47:33,556 - core.decorators - INFO - FUNC 20250401184733553900: create_employee called
+2025-04-01 18:47:33,558 - core.decorators - INFO - FUNC 20250401184733558358: create_employee called
+2025-04-01 18:47:33,561 - core.decorators - INFO - FUNC 20250401184733561452: create_employee called
+2025-04-01 18:47:33,565 - core.decorators - INFO - DONE 20250401184733265716: completed in 0.2988s
+2025-04-01 18:47:33,565 - core.decorators - INFO - create_employee took 0.2998s
+2025-04-01 18:47:33,652 - core.decorators - INFO - DONE 20250401184733558358: completed in 0.0922s
+2025-04-01 18:47:33,653 - core.decorators - INFO - create_employee took 0.0950s
+2025-04-01 18:47:33,659 - core.decorators - INFO - DONE 20250401184733561452: completed in 0.0962s
+2025-04-01 18:47:33,660 - core.decorators - INFO - create_employee took 0.0993s
+2025-04-01 18:47:33,662 - core.decorators - INFO - DONE 20250401184733550938: completed in 0.1107s
+2025-04-01 18:47:33,663 - core.decorators - INFO - create_employee took 0.1128s
+2025-04-01 18:47:33,667 - core.decorators - INFO - DONE 20250401184733553900: completed in 0.1097s
+2025-04-01 18:47:33,669 - core.decorators - INFO - create_employee took 0.1156s
+2025-04-01 18:47:34,312 - core.decorators - INFO - FUNC 20250401184734312967: create_employee called
+2025-04-01 18:47:34,993 - core.decorators - INFO - DONE 20250401184734312967: completed in 0.6799s
+2025-04-01 18:47:34,994 - core.decorators - INFO - create_employee took 0.6815s
+2025-04-01 18:47:36,818 - core.decorators - INFO - FUNC 20250401184736818842: create_employee called
+2025-04-01 18:47:36,825 - core.decorators - INFO - FUNC 20250401184736825507: create_employee called
+2025-04-01 18:47:36,827 - core.decorators - INFO - FUNC 20250401184736827607: create_employee called
+2025-04-01 18:47:36,829 - core.decorators - INFO - FUNC 20250401184736829947: create_employee called
+2025-04-01 18:47:36,832 - core.decorators - INFO - FUNC 20250401184736832163: create_employee called
+2025-04-01 18:47:36,834 - core.decorators - INFO - FUNC 20250401184736834392: create_employee called
+2025-04-01 18:47:36,836 - core.decorators - INFO - FUNC 20250401184736836710: create_employee called
+2025-04-01 18:47:36,839 - core.decorators - INFO - FUNC 20250401184736839783: create_employee called
+2025-04-01 18:47:36,842 - core.decorators - INFO - FUNC 20250401184736842687: create_employee called
+2025-04-01 18:47:36,844 - core.decorators - INFO - FUNC 20250401184736844765: create_employee called
+2025-04-01 18:47:36,888 - core.decorators - INFO - DONE 20250401184736818842: completed in 0.0697s
+2025-04-01 18:47:36,889 - core.decorators - INFO - create_employee took 0.0709s
+2025-04-01 18:47:36,891 - core.decorators - INFO - DONE 20250401184736825507: completed in 0.0653s
+2025-04-01 18:47:36,891 - core.decorators - INFO - create_employee took 0.0663s
+2025-04-01 18:47:36,895 - core.decorators - INFO - DONE 20250401184736829947: completed in 0.0660s
+2025-04-01 18:47:36,895 - core.decorators - INFO - create_employee took 0.0660s
+2025-04-01 18:47:36,898 - core.decorators - INFO - DONE 20250401184736832163: completed in 0.0653s
+2025-04-01 18:47:36,899 - core.decorators - INFO - create_employee took 0.0673s
+2025-04-01 18:47:36,908 - core.decorators - INFO - DONE 20250401184736834392: completed in 0.0728s
+2025-04-01 18:47:36,908 - core.decorators - INFO - create_employee took 0.0745s
+2025-04-01 18:47:36,911 - core.decorators - INFO - DONE 20250401184736827607: completed in 0.0824s
+2025-04-01 18:47:36,911 - core.decorators - INFO - create_employee took 0.0841s
+2025-04-01 18:47:36,920 - core.decorators - INFO - DONE 20250401184736839783: completed in 0.0810s
+2025-04-01 18:47:36,920 - core.decorators - INFO - create_employee took 0.0810s
+2025-04-01 18:47:36,923 - core.decorators - INFO - DONE 20250401184736842687: completed in 0.0806s
+2025-04-01 18:47:36,923 - core.decorators - INFO - create_employee took 0.0806s
+2025-04-01 18:47:36,925 - core.decorators - INFO - DONE 20250401184736836710: completed in 0.0877s
+2025-04-01 18:47:36,926 - core.decorators - INFO - create_employee took 0.0895s
+2025-04-01 18:47:36,932 - core.decorators - INFO - DONE 20250401184736844765: completed in 0.0873s
+2025-04-01 18:47:36,932 - core.decorators - INFO - create_employee took 0.0873s
+2025-04-01 18:47:37,573 - core.decorators - INFO - FUNC 20250401184737572318: create_employee called
+2025-04-01 18:47:37,584 - core.decorators - INFO - DONE 20250401184737572318: completed in 0.0106s
+2025-04-01 18:47:37,585 - core.decorators - INFO - create_employee took 0.0122s
+2025-04-01 18:47:37,908 - core.decorators - INFO - FUNC 20250401184737908100: create_employee called
+2025-04-01 18:47:37,910 - core.decorators - INFO - FUNC 20250401184737910604: create_employee called
+2025-04-01 18:47:37,912 - core.decorators - INFO - FUNC 20250401184737912917: create_employee called
+2025-04-01 18:47:37,915 - core.decorators - INFO - FUNC 20250401184737915135: create_employee called
+2025-04-01 18:47:37,917 - core.decorators - INFO - FUNC 20250401184737917819: create_employee called
+2025-04-01 18:47:37,922 - core.decorators - INFO - FUNC 20250401184737922463: create_employee called
+2025-04-01 18:47:37,924 - core.decorators - INFO - FUNC 20250401184737924505: create_employee called
+2025-04-01 18:47:37,927 - core.decorators - INFO - FUNC 20250401184737927268: create_employee called
+2025-04-01 18:47:37,935 - core.decorators - INFO - FUNC 20250401184737935348: create_employee called
+2025-04-01 18:47:37,960 - core.decorators - INFO - DONE 20250401184737922463: completed in 0.0381s
+2025-04-01 18:47:37,960 - core.decorators - INFO - create_employee took 0.0381s
+2025-04-01 18:47:37,972 - core.decorators - INFO - DONE 20250401184737910604: completed in 0.0604s
+2025-04-01 18:47:37,973 - core.decorators - INFO - create_employee took 0.0615s
+2025-04-01 18:47:37,978 - core.decorators - INFO - DONE 20250401184737908100: completed in 0.0692s
+2025-04-01 18:47:37,978 - core.decorators - INFO - create_employee took 0.0702s
+2025-04-01 18:47:37,987 - core.decorators - INFO - DONE 20250401184737912917: completed in 0.0732s
+2025-04-01 18:47:37,989 - core.decorators - INFO - create_employee took 0.0742s
+2025-04-01 18:47:37,990 - core.decorators - INFO - DONE 20250401184737924505: completed in 0.0654s
+2025-04-01 18:47:37,991 - core.decorators - INFO - create_employee took 0.0663s
+2025-04-01 18:47:37,995 - core.decorators - INFO - DONE 20250401184737917819: completed in 0.0765s
+2025-04-01 18:47:37,997 - core.decorators - INFO - create_employee took 0.0796s
+2025-04-01 18:47:38,008 - core.decorators - INFO - DONE 20250401184737935348: completed in 0.0706s
+2025-04-01 18:47:38,009 - core.decorators - INFO - create_employee took 0.0742s
+2025-04-01 18:47:38,011 - core.decorators - INFO - DONE 20250401184737915135: completed in 0.0952s
+2025-04-01 18:47:38,011 - core.decorators - INFO - create_employee took 0.0967s
+2025-04-01 18:47:38,039 - core.decorators - INFO - DONE 20250401184737927268: completed in 0.1116s
+2025-04-01 18:47:38,040 - core.decorators - INFO - create_employee took 0.1126s
+2025-04-01 18:47:38,187 - core.decorators - INFO - FUNC 20250401184738187830: create_employee called
+2025-04-01 18:47:38,201 - core.decorators - INFO - DONE 20250401184738187830: completed in 0.0116s
+2025-04-01 18:47:38,201 - core.decorators - INFO - create_employee took 0.0139s
+2025-04-01 18:47:38,756 - core.decorators - INFO - FUNC 20250401184738756284: create_employee called
+2025-04-01 18:47:38,769 - core.decorators - INFO - DONE 20250401184738756284: completed in 0.0127s
+2025-04-01 18:47:38,769 - core.decorators - INFO - create_employee took 0.0133s
+2025-04-01 18:47:38,958 - core.decorators - INFO - FUNC 20250401184738958750: create_employee called
+2025-04-01 18:47:38,961 - core.decorators - INFO - FUNC 20250401184738961841: create_employee called
+2025-04-01 18:47:38,962 - core.decorators - INFO - FUNC 20250401184738962842: create_employee called
+2025-04-01 18:47:38,966 - core.decorators - INFO - FUNC 20250401184738965918: create_employee called
+2025-04-01 18:47:38,967 - core.decorators - INFO - FUNC 20250401184738967697: create_employee called
+2025-04-01 18:47:38,969 - core.decorators - INFO - FUNC 20250401184738969696: create_employee called
+2025-04-01 18:47:38,972 - core.decorators - INFO - FUNC 20250401184738972829: create_employee called
+2025-04-01 18:47:38,974 - core.decorators - INFO - FUNC 20250401184738974896: create_employee called
+2025-04-01 18:47:38,976 - core.decorators - INFO - FUNC 20250401184738976908: create_employee called
+2025-04-01 18:47:39,015 - core.decorators - INFO - DONE 20250401184738965918: completed in 0.0489s
+2025-04-01 18:47:39,015 - core.decorators - INFO - create_employee took 0.0496s
+2025-04-01 18:47:39,018 - core.decorators - INFO - DONE 20250401184738961841: completed in 0.0557s
+2025-04-01 18:47:39,018 - core.decorators - INFO - create_employee took 0.0563s
+2025-04-01 18:47:39,020 - core.decorators - INFO - DONE 20250401184738962842: completed in 0.0567s
+2025-04-01 18:47:39,020 - core.decorators - INFO - create_employee took 0.0578s
+2025-04-01 18:47:39,023 - core.decorators - INFO - DONE 20250401184738958750: completed in 0.0640s
+2025-04-01 18:47:39,024 - core.decorators - INFO - create_employee took 0.0655s
+2025-04-01 18:47:39,037 - core.decorators - INFO - DONE 20250401184738972829: completed in 0.0642s
+2025-04-01 18:47:39,038 - core.decorators - INFO - create_employee took 0.0661s
+2025-04-01 18:47:39,046 - core.decorators - INFO - DONE 20250401184738967697: completed in 0.0774s
+2025-04-01 18:47:39,046 - core.decorators - INFO - create_employee took 0.0784s
+2025-04-01 18:47:39,052 - core.decorators - INFO - DONE 20250401184738976908: completed in 0.0740s
+2025-04-01 18:47:39,052 - core.decorators - INFO - create_employee took 0.0760s
+2025-04-01 18:47:39,056 - core.decorators - INFO - DONE 20250401184738969696: completed in 0.0848s
+2025-04-01 18:47:39,057 - core.decorators - INFO - create_employee took 0.0882s
+2025-04-01 18:47:39,058 - core.decorators - INFO - DONE 20250401184738974896: completed in 0.0829s
+2025-04-01 18:47:39,058 - core.decorators - INFO - create_employee took 0.0840s
+2025-04-01 18:47:39,279 - core.decorators - INFO - FUNC 20250401184739279561: create_employee called
+2025-04-01 18:47:39,290 - core.decorators - INFO - DONE 20250401184739279561: completed in 0.0109s
+2025-04-01 18:47:39,291 - core.decorators - INFO - create_employee took 0.0120s
+2025-04-01 18:47:39,441 - core.decorators - INFO - FUNC 20250401184739441001: create_employee called
+2025-04-01 18:47:39,443 - core.decorators - INFO - FUNC 20250401184739443990: create_employee called
+2025-04-01 18:47:39,446 - core.decorators - INFO - FUNC 20250401184739446418: create_employee called
+2025-04-01 18:47:39,451 - core.decorators - INFO - FUNC 20250401184739451266: create_employee called
+2025-04-01 18:47:39,453 - core.decorators - INFO - FUNC 20250401184739453609: create_employee called
+2025-04-01 18:47:39,477 - core.decorators - INFO - DONE 20250401184739441001: completed in 0.0351s
+2025-04-01 18:47:39,478 - core.decorators - INFO - create_employee took 0.0371s
+2025-04-01 18:47:39,480 - core.decorators - INFO - DONE 20250401184739446418: completed in 0.0320s
+2025-04-01 18:47:39,481 - core.decorators - INFO - create_employee took 0.0343s
+2025-04-01 18:47:39,483 - core.decorators - INFO - DONE 20250401184739451266: completed in 0.0320s
+2025-04-01 18:47:39,483 - core.decorators - INFO - create_employee took 0.0323s
+2025-04-01 18:47:39,488 - core.decorators - INFO - DONE 20250401184739453609: completed in 0.0348s
+2025-04-01 18:47:39,488 - core.decorators - INFO - create_employee took 0.0348s
+2025-04-01 18:47:39,496 - core.decorators - INFO - DONE 20250401184739443990: completed in 0.0508s
+2025-04-01 18:47:39,496 - core.decorators - INFO - create_employee took 0.0525s
+2025-04-01 18:47:39,835 - core.decorators - INFO - FUNC 20250401184739835063: create_employee called
+2025-04-01 18:47:39,837 - core.decorators - INFO - FUNC 20250401184739837488: create_employee called
+2025-04-01 18:47:39,853 - core.decorators - INFO - DONE 20250401184739835063: completed in 0.0174s
+2025-04-01 18:47:39,854 - core.decorators - INFO - create_employee took 0.0198s
+2025-04-01 18:47:39,856 - core.decorators - INFO - DONE 20250401184739837488: completed in 0.0178s
+2025-04-01 18:47:39,857 - core.decorators - INFO - create_employee took 0.0201s
+2025-04-01 18:47:39,883 - core.decorators - INFO - FUNC 20250401184739883378: create_employee called
+2025-04-01 18:47:39,883 - core.decorators - INFO - FUNC 20250401184739883378: create_employee called
+2025-04-01 18:47:39,907 - core.decorators - INFO - DONE 20250401184739883378: completed in 0.0154s
+2025-04-01 18:47:39,913 - core.decorators - INFO - create_employee took 0.0302s
+2025-04-01 18:47:39,921 - core.decorators - INFO - DONE 20250401184739883378: completed in 0.0383s
+2025-04-01 18:47:39,922 - core.decorators - INFO - create_employee took 0.0396s
+2025-04-01 18:47:40,107 - core.decorators - INFO - FUNC 20250401184740107868: create_employee called
+2025-04-01 18:47:40,110 - core.decorators - INFO - FUNC 20250401184740110733: create_employee called
+2025-04-01 18:47:40,112 - core.decorators - INFO - FUNC 20250401184740112598: create_employee called
+2025-04-01 18:47:40,115 - core.decorators - INFO - FUNC 20250401184740115019: create_employee called
+2025-04-01 18:47:40,119 - core.decorators - INFO - FUNC 20250401184740119104: create_employee called
+2025-04-01 18:47:40,121 - core.decorators - INFO - FUNC 20250401184740121302: create_employee called
+2025-04-01 18:47:40,144 - core.decorators - INFO - DONE 20250401184740121302: completed in 0.0221s
+2025-04-01 18:47:40,144 - core.decorators - INFO - create_employee took 0.0232s
+2025-04-01 18:47:40,153 - core.decorators - INFO - DONE 20250401184740119104: completed in 0.0336s
+2025-04-01 18:47:40,155 - core.decorators - INFO - create_employee took 0.0360s
+2025-04-01 18:47:40,157 - core.decorators - INFO - DONE 20250401184740107868: completed in 0.0481s
+2025-04-01 18:47:40,157 - core.decorators - INFO - create_employee took 0.0493s
+2025-04-01 18:47:40,158 - core.decorators - INFO - DONE 20250401184740110733: completed in 0.0474s
+2025-04-01 18:47:40,158 - core.decorators - INFO - create_employee took 0.0474s
+2025-04-01 18:47:40,164 - core.decorators - INFO - DONE 20250401184740112598: completed in 0.0510s
+2025-04-01 18:47:40,165 - core.decorators - INFO - create_employee took 0.0531s
+2025-04-01 18:47:40,167 - core.decorators - INFO - DONE 20250401184740115019: completed in 0.0513s
+2025-04-01 18:47:40,168 - core.decorators - INFO - create_employee took 0.0538s
+2025-04-01 18:47:40,243 - core.decorators - INFO - FUNC 20250401184740243197: create_employee called
+2025-04-01 18:47:40,258 - core.decorators - INFO - DONE 20250401184740243197: completed in 0.0144s
+2025-04-01 18:47:40,259 - core.decorators - INFO - create_employee took 0.0159s
+2025-04-01 18:47:40,498 - core.decorators - INFO - FUNC 20250401184740498799: create_employee called
+2025-04-01 18:47:40,500 - core.decorators - INFO - FUNC 20250401184740500376: create_employee called
+2025-04-01 18:47:40,504 - core.decorators - INFO - FUNC 20250401184740504371: create_employee called
+2025-04-01 18:47:40,518 - core.decorators - INFO - DONE 20250401184740498799: completed in 0.0191s
+2025-04-01 18:47:40,524 - core.decorators - INFO - create_employee took 0.0253s
+2025-04-01 18:47:40,526 - core.decorators - INFO - DONE 20250401184740500376: completed in 0.0259s
+2025-04-01 18:47:40,527 - core.decorators - INFO - create_employee took 0.0267s
+2025-04-01 18:47:40,528 - core.decorators - INFO - DONE 20250401184740504371: completed in 0.0238s
+2025-04-01 18:47:40,528 - core.decorators - INFO - create_employee took 0.0244s
+2025-04-01 18:47:40,900 - core.decorators - INFO - FUNC 20250401184740900234: create_employee called
+2025-04-01 18:47:40,907 - core.decorators - INFO - FUNC 20250401184740907095: create_employee called
+2025-04-01 18:47:40,909 - core.decorators - INFO - FUNC 20250401184740909347: create_employee called
+2025-04-01 18:47:40,912 - core.decorators - INFO - FUNC 20250401184740912892: create_employee called
+2025-04-01 18:47:40,919 - core.decorators - INFO - FUNC 20250401184740919570: create_employee called
+2025-04-01 18:47:40,922 - core.decorators - INFO - FUNC 20250401184740922298: create_employee called
+2025-04-01 18:47:40,922 - core.decorators - INFO - FUNC 20250401184740922298: create_employee called
+2025-04-01 18:47:40,949 - core.decorators - INFO - DONE 20250401184740900234: completed in 0.0437s
+2025-04-01 18:47:40,950 - core.decorators - INFO - create_employee took 0.0503s
+2025-04-01 18:47:40,955 - core.decorators - INFO - DONE 20250401184740912892: completed in 0.0422s
+2025-04-01 18:47:40,956 - core.decorators - INFO - create_employee took 0.0437s
+2025-04-01 18:47:40,969 - core.decorators - INFO - DONE 20250401184740919570: completed in 0.0484s
+2025-04-01 18:47:40,970 - core.decorators - INFO - create_employee took 0.0509s
+2025-04-01 18:47:40,978 - core.decorators - INFO - DONE 20250401184740909347: completed in 0.0678s
+2025-04-01 18:47:40,978 - core.decorators - INFO - create_employee took 0.0695s
+2025-04-01 18:47:40,988 - core.decorators - INFO - DONE 20250401184740907095: completed in 0.0799s
+2025-04-01 18:47:40,989 - core.decorators - INFO - create_employee took 0.0822s
+2025-04-01 18:47:40,989 - core.decorators - INFO - DONE 20250401184740922298: completed in 0.0675s
+2025-04-01 18:47:40,992 - core.decorators - INFO - create_employee took 0.0700s
+2025-04-01 18:47:40,993 - core.decorators - INFO - DONE 20250401184740922298: completed in 0.0714s
+2025-04-01 18:47:40,993 - core.decorators - INFO - create_employee took 0.0714s
+2025-04-01 18:47:41,178 - core.decorators - INFO - FUNC 20250401184741178612: create_employee called
+2025-04-01 18:47:41,188 - core.decorators - INFO - DONE 20250401184741178612: completed in 0.0103s
+2025-04-01 18:47:41,189 - core.decorators - INFO - create_employee took 0.0110s
+2025-04-01 18:47:41,314 - core.decorators - INFO - FUNC 20250401184741314646: create_employee called
+2025-04-01 18:47:41,318 - core.decorators - INFO - FUNC 20250401184741318291: create_employee called
+2025-04-01 18:47:41,320 - core.decorators - INFO - FUNC 20250401184741320507: create_employee called
+2025-04-01 18:47:41,324 - core.decorators - INFO - FUNC 20250401184741323244: create_employee called
+2025-04-01 18:47:41,326 - core.decorators - INFO - FUNC 20250401184741326761: create_employee called
+2025-04-01 18:47:41,330 - core.decorators - INFO - FUNC 20250401184741330161: create_employee called
+2025-04-01 18:47:41,331 - core.decorators - INFO - FUNC 20250401184741331934: create_employee called
+2025-04-01 18:47:41,337 - core.decorators - INFO - FUNC 20250401184741336913: create_employee called
+2025-04-01 18:47:41,339 - core.decorators - INFO - FUNC 20250401184741339580: create_employee called
+2025-04-01 18:47:41,373 - core.decorators - INFO - DONE 20250401184741318291: completed in 0.0536s
+2025-04-01 18:47:41,373 - core.decorators - INFO - create_employee took 0.0548s
+2025-04-01 18:47:41,384 - core.decorators - INFO - DONE 20250401184741323244: completed in 0.0593s
+2025-04-01 18:47:41,385 - core.decorators - INFO - create_employee took 0.0620s
+2025-04-01 18:47:41,388 - core.decorators - INFO - DONE 20250401184741336913: completed in 0.0501s
+2025-04-01 18:47:41,390 - core.decorators - INFO - create_employee took 0.0531s
+2025-04-01 18:47:41,391 - core.decorators - INFO - DONE 20250401184741320507: completed in 0.0704s
+2025-04-01 18:47:41,392 - core.decorators - INFO - create_employee took 0.0725s
+2025-04-01 18:47:41,394 - core.decorators - INFO - DONE 20250401184741339580: completed in 0.0522s
+2025-04-01 18:47:41,394 - core.decorators - INFO - create_employee took 0.0553s
+2025-04-01 18:47:41,396 - core.decorators - INFO - DONE 20250401184741331934: completed in 0.0612s
+2025-04-01 18:47:41,397 - core.decorators - INFO - create_employee took 0.0660s
+2025-04-01 18:47:41,402 - core.decorators - INFO - DONE 20250401184741314646: completed in 0.0866s
+2025-04-01 18:47:41,402 - core.decorators - INFO - create_employee took 0.0874s
+2025-04-01 18:47:41,404 - core.decorators - INFO - DONE 20250401184741326761: completed in 0.0762s
+2025-04-01 18:47:41,405 - core.decorators - INFO - create_employee took 0.0785s
+2025-04-01 18:47:41,409 - core.decorators - INFO - DONE 20250401184741330161: completed in 0.0782s
+2025-04-01 18:47:41,409 - core.decorators - INFO - create_employee took 0.0795s
+2025-04-01 18:47:41,810 - core.decorators - INFO - FUNC 20250401184741810254: create_employee called
+2025-04-01 18:47:41,822 - core.decorators - INFO - DONE 20250401184741810254: completed in 0.0100s
+2025-04-01 18:47:41,823 - core.decorators - INFO - create_employee took 0.0135s
+2025-04-01 18:47:41,968 - core.decorators - INFO - FUNC 20250401184741968898: create_employee called
+2025-04-01 18:47:41,971 - core.decorators - INFO - FUNC 20250401184741971120: create_employee called
+2025-04-01 18:47:41,971 - core.decorators - INFO - FUNC 20250401184741971120: create_employee called
+2025-04-01 18:47:41,975 - core.decorators - INFO - FUNC 20250401184741975708: create_employee called
+2025-04-01 18:47:41,980 - core.decorators - INFO - FUNC 20250401184741980358: create_employee called
+2025-04-01 18:47:41,982 - core.decorators - INFO - FUNC 20250401184741982598: create_employee called
+2025-04-01 18:47:41,985 - core.decorators - INFO - FUNC 20250401184741985087: create_employee called
+2025-04-01 18:47:41,988 - core.decorators - INFO - FUNC 20250401184741988031: create_employee called
+2025-04-01 18:47:41,994 - core.decorators - INFO - FUNC 20250401184741994100: create_employee called
+2025-04-01 18:47:42,030 - core.decorators - INFO - DONE 20250401184741988031: completed in 0.0410s
+2025-04-01 18:47:42,033 - core.decorators - INFO - create_employee took 0.0458s
+2025-04-01 18:47:42,034 - core.decorators - INFO - DONE 20250401184741971120: completed in 0.0630s
+2025-04-01 18:47:42,036 - core.decorators - INFO - create_employee took 0.0655s
+2025-04-01 18:47:42,039 - core.decorators - INFO - DONE 20250401184741968898: completed in 0.0693s
+2025-04-01 18:47:42,039 - core.decorators - INFO - create_employee took 0.0703s
+2025-04-01 18:47:42,042 - core.decorators - INFO - DONE 20250401184741971120: completed in 0.0718s
+2025-04-01 18:47:42,042 - core.decorators - INFO - create_employee took 0.0718s
+2025-04-01 18:47:42,046 - core.decorators - INFO - DONE 20250401184741982598: completed in 0.0633s
+2025-04-01 18:47:42,048 - core.decorators - INFO - create_employee took 0.0655s
+2025-04-01 18:47:42,057 - core.decorators - INFO - DONE 20250401184741994100: completed in 0.0626s
+2025-04-01 18:47:42,057 - core.decorators - INFO - create_employee took 0.0638s
+2025-04-01 18:47:42,062 - core.decorators - INFO - DONE 20250401184741980358: completed in 0.0818s
+2025-04-01 18:47:42,063 - core.decorators - INFO - create_employee took 0.0833s
+2025-04-01 18:47:42,068 - core.decorators - INFO - DONE 20250401184741985087: completed in 0.0822s
+2025-04-01 18:47:42,068 - core.decorators - INFO - create_employee took 0.0832s
+2025-04-01 18:47:42,089 - core.decorators - INFO - DONE 20250401184741975708: completed in 0.1124s
+2025-04-01 18:47:42,089 - core.decorators - INFO - create_employee took 0.1138s
+2025-04-01 18:47:42,333 - core.decorators - INFO - FUNC 20250401184742333281: create_employee called
+2025-04-01 18:47:42,346 - core.decorators - INFO - DONE 20250401184742333281: completed in 0.0121s
+2025-04-01 18:47:42,347 - core.decorators - INFO - create_employee took 0.0140s
+2025-04-01 18:47:42,495 - core.decorators - INFO - FUNC 20250401184742495599: create_employee called
+2025-04-01 18:47:42,509 - core.decorators - INFO - FUNC 20250401184742509583: create_employee called
+2025-04-01 18:47:42,512 - core.decorators - INFO - FUNC 20250401184742512355: create_employee called
+2025-04-01 18:47:42,516 - core.decorators - INFO - FUNC 20250401184742516237: create_employee called
+2025-04-01 18:47:42,518 - core.decorators - INFO - FUNC 20250401184742518957: create_employee called
+2025-04-01 18:47:42,523 - core.decorators - INFO - FUNC 20250401184742523098: create_employee called
+2025-04-01 18:47:42,525 - core.decorators - INFO - FUNC 20250401184742525599: create_employee called
+2025-04-01 18:47:42,533 - core.decorators - INFO - FUNC 20250401184742533611: create_employee called
+2025-04-01 18:47:42,541 - core.decorators - INFO - FUNC 20250401184742541025: create_employee called
+2025-04-01 18:47:42,550 - core.decorators - INFO - DONE 20250401184742495599: completed in 0.0550s
+2025-04-01 18:47:42,550 - core.decorators - INFO - create_employee took 0.0550s
+2025-04-01 18:47:42,595 - core.decorators - INFO - DONE 20250401184742516237: completed in 0.0794s
+2025-04-01 18:47:42,596 - core.decorators - INFO - create_employee took 0.0800s
+2025-04-01 18:47:42,600 - core.decorators - INFO - DONE 20250401184742518957: completed in 0.0809s
+2025-04-01 18:47:42,600 - core.decorators - INFO - create_employee took 0.0815s
+2025-04-01 18:47:42,600 - core.decorators - INFO - DONE 20250401184742509583: completed in 0.0901s
+2025-04-01 18:47:42,600 - core.decorators - INFO - create_employee took 0.0909s
+2025-04-01 18:47:42,605 - core.decorators - INFO - DONE 20250401184742512355: completed in 0.0926s
+2025-04-01 18:47:42,606 - core.decorators - INFO - create_employee took 0.0941s
+2025-04-01 18:47:42,615 - core.decorators - INFO - DONE 20250401184742523098: completed in 0.0925s
+2025-04-01 18:47:42,615 - core.decorators - INFO - create_employee took 0.0925s
+2025-04-01 18:47:42,619 - core.decorators - INFO - DONE 20250401184742533611: completed in 0.0857s
+2025-04-01 18:47:42,620 - core.decorators - INFO - create_employee took 0.0866s
+2025-04-01 18:47:42,624 - core.decorators - INFO - DONE 20250401184742525599: completed in 0.0969s
+2025-04-01 18:47:42,624 - core.decorators - INFO - create_employee took 0.0992s
+2025-04-01 18:47:42,632 - core.decorators - INFO - DONE 20250401184742541025: completed in 0.0916s
+2025-04-01 18:47:42,638 - core.decorators - INFO - create_employee took 0.0978s
+2025-04-01 18:47:42,866 - core.decorators - INFO - FUNC 20250401184742866817: create_employee called
+2025-04-01 18:47:42,877 - core.decorators - INFO - DONE 20250401184742866817: completed in 0.0098s
+2025-04-01 18:47:42,878 - core.decorators - INFO - create_employee took 0.0114s
+2025-04-01 18:47:43,116 - core.decorators - INFO - FUNC 20250401184743116029: create_employee called
+2025-04-01 18:47:43,116 - core.decorators - WARNING - Rate limit exceeded: unknown
+2025-04-01 18:47:43,117 - core.decorators - ERROR - FAIL 20250401184743116029: error after 0.0010s - 
+2025-04-01 18:47:43,117 - core.decorators - ERROR - create_employee failed after 0.0019s: 
+2025-04-01 18:47:43,118 - core.database - ERROR - DB session error: 
+2025-04-01 18:47:43,119 - core.decorators - INFO - FUNC 20250401184743119939: create_employee called
+2025-04-01 18:47:43,121 - core.decorators - WARNING - Rate limit exceeded: unknown
+2025-04-01 18:47:43,121 - core.decorators - ERROR - FAIL 20250401184743119939: error after 0.0004s - 
+2025-04-01 18:47:43,122 - core.decorators - ERROR - create_employee failed after 0.0024s: 
+2025-04-01 18:47:43,123 - core.database - ERROR - DB session error: 
+2025-04-01 18:47:43,123 - core.decorators - INFO - FUNC 20250401184743123960: create_employee called
+2025-04-01 18:47:43,125 - core.decorators - WARNING - Rate limit exceeded: unknown
+2025-04-01 18:47:43,125 - core.decorators - ERROR - FAIL 20250401184743123960: error after 0.0000s - 
+2025-04-01 18:47:43,126 - core.decorators - ERROR - create_employee failed after 0.0022s: 
+2025-04-01 18:47:43,126 - core.database - ERROR - DB session error: 
+2025-04-01 18:47:43,128 - core.decorators - INFO - FUNC 20250401184743128256: create_employee called
+2025-04-01 18:47:43,129 - core.decorators - WARNING - Rate limit exceeded: unknown
+2025-04-01 18:47:43,130 - core.decorators - ERROR - FAIL 20250401184743128256: error after 0.0011s - 
+2025-04-01 18:47:43,130 - core.decorators - ERROR - create_employee failed after 0.0023s: 
+2025-04-01 18:47:43,130 - core.database - ERROR - DB session error: 
+2025-04-01 18:47:43,132 - core.decorators - INFO - FUNC 20250401184743132776: create_employee called
+2025-04-01 18:47:43,133 - core.decorators - WARNING - Rate limit exceeded: unknown
+2025-04-01 18:47:43,134 - core.decorators - ERROR - FAIL 20250401184743132776: error after 0.0008s - 
+2025-04-01 18:47:43,134 - core.decorators - ERROR - create_employee failed after 0.0016s: 
+2025-04-01 18:47:43,135 - core.database - ERROR - DB session error: 
+2025-04-01 18:47:43,137 - core.decorators - INFO - FUNC 20250401184743137492: create_employee called
+2025-04-01 18:47:43,137 - core.decorators - WARNING - Rate limit exceeded: unknown
+2025-04-01 18:47:43,137 - core.decorators - ERROR - FAIL 20250401184743137492: error after 0.0000s - 
+2025-04-01 18:47:43,138 - core.decorators - ERROR - create_employee failed after 0.0013s: 
+2025-04-01 18:47:43,138 - core.database - ERROR - DB session error: 
+2025-04-01 18:47:43,141 - core.decorators - INFO - FUNC 20250401184743141429: create_employee called
+2025-04-01 18:47:43,141 - core.decorators - WARNING - Rate limit exceeded: unknown
+2025-04-01 18:47:43,141 - core.decorators - ERROR - FAIL 20250401184743141429: error after 0.0000s - 
+2025-04-01 18:47:43,143 - core.decorators - ERROR - create_employee failed after 0.0016s: 
+2025-04-01 18:47:43,143 - core.database - ERROR - DB session error: 
+2025-04-01 18:47:43,145 - core.decorators - INFO - FUNC 20250401184743145188: create_employee called
+2025-04-01 18:47:43,146 - core.decorators - WARNING - Rate limit exceeded: unknown
+2025-04-01 18:47:43,147 - core.decorators - ERROR - FAIL 20250401184743145188: error after 0.0010s - 
+2025-04-01 18:47:43,147 - core.decorators - ERROR - create_employee failed after 0.0024s: 
+2025-04-01 18:47:43,149 - core.database - ERROR - DB session error: 
+2025-04-01 18:47:43,151 - core.decorators - INFO - FUNC 20250401184743151147: create_employee called
+2025-04-01 18:47:43,151 - core.decorators - WARNING - Rate limit exceeded: unknown
+2025-04-01 18:47:43,151 - core.decorators - ERROR - FAIL 20250401184743151147: error after 0.0000s - 
+2025-04-01 18:47:43,152 - core.decorators - ERROR - create_employee failed after 0.0018s: 
+2025-04-01 18:47:43,153 - core.database - ERROR - DB session error: 
+2025-04-01 18:47:43,435 - core.decorators - INFO - FUNC 20250401184743432701: create_employee called
+2025-04-01 18:47:43,435 - core.decorators - WARNING - Rate limit exceeded: unknown
+2025-04-01 18:47:43,436 - core.decorators - ERROR - FAIL 20250401184743432701: error after 0.0010s - 
+2025-04-01 18:47:43,436 - core.decorators - ERROR - create_employee failed after 0.0038s: 
+2025-04-01 18:47:43,436 - core.database - ERROR - DB session error: 
+2025-04-01 18:47:44,162 - core.decorators - INFO - FUNC 20250401184744162389: create_employee called
+2025-04-01 18:47:44,165 - core.decorators - WARNING - Rate limit exceeded: unknown
+2025-04-01 18:47:44,166 - core.decorators - ERROR - FAIL 20250401184744162389: error after 0.0006s - 
+2025-04-01 18:47:44,166 - core.decorators - ERROR - create_employee failed after 0.0041s: 
+2025-04-01 18:47:44,167 - core.database - ERROR - DB session error: 
+2025-04-01 18:47:44,168 - core.decorators - INFO - FUNC 20250401184744168848: create_employee called
+2025-04-01 18:47:44,170 - core.decorators - WARNING - Rate limit exceeded: unknown
+2025-04-01 18:47:44,170 - core.decorators - ERROR - FAIL 20250401184744168848: error after 0.0002s - 
+2025-04-01 18:47:44,171 - core.decorators - ERROR - create_employee failed after 0.0022s: 
+2025-04-01 18:47:44,171 - core.database - ERROR - DB session error: 
+2025-04-01 18:47:44,192 - core.decorators - INFO - FUNC 20250401184744192846: create_employee called
+2025-04-01 18:47:44,192 - core.decorators - WARNING - Rate limit exceeded: unknown
+2025-04-01 18:47:44,192 - core.decorators - ERROR - FAIL 20250401184744192846: error after 0.0000s - 
+2025-04-01 18:47:44,192 - core.decorators - ERROR - create_employee failed after 0.0000s: 
+2025-04-01 18:47:44,192 - core.database - ERROR - DB session error: 
+2025-04-01 18:47:44,197 - core.decorators - INFO - FUNC 20250401184744196985: create_employee called
+2025-04-01 18:47:44,198 - core.decorators - WARNING - Rate limit exceeded: unknown
+2025-04-01 18:47:44,198 - core.decorators - ERROR - FAIL 20250401184744196985: error after 0.0001s - 
+2025-04-01 18:47:44,199 - core.decorators - ERROR - create_employee failed after 0.0027s: 
+2025-04-01 18:47:44,199 - core.database - ERROR - DB session error: 
+2025-04-01 18:47:44,199 - core.decorators - INFO - FUNC 20250401184744199728: create_employee called
+2025-04-01 18:47:44,199 - core.decorators - WARNING - Rate limit exceeded: unknown
+2025-04-01 18:47:44,199 - core.decorators - ERROR - FAIL 20250401184744199728: error after 0.0000s - 
+2025-04-01 18:47:44,204 - core.decorators - ERROR - create_employee failed after 0.0046s: 
+2025-04-01 18:47:44,204 - core.database - ERROR - DB session error: 
+2025-04-01 18:47:44,206 - core.decorators - INFO - FUNC 20250401184744206436: create_employee called
+2025-04-01 18:47:44,209 - core.decorators - WARNING - Rate limit exceeded: unknown
+2025-04-01 18:47:44,209 - core.decorators - ERROR - FAIL 20250401184744206436: error after 0.0005s - 
+2025-04-01 18:47:44,210 - core.decorators - ERROR - create_employee failed after 0.0039s: 
+2025-04-01 18:47:44,210 - core.database - ERROR - DB session error: 
+2025-04-01 18:47:44,212 - core.decorators - INFO - FUNC 20250401184744212324: create_employee called
+2025-04-01 18:47:44,212 - core.decorators - WARNING - Rate limit exceeded: unknown
+2025-04-01 18:47:44,213 - core.decorators - ERROR - FAIL 20250401184744212324: error after 0.0009s - 
+2025-04-01 18:47:44,214 - core.decorators - ERROR - create_employee failed after 0.0026s: 
+2025-04-01 18:47:44,218 - core.database - ERROR - DB session error: 
+2025-04-01 18:47:44,219 - core.decorators - INFO - FUNC 20250401184744219885: create_employee called
+2025-04-01 18:47:44,221 - core.decorators - WARNING - Rate limit exceeded: unknown
+2025-04-01 18:47:44,221 - core.decorators - ERROR - FAIL 20250401184744219885: error after 0.0005s - 
+2025-04-01 18:47:44,222 - core.decorators - ERROR - create_employee failed after 0.0028s: 
+2025-04-01 18:47:44,222 - core.database - ERROR - DB session error: 
+2025-04-01 18:47:44,223 - core.decorators - INFO - FUNC 20250401184744223712: create_employee called
+2025-04-01 18:47:44,224 - core.decorators - WARNING - Rate limit exceeded: unknown
+2025-04-01 18:47:44,225 - core.decorators - ERROR - FAIL 20250401184744223712: error after 0.0010s - 
+2025-04-01 18:47:44,231 - core.decorators - ERROR - create_employee failed after 0.0078s: 
+2025-04-01 18:47:44,235 - core.database - ERROR - DB session error: 
+2025-04-01 18:47:44,463 - core.decorators - INFO - FUNC 20250401184744463317: create_employee called
+2025-04-01 18:47:44,464 - core.decorators - WARNING - Rate limit exceeded: unknown
+2025-04-01 18:47:44,465 - core.decorators - ERROR - FAIL 20250401184744463317: error after 0.0011s - 
+2025-04-01 18:47:44,465 - core.decorators - ERROR - create_employee failed after 0.0022s: 
+2025-04-01 18:47:44,466 - core.database - ERROR - DB session error: 
+2025-04-01 18:49:36,725 - main - INFO - Shutting down, closing connections...
+2025-04-01 18:49:36,727 - core.database - INFO - Database connections closed
+2025-04-01 18:49:36,727 - main - INFO - Database connections closed
+2025-04-01 18:49:41,044 - main - INFO - Starting server...
+2025-04-01 18:50:16,179 - main - INFO - Shutting down, closing connections...
+2025-04-01 18:50:16,180 - core.database - INFO - Database connections closed
+2025-04-01 18:50:16,180 - main - INFO - Database connections closed
+2025-04-01 18:50:20,934 - main - INFO - Starting server...
+2025-04-01 18:50:52,444 - main - INFO - Shutting down, closing connections...
+2025-04-01 18:50:52,446 - core.database - INFO - Database connections closed
+2025-04-01 18:50:52,446 - main - INFO - Database connections closed
+2025-04-01 18:50:57,081 - main - INFO - Starting server...
+2025-04-01 18:51:20,308 - main - INFO - Shutting down, closing connections...
+2025-04-01 18:51:20,309 - core.database - INFO - Database connections closed
+2025-04-01 18:51:20,310 - main - INFO - Database connections closed
+2025-04-01 18:51:24,571 - main - INFO - Starting server...

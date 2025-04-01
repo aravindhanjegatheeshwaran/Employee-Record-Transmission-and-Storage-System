@@ -1,4 +1,3 @@
-# server/main.py
 import asyncio
 import json
 from fastapi import FastAPI, Request, WebSocket, WebSocketDisconnect, Depends
@@ -14,7 +13,6 @@ from api.api import router as employees_orm_router
 from core.security import get_current_user
 from schemas.schema import EmployeeCreate
 
-# Try to import aiokafka for Kafka consumer 
 try:
     import aiokafka
     KAFKA_AVAILABLE = True
@@ -31,7 +29,6 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-# Kafka consumer
 kafka_consumer = None
 kafka_task = None
 
@@ -58,8 +55,9 @@ async def start_kafka_consumer():
                 logger.info(f"Received Kafka message: {msg.value}")
                 employee_data = msg.value
                 
-                async with get_db() as db:
-                    # Check if employee exists
+                db_gen = get_db()
+                db = await anext(db_gen.__aiter__())
+                try:
                     employee_id = employee_data.get("employee_id")
                     if not employee_id:
                         logger.error("Invalid employee data: missing employee_id")
@@ -70,10 +68,17 @@ async def start_kafka_consumer():
                         logger.warning(f"Employee ID {employee_id} already exists")
                         continue
                     
-                    # Create employee
                     employee = EmployeeCreate(**employee_data)
                     await employee_repository.create(db, employee.dict())
                     logger.info(f"Employee created via Kafka: {employee_id}")
+                    
+                    await db.commit()
+                except Exception as e:
+                    await db.rollback()
+                    logger.error(f"Database error processing Kafka message: {str(e)}")
+                    raise
+                finally:
+                    await db.close()
             except Exception as e:
                 logger.error(f"Error processing Kafka message: {str(e)}")
     except Exception as e:
@@ -81,14 +86,12 @@ async def start_kafka_consumer():
     finally:
         await consumer.stop()
 
-
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     global kafka_consumer, kafka_task
     
     logger.info("Starting server...")
     
-    # Start Kafka consumer if available
     if KAFKA_AVAILABLE:
         kafka_task = asyncio.create_task(start_kafka_consumer())
     
@@ -96,7 +99,6 @@ async def lifespan(app: FastAPI):
     
     logger.info("Shutting down, closing connections...")
     
-    # Cancel Kafka consumer task
     if kafka_task:
         kafka_task.cancel()
         try:
@@ -109,7 +111,6 @@ async def lifespan(app: FastAPI):
         logger.info("Database connections closed")
     except Exception as e:
         logger.error(f"Error during shutdown: {str(e)}")
-
 
 app = FastAPI(
     title="Employee Record System API",
@@ -132,7 +133,6 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-
 @app.middleware("http")
 async def add_process_time_header(request: Request, call_next):
     start_time = time.time()
@@ -141,8 +141,6 @@ async def add_process_time_header(request: Request, call_next):
     response.headers["X-Process-Time"] = str(process_time)
     return response
 
-
-# WebSocket connection manager
 class ConnectionManager:
     def __init__(self):
         self.active_connections = {}
@@ -160,17 +158,13 @@ class ConnectionManager:
     async def send_response(self, message: dict, websocket: WebSocket):
         await websocket.send_text(json.dumps(message))
 
-
 manager = ConnectionManager()
 
-
-# WebSocket endpoint
 @app.websocket("/ws")
 async def websocket_endpoint(websocket: WebSocket):
     await websocket.accept()
     
     try:
-        # Get authorization token from headers
         headers = dict(websocket.headers)
         auth_header = headers.get("authorization", "")
         
@@ -203,9 +197,10 @@ async def websocket_endpoint(websocket: WebSocket):
                 employee_data = json.loads(data)
                 logger.info(f"Received WebSocket message: {employee_data}")
                 
-                # Process employee data
-                async with get_db() as db:
-                    # Check if employee exists
+                db_gen = get_db()
+                db = await anext(db_gen.__aiter__())
+                
+                try:
                     employee_id = employee_data.get("employee_id")
                     if not employee_id:
                         await manager.send_response({
@@ -222,16 +217,22 @@ async def websocket_endpoint(websocket: WebSocket):
                         }, websocket)
                         continue
                     
-                    # Create employee
                     employee = EmployeeCreate(**employee_data)
                     new_employee = await employee_repository.create(db, employee.dict())
                     
-                    # Send success response
+                    await db.commit()
+                    
                     await manager.send_response({
                         "status": "success",
                         "message": f"Employee created: {employee_id}",
                         "employee_id": employee_id
                     }, websocket)
+                except Exception as e:
+                    await db.rollback()
+                    logger.error(f"Database error processing WebSocket message: {str(e)}")
+                    raise
+                finally:
+                    await db.close()
                     
             except json.JSONDecodeError:
                 await manager.send_response({
@@ -254,11 +255,9 @@ async def websocket_endpoint(websocket: WebSocket):
         except:
             pass
 
-
 app.include_router(auth.router)
 app.include_router(api.router)
 app.include_router(employees_orm_router)
-
 
 @app.get("/", tags=["health"])
 async def health_check():
@@ -267,7 +266,6 @@ async def health_check():
         "message": "Server is running",
         "version": "1.1.0"
     }
-
 
 if __name__ == "__main__":
     import uvicorn    

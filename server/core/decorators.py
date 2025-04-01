@@ -1,4 +1,3 @@
-# server/core/decorators.py
 import functools
 import time
 import logging
@@ -91,40 +90,33 @@ def validate_input(validator_class):
     def decorator(func):
         @functools.wraps(func)
         async def async_wrapper(*args, **kwargs):
-            request_body = None
+            for value in list(kwargs.values()) + list(args):
+                if isinstance(value, validator_class):
+                    return await func(*args, **kwargs)
             
-            for key, value in list(kwargs.items()):
-                if not isinstance(value, Request) and value is not None:
-                    request_body = value
+            request = None
+            for arg in args:
+                if isinstance(arg, Request):
+                    request = arg
                     break
             
-            if request_body is None:
-                for arg in args:
-                    if not isinstance(arg, Request) and arg is not None:
-                        request_body = arg
+            if not request:
+                for value in kwargs.values():
+                    if isinstance(value, Request):
+                        request = value
                         break
             
-            if not request_body:
-                raise HTTPException(
-                    status_code=status.HTTP_400_BAD_REQUEST, 
-                    detail="No request body found"
-                )
-            
-            try:
-                if isinstance(request_body, dict):
-                    validator_class(**request_body)
-                else:
-                    request_dict = request_body
-                    if hasattr(request_body, "__dict__"):
-                        request_dict = request_body.__dict__
-                    validator_class(**request_dict)
-                
-            except Exception as e:
-                logger.error(f"Validation error: {str(e)}")
-                raise HTTPException(
-                    status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
-                    detail=f"Validation failed: {str(e)}"
-                )
+            if request:
+                try:
+                    json_body = await request.json()
+                    logger.debug(f"Request body: {json_body}")
+                    validator_class(**json_body)
+                except Exception as e:
+                    logger.error(f"Validation error: {str(e)}")
+                    raise HTTPException(
+                        status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+                        detail=f"Validation failed: {str(e)}"
+                    )
             
             return await func(*args, **kwargs)
 
